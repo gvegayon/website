@@ -6,42 +6,47 @@
   <meta name="description" content="George Vega Yon, statistical computing, rstats and data science">
   <meta name="keywords" content="rgexf,george vega,george vega yon,parallel,ABCoptim,netdiffuseR,twitterreport">
   <meta name="author" content="George G. Vega Yon">
-  <link rel="stylesheet" type="text/css" href="ggvy_style.css">
+  <!--<link rel="stylesheet" type="text/css" href="ggvy_style.css">-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/f1f87a298c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body style="font-family: 'Jost';">
 
-<div class="jumbotron text-center bg-dark text-white">
-  <img src="img/IMG_20181220_131426_1.jpg" alt="Self" style="filter: grayscale(100%);width:60%;min-width:250px;max-width:600px" class="rounded">
-  <h1>George G. Vega Yon</h1>
-  <h2 class="text-muted">Statistical Computing</h2>
-  <!--<p>Resize this responsive page to see the effect!</p> -->
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Column 1</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+<div class="container-fluid"  style="background-image:url('img/IMG_20181220_131426_1-light.jpg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position-x:center;background-position-y:top;">
+  <div class="row" style="min-height:-webkit-fill-available;">
+    <!--<div class="col-sm-5 container-fluid" style="background-image:url('img/IMG_20181220_131426_1-vers2.jpg');background-size:contain;background-repeat:no-repeat;background-attachment:fixed;filter: grayscale(100%);">
+    </div>-->
+    <!--https://stackoverflow.com/questions/10707253/css-full-screen-div-with-text-in-the-middle-->
+    <div class="container text-center align-content-center" style="position: absolute;width: 400px;height: 100px;top:50%;left:50%;margin-left:-200px;margin-top:-150px; ">
+      <img src="img/red_pequena.png" style="filter:grayscale(1);">
+      <h2>George G. Vega Yon</h1>
+      <h4 class="text-muted">Ph.D., Statistical Computing, Complex Systems</h2>
+      <p style="filter:grayscale(1);">
+        <a data-toggle="popover" data-trigger="hover" data-content="My linkedin profile" href="https://linkedin.com/in/georgevegayon" target="_blank"><i class="fab fa-linkedin fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0000-0002-3171-0844" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="Checkout my code on GitHub" href="https://github.com/gvegayon/" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank"><i class="fas fa-microscope fa-3x"> </i></a>
+        <!--<a data-toggle="popover" data-trigger="hover" data-content="Contact me!" href="mailto:g.vegayon@gmail.com" target="_blank"><i class="fas fa-envelope fa-3x"></i> </i></a>-->
+      </p>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 2</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div style="text-align: right;position: absolute;bottom: 15px;right: 15px;filter:grayscale(1);" class="container-fluid">
+        Contact me at <a href="mailto:g.vegayon@gmail.com">g.vegayon@gmail.com</a>
     </div>
   </div>
 </div>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
+
 
 </body>
 </html>
