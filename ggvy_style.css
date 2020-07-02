@@ -1,0 +1,99 @@
+body {
+  font-family:  Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+/*  width: 80%;
+  max-width: 800px;
+  margin: auto;*/
+}
+
+header {
+  color: rgb(300,300,300);
+  text-align:center;
+  text-shadow: 2px 2px 2px #9c9c9c;
+  font-weight: bold;
+  font-size:20pt;
+  padding: 2px;
+  background-image:url("img/red_pequena.png");
+  background-position:left;
+  background-repeat:no-repeat;
+}
+
+footer {
+  background-color:white;
+  color:rgb(150,150,150);
+  font-size:10pt;
+  padding: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color:rgb(200,200,200);
+  border-top-width: 4px;
+}
+
+/* Some general settings */
+b {color:#1e1e1e;}
+strong {color:#787878} /*font-weight: normal; text-shadow:0 1px 1px gray;}*/
+nav {
+  line-height:30px;
+  background-color:gray;
+  height:30px;
+  color:white;
+  text-align:center;
+  border-radius: 50px;
+  box-shadow: 0 2px 1px #9c9c9c;
+  word-spacing: 30px;
+}
+
+section {
+  text-align: justify;
+  padding:10px;
+}
+
+/* *****************************************************************************
+Links style for the nav
+***************************************************************************** */
+pre {
+  background-color:rgb(194, 209, 224);
+  padding: inherit;
+  border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 2px 1px #9c9c9c;
+}
+
+/* *****************************************************************************
+Links style for the nav
+***************************************************************************** */
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: Teal;
+}
+
+/* unvisited link */
+nav a:link {color: white;text-decoration: none}
+
+/* visited link */
+nav a:visited {color: white;text-decoration: none}
+
+/* Hover */
+nav a:hover, a:hover {color: white; text-shadow: 0 2px 1px black;text-decoration: none}
+
+/* selected link */
+nav a:active {color: black;text-decoration: none}
+
+/* Header style */
+h2 {color:#1e1e1e; font-weight:lighter;}
+h3 {color:#1e1e1e; font-weight:lighter;}
+h4 {color:#1e1e1e; font-weight:lighter;}
+
+img { /*iframe*/
+  display: block;
+  width: auto;
+  max-width: 80%;
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+        
