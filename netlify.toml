@@ -1,1 +1,6 @@
+[[redirects]]
+  from = "/talk/*"
+  to = "https://github.com/gvegayon/talks/blob/master/README.md"
+  status = 301
+  force = true
 
