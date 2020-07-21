@@ -8,4 +8,13 @@
   to   = "https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en"
   status = 301
   force = true
-
+[[redirects]]
+  from = "/talks/*"
+  to = "https://github.com/gvegayon/talks/blob/master/README.md"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/papers/*"
+  to   = "https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en"
+  status = 301
+  force = true
