@@ -19,7 +19,7 @@
   status = 301
   force = true
 [[redirects]]
-  from   = "/officehours/"
+  from   = "/officehours/*"
   tp     = "https://calendar.google.com/calendar/selfsched?sstoken=UU5Ra3M2QzFUeHNNfGRlZmF1bHR8OWI0ZjI1NTUxOWNlZjM2YTM4ZmViMmE2OWFlY2JjNWY"
   status = 301
-  force  = true
+  force  = false
