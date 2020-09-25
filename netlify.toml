@@ -18,3 +18,8 @@
   to   = "https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en"
   status = 301
   force = true
+[[redirects]]
+  from   = "/officehours/"
+  tp     = "https://calendar.google.com/calendar/selfsched?sstoken=UU5Ra3M2QzFUeHNNfGRlZmF1bHR8OWI0ZjI1NTUxOWNlZjM2YTM4ZmViMmE2OWFlY2JjNWY"
+  status = 301
+  force  = true
