@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/uai/"
+  to = "https://github.com/gvegayon/faculty-talk/raw/uai-fic/handout.pdf"
+  status = 301
+  force = true
+[[redirects]]
   from = "/talk/*"
   to = "https://github.com/gvegayon/talks/blob/master/README.md"
   status = 301
