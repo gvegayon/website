@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/slides/uai/"
+  from = "/slides/uai-fic/"
   to = "https://github.com/gvegayon/faculty-talk/raw/uai-fic/handout.pdf"
   status = 301
   force = true
