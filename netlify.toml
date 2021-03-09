@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/nygc/"
+  to = "https://github.com/gvegayon/ny-genome-talk/raw/nygc/handout.pdf"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/uai-fic/"
   to = "https://github.com/gvegayon/faculty-talk/raw/uai-fic/handout.pdf"
   status = 301
