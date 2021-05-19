@@ -9,6 +9,11 @@
   status = 301
   force = true
 [[redirects]]
+  from = "/slides/uai-ds-may"
+  to = "https://github.com/gvegayon/usc-biostats-seminar-may2021/tree/036a2019cfa687c12f9d496d3180ca9e28cd9719"
+  status = 301
+  force = true
+[[redirects]]
   from = "/talk/*"
   to = "https://github.com/gvegayon/talks/blob/master/README.md"
   status = 301
