@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/networks2021/"
+  to = "https://github.com/gvegayon/networks2021/raw/master/handout.pdf"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/utah-epi/"
   to = "https://github.com/gvegayon/faculty-talk/raw/utah-epi/handout.pdf"
   status = 301
