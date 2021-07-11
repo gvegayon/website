@@ -24,6 +24,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/f1f87a298c.js" crossorigin="anonymous"></script>
+
+  <style>
+  .bio {
+    max-width: 550px;
+    padding-left: 5%;
+  }    
+  </style>
+
 </head>
 
 <body style="font-family: 'Jost';background-image:url('img/george-puc.jpeg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position-x:center;background-position-y:top;">
@@ -36,23 +44,42 @@
     <div class="container-fluid" style="text-align:right;position:absolute;top:7px;right:7px;">
      <img src="img/ukfaculty.svg" style="filter:drop-shadow(1px 1px 1px white) opacity(.5);width:40%;min-width:100px;max-width:400px">
     </div>
-    <div class="container text-center align-content-center" style="position: absolute;width:390px;top:50%;left:50%;margin-left:-200px;margin-top:-120px;padding-bottom:30px;">
+    <div class="container text-left align-content-left" style="height: 200px;"></div>
+    <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent);padding-top: 10px;">
+      <!-- style="position: absolute;width:390px;top:50%;left:50%;margin-left:-200px;margin-top:-120px;padding-bottom:30px;" -->
 	    <!--<img src="img/red_pequena.png" style="filter:grayscale(1);width-min:100px;width:30%;">-->
-      <h2>George G. Vega Yon</h1>
-      <h4 class="text-muted">Ph.D., Statistical Computing, Complex Systems</h2>
-      <p style="filter:grayscale(1);">
-        I build statistical models, analyze complex data, teach, and develop scientific software.
-	<br>
+      <h2 class="bio">George G. Vega Yon</h1>
+      <h4 class="bio" style="color: rgba(40, 40, 40, 1);font-weight:500;">Ph.D., Statistical Computing<br>Complex Systems</h2>
+      <p class="bio" style="filter:grayscale(1);">
+        <!-- I build statistical models, analyze complex data,<br>teach, and develop scientific software. -->
         <a data-toggle="popover" data-trigger="hover" data-content="My linkedin profile" href="https://linkedin.com/in/georgevegayon" target="_blank"><i class="fab fa-linkedin fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0000-0002-3171-0844" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="Checkout my code on GitHub" href="https://github.com/gvegayon/" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank"><i class="fas fa-microscope fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My talks" href="https://github.com/gvegayon/talks/blob/master/README.md" target="_blank"><i class="fas fa-chalkboard-teacher fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My twitter" href="https://twitter.com/gvegayon" target="_blank"><i class="fab fa-twitter fa-3x"> </i></a>
-        <!--<a data-toggle="popover" data-trigger="hover" data-content="Contact me!" href="mailto:g.vegayon@gmail.com" target="_blank"><i class="fas fa-envelope fa-3x"></i> </i></a>-->
+      </p>
+      <p class="bio">
+        I am a Research Programmer at
+        <a href="https://preventivemedicine.usc.edu/" target="_blank">USC's Department of Population and Public Health Sciences</a>,
+        where I work on studying <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Complex Systems</a> using
+        <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Statistical Computing</a>. I have over
+        ten years of experience developing scientific software focusing on high-performance
+        computing, data visualization, and social network analysis. My training is in Public
+        Policy (M.A. UAI, 2011), Economics (M.Sc. Caltech, 2015), and
+        Biostatistics (Ph.D. USC, 2020).
+      </p>
+      <p class="bio">
+        I obtained my Ph.D. in Biostatistics under the supervision of <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof.
+          Paul Marjoram</a> and <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, with my dissertation titled
+        "<a href="http://digitallibrary.usc.edu/digital/collection/p15799coll89/id/348731/rec/1" target="_blank">Essays on Bioinformatics and Social Network Analysis: Statistical and
+        Computational Methods for Complex Systems</a>."
       </p>
     </div>
-    <div style="text-align: right;position: absolute;bottom:7px;right:7px;filter:grayscale(1);" class="container-fluid">
+    <!-- <div class="container-fluid overflow-hidden aling-content-center" style="text-align: center;height: 200px;">
+      <h1>Hello</h1>
+    </div> -->
+    <div style="text-align: right;filter:grayscale(1);padding-bottom: 10px;padding-right: 10px;" class="container-fluid pr-2 pb-2 overflow-hidden">
       Contact me at <a href="mailto:g.vegayon@gmail.com">g.vegayon@gmail.com</a><br>
       Latest resume <a href="https://github.com/gvegayon/resume/raw/master/resume.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a> |
       cv <a href="https://github.com/gvegayon/resume/raw/master/cv.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a>
