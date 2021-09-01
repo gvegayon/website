@@ -29,7 +29,12 @@
   .bio {
     max-width: 550px;
     padding-left: 5%;
-  }    
+    filter: grayscale(.5);
+  } 
+
+  .cryptedmail:after {
+    content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+  }
   </style>
 
 </head>
@@ -42,7 +47,7 @@
     </div>-->
     <!--https://stackoverflow.com/questions/10707253/css-full-screen-div-with-text-in-the-middle-->
     <div class="container-fluid" style="text-align:right;position:absolute;top:7px;right:7px;">
-     <img src="img/ukfaculty.svg" style="filter:drop-shadow(1px 1px 1px white) opacity(.5);width:40%;min-width:100px;max-width:400px">
+     <img src="img/ukfaculty.svg" style="filter:drop-shadow(2px 2px 2px white) opacity(.5);width:40%;min-width:100px;max-width:400px">
     </div>
     <div class="container text-left align-content-left" style="height: 200px;"></div>
     <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent);padding-top: 10px;">
@@ -55,7 +60,7 @@
         <a data-toggle="popover" data-trigger="hover" data-content="My linkedin profile" href="https://linkedin.com/in/georgevegayon" target="_blank"><i class="fab fa-linkedin fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0000-0002-3171-0844" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="Checkout my code on GitHub" href="https://github.com/gvegayon/" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
-        <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank"><i class="fas fa-microscope fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank"><i class="fas fa-graduation-cap fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My talks" href="https://github.com/gvegayon/talks/blob/master/README.md" target="_blank"><i class="fas fa-chalkboard-teacher fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My twitter" href="https://twitter.com/gvegayon" target="_blank"><i class="fab fa-twitter fa-3x"> </i></a>
       </p>
@@ -63,11 +68,13 @@
         I am a Research Programmer at
         <a href="https://preventivemedicine.usc.edu/" target="_blank">USC's Department of Population and Public Health Sciences</a>,
         where I work on studying <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Complex Systems</a> using
-        <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Statistical Computing</a>. I have over
+        <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Statistical Computing</a>.
+	Starting November 2021, I will be an Assistant Professor of Research at the
+	<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>. I have over
         ten years of experience developing scientific software focusing on high-performance
         computing, data visualization, and social network analysis. My training is in Public
-        Policy (M.A. UAI, 2011), Economics (M.Sc. Caltech, 2015), and
-        Biostatistics (Ph.D. USC, 2020).
+        Policy (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and
+        Biostatistics (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
       </p>
       <p class="bio">
         I obtained my Ph.D. in Biostatistics under the supervision of <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof.
@@ -79,8 +86,15 @@
     <!-- <div class="container-fluid overflow-hidden aling-content-center" style="text-align: center;height: 200px;">
       <h1>Hello</h1>
     </div> -->
+    <!-- <div class="container-fluid align-content-center">
+      <img src="img/hexlogos.png" style="padding-left:5%;filter: grayscale(.1);width: 100%;max-width: 800px;">
+    </div> -->
     <div style="text-align: right;filter:grayscale(1);padding-bottom: 10px;padding-right: 10px;" class="container-fluid pr-2 pb-2 overflow-hidden">
-      Contact me at <a href="mailto:g.vegayon@gmail.com">g.vegayon@gmail.com</a><br>
+      Contact me at <a href="#" class="cryptedmail"
+      data-name="g.vegayon"
+      data-domain="gmail"
+      data-tld="com"
+      onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a><br>
       Latest resume <a href="https://github.com/gvegayon/resume/raw/master/resume.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a> |
       cv <a href="https://github.com/gvegayon/resume/raw/master/cv.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a>
     </div>
