@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/netsnau0/"
+  to = "https://github.com/gvegayon/netsnau0apr2022/raw/main/main.pdf"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/ars2021/"
   to = "https://github.com/gvegayon/ars2021/raw/master/slides.pdf"
   status = 301
