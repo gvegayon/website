@@ -1,4 +1,14 @@
 [[redirects]]
+  from = "/apps/epiworld"
+  to = "https://github.com/UofUEpi/epiworld"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/slides/epiworld1/"
+  to = "https://docs.google.com/presentation/d/1chntyM9itTJv9lm_urMa8cnSN-vgL1uOmNxPhvXrQFo/edit?usp=sharing"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/epiworld0/"
   to = "https://docs.google.com/presentation/d/183icOxjgGRJeyzf7QRCTglfhbjy_U7h8mO7V17OvSw4/edit?usp=sharing"
   status = 301
