@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/sunbelt2022"
+  to = "https://github.com/gvegayon/gallery/tree/master/20220700-sunbelt"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/happiest"
   to = "https://docs.google.com/presentation/d/1koWJnekIcQyPbHGSrq0lBp0doZTKQK309H7xHgeHilY/edit?usp=sharing"
   status = 301
