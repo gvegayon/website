@@ -79,7 +79,7 @@
   status = 301
   force = true
 [[redirects]]
-  from   = "/officehours/*"
-  to     = "https://calendar.google.com/calendar/selfsched?sstoken=UU5Ra3M2QzFUeHNNfGRlZmF1bHR8OWI0ZjI1NTUxOWNlZjM2YTM4ZmViMmE2OWFlY2JjNWY"
+  from   = "/meetme/*"
+  to     = "https://calendar.app.google/LxNeGy5CtzaDroFv6"
   status = 301
   force  = true
