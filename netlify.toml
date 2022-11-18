@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/spur2023"
+  to = "https://our.utah.edu/spur/visualization-tools-for-network-science-building-beautiful-graphs-with-netplot/"
+  status = 301
+  force = true
+[[redirects]]
   from = "/sunbelt2022"
   to = "https://github.com/gvegayon/gallery/tree/master/20220700-sunbelt"
   status = 301
