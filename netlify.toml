@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/quinlanlab2022"
+  to = "https://github.com/gvegayon/talks/tree/master/20221208-quinlan-lab"
+  status = 301
+  force = true
+[[redirects]]
   from = "/spur2023"
   to = "https://our.utah.edu/spur/visualization-tools-for-network-science-building-beautiful-graphs-with-netplot/"
   status = 301
