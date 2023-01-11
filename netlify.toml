@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/UoUDS2023"
+  to = "https://github.com/gvegayon/talks/tree/master/20230111-uofu-datascience"
+  status = 301
+  force = true
+[[redirects]]
   from = "/quinlanlab2022"
   to = "https://github.com/gvegayon/talks/tree/master/20221208-quinlan-lab"
   status = 301
