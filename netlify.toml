@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/sci2023"
+  to = "https://github.com/gvegayon/gvegayon/sci2023"
+  status = 301
+  force = true
+[[redirects]]
   from = "/UoUDS2023"
   to = "https://github.com/gvegayon/talks/tree/master/20230111-uofu-datascience"
   status = 301
