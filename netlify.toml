@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/slides/sci2023"
-  to = "https://github.com/gvegayon/gvegayon/sci2023"
+  to = "https://github.com/gvegayon/sci2023"
   status = 301
   force = true
 [[redirects]]
