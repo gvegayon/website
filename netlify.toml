@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/mind2023"
+  to = "https://gvegayon.github.io/mech-ml-mind/"
+  status = 301
+  force = true
+[[redirects]]
   from = "/image2023"
   to = "https://github.com/gvegayon/image2023/blob/master/slides.pdf"
   status = 301
