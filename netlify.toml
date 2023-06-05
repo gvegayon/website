@@ -5,7 +5,7 @@
   force = true
 [[redirects]]
   from = "/slides/uou-cdc-june2023"
-  to = "https://github.com/gvegayon/image2023/blob/master/slides.pdf"
+  to = "https://docs.google.com/presentation/d/14eP8lFgRrExTgU3D1uvbL-gu7YuX7dKHoUIV1mgWf5U/edit?usp=sharing"
   status = 301
   force = true
 [[redirects]]
