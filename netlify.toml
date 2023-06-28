@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/epiworld-posit"
+  to = "https://posit.cloud/spaces/381081/join?access_code=uLrnXjGfGAXqnwTRdlVOW9vcfJ6tdoBTBRnXy5yH"
+  status = 301
+  force = true
+[[redirects]]
   from = "/netplot-sunbelt2023"
   to = "https://uofuepibio.github.io/netplot-sunbelt2023/"
   status = 301
