@@ -1,6 +1,6 @@
 [[redirects]]
   from = "slides/sunbelt2023"
-  to = "ggv.cl/slides/sunbelt2023"
+  to = "https://uofuepibio.github.io/abm-networks-epi/"
   status = 301
   force = true
 [[redirects]]
