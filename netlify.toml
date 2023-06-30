@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/sunbelt2023"
+  to = "ggv.cl/slides/sunbelt2023"
+  status = 301
+  force = true
+[[redirects]]
   from = "/epiworld-posit"
   to = "https://posit.cloud/spaces/381081/join?access_code=uLrnXjGfGAXqnwTRdlVOW9vcfJ6tdoBTBRnXy5yH"
   status = 301
