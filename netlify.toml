@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/jsm2023"
+  to = "https://gvegayon.github.io/jsm-discussion"
+  status = 301
+  force = true
+[[redirects]]
   from = "slides/sunbelt2023"
   to = "https://uofuepibio.github.io/abm-networks-epi/"
   status = 301
