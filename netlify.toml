@@ -1,4 +1,14 @@
 [[redirects]]
+  from = "cv"
+  to = "https://github.com/gvegayon/resume/raw/master/cv.pdf"
+  status = 301
+  force = true
+[[redirects]]
+  from = "resume"
+  to = "https://github.com/gvegayon/resume/raw/master/resume.pdf"
+  status = 301
+  force = true
+[[redirects]]
   from = "slides/jsm2023"
   to = "https://gvegayon.github.io/jsm-discussion"
   status = 301
