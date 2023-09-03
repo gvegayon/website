@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "scholar"
+  to = "https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en"
+  status = 301
+  force = true
+[[redirects]]
   from = "cv"
   to = "https://github.com/gvegayon/resume/raw/master/cv.pdf"
   status = 301
