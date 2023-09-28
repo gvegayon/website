@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/uou-cdc-oct2023"
+  to = "https://docs.google.com/presentation/d/1F3__c2royghDh9MQ93tt3L8m35lGNfX8OiWDv8G5x78/edit?usp=sharing"
+  status = 301
+  force = true
+[[redirects]]
   from = "scholar"
   to = "https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en"
   status = 301
