@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/slides/p01-sep2023"
+  to = "https://docs.google.com/presentation/d/1t4KbQCtlyGr2THnJUl-P5wU5BoNSerPNaneZ9-b79Lw/edit?usp=sharing"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/uou-cdc-oct2023"
   to = "https://docs.google.com/presentation/d/1F3__c2royghDh9MQ93tt3L8m35lGNfX8OiWDv8G5x78/edit?usp=sharing"
   status = 301
