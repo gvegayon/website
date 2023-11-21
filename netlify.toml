@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "/altara2023"
+  to = "https://docs.google.com/presentation/d/160HTOw9O79njLeI2kt36rNmeLHRpRYko7161p7MU7wM/edit?usp=sharing"
+  status = 301
+  force = true
+[[redirects]]
   from = "/slides/p01-sep2023"
   to = "https://docs.google.com/presentation/d/1t4KbQCtlyGr2THnJUl-P5wU5BoNSerPNaneZ9-b79Lw/edit?usp=sharing"
   status = 301
