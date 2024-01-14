@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/udd-ene2024"
+  to = "https://gvegayon.github.io/mechml-udd-ene2024"
+  force = true
+  status = 301
+[[redirects]]
   from = "/altara2023"
   to = "https://docs.google.com/presentation/d/160HTOw9O79njLeI2kt36rNmeLHRpRYko7161p7MU7wM/edit?usp=sharing"
   status = 301
