@@ -30,7 +30,7 @@
   force = true
 [[redirects]]
   from = "resume"
-  to = "https://github.com/gvegayon/resume/raw/master/resume.pdf"
+  to = "https://github.com/gvegayon/resume/raw/master/resume.docx"
   status = 301
   force = true
 [[redirects]]
