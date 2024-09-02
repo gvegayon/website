@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/ccs2024"
+  to = "https://gvegayon.github.io/ccs2024-software-london"
+  force = true
+  status = 301
+[[redirects]]
   from = "slides/mind-june2024"
   to = "https://gvegayon.github.io/20240604-mind"
   force = true
