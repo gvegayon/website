@@ -1,6 +1,6 @@
 [[redirects]]
   from = "slides/ccs2024"
-  to = "https://gvegayon.github.io/ccs2024-software-london"
+  to = "https://gvegayon.github.io/ccs2024"
   force = true
   status = 301
 [[redirects]]
