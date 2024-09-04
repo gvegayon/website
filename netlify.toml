@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/exeter-abm-2024"
+  to = "https://gvegayon.github.io/exeter-abms-sept2024"
+  force = true
+  status = 301
+[[redirects]]
   from = "cloud/ccs2024"
   to = "https://posit.cloud/spaces/547776/join?access_code=SthQasPvG8T7_9213Q6FnFarHAHCkzLUWyjq-G5r"
   force = true
