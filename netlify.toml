@@ -1,6 +1,6 @@
 [[redirects]]
   from = "slides/exeter-abm-2024"
-  to = "https://gvegayon.github.io/exeter-abms-sept2024"
+  to = "https://gvegayon.github.io/exeter-abms-sep2024/"
   force = true
   status = 301
 [[redirects]]
@@ -10,7 +10,7 @@
   status = 301
 [[redirects]]
   from = "slides/exeter-hpc-2024"
-  to = "https://gvegayon.github.io/exeter-hpc-sep2024"
+  to = "https://gvegayon.github.io/exeter-hpc-sep2024/"
   force = true
   status = 301
 [[redirects]]
