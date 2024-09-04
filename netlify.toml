@@ -1,4 +1,14 @@
 [[redirects]]
+  from = "cloud/ccs2024"
+  to = "https://posit.cloud/spaces/547776/join?access_code=SthQasPvG8T7_9213Q6FnFarHAHCkzLUWyjq-G5r"
+  force = true
+  status = 301
+[[redirects]]
+  from = "slides/exeter-hpc-2024"
+  to = "https://gvegayon.github.io/exeter-hpc-sep2024"
+  force = true
+  status = 301
+[[redirects]]
   from = "slides/ccs2024"
   to = "https://gvegayon.github.io/ccs2024"
   force = true
