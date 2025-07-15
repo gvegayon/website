@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "posit.cloud"
+  to = "https://posit.cloud/spaces/670492/join?access_code=HkO5Cug1iuebqm3K10klwIiUEXEhW_tKLMqfB5WO"
+  force = true
+  status = 301
+[[redirects]]
   from = "slides/sunbelt2025"
   to = "https://uofuepibio.github.io/defm-sunbelt2025/"
   force = true
