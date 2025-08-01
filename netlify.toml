@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "cran/epiworldR"
+  to = "https://cran.r-project.org/package=epiworldR"
+  force = true
+  status = 301
+[[redirects]]
   from = "shiny/measles-survey"
   to = "https://forms.gle/mtysngVirD5WDwh58"
   force = true
