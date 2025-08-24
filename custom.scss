@@ -1,0 +1,65 @@
+/*-- scss:defaults --*/
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+// Variables
+$font-family-base: 'Jost', sans-serif;
+$primary: #008080;
+$secondary: #666;
+
+/*-- scss:rules --*/
+
+// Override default font
+body {
+  font-family: $font-family-base;
+}
+
+// Custom bio section styling
+.bio {
+  max-width: 550px;
+  padding-left: 5%;
+  filter: grayscale(.5);
+  font-family: $font-family-base;
+}
+
+// Social links
+.social-links a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  
+  &:hover {
+    color: #ccc;
+    text-shadow: 0 2px 1px black;
+  }
+}
+
+// Hero section
+.hero-section {
+  font-family: $font-family-base;
+}
+
+// Navigation
+.navbar {
+  .navbar-brand {
+    font-weight: bold;
+  }
+}
+
+// Footer
+.page-footer {
+  filter: grayscale(1);
+  padding: 20px;
+}
+
+// Links
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: $primary;
+  
+  &:hover {
+    color: darken($primary, 10%);
+    text-shadow: 0 1px 1px gray;
+  }

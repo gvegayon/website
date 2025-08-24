@@ -1,0 +1,60 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+::: {.hero-section style="background-image:url('img/george-puc.jpeg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position-x:center;background-position-y:top; min-height: 100vh; position: relative;"}
+
+::: {.hero-content style="position: absolute; top: 0; right: 0; padding: 20px;"}
+![](img/ukfaculty.svg){style="filter:drop-shadow(2px 2px 2px white) opacity(.5);width:40%;min-width:100px;max-width:400px"}
+:::
+
+::: {.bio-section style="position: absolute; top: 200px; left: 0; background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent); padding: 20px; color: white;"}
+
+# George G. Vega Yon {.bio}
+
+## Ph.D., Statistical Computing<br>Complex Systems {.bio style="color: rgba(40, 40, 40, 1);font-weight:500;"}
+
+::: {.social-links .bio style="filter:grayscale(1);"}
+[{{< fa brands linkedin size=3x >}}](https://linkedin.com/in/georgevegayon){target="_blank" title="My linkedin profile"}
+[{{< fa brands orcid size=3x >}}](https://orcid.org/0000-0002-3171-0844){target="_blank" title="My ORCID profile"}
+[{{< fa brands github size=3x >}}](https://github.com/gvegayon/){target="_blank" title="Checkout my code on GitHub"}
+[{{< fa graduation-cap size=3x >}}](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target="_blank" title="My Google Scholar Profile"}
+[{{< fa chalkboard-teacher size=3x >}}](https://github.com/gvegayon/talks/blob/master/README.md){target="_blank" title="My talks"}
+[{{< fa brands twitter size=3x >}}](https://twitter.com/gvegayon){target="_blank" title="My twitter"}
+:::
+
+::: {.bio-text .bio}
+I am an Assistant Professor of Research at the [Division of Epidemiology at the University of Utah](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}. I work on studying [Complex Systems](https://cssociety.org/about-us/what-are-cs){target="_blank"} using [Statistical Computing](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A. [UAI](https://www.uai.cl/){target="_blank"}, 2011), Economics (M.Sc. [Caltech](https://caltech.edu){target="_blank"}, 2015), and Biostatistics (Ph.D. [USC](https://usc.edu){target="_blank"}, 2020).
+
+I obtained my Ph.D. in Biostatistics under the supervision of [Prof. Paul Marjoram](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"} and [Prof. Kayla de la Haye](https://kayladelahaye.net){target="_blank"}, with my dissertation titled "[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](thesis.pdf){target="_blank"}."
+
+I'm available for coding, data science, network science, and data visualization consulting.
+:::
+
+:::
+
+:::
+
+<style>
+.bio {
+  max-width: 550px;
+  padding-left: 5%;
+  filter: grayscale(.5);
+  font-family: 'Jost', sans-serif;
+}
+
+.social-links a {
+  color: white;
+  margin-right: 10px;
+}
+
+.social-links a:hover {
+  color: #ccc;
+}
+
+.hero-section {
+  font-family: 'Jost', sans-serif;
+}
+</style>

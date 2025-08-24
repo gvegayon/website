@@ -1,0 +1,75 @@
+name: Build and Deploy Quarto Website
+
+on:
+  schedule:
+    # Run every Sunday at 2 AM UTC (weekly update)
+    - cron: '0 2 * * 0'
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:4.5.1
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Install system dependencies
+      run: |
+        apt-get update
+        apt-get install -y curl wget git pandoc
+        
+    - name: Install Quarto
+      run: |
+        cd /tmp
+        wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.549/quarto-1.4.549-linux-amd64.tar.gz
+        tar -xzf quarto-1.4.549-linux-amd64.tar.gz
+        mkdir -p /usr/local/bin
+        ln -s /tmp/quarto-1.4.549/bin/quarto /usr/local/bin/quarto
+        quarto --version
+
+    - name: Install R packages
+      run: |
+        Rscript -e "install.packages(c('httr', 'rvest', 'stringr', 'rmarkdown', 'knitr'), repos='https://cran.rstudio.com/')"
+
+    - name: Render Quarto website
+      run: |
+        quarto render
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git config --global --add safe.directory /__w/website/website
+
+    - name: Deploy to GitHub Pages
+      run: |
+        # Check if there are any changes in public directory
+        if [ -d "public" ]; then
+          git add public/
+          if ! git diff --staged --quiet; then
+            git commit -m "Update website - $(date)"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+        else
+          echo "Public directory not found"
+          exit 1
+        fi
+
+    - name: Upload site as artifact (on failure)
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: built-site
+        path: public/
+        retention-days: 7

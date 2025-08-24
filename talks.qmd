@@ -1,0 +1,63 @@
+---
+title: "Talks"
+---
+
+```{r}
+#| echo: false
+#| output: asis
+
+# Function to fetch and parse README from talks repository
+fetch_talks <- function() {
+  library(httr)
+  library(stringr)
+  
+  # Fetch README.md from talks repository
+  url <- "https://raw.githubusercontent.com/gvegayon/talks/master/README.md"
+  
+  tryCatch({
+    response <- GET(url)
+    
+    if (status_code(response) == 200) {
+      content <- content(response, "text", encoding = "UTF-8")
+      
+      # Remove the title line and any initial setup content
+      # Find the start of the talks list
+      lines <- strsplit(content, "\n")[[1]]
+      
+      # Find where the actual talks list starts (usually after "# List of talks")
+      start_idx <- which(grepl("^# List of talks", lines, ignore.case = TRUE))
+      if (length(start_idx) == 0) {
+        start_idx <- which(grepl("^##|^\\*|^-", lines))[1]
+      } else {
+        start_idx <- start_idx[1] + 1
+      }
+      
+      if (!is.na(start_idx) && start_idx <= length(lines)) {
+        talks_content <- paste(lines[start_idx:length(lines)], collapse = "\n")
+        cat(talks_content)
+      } else {
+        cat("Could not parse talks content properly.\n")
+      }
+      
+    } else {
+      cat("Error fetching talks: HTTP", status_code(response), "\n")
+      cat("Please visit [my talks repository](https://github.com/gvegayon/talks) for the latest information.\n")
+    }
+  }, error = function(e) {
+    cat("Error fetching talks data:", e$message, "\n")
+    cat("Please visit [my talks repository](https://github.com/gvegayon/talks) for the latest information.\n")
+  })
+}
+
+# Execute the function
+fetch_talks()
+```
+
+## Fallback Information
+
+If the automatic fetch above didn't work, you can find my complete list of talks and presentations at:
+
+- **GitHub Repository**: [gvegayon/talks](https://github.com/gvegayon/talks)
+- **Direct Link**: [README.md](https://github.com/gvegayon/talks/blob/master/README.md)
+
+This page automatically updates whenever I add new talks to my repository.

@@ -1,0 +1,27 @@
+# Quarto build files
+/.quarto/
+/_site/
+*_cache/
+*_files/
+
+# R files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Node modules (if using)
+node_modules/
+
+# Build artifacts
+*.log
