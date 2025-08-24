@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>George G. Vega Yon -</title>
+<title>George G. Vega Yon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -143,48 +143,45 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="hero-section" style="background-image:url('img/george-puc.jpeg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position-x:center;background-position-y:top; min-height: 100vh; position: relative;">
-<div class="hero-content" style="position: absolute; top: 0; right: 0; padding: 20px;">
-<p><img src="img/ukfaculty.svg" class="img-fluid" style="filter:drop-shadow(2px 2px 2px white) opacity(.5);width:40%;min-width:100px;max-width:400px"></p>
-</div>
-<section id="george-g.-vega-yon" class="level1 bio bio-section" style="position: absolute; top: 200px; left: 0; background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent); padding: 20px; color: white;">
-<h1 class="bio">George G. Vega Yon</h1>
-<section id="ph.d.-statistical-computing-complex-systems" class="level2 bio" style="color: rgba(40, 40, 40, 1);font-weight:500;">
-<h2 class="bio anchored" style="color: rgba(40, 40, 40, 1);font-weight:500;" data-anchor-id="ph.d.-statistical-computing-complex-systems">Ph.D., Statistical Computing<br>Complex Systems</h2>
-<div class="social-links bio" style="filter:grayscale(1);">
-<p><a href="https://linkedin.com/in/georgevegayon" target="_blank" title="My linkedin profile"><i class="fab fa-linkedin fa-3x"></i></a> <a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="My ORCID profile"><i class="fab fa-orcid fa-3x"></i></a> <a href="https://github.com/gvegayon/" target="_blank" title="Checkout my code on GitHub"><i class="fab fa-github fa-3x"></i></a> <a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&amp;hl=en" target="_blank" title="My Google Scholar Profile"><i class="fas fa-graduation-cap fa-3x"></i></a> <a href="https://github.com/gvegayon/talks/blob/master/README.md" target="_blank" title="My talks"><i class="fas fa-chalkboard-teacher fa-3x"></i></a> <a href="https://twitter.com/gvegayon" target="_blank" title="My twitter"><i class="fab fa-twitter fa-3x"></i></a></p>
-</div>
-<div class="bio-text bio">
-<p>I am an Assistant Professor of Research at the <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>. I work on studying <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Complex Systems</a> using <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Statistical Computing</a>. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A.&nbsp;<a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and Biostatistics (Ph.D.&nbsp;<a href="https://usc.edu" target="_blank">USC</a>, 2020).</p>
-<p>I obtained my Ph.D.&nbsp;in Biostatistics under the supervision of <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&amp;hl=en" target="_blank">Prof.&nbsp;Paul Marjoram</a> and <a href="https://kayladelahaye.net" target="_blank">Prof.&nbsp;Kayla de la Haye</a>, with my dissertation titled “<a href="thesis.pdf" target="_blank">Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems</a>.”</p>
-<p>I’m available for coding, data science, network science, and data visualization consulting.</p>
-</div>
+<section id="george-g.-vega-yon---quarto-website" class="level1">
+<h1>George G. Vega Yon - Quarto Website</h1>
+<p>This is the source code for my personal website built with Quarto.</p>
+<section id="structure" class="level2">
+<h2 class="anchored" data-anchor-id="structure">Structure</h2>
+<ul>
+<li><code>index.qmd</code> - Homepage with bio and social links</li>
+<li><code>talks.qmd</code> - Automatically fetches talks from <a href="https://github.com/gvegayon/talks">gvegayon/talks</a> repository</li>
+<li><code>publications.qmd</code> - Links to Google Scholar profile and research overview</li>
+<li><code>software.qmd</code> - Automatically fetches software list from <a href="https://github.com/gvegayon/resume/blob/master/software.bib">gvegayon/resume</a></li>
+<li><code>_quarto.yml</code> - Main configuration file</li>
+<li><code>styles.css</code> / <code>custom.scss</code> - Custom styling</li>
+</ul>
+</section>
+<section id="automatic-updates" class="level2">
+<h2 class="anchored" data-anchor-id="automatic-updates">Automatic Updates</h2>
+<p>The website is configured to automatically update weekly via GitHub Actions, fetching the latest: - Talks from the talks repository - Software from the resume repository<br>
+- Publications metadata</p>
+</section>
+<section id="building-locally" class="level2">
+<h2 class="anchored" data-anchor-id="building-locally">Building Locally</h2>
+<p>To build the website locally:</p>
+<ol type="1">
+<li>Install <a href="https://quarto.org/docs/get-started/">Quarto</a></li>
+<li>Install required R packages: <code>httr</code>, <code>rvest</code>, <code>stringr</code>, <code>rmarkdown</code>, <code>knitr</code></li>
+<li>Run <code>quarto render</code></li>
+</ol>
+</section>
+<section id="deployment" class="level2">
+<h2 class="anchored" data-anchor-id="deployment">Deployment</h2>
+<p>The website is automatically built and deployed using GitHub Actions with the <code>rocker/tidyverse:4.5.1</code> container, which includes Quarto and all necessary R packages.</p>
+</section>
+<section id="original-website" class="level2">
+<h2 class="anchored" data-anchor-id="original-website">Original Website</h2>
+<p>The original HTML website is preserved in the <code>public</code> directory and serves as the baseline for the new Quarto version.</p>
+
+
 </section>
 </section>
-</div>
-<style>
-.bio {
-  max-width: 550px;
-  padding-left: 5%;
-  filter: grayscale(.5);
-  font-family: 'Jost', sans-serif;
-}
-
-.social-links a {
-  color: white;
-  margin-right: 10px;
-}
-
-.social-links a:hover {
-  color: #ccc;
-}
-
-.hero-section {
-  font-family: 'Jost', sans-serif;
-}
-</style>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

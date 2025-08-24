@@ -17,12 +17,12 @@ toc: false
 ## Ph.D., Statistical Computing<br>Complex Systems {.bio style="color: rgba(40, 40, 40, 1);font-weight:500;"}
 
 ::: {.social-links .bio style="filter:grayscale(1);"}
-[{{< fa brands linkedin size=3x >}}](https://linkedin.com/in/georgevegayon){target="_blank" title="My linkedin profile"}
-[{{< fa brands orcid size=3x >}}](https://orcid.org/0000-0002-3171-0844){target="_blank" title="My ORCID profile"}
-[{{< fa brands github size=3x >}}](https://github.com/gvegayon/){target="_blank" title="Checkout my code on GitHub"}
-[{{< fa graduation-cap size=3x >}}](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target="_blank" title="My Google Scholar Profile"}
-[{{< fa chalkboard-teacher size=3x >}}](https://github.com/gvegayon/talks/blob/master/README.md){target="_blank" title="My talks"}
-[{{< fa brands twitter size=3x >}}](https://twitter.com/gvegayon){target="_blank" title="My twitter"}
+[<i class="fab fa-linkedin fa-3x"></i>](https://linkedin.com/in/georgevegayon){target="_blank" title="My linkedin profile"}
+[<i class="fab fa-orcid fa-3x"></i>](https://orcid.org/0000-0002-3171-0844){target="_blank" title="My ORCID profile"}
+[<i class="fab fa-github fa-3x"></i>](https://github.com/gvegayon/){target="_blank" title="Checkout my code on GitHub"}
+[<i class="fas fa-graduation-cap fa-3x"></i>](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target="_blank" title="My Google Scholar Profile"}
+[<i class="fas fa-chalkboard-teacher fa-3x"></i>](https://github.com/gvegayon/talks/blob/master/README.md){target="_blank" title="My talks"}
+[<i class="fab fa-twitter fa-3x"></i>](https://twitter.com/gvegayon){target="_blank" title="My twitter"}
 :::
 
 ::: {.bio-text .bio}

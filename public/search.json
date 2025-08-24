@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "George G. Vega Yon",
+    "section": "",
+    "text": "I am an Assistant Professor of Research at the Division of Epidemiology at the University of Utah. I work on studying Complex Systems using Statistical Computing. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A. UAI, 2011), Economics (M.Sc. Caltech, 2015), and Biostatistics (Ph.D. USC, 2020).\nI obtained my Ph.D. in Biostatistics under the supervision of Prof. Paul Marjoram and Prof. Kayla de la Haye, with my dissertation titled “Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems.”\nI’m available for coding, data science, network science, and data visualization consulting."
+  },
+  {
+    "objectID": "index.html#ph.d.-statistical-computing-complex-systems",
+    "href": "index.html#ph.d.-statistical-computing-complex-systems",
+    "title": "George G. Vega Yon",
+    "section": "",
+    "text": "I am an Assistant Professor of Research at the Division of Epidemiology at the University of Utah. I work on studying Complex Systems using Statistical Computing. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A. UAI, 2011), Economics (M.Sc. Caltech, 2015), and Biostatistics (Ph.D. USC, 2020).\nI obtained my Ph.D. in Biostatistics under the supervision of Prof. Paul Marjoram and Prof. Kayla de la Haye, with my dissertation titled “Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems.”\nI’m available for coding, data science, network science, and data visualization consulting."
+  },
+  {
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository.\nNote: This page will automatically fetch and display the latest software from my resume repository when the R packages are available in the build environment."
+  },
+  {
+    "objectID": "software.html#r-packages-and-software",
+    "href": "software.html#r-packages-and-software",
+    "title": "Software",
+    "section": "",
+    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository.\nNote: This page will automatically fetch and display the latest software from my resume repository when the R packages are available in the build environment."
+  },
+  {
+    "objectID": "software.html#development-philosophy",
+    "href": "software.html#development-philosophy",
+    "title": "Software",
+    "section": "Development Philosophy",
+    "text": "Development Philosophy\nI believe in developing software that is:\n\nOpen Source: All my packages are freely available under permissive licenses\nWell Documented: Comprehensive documentation with examples and tutorials\n\nTested: Rigorous testing to ensure reliability\nPerformant: Optimized for speed, especially for large-scale computations\nUser-Friendly: Intuitive APIs that follow R conventions"
+  },
+  {
+    "objectID": "software.html#contributions",
+    "href": "software.html#contributions",
+    "title": "Software",
+    "section": "Contributions",
+    "text": "Contributions\nI actively contribute to the R ecosystem and have contributed to various open-source projects. My packages are available on:\n\nCRAN (The Comprehensive R Archive Network)\nGitHub (Development versions and additional tools)"
+  },
+  {
+    "objectID": "software.html#support-and-issues",
+    "href": "software.html#support-and-issues",
+    "title": "Software",
+    "section": "Support and Issues",
+    "text": "Support and Issues\nIf you encounter issues with any of my software or have feature requests, please:\n\nCheck the package documentation and examples\nSearch existing issues on the GitHub repository\nOpen a new issue with a reproducible example\nFor general questions, feel free to email me"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile.\n\n\n\nStatistical Computing\nSocial Network Analysis\nBiostatistics\nHigh-Performance Computing\nData Visualization\nComplex Systems\n\n\n\n\nMy research focuses on developing statistical methods and computational tools for analyzing complex systems, particularly in the areas of:\n\nNetwork epidemiology: Developing models for disease spread in networks\nSocial network analysis: Creating tools for analyzing social structures\nHigh-performance computing: Optimizing statistical algorithms for parallel computing\nR package development: Contributing to the R ecosystem with specialized tools\n\n\n\n\nTitle: Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems\nInstitution: University of Southern California (USC)\nYear: 2020\nAdvisors: Prof. Paul Marjoram and Prof. Kayla de la Haye\n\nThis page provides an overview of my research areas. For detailed publication lists, citation metrics, and full-text access, please visit my Google Scholar profile."
+  },
+  {
+    "objectID": "publications.html#my-publications",
+    "href": "publications.html#my-publications",
+    "title": "Publications",
+    "section": "",
+    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile.\n\n\n\nStatistical Computing\nSocial Network Analysis\nBiostatistics\nHigh-Performance Computing\nData Visualization\nComplex Systems\n\n\n\n\nMy research focuses on developing statistical methods and computational tools for analyzing complex systems, particularly in the areas of:\n\nNetwork epidemiology: Developing models for disease spread in networks\nSocial network analysis: Creating tools for analyzing social structures\nHigh-performance computing: Optimizing statistical algorithms for parallel computing\nR package development: Contributing to the R ecosystem with specialized tools\n\n\n\n\nTitle: Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems\nInstitution: University of Southern California (USC)\nYear: 2020\nAdvisors: Prof. Paul Marjoram and Prof. Kayla de la Haye\n\nThis page provides an overview of my research areas. For detailed publication lists, citation metrics, and full-text access, please visit my Google Scholar profile."
+  },
+  {
+    "objectID": "publications.html#key-software-contributions",
+    "href": "publications.html#key-software-contributions",
+    "title": "Publications",
+    "section": "Key Software Contributions",
+    "text": "Key Software Contributions\nMany of my publications are accompanied by open-source software implementations. You can find these in the Software section or on my GitHub profile."
+  },
+  {
+    "objectID": "publications.html#collaboration",
+    "href": "publications.html#collaboration",
+    "title": "Publications",
+    "section": "Collaboration",
+    "text": "Collaboration\nI’m always interested in collaborative research opportunities. If you’re working on problems related to network analysis, statistical computing, or complex systems, feel free to reach out."
+  },
+  {
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "This page automatically fetches the latest talks from my talks repository.\n\n\nFor the most up-to-date list of my talks and presentations, please visit:\n\nGitHub Repository: gvegayon/talks\nDirect Link: README.md\n\n\n\n\nMy talks typically cover topics in:\n\nStatistical Computing: High-performance computing methods for statistical analysis\nNetwork Analysis: Social network analysis methods and applications\nAgent-Based Modeling: Epidemiological modeling using ABMs\nR Package Development: Creating tools for the R ecosystem\nBiostatistics: Statistical methods in health and biological research\n\n\n\n\nIf you’re interested in having me speak at your event, please feel free to contact me.\nNote: This page will automatically fetch and display talks from my repository when the R packages are available in the build environment."
+  },
+  {
+    "objectID": "talks.html#my-talks-and-presentations",
+    "href": "talks.html#my-talks-and-presentations",
+    "title": "Talks",
+    "section": "",
+    "text": "This page automatically fetches the latest talks from my talks repository.\n\n\nFor the most up-to-date list of my talks and presentations, please visit:\n\nGitHub Repository: gvegayon/talks\nDirect Link: README.md\n\n\n\n\nMy talks typically cover topics in:\n\nStatistical Computing: High-performance computing methods for statistical analysis\nNetwork Analysis: Social network analysis methods and applications\nAgent-Based Modeling: Epidemiological modeling using ABMs\nR Package Development: Creating tools for the R ecosystem\nBiostatistics: Statistical methods in health and biological research\n\n\n\n\nIf you’re interested in having me speak at your event, please feel free to contact me.\nNote: This page will automatically fetch and display talks from my repository when the R packages are available in the build environment."
+  },
+  {
+    "objectID": "README-quarto.html",
+    "href": "README-quarto.html",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "This is the source code for my personal website built with Quarto.\n\n\n\nindex.qmd - Homepage with bio and social links\ntalks.qmd - Automatically fetches talks from gvegayon/talks repository\npublications.qmd - Links to Google Scholar profile and research overview\nsoftware.qmd - Automatically fetches software list from gvegayon/resume\n_quarto.yml - Main configuration file\nstyles.css / custom.scss - Custom styling\n\n\n\n\nThe website is configured to automatically update weekly via GitHub Actions, fetching the latest: - Talks from the talks repository - Software from the resume repository\n- Publications metadata\n\n\n\nTo build the website locally:\n\nInstall Quarto\nInstall required R packages: httr, rvest, stringr, rmarkdown, knitr\nRun quarto render\n\n\n\n\nThe website is automatically built and deployed using GitHub Actions with the rocker/tidyverse:4.5.1 container, which includes Quarto and all necessary R packages.\n\n\n\nThe original HTML website is preserved in the public directory and serves as the baseline for the new Quarto version."
+  },
+  {
+    "objectID": "README-quarto.html#structure",
+    "href": "README-quarto.html#structure",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "index.qmd - Homepage with bio and social links\ntalks.qmd - Automatically fetches talks from gvegayon/talks repository\npublications.qmd - Links to Google Scholar profile and research overview\nsoftware.qmd - Automatically fetches software list from gvegayon/resume\n_quarto.yml - Main configuration file\nstyles.css / custom.scss - Custom styling"
+  },
+  {
+    "objectID": "README-quarto.html#automatic-updates",
+    "href": "README-quarto.html#automatic-updates",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "The website is configured to automatically update weekly via GitHub Actions, fetching the latest: - Talks from the talks repository - Software from the resume repository\n- Publications metadata"
+  },
+  {
+    "objectID": "README-quarto.html#building-locally",
+    "href": "README-quarto.html#building-locally",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "To build the website locally:\n\nInstall Quarto\nInstall required R packages: httr, rvest, stringr, rmarkdown, knitr\nRun quarto render"
+  },
+  {
+    "objectID": "README-quarto.html#deployment",
+    "href": "README-quarto.html#deployment",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "The website is automatically built and deployed using GitHub Actions with the rocker/tidyverse:4.5.1 container, which includes Quarto and all necessary R packages."
+  },
+  {
+    "objectID": "README-quarto.html#original-website",
+    "href": "README-quarto.html#original-website",
+    "title": "George G. Vega Yon - Quarto Website",
+    "section": "",
+    "text": "The original HTML website is preserved in the public directory and serves as the baseline for the new Quarto version."
+  }
+]

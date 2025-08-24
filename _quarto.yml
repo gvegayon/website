@@ -33,12 +33,11 @@ website:
 
 format:
   html:
-    theme: 
-      - default
-      - custom.scss
+    theme: default
     css: styles.css
     toc: false
     page-layout: full
+    include-in-header: fontawesome.html
 
 execute:
   freeze: auto

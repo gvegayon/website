@@ -1,0 +1,78 @@
+/* Custom styles based on the original website */
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+.bio {
+  max-width: 550px;
+  padding-left: 5%;
+  filter: grayscale(.5);
+  font-family: 'Jost', sans-serif;
+}
+
+.social-links a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ccc;
+  text-shadow: 0 2px 1px black;
+}
+
+.hero-section {
+  font-family: 'Jost', sans-serif;
+}
+
+.cryptedmail:after {
+  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+}
+
+/* Navbar customization */
+.navbar-brand {
+  font-weight: bold;
+}
+
+/* Footer styling */
+.page-footer {
+  filter: grayscale(1);
+  padding: 20px;
+}
+
+/* General link styling */
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: Teal;
+}
+
+a:hover {
+  color: #008080;
+  text-shadow: 0 1px 1px gray;
+}
+
+/* Publication and software lists */
+.publication-item, .software-item {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.publication-item:last-child, .software-item:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .bio {
+    padding-left: 2%;
+    max-width: 90%;
+  }
+  
+  .social-links {
+    text-align: center;
+  }
+}

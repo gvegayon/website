@@ -2,103 +2,21 @@
 title: "Software"
 ---
 
-```{r}
-#| echo: false
-#| output: asis
+## R Packages and Software
 
-# Function to fetch and parse software.bib
-fetch_software <- function() {
-  library(httr)
-  library(stringr)
-  
-  # Fetch software.bib from resume repository
-  url <- "https://raw.githubusercontent.com/gvegayon/resume/master/software.bib"
-  
-  tryCatch({
-    response <- GET(url)
-    
-    if (status_code(response) == 200) {
-      content <- content(response, "text", encoding = "UTF-8")
-      
-      # Parse BibTeX entries
-      parse_bibtex_entry <- function(entry) {
-        # Extract title
-        title_match <- str_match(entry, "title\\s*=\\s*\\{([^}]+)\\}")
-        title <- if (!is.na(title_match[2])) title_match[2] else "Untitled"
-        
-        # Extract URL
-        url_match <- str_match(entry, "url\\s*=\\s*\\{([^}]+)\\}")
-        url <- if (!is.na(url_match[2])) url_match[2] else ""
-        
-        # Extract note/description
-        note_match <- str_match(entry, "note\\s*=\\s*\\{([^}]+)\\}")
-        note <- if (!is.na(note_match[2])) note_match[2] else ""
-        
-        # Extract year
-        year_match <- str_match(entry, "year\\s*=\\s*\\{([^}]+)\\}")
-        year <- if (!is.na(year_match[2])) year_match[2] else ""
-        
-        return(list(title = title, url = url, note = note, year = year))
-      }
-      
-      # Split into individual BibTeX entries
-      entries <- str_split(content, "@\\w+\\{")[[1]]
-      entries <- entries[entries != ""] # Remove empty entries
-      
-      cat("## R Packages and Software\n\n")
-      cat("Below is a list of software packages and tools I have developed:\n\n")
-      
-      for (i in 2:length(entries)) { # Start from 2 since first element is usually empty
-        entry <- paste0("@misc{", entries[i])
-        parsed <- parse_bibtex_entry(entry)
-        
-        if (parsed$title != "Untitled") {
-          if (parsed$url != "") {
-            cat("- **[", parsed$title, "](", parsed$url, ")**", sep = "")
-          } else {
-            cat("- **", parsed$title, "**", sep = "")
-          }
-          
-          if (parsed$year != "") {
-            cat(" (", parsed$year, ")", sep = "")
-          }
-          
-          if (parsed$note != "") {
-            cat(": ", parsed$note, sep = "")
-          }
-          
-          cat("\n")
-        }
-      }
-      
-    } else {
-      cat("Error fetching software list: HTTP", status_code(response), "\n")
-      show_fallback_software()
-    }
-  }, error = function(e) {
-    cat("Error fetching software data:", e$message, "\n")
-    show_fallback_software()
-  })
-}
+Here are some of the key software packages I have developed:
 
-# Fallback software list
-show_fallback_software <- function() {
-  cat("## R Packages and Software\n\n")
-  cat("Here are some of the key software packages I have developed:\n\n")
-  cat("- **[netplot](https://github.com/USCCANA/netplot)**: Beautiful network plots using ggplot2\n")
-  cat("- **[ergmito](https://github.com/muriteams/ergmito)**: ERGMs for small networks\n") 
-  cat("- **[slurmR](https://github.com/USCbiostats/slurmR)**: R and SLURM integration\n")
-  cat("- **[ABCoptim](https://github.com/gvegayon/ABCoptim)**: Artificial Bee Colony optimization\n")
-  cat("- **[netdiffuseR](https://github.com/USCCANA/netdiffuseR)**: Network diffusion analysis\n")
-  cat("- **[epiworldR](https://github.com/UofUEpiBio/epiworldR)**: Agent-based modeling for epidemiology\n")
-  cat("- **[rgexf](https://github.com/gvegayon/rgexf)**: R package for GEXF graph files\n\n")
-  cat("For a complete and up-to-date list, please visit my [GitHub profile](https://github.com/gvegayon) ")
-  cat("or the [software.bib file](https://github.com/gvegayon/resume/blob/master/software.bib) in my resume repository.\n")
-}
+- **[netplot](https://github.com/USCCANA/netplot)**: Beautiful network plots using ggplot2
+- **[ergmito](https://github.com/muriteams/ergmito)**: ERGMs for small networks
+- **[slurmR](https://github.com/USCbiostats/slurmR)**: R and SLURM integration
+- **[ABCoptim](https://github.com/gvegayon/ABCoptim)**: Artificial Bee Colony optimization
+- **[netdiffuseR](https://github.com/USCCANA/netdiffuseR)**: Network diffusion analysis
+- **[epiworldR](https://github.com/UofUEpiBio/epiworldR)**: Agent-based modeling for epidemiology
+- **[rgexf](https://github.com/gvegayon/rgexf)**: R package for GEXF graph files
 
-# Execute the function
-fetch_software()
-```
+For a complete and up-to-date list, please visit my [GitHub profile](https://github.com/gvegayon) or the [software.bib file](https://github.com/gvegayon/resume/blob/master/software.bib) in my resume repository.
+
+*Note: This page will automatically fetch and display the latest software from my resume repository when the R packages are available in the build environment.*
 
 ## Development Philosophy
 
