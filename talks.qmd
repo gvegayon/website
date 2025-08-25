@@ -2,29 +2,7 @@
 title: "Talks"
 ---
 
-## My Talks and Presentations
-
-This page automatically fetches the latest talks from my [talks repository](https://github.com/gvegayon/talks).
-
-### Recent Presentations
-
 For the most up-to-date list of my talks and presentations, please visit:
 
 - **GitHub Repository**: [gvegayon/talks](https://github.com/gvegayon/talks)
 - **Direct Link**: [README.md](https://github.com/gvegayon/talks/blob/master/README.md)
-
-### Research Areas Covered
-
-My talks typically cover topics in:
-
-- **Statistical Computing**: High-performance computing methods for statistical analysis
-- **Network Analysis**: Social network analysis methods and applications
-- **Agent-Based Modeling**: Epidemiological modeling using ABMs
-- **R Package Development**: Creating tools for the R ecosystem
-- **Biostatistics**: Statistical methods in health and biological research
-
-### Contact for Speaking Engagements
-
-If you're interested in having me speak at your event, please feel free to [contact me](mailto:g.vegayon@gmail.com).
-
-*Note: This page will automatically fetch and display talks from my repository when the R packages are available in the build environment.*

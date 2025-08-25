@@ -1,75 +1,5 @@
 [
   {
-    "objectID": "software-dynamic.html",
-    "href": "software-dynamic.html",
-    "title": "Software",
-    "section": "",
-    "text": "Below is a list of software packages and tools I have developed:\n\nrgexf: Build, Import and Export GEXF Graph Files (2020): R package version 0.16.0\nABCoptim: Implementation of Artificial Bee Colony (ABC) Optimization (2017): R package version 0.15.0\n{{netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks (2020): R package version 1.22.0\nergmito: Exponential Random Graph Models for Small Networks (2020): R package version 0.3-0\nslurmR: A Lightweight Wrapper for ‘Slurm’ (2020): R package version 0.4-1\nfmcmc: A friendly MCMC framework (2020): R package version 0.3-0\nparallel: Stata Module for Parallel Computing (2019): Stata Module version 1.20.0\naphylo: Statistical Inference of Annotated Phylogenetic Trees (2022): R package version 0.2-1\nnetplot: Beautiful graph drawing (2021): R package version 0.1-1\nbarry: your to-go motif accountant (2020): C++ library version 0.0-1\npruner: Implementing the Felsenstein’s Tree Pruning algorithm (2020): C++ library version 0.0-1\n{twitterreport: Out-of-the-box analysis and reporting tools for twitter: R package version 0.16\n{epiworld (2022): C++ library version 0.0-1\ndefm: Estimation and simulation of Multi-binary response models (2023): R package version 0.1.0\nepiworldR: Fast Agent-Based Epi Models (2023): R package version 0.0-2\nepiworldRShiny: Shiny interface for epiworldR (2023): R package version 0.1-0\n{PyRenew (2024): Python package version 0.1.0\nwwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators (2024): R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/"
-  },
-  {
-    "objectID": "software-dynamic.html#r-packages-and-software",
-    "href": "software-dynamic.html#r-packages-and-software",
-    "title": "Software",
-    "section": "",
-    "text": "Below is a list of software packages and tools I have developed:\n\nrgexf: Build, Import and Export GEXF Graph Files (2020): R package version 0.16.0\nABCoptim: Implementation of Artificial Bee Colony (ABC) Optimization (2017): R package version 0.15.0\n{{netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks (2020): R package version 1.22.0\nergmito: Exponential Random Graph Models for Small Networks (2020): R package version 0.3-0\nslurmR: A Lightweight Wrapper for ‘Slurm’ (2020): R package version 0.4-1\nfmcmc: A friendly MCMC framework (2020): R package version 0.3-0\nparallel: Stata Module for Parallel Computing (2019): Stata Module version 1.20.0\naphylo: Statistical Inference of Annotated Phylogenetic Trees (2022): R package version 0.2-1\nnetplot: Beautiful graph drawing (2021): R package version 0.1-1\nbarry: your to-go motif accountant (2020): C++ library version 0.0-1\npruner: Implementing the Felsenstein’s Tree Pruning algorithm (2020): C++ library version 0.0-1\n{twitterreport: Out-of-the-box analysis and reporting tools for twitter: R package version 0.16\n{epiworld (2022): C++ library version 0.0-1\ndefm: Estimation and simulation of Multi-binary response models (2023): R package version 0.1.0\nepiworldR: Fast Agent-Based Epi Models (2023): R package version 0.0-2\nepiworldRShiny: Shiny interface for epiworldR (2023): R package version 0.1-0\n{PyRenew (2024): Python package version 0.1.0\nwwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators (2024): R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/"
-  },
-  {
-    "objectID": "software-dynamic.html#development-philosophy",
-    "href": "software-dynamic.html#development-philosophy",
-    "title": "Software",
-    "section": "Development Philosophy",
-    "text": "Development Philosophy\nI believe in developing software that is:\n\nOpen Source: All my packages are freely available under permissive licenses\nWell Documented: Comprehensive documentation with examples and tutorials\n\nTested: Rigorous testing to ensure reliability\nPerformant: Optimized for speed, especially for large-scale computations\nUser-Friendly: Intuitive APIs that follow R conventions"
-  },
-  {
-    "objectID": "software-dynamic.html#contributions",
-    "href": "software-dynamic.html#contributions",
-    "title": "Software",
-    "section": "Contributions",
-    "text": "Contributions\nI actively contribute to the R ecosystem and have contributed to various open-source projects. My packages are available on:\n\nCRAN (The Comprehensive R Archive Network)\nGitHub (Development versions and additional tools)"
-  },
-  {
-    "objectID": "software-dynamic.html#support-and-issues",
-    "href": "software-dynamic.html#support-and-issues",
-    "title": "Software",
-    "section": "Support and Issues",
-    "text": "Support and Issues\nIf you encounter issues with any of my software or have feature requests, please:\n\nCheck the package documentation and examples\nSearch existing issues on the GitHub repository\nOpen a new issue with a reproducible example\nFor general questions, feel free to email me"
-  },
-  {
-    "objectID": "software.html",
-    "href": "software.html",
-    "title": "Software",
-    "section": "",
-    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository.\nNote: This page will automatically fetch and display the latest software from my resume repository when the R packages are available in the build environment."
-  },
-  {
-    "objectID": "software.html#r-packages-and-software",
-    "href": "software.html#r-packages-and-software",
-    "title": "Software",
-    "section": "",
-    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository.\nNote: This page will automatically fetch and display the latest software from my resume repository when the R packages are available in the build environment."
-  },
-  {
-    "objectID": "software.html#development-philosophy",
-    "href": "software.html#development-philosophy",
-    "title": "Software",
-    "section": "Development Philosophy",
-    "text": "Development Philosophy\nI believe in developing software that is:\n\nOpen Source: All my packages are freely available under permissive licenses\nWell Documented: Comprehensive documentation with examples and tutorials\n\nTested: Rigorous testing to ensure reliability\nPerformant: Optimized for speed, especially for large-scale computations\nUser-Friendly: Intuitive APIs that follow R conventions"
-  },
-  {
-    "objectID": "software.html#contributions",
-    "href": "software.html#contributions",
-    "title": "Software",
-    "section": "Contributions",
-    "text": "Contributions\nI actively contribute to the R ecosystem and have contributed to various open-source projects. My packages are available on:\n\nCRAN (The Comprehensive R Archive Network)\nGitHub (Development versions and additional tools)"
-  },
-  {
-    "objectID": "software.html#support-and-issues",
-    "href": "software.html#support-and-issues",
-    "title": "Software",
-    "section": "Support and Issues",
-    "text": "Support and Issues\nIf you encounter issues with any of my software or have feature requests, please:\n\nCheck the package documentation and examples\nSearch existing issues on the GitHub repository\nOpen a new issue with a reproducible example\nFor general questions, feel free to email me"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "George G. Vega Yon",
@@ -84,130 +14,39 @@
     "text": "I am an Assistant Professor of Research at the Division of Epidemiology at the University of Utah. I work on studying Complex Systems using Statistical Computing. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis. My training is in Public Policy (M.A. UAI, 2011), Economics (M.Sc. Caltech, 2015), and Biostatistics (Ph.D. USC, 2020).\nI obtained my Ph.D. in Biostatistics under the supervision of Prof. Paul Marjoram and Prof. Kayla de la Haye, with my dissertation titled “Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems.”\nI’m available for coding, data science, network science, and data visualization consulting."
   },
   {
-    "objectID": "talks-dynamic.html",
-    "href": "talks-dynamic.html",
-    "title": "Talks",
+    "objectID": "software.html",
+    "href": "software.html",
+    "title": "Software",
     "section": "",
-    "text": "A continuous work in progress, you can find more information about my work here."
+    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository."
   },
   {
-    "objectID": "talks-dynamic.html#section",
-    "href": "talks-dynamic.html#section",
-    "title": "Talks",
-    "section": "2025",
-    "text": "2025\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\n“Expanding the ERGM Framework: Modeling Interrelated Health Outcomes with Jointly-Distributed Binary Data” (June 26, 2025) Sunbelt Conference, 2025 \nconference talk\n\n\nUnderstanding Diffusion with netdiffuseR (June 24, 2025) Sunbelt Conference, 2025 \nconference workshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-1",
-    "href": "talks-dynamic.html#section-1",
-    "title": "Talks",
-    "section": "2024",
-    "text": "2024\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nAutomatic Calibration of Agent-Based Models using Deep Neural Networks (November 1, 2024) DELPHI Symposium 2024 \nconference poster\n\n\nHow does network structure in Agent-Based Models affect epidemiological parameters? A large (October 27, 2024) CSS 2024 Santa Fe \nconference poster\n\n\n“Machine Learning Sandwich for Agent-Based Models: Automatic calibration and post-processing adjustment for ABMs” (September 4, 2024) Methods talks \ninvited talk\n\n\n“A Brief Introduction to High-Performance Computing: With Applications in R” (September 4, 2024) Methods talks \ninvited talk\n\n\nepiworld: A fast multi-language library for epi ABMs (September 3, 2024) Conference on Complex Systems, 2024 \nconference talk\n\n\n“Exponential Random Graph Models: An Introduction” (July 4, 2024) Summer Institute in Computational Social Science \ninvited talk\n\n\n“‘La Muerte del Aprendizaje de Máquina’ o ‘cómo la teoría puede mejorar a las máquinas’” (January 15, 2024) Escuela de Verano de Sistemas Complejos \ninvited talk\n\n\nStatistical Inference in Network Science: A short course (January 15, 2024) Escuela de Verano de Sistemas Complejos \nworkshop\n\n\nIntroduction to Exponential-Family Random Graph Models (January 11, 2024) 1st Chilean Summer School about Social Network Research \nworkshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-2",
-    "href": "talks-dynamic.html#section-2",
-    "title": "Talks",
-    "section": "2023",
-    "text": "2023\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nWhat is a Scientist? (November 21, 2023) Career Day 2023\ninvited talk\n\n\nPower and multicollinearity in small networks: A discussion of “Tale of Two Datasets: Representativeness and Generalisability of Inference for Samples of Networks” by Krivitsky, Coletti & Hens (August 9, 2023) Joint Statistical Meetings, 2023 \ninvited talk\n\n\nHow Network Structure Affects Epidemiological Indicators in ABMs - A Large Simulation Study Featuring Artificial and Real-world Networks (July 1, 2023) INSNA Sunbelt 2023 \nconference talk\n\n\nVisualization tools for network science: Building beautiful graphs with netplot (June 30, 2023) INSNA Sunbelt 2023 \nconference poster\n\n\nSimulating Complex Agent-Based Model with epiworldR: A fast and flexible ABM framework (June 28, 2023) INSNA Sunbelt 2023 \nconference workshop\n\n\nMechanistic Machine Learning (May 19, 2023) MInD2.0 Visit Harvard \ntalk\n\n\nNetwork visualization (in R) with “netplot” and motif counting (in C++) with “barry” (April 7, 2023) SCI Seminar \ninvited talk\n\n\nPrediction of Gene Functions by Leveraging Biological Insights with Mechanistic Machine Learning (January 11, 2023) University of Utah Data Science Seminar  \ninvited talk"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-3",
-    "href": "talks-dynamic.html#section-3",
-    "title": "Talks",
-    "section": "2022",
-    "text": "2022\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nThe importance of interaction networks in long-term care facilities to reduce the equilibrium prevalence of infectious pathogens (July 15, 2022) Sunbelt 2022\nconference talk\n\n\nImaginary Network Motifs: Structural Patterns of False Positives and Negatives in Social Networks (May 27, 2022) 72th Annual Conference of the International Communication Association\nconference talk"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-4",
-    "href": "talks-dynamic.html#section-4",
-    "title": "Talks",
-    "section": "2021",
-    "text": "2021\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nUna Mirada General a los Modelos Cuantitativos de Redes Sociales (November 18, 2021) VII Reunión Latinoamericana de Análisis de Redes Sociales \nconference talk\n\n\nTriads, Dyads, and Gene Functions - When Social Network Analysis Meets Phylogenetics (July 10, 2021) NETWORKS 2021 - A Joint Sunbelt and NetSci Conference\nconference talk\n\n\nNetwork Influence in Officer Firearm Use (July 7, 2021) NETWORKS 2021 - A Joint Sunbelt and NetSci Conference\nconference talk\n\n\nTriadas, lazos y funciones genéticas: cuando las redes sociales y la filogenética se encuentran (May 19, 2021) Seminario de Data Science \ninvited talk\n\n\nA Crash course on git (March 18, 2021) Happy Scientist Seminar  \nworkshop\n\n\nTriads, Dyads, and Gene Functions - When Social Network Analysis Meets Phylogenetics (March 9, 2021) Computational Cancer Genomics Working Group Evening Lecture  \ninvited talk\n\n\nHPC with Slurm, R, and the slurmR R package (February 19, 2021) Happy Scientist Seminar  \nworkshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-5",
-    "href": "talks-dynamic.html#section-5",
-    "title": "Talks",
-    "section": "2020",
-    "text": "2020\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nEssays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems (June 22, 2020) Doctoral Defense \ntalk\n\n\nERGMito Statistical Models for Small Team Social Networks (June 1, 2020) SciTS 2020 \nconference talk\n\n\n“Predicción de funciones genéticas utilizando evidencia experimental y árboles filogenéticos: Un modelo evolutivo” o “Ciencia de datos en la práctica” (April 15, 2020) PUC Mathematical and Computational Engineering Seminars \ninvited talk\n\n\nEssays on Bioinformatics and Social Network Analysis Statistical and Computational Methods for Complex Systems (January 30, 2020) Biostats Seminars  \ntalk\n\n\nslurmR workshop (January 22, 2020) Happy Scientist Semminar Series \nworkshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-6",
-    "href": "talks-dynamic.html#section-6",
-    "title": "Talks",
-    "section": "2019",
-    "text": "2019\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nHappy Scientist Seminar: Research Pipelines (October 24, 2019) Happy Scientist Seminar \ntalk\n\n\nA Brief Introduction to Using R for High-Performance Computing (August 27, 2019) Orange County R Users Group  \ninvited talk\n\n\nExact Statistics and Semi-Parametric Tests for Small Network Data (July 19, 2019) IC2S2, 2019 \nconference talk\n\n\nExact Statistics and Semi-Parametric Tests for Small Network Data (June 20, 2019) Sunbelt 2019 \nconference talk\n\n\nWhat drives social networks? A gentle introduction to exponential random graph models (with a focus on small networks) (June 19, 2019) East LA R User Group \ntalk\n\n\nBig Problems for Small Networks: Statistical Analysis of Small Networks and Team Performance (April 29, 2019) UCI Social Network Research Group \ninvited talk\n\n\nBig Problems for Small Networks: Statistical Analysis of Small Networks and Team Performance (March 20, 2019) SONIC Speaker  \ninvited talk\n\n\nSmall network statistics for the network science of teams (January 3, 2019) NetSciX 2019, SCL \nconference talk"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-7",
-    "href": "talks-dynamic.html#section-7",
-    "title": "Talks",
-    "section": "2018",
-    "text": "2018\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nEstadística de Redes y Econometría Espacial (con R) (December 20, 2018) IMFD Summer School  \ninvited talk\n\n\nOverview of Social Network Models (December 12, 2018) \ntalk\n\n\nComputacion de Alto Rendimiento con R (December 12, 2018) satRday Santiago 2018 \nconference workshop\n\n\nBig Problems for Small Networks: Small Network Statistics (November 28, 2018) NASN 2018, DC \nconference talk\n\n\nA brief introduction to using R for high-performance computing (November 12, 2018) East LA R User Group \ntalk\n\n\nR Bootcamp for Scientific Computing 2018 (August 13, 2018) R Bootcamp for Scientific Computing \nworkshop\n\n\nIntroduction to R (for HPC users) (July 7, 2018) USC’s HPCC workshop \nworkshop\n\n\nIntro to R (July 7, 2018) USC’s HPCC workshop \nworkshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-8",
-    "href": "talks-dynamic.html#section-8",
-    "title": "Talks",
-    "section": "2017",
-    "text": "2017\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nUncomplicated Parallel Computing with Stata (July 28, 2017) Stata Conference 2017 \nconference talk\n\n\nDiffusion of Smoking Initiation Among Diverse, Urban American Adolescents Over The High School Period (July 28, 2017) NASN 2017 \nconference talk\n\n\nUnderstanding Diffusion with netdiffuseR (July 26, 2017) NASN 2017 \nconference workshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-9",
-    "href": "talks-dynamic.html#section-9",
-    "title": "Talks",
-    "section": "2016",
-    "text": "2016\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nReproducible Research (September 19, 2016) Health Behavior Research Students talk \ntalk\n\n\nNetwork Diffusion of Innovations in R: Introducing netdiffuseR (June 29, 2016) useR! 2016  \nconference talk\n\n\nNetwork Diffusion of Innovations in R: Introducing netdiffuseR (June 24, 2016) IC2S2, 2016 \nconference poster\n\n\nUnderstanding Diffusion with netdiffuseR (March 28, 2016) Sunbelt Conference, 2016  \nconference workshop"
-  },
-  {
-    "objectID": "talks-dynamic.html#section-10",
-    "href": "talks-dynamic.html#section-10",
-    "title": "Talks",
-    "section": "2013",
-    "text": "2013\n\n\n\n\n\n\n\nTitle\nType\n\n\n\n\nJust tired of endless loops! or parallel: Stata module for parallel computing (July 18, 2013) Stata Conference, 2013 \nconference talk"
-  },
-  {
-    "objectID": "talks.html",
-    "href": "talks.html",
-    "title": "Talks",
+    "objectID": "software.html#r-packages-and-software",
+    "href": "software.html#r-packages-and-software",
+    "title": "Software",
     "section": "",
-    "text": "This page automatically fetches the latest talks from my talks repository.\n\n\nFor the most up-to-date list of my talks and presentations, please visit:\n\nGitHub Repository: gvegayon/talks\nDirect Link: README.md\n\n\n\n\nMy talks typically cover topics in:\n\nStatistical Computing: High-performance computing methods for statistical analysis\nNetwork Analysis: Social network analysis methods and applications\nAgent-Based Modeling: Epidemiological modeling using ABMs\nR Package Development: Creating tools for the R ecosystem\nBiostatistics: Statistical methods in health and biological research\n\n\n\n\nIf you’re interested in having me speak at your event, please feel free to contact me.\nNote: This page will automatically fetch and display talks from my repository when the R packages are available in the build environment."
-  },
-  {
-    "objectID": "talks.html#my-talks-and-presentations",
-    "href": "talks.html#my-talks-and-presentations",
-    "title": "Talks",
-    "section": "",
-    "text": "This page automatically fetches the latest talks from my talks repository.\n\n\nFor the most up-to-date list of my talks and presentations, please visit:\n\nGitHub Repository: gvegayon/talks\nDirect Link: README.md\n\n\n\n\nMy talks typically cover topics in:\n\nStatistical Computing: High-performance computing methods for statistical analysis\nNetwork Analysis: Social network analysis methods and applications\nAgent-Based Modeling: Epidemiological modeling using ABMs\nR Package Development: Creating tools for the R ecosystem\nBiostatistics: Statistical methods in health and biological research\n\n\n\n\nIf you’re interested in having me speak at your event, please feel free to contact me.\nNote: This page will automatically fetch and display talks from my repository when the R packages are available in the build environment."
+    "text": "Here are some of the key software packages I have developed:\n\nnetplot: Beautiful network plots using ggplot2\nergmito: ERGMs for small networks\nslurmR: R and SLURM integration\nABCoptim: Artificial Bee Colony optimization\nnetdiffuseR: Network diffusion analysis\nepiworldR: Agent-based modeling for epidemiology\nrgexf: R package for GEXF graph files\n\nFor a complete and up-to-date list, please visit my GitHub profile or the software.bib file in my resume repository."
   },
   {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile.\n\n\n\nStatistical Computing\nSocial Network Analysis\nBiostatistics\nHigh-Performance Computing\nData Visualization\nComplex Systems\n\n\n\n\nMy research focuses on developing statistical methods and computational tools for analyzing complex systems, particularly in the areas of:\n\nNetwork epidemiology: Developing models for disease spread in networks\nSocial network analysis: Creating tools for analyzing social structures\nHigh-performance computing: Optimizing statistical algorithms for parallel computing\nR package development: Contributing to the R ecosystem with specialized tools\n\n\n\n\nTitle: Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems\nInstitution: University of Southern California (USC)\nYear: 2020\nAdvisors: Prof. Paul Marjoram and Prof. Kayla de la Haye\n\nThis page provides an overview of my research areas. For detailed publication lists, citation metrics, and full-text access, please visit my Google Scholar profile."
+    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile."
   },
   {
     "objectID": "publications.html#my-publications",
     "href": "publications.html#my-publications",
     "title": "Publications",
     "section": "",
-    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile.\n\n\n\nStatistical Computing\nSocial Network Analysis\nBiostatistics\nHigh-Performance Computing\nData Visualization\nComplex Systems\n\n\n\n\nMy research focuses on developing statistical methods and computational tools for analyzing complex systems, particularly in the areas of:\n\nNetwork epidemiology: Developing models for disease spread in networks\nSocial network analysis: Creating tools for analyzing social structures\nHigh-performance computing: Optimizing statistical algorithms for parallel computing\nR package development: Contributing to the R ecosystem with specialized tools\n\n\n\n\nTitle: Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems\nInstitution: University of Southern California (USC)\nYear: 2020\nAdvisors: Prof. Paul Marjoram and Prof. Kayla de la Haye\n\nThis page provides an overview of my research areas. For detailed publication lists, citation metrics, and full-text access, please visit my Google Scholar profile."
+    "text": "For the most up-to-date list of my publications, please visit my Google Scholar profile."
   },
   {
-    "objectID": "publications.html#key-software-contributions",
-    "href": "publications.html#key-software-contributions",
-    "title": "Publications",
-    "section": "Key Software Contributions",
-    "text": "Key Software Contributions\nMany of my publications are accompanied by open-source software implementations. You can find these in the Software section or on my GitHub profile."
-  },
-  {
-    "objectID": "publications.html#collaboration",
-    "href": "publications.html#collaboration",
-    "title": "Publications",
-    "section": "Collaboration",
-    "text": "Collaboration\nI’m always interested in collaborative research opportunities. If you’re working on problems related to network analysis, statistical computing, or complex systems, feel free to reach out."
+    "objectID": "talks.html",
+    "href": "talks.html",
+    "title": "Talks",
+    "section": "",
+    "text": "For the most up-to-date list of my talks and presentations, please visit:\n\nGitHub Repository: gvegayon/talks\nDirect Link: README.md"
   },
   {
     "objectID": "README-quarto.html",
