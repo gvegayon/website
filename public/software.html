@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>Software</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -91,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -99,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link active" href="./software.html" aria-current="page"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
@@ -145,28 +165,92 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content column-page" id="quarto-document-content">
 
-
-
-
-<!-- Header Section with Background Image and Logo -->
-<div class="header" style="background-image: url('img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; text-align: center; padding: 50px 0;">
-<p><img src="img/logo.svg" class="img-fluid" style="width: 20%; max-width: 70%; min-width: 200px;"></p>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Software</h1>
 </div>
-<!-- Welcome Section -->
-<section id="welcome-to-george-g.-vega-yons-website" class="level2">
-<h2 class="anchored" data-anchor-id="welcome-to-george-g.-vega-yons-website">Welcome to <strong>George G. Vega Yon’s</strong> Website</h2>
-<p>I am an Assistant Professor of Research at the <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>. I work on studying <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Complex Systems</a> using <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Statistical Computing</a>. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis.</p>
-<!-- Bio Section
-::: {.bio-content}
-### About Me -->
-<p>My training is in Public Policy (M.A.&nbsp;<a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and Biostatistics (Ph.D.&nbsp;<a href="https://usc.edu" target="_blank">USC</a>, 2020).</p>
-<p>I obtained my Ph.D.&nbsp;in Biostatistics under the supervision of <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&amp;hl=en" target="_blank">Prof.&nbsp;Paul Marjoram</a> and <a href="https://kayladelahaye.net" target="_blank">Prof.&nbsp;Kayla de la Haye</a>, with my dissertation titled “<a href="thesis.pdf" target="_blank">Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems</a>.”</p>
-<p>I’m available for coding, data science, network science, and data visualization consulting.</p>
 
 
-</section>
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div style="text-align: center;">
+<p><img src="img/hexlogos.png" class="img-fluid" style="width:70.0%" alt="A handful of hex logos for the software I am working on"></p>
+</div>
+<p>The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on <a href="https://github.com/gvegayon">my GitHub</a></p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-pyrenew" class="csl-entry" role="listitem">
+Bayer, D., Morris, D. H., Vega Yon, G., Martin, T., &amp; Bidari, S. (2024). <em><span>PyRenew</span>: A package for bayesian renewal modeling with <span>JAX</span> and <span>NumPyro</span></em>. <a href="https://github.com/CDCgov/PyRenew">https://github.com/CDCgov/PyRenew</a>
+</div>
+<div id="ref-wwinference" class="csl-entry" role="listitem">
+Johnson, K., Morris, D., Abbott, S., Bernal Zelaya, C., Vega Yon, G., Bayer, D., Magee, A., &amp; Olesen, S. (2024). <em>Wwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators</em>. <a href="https://github.com/cdcgov/ww-inference-model/">https://github.com/cdcgov/ww-inference-model/</a>
+</div>
+<div id="ref-epiworldR" class="csl-entry" role="listitem">
+Meyer, D., &amp; Vega Yon, G. (2023). <em>epiworldR: Fast agent-based epi models</em>. <a href="https://cran.r-project.org/package=epiworldR">https://cran.r-project.org/package=epiworldR</a>
+</div>
+<div id="ref-epiworldRShiny" class="csl-entry" role="listitem">
+Meyer, D., &amp; Vega Yon, G. (2023). <em>epiworldRShiny: Shiny interface for epiworldR</em>. <a href="https://cran.r-project.org/package=epiworldRShiny">https://cran.r-project.org/package=epiworldRShiny</a>
+</div>
+<div id="ref-defm" class="csl-entry" role="listitem">
+Vega Yon, G. (2023). <em>Defm: Estimation and simulation of multi-binary response models</em>. <a href="htps://cran.r-project.org/package=defm">htps://cran.r-project.org/package=defm</a>
+</div>
+<div id="ref-aphylo" class="csl-entry" role="listitem">
+Vega Yon, G. (2022). <em>Aphylo: Statistical inference of annotated phylogenetic trees</em>. <a href="https://cran.r-project.org/package=aphylo">https://cran.r-project.org/package=aphylo</a>
+</div>
+<div id="ref-epiworld" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2022). <em><span class="nocase">epiworld</span>: A flexible and general agent based model engine</em>. <a href="https://github.com/UofUEpiBio/epiworld">https://github.com/UofUEpiBio/epiworld</a>
+</div>
+<div id="ref-netplot" class="csl-entry" role="listitem">
+Vega Yon, G. (2021). <em>Netplot: Beautiful graph drawing</em>. <a href="https://cran.r-project.org/package=netplot">https://cran.r-project.org/package=netplot</a>
+</div>
+<div id="ref-ergmito" class="csl-entry" role="listitem">
+Vega Yon, G. G., &amp; de la Haye, K. (2020). <em>Ergmito: Exponential random graph models for small networks</em>. <a href="https://cran.r-project.org/package=ergmito">https://cran.r-project.org/package=ergmito</a>
+</div>
+<div id="ref-barry" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2020). <em>Barry: Your to-go motif accountant</em>. <a href="https://github.com/USCbiostats/barry">https://github.com/USCbiostats/barry</a>
+</div>
+<div id="ref-fmcmc" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2020). <em>Fmcmc: A friendly MCMC framework</em>. <a href="https://CRAN.R-project.org/package=fmcmc">https://CRAN.R-project.org/package=fmcmc</a>
+</div>
+<div id="ref-pruner" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2020). <em>Pruner: Implementing the felsenstein’s tree pruning algorithm</em>. <a href="https://github.com/USCbiostats/pruner">https://github.com/USCbiostats/pruner</a>
+</div>
+<div id="ref-rgexf" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2020). <em>Rgexf: Build, import and export GEXF graph files</em>. <a href="https://CRAN.R-project.org/package=rgexf">https://CRAN.R-project.org/package=rgexf</a>
+</div>
+<div id="ref-slurmR" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2020). <em>slurmR: A lightweight wrapper for ’slurm’</em>. <a href="https://CRAN.R-project.org/package=slurmR">https://CRAN.R-project.org/package=slurmR</a>
+</div>
+<div id="ref-netdiffuseR" class="csl-entry" role="listitem">
+Yon, G. V., &amp; Valente, T. (2020). <em><span class="nocase">netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks</span></em>. <a href="https://doi.org/10.5281/zenodo.1039317">https://doi.org/10.5281/zenodo.1039317</a>
+</div>
+<div id="ref-parallel" class="csl-entry" role="listitem">
+Vega Yon, G., &amp; Quistorff, B. (2019). <em>Parallel: Stata module for parallel computing</em>. <a href="https://github.com/gvegayon/parallel">https://github.com/gvegayon/parallel</a>
+</div>
+<div id="ref-googlePublicData" class="csl-entry" role="listitem">
+Vega Yon, G. G. (2017). <em>googlePublicData: Working with google’s ’public data explorer’ DSPL metadata files</em>. <a href="https://CRAN.R-project.org/package=googlePublicData">https://CRAN.R-project.org/package=googlePublicData</a>
+</div>
+<div id="ref-ABCoptim" class="csl-entry" role="listitem">
+Yon, G. V., &amp; Muñoz, E. (2017). <em>ABCoptim: Implementation of artificial bee colony (ABC) optimization</em>. <a href="https://CRAN.R-project.org/package=ABCoptim">https://CRAN.R-project.org/package=ABCoptim</a>
+</div>
+<div id="ref-twitterreport" class="csl-entry" role="listitem">
+Yon, G. G. V. (2016). <em><span class="nocase">twitterreport: Out-of-the-box analysis and reporting tools for twitter</span></em> (Version v0.16) [Computer software]. Zenodo. <a href="https://doi.org/10.5281/zenodo.44528">https://doi.org/10.5281/zenodo.44528</a>
+</div>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

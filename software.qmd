@@ -1,0 +1,33 @@
+---
+title: "Software"
+bibliography: software.bib
+csl: apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+---
+
+::: {style="text-align: center;"}
+![](img/hexlogos.png){width="70%" fig-alt="A handful of hex logos for the software I am working on"}
+:::
+
+The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on [my GitHub](https://github.com/gvegayon)
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "software.bib")
+```
