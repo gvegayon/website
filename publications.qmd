@@ -1,7 +1,29 @@
 ---
 title: "Publications"
+bibliography: papers.bib
+csl: apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
 ---
 
-## My Publications
-
 For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}.
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "papers.bib")
+```

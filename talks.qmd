@@ -1,8 +1,20 @@
 ---
-title: "Talks"
 ---
 
-For the most up-to-date list of my talks and presentations, please visit:
+```{r}
+#| label: fetch-talks
+#| echo: false
+#| results: asis
+#| warning: false
+tmp <- tempfile(fileext = ".md")
+ans <- download.file(
+  url = "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md",
+  destfile = tmp
+)
 
-- **GitHub Repository**: [gvegayon/talks](https://github.com/gvegayon/talks)
-- **Direct Link**: [README.md](https://github.com/gvegayon/talks/blob/master/README.md)
+# We should have no error
+stopifnot(ans == 0)
+
+readLines(tmp) |>
+  cat(sep = "\n")
+```

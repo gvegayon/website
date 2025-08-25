@@ -44,9 +44,10 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-	color: white !important;
+	/* color: white !important;
 	text-shadow: 0 2px 1px rgb(255, 255, 255);
-	text-decoration: none;
+	text-decoration: none; */
+  text-decoration: underline;
 }
 
 .navbar-nav .nav-link:visited {
@@ -88,8 +89,7 @@ a {
 }
 
 a:hover {
-  color: var(--main-color);
-  text-shadow: 0 1px 1px gray;
+  text-decoration: underline;
 }
 
 /* Section styling */

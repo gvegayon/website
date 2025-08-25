@@ -1,17 +1,33 @@
 ---
 title: "Software"
+bibliography: software.bib
+csl: apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
 ---
 
-## R Packages and Software
+::: {style="text-align: center;"}
+![](img/hexlogos.png){width="70%" fig-alt="A handful of hex logos for the software I am working on"}
+:::
 
-Here are some of the key software packages I have developed:
+The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on [my GitHub](https://github.com/gvegayon)
 
-- **[netplot](https://github.com/USCCANA/netplot)**: Beautiful network plots using ggplot2
-- **[ergmito](https://github.com/muriteams/ergmito)**: ERGMs for small networks
-- **[slurmR](https://github.com/USCbiostats/slurmR)**: R and SLURM integration
-- **[ABCoptim](https://github.com/gvegayon/ABCoptim)**: Artificial Bee Colony optimization
-- **[netdiffuseR](https://github.com/USCCANA/netdiffuseR)**: Network diffusion analysis
-- **[epiworldR](https://github.com/UofUEpiBio/epiworldR)**: Agent-based modeling for epidemiology
-- **[rgexf](https://github.com/gvegayon/rgexf)**: R package for GEXF graph files
+::: {#refs}
+:::
 
-For a complete and up-to-date list, please visit my [GitHub profile](https://github.com/gvegayon) or the [software.bib file](https://github.com/gvegayon/resume/blob/master/software.bib) in my resume repository.
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "software.bib")
+```

@@ -10,37 +10,16 @@ toc: false
 :::
 
 <!-- Welcome Section -->
-::: {.container-md style="padding: 50px 0; text-align: center;"}
 ## Welcome to **George G. Vega Yon's** Website
 
 I am an Assistant Professor of Research at the [Division of Epidemiology at the University of Utah](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}. I work on studying [Complex Systems](https://cssociety.org/about-us/what-are-cs){target="_blank"} using [Statistical Computing](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis.
-:::
 
-<!-- Bio Section -->
+<!-- Bio Section
 ::: {.bio-content}
-### About Me
+### About Me -->
 
 My training is in Public Policy (M.A. [UAI](https://www.uai.cl/){target="_blank"}, 2011), Economics (M.Sc. [Caltech](https://caltech.edu){target="_blank"}, 2015), and Biostatistics (Ph.D. [USC](https://usc.edu){target="_blank"}, 2020).
 
 I obtained my Ph.D. in Biostatistics under the supervision of [Prof. Paul Marjoram](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"} and [Prof. Kayla de la Haye](https://kayladelahaye.net){target="_blank"}, with my dissertation titled "[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](thesis.pdf){target="_blank"}."
 
 I'm available for coding, data science, network science, and data visualization consulting.
-
-### Connect with Me
-
-::: {.social-links style="text-align: center; margin: 30px 0;"}
-[<i class="fab fa-linkedin fa-3x"></i>](https://linkedin.com/in/georgevegayon){target="_blank" title="My LinkedIn profile"}
-[<i class="fab fa-orcid fa-3x"></i>](https://orcid.org/0000-0002-3171-0844){target="_blank" title="My ORCID profile"}
-[<i class="fab fa-github fa-3x"></i>](https://github.com/gvegayon/){target="_blank" title="Checkout my code on GitHub"}
-[<i class="fas fa-graduation-cap fa-3x"></i>](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target="_blank" title="My Google Scholar Profile"}
-[<i class="fas fa-chalkboard-teacher fa-3x"></i>](https://github.com/gvegayon/talks/blob/master/README.md){target="_blank" title="My talks"}
-[<i class="fab fa-twitter fa-3x"></i>](https://twitter.com/gvegayon){target="_blank" title="My twitter"}
-:::
-
-### Quick Links
-
-- **[CV](https://github.com/gvegayon/resume/raw/master/cv.pdf){target="_blank"}** - Complete curriculum vitae
-- **[Resume](https://github.com/gvegayon/resume/raw/master/resume.pdf){target="_blank"}** - Professional summary
-- **[Contact](mailto:g.vegayon@gmail.com)** - Get in touch: g.vegayon@gmail.com
-
-:::

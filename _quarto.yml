@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: public
+  render: 
+    - "*.qmd"
+    - "!README.md"
+
   resources:
     - "img/"
 
@@ -20,6 +24,17 @@ website:
         text: Software
       - href: talks.qmd
         text: Talks
+    right:
+      - href: https://github.com/gvegayon
+        icon: github
+      - href: https://linkedin.com/in/georgevegayon
+        icon: linkedin
+      - href: https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en
+        icon: mortarboard-fill
+      - href: https://bsky.app/profile/gvegayon.bsky.social
+        icon: bluesky
+      - href: https://orcid.org/0000-0002-3171-0844
+        text: ORCID
 
   page-footer:
     center: |
