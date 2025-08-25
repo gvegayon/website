@@ -1,57 +1,126 @@
-/* Custom styles based on the original website */
+/* CSS styles matching the lab website */
 @import url('https://fonts.googleapis.com/css?family=Jost');
+
+/* CSS Variables matching lab website */
+:root {
+	--link-on: white;
+	--link-off: brown;
+	--main-color: #ff8000ff;
+}
+
+*,p {
+    font-family: 'Jost', sans-serif;
+}
 
 body {
   font-family: 'Jost', sans-serif;
 }
 
-.bio {
-  max-width: 550px;
-  padding-left: 5%;
-  filter: grayscale(.5);
-  font-family: 'Jost', sans-serif;
+/* Header Section */
+.header {
+	position: relative;
 }
 
-.social-links a {
-  color: white;
-  margin-right: 10px;
-  text-decoration: none;
+.header img {
+	filter: drop-shadow(2px 2px 2px white);
 }
 
-.social-links a:hover {
-  color: #ccc;
-  text-shadow: 0 2px 1px black;
+/* Navigation Bar Styling - More specific selectors to override Bootstrap */
+.navbar[data-bs-theme="dark"] {
+	background-color: var(--main-color) !important;
+	color: white !important;
 }
 
-.hero-section {
-  font-family: 'Jost', sans-serif;
+.navbar {
+	background-color: var(--main-color) !important;
+	color: white !important;
+	display: flex;
+	justify-content: center;
 }
 
-.cryptedmail:after {
-  content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+.navbar-nav .nav-link {
+	color: white !important;
+	text-decoration: none;
 }
 
-/* Navbar customization */
-.navbar-brand {
-  font-weight: bold;
+.navbar-nav .nav-link:hover {
+	color: white !important;
+	text-shadow: 0 2px 1px rgb(255, 255, 255);
+	text-decoration: none;
 }
 
-/* Footer styling */
-.page-footer {
-  filter: grayscale(1);
-  padding: 20px;
+.navbar-nav .nav-link:visited {
+	color: white !important;
+	text-decoration: none;
+}
+
+.navbar-nav .nav-link:active {
+	color: rgb(255, 255, 255) !important;
+	text-decoration: none;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+	color: gray;
+}
+
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--main-color) !important;
+}
+
+p {
+	color: gray;
+}
+
+p a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--main-color) !important;
 }
 
 /* General link styling */
 a {
   text-decoration: none;
   font-weight: bolder;
-  color: Teal;
+  color: var(--main-color);
 }
 
 a:hover {
-  color: #008080;
+  color: var(--main-color);
   text-shadow: 0 1px 1px gray;
+}
+
+/* Section styling */
+section {
+    min-height: 80vh;
+    border-top: none;
+}
+
+.section-head {
+	padding-top: -10px;
+}
+
+/* Bio section styling */
+.bio-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Social links */
+.social-links a {
+  color: var(--main-color);
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.social-links a:hover {
+  color: var(--main-color);
+  text-shadow: 0 2px 1px gray;
 }
 
 /* Publication and software lists */
@@ -65,14 +134,21 @@ a:hover {
   border-bottom: none;
 }
 
+/* Footer styling */
+.page-footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .bio {
-    padding-left: 2%;
-    max-width: 90%;
+  .bio-content {
+    padding: 10px;
   }
   
-  .social-links {
-    text-align: center;
+  .social-links a {
+    font-size: 1.5rem;
+    margin: 0 5px;
   }
 }

@@ -1,39 +1,34 @@
 project:
   type: website
   output-dir: public
+  resources:
+    - "img/"
 
 website:
-  title: "George G. Vega Yon"
+  title: ""
   description: "Ph.D., Statistical Computing, Complex Systems"
   navbar:
+    background: "#ff8000ff"
+    foreground: white
+    collapse-below: lg
     left:
       - href: index.qmd
         text: Home
-      - href: talks.qmd
-        text: Talks
       - href: publications.qmd
         text: Publications
       - href: software.qmd
         text: Software
-    right:
-      - icon: linkedin
-        href: https://linkedin.com/in/georgevegayon
-        aria-label: LinkedIn
-      - icon: github
-        href: https://github.com/gvegayon/
-        aria-label: GitHub
-      - text: "CV"
-        href: https://github.com/gvegayon/resume/raw/master/cv.pdf
-      - text: "Resume"
-        href: https://github.com/gvegayon/resume/raw/master/resume.pdf
+      - href: talks.qmd
+        text: Talks
 
   page-footer:
     center: |
-      Contact me at [g.vegayon@gmail.com](mailto:g.vegayon@gmail.com)
+      © 2024 George G. Vega Yon. All rights reserved.
 
 format:
   html:
-    theme: default
+    theme: 
+      - default
     css: styles.css
     toc: false
     page-layout: full
