@@ -1,0 +1,17 @@
+FROM rocker/tidyverse:4.5.1
+
+# # Installing quarto
+# RUN apt update && apt install -y --no-install-recommends \
+#     wget libpod-simple-perl && \
+#     wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.33/quarto-1.7.33-linux-amd64.deb && \
+#     dpkg -i quarto*
+
+# RUN install2.r --error tinytex && Rscript -e 'tinytex::install_tinytex()'
+
+# # Making sure that the path is available
+# ENV PATH="/root/.TinyTeX/bin/x86_64-linux/:${PATH}"
+
+RUN install2.r --error languageserver && \
+    installGithub.r nx10/httpgd
+
+CMD ["bash"]

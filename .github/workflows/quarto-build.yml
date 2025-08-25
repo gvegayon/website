@@ -22,27 +22,9 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Install system dependencies
-      run: |
-        apt-get update
-        apt-get install -y curl wget git pandoc
-        
-    - name: Install Quarto
-      run: |
-        cd /tmp
-        wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.549/quarto-1.4.549-linux-amd64.tar.gz
-        tar -xzf quarto-1.4.549-linux-amd64.tar.gz
-        mkdir -p /usr/local/bin
-        ln -s /tmp/quarto-1.4.549/bin/quarto /usr/local/bin/quarto
-        quarto --version
-
-    - name: Install R packages
-      run: |
-        Rscript -e "install.packages(c('httr', 'rvest', 'stringr', 'rmarkdown', 'knitr'), repos='https://cran.rstudio.com/')"
-
     - name: Render Quarto website
       run: |
-        quarto render
+        make
 
     - name: Configure Git
       run: |
