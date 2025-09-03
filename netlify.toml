@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/contagio-sep2025"
+  to = "https://gvegayon.github.io/contagio-sep2025/"
+  force = true
+  status = 301
+[[redirects]]
   from = "cran/epiworldR"
   to = "https://cran.r-project.org/package=epiworldR"
   force = true
