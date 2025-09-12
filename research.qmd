@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+title: "Research"
 bibliography: papers.bib
 csl: apa-7th-curriculum-vitae.csl
 nocite: |

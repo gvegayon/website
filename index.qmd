@@ -2,6 +2,7 @@
 title: ""
 page-layout: full
 toc: false
+title-prefix: Vega Yon Lab
 ---
 
 <!-- Header Section with Background Image and Logo -->
@@ -10,7 +11,6 @@ toc: false
 :::
 
 <!-- Welcome Section -->
-## Welcome to **George G. Vega Yon's** Website
 
 I am an Assistant Professor of Research at the [Division of Epidemiology at the University of Utah](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}. I work on studying [Complex Systems](https://cssociety.org/about-us/what-are-cs){target="_blank"} using [Statistical Computing](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis.
 

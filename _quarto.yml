@@ -9,7 +9,8 @@ project:
     - "img/"
 
 website:
-  title: ""
+  title: "Vega Yon Lab"
+  image: img/logo.svg
   description: "Ph.D., Statistical Computing, Complex Systems"
   navbar:
     background: "#ff8000ff"
@@ -18,12 +19,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: publications.qmd
-        text: Publications
+      - href: research.qmd
+        text: Research
       - href: software.qmd
         text: Software
       - href: talks.qmd
         text: Talks
+      - href: teaching.qmd
+        text: Teaching
     right:
       - href: https://github.com/gvegayon
         icon: github
@@ -38,7 +41,7 @@ website:
 
   page-footer:
     center: |
-      © 2024 George G. Vega Yon. All rights reserved.
+      © 2025 George G. Vega Yon. All rights reserved.
 
 format:
   html:
@@ -46,7 +49,7 @@ format:
       - default
     css: styles.css
     toc: false
-    page-layout: full
+    page-layout: article
     include-in-header: fontawesome.html
 
 execute:

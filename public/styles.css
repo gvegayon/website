@@ -62,26 +62,28 @@ body {
 
 /* Typography */
 h1, h2, h3, h4 {
-	color: gray;
+	color: darkslategray;
 }
 
+/*
 h1 a, h2 a, h3 a {
 	text-decoration: none;
 	font-weight: bolder;
 	color: var(--main-color) !important;
-}
+} */
 
 p {
 	color: gray;
 }
 
-p a {
+/* p a {
 	text-decoration: none;
 	font-weight: bolder;
 	color: var(--main-color) !important;
 }
 
 /* General link styling */
+
 a {
   text-decoration: none;
   font-weight: bolder;
@@ -90,5 +92,5 @@ a {
 
 a:hover {
   text-decoration: underline;
-}
+} 
 

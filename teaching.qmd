@@ -1,0 +1,43 @@
+---
+title: Teaching
+---
+
+I am a dedicated educator who enjoys sharing knowledge and fostering an open and inclusive learning environment. Most of my teaching experience has been in the areas of data science, statistics, and network science. Committed to open science, I ensure all my educational contents are freely available online.
+
+## Books
+
+
+::: {.columns style="text-align: center;"}
+::: {.column width="50%"}
+### Applied Network Science With R
+![](img/cover-book-sna.png){width="50%"}
+
+The book is a collection of presentations, workshops, and tutorials I have developed over the years to teach network science with R. The book mostly deals with ERGM models and network data processing. The book was written entirely in quarto, which makes it completely reproducible.
+
+Book website: <https://book.ggvy.cl><br>
+Spanish version: <https://book.ggvy.cl/es>
+
+:::
+
+::: {.column width="50%"}
+### Applied HPC with R
+
+![](img/cover-book-hpc.png){width="50%"}
+
+This book provides a practical overview of how to accelerate R code. With a focus on parallel computing and writing efficient R code, the book also provides an introduction to how to use R in HPC environments with the slurmR R package and ready-to-use examples with C++ via Rcpp.
+
+Book website: <https://book-hpc.ggvy.cl><br>
+Spanish version: <https://book-hpc.ggvy.cl/es>
+:::
+:::
+
+
+## Courses
+
+- **PHS 7045: Advanced Programming with R and HPC** (University of Utah, Graduate Programs) ([link](https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023){target="_blank"}): I co-designed this class with faculty from the USC Division of Biostatistics as the introductory class to the USC Masters degree in Health Data Science.
+
+- **PM 566: Introduction to Health Data Science** (USC, Graduate Programs) ([link](https://github.com/USCbiostats/PM566/tree/fall2021){target="_blank"}): I co-design and teach this class with my colleague Dr. Jonathan Chipman to graduate students in the University of Utah Department of Population Health Sciences.
+
+## Workshops and Tutorials
+
+You can find a complete list of my workshops and tutorials in the [talks](talks.qmd) section of my website.
