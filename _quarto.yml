@@ -9,10 +9,11 @@ project:
     - "img/"
 
 website:
-  title: "Vega Yon Lab"
+  title: "G Vega Yon"
   image: img/logo.svg
   description: "Ph.D., Statistical Computing, Complex Systems"
   navbar:
+    logo: img/logo.svg
     background: "#ff8000ff"
     foreground: white
     collapse-below: lg
