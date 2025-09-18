@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "ai/chatgpt-paper"
+  to = "https://chatgpt.com/share/68a4ec43-3a00-800d-ad35-9e53238f41cf"
+  force = true
+  status = 301
+[[redirects]]
   from = "ai/chatgpt-grant-match"
   to = "https://chatgpt.com/share/68cc26a7-09b4-800d-9944-94d069c7896f"
   force = true
