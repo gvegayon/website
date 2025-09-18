@@ -1,4 +1,14 @@
 [[redirects]]
+  from = "ai/chatgpt-grant-match"
+  to = "https://chatgpt.com/share/68cc26a7-09b4-800d-9944-94d069c7896f"
+  force = true
+  status = 301
+[[redirects]]
+  from = "ai/examples"
+  to = "https://github.com/gvegayon/ai-examples"
+  force = true
+  status = 301
+[[redirects]]
   from = "slides/contagio-sep2025"
   to = "https://gvegayon.github.io/contagio-sep2025/"
   force = true
