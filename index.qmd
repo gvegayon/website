@@ -7,7 +7,7 @@ title-prefix: G Vega Yon
 
 <!-- Background Header Section - 30vh -->
 ::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center;"}
-![](img/george_darwin.jpg){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3);"}
+![](img/george_darwin.jpg){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;"}
 :::
 
 
