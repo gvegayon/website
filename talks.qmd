@@ -1,0 +1,20 @@
+---
+---
+
+```{r}
+#| label: fetch-talks
+#| echo: false
+#| results: asis
+#| warning: false
+tmp <- tempfile(fileext = ".md")
+ans <- download.file(
+  url = "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md",
+  destfile = tmp
+)
+
+# We should have no error
+stopifnot(ans == 0)
+
+readLines(tmp) |>
+  cat(sep = "\n")
+```
