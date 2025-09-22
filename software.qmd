@@ -1,5 +1,4 @@
 ---
-title: "Software"
 bibliography: software.bib
 csl: apa-7th-curriculum-vitae.csl
 nocite: |
@@ -9,6 +8,10 @@ nocite: |
 ::: {style="text-align: center;"}
 ![](img/hexlogos.png){width="70%" fig-alt="A handful of hex logos for the software I am working on"}
 :::
+
+# Software
+
+I am deeply committed to **open-source software** and have been building professional-grade tools for over 15 years—going back to the days of [Google Codehere](https://code.google.com/archive/p/rdspl/){target="_blank"}. My work combines rigorous statistical methods with modern software engineering practices, including **version control** (Git/GitHub), **continuous integration**, **agentic AI**, **container technologies**, and **agile methodologies**. I have led scientific software development teams to deliver **high-performance**, **reliable**, and **user-friendly tools** that are widely adopted by researchers and practitioners. Most of my work is built in C++ with wrappers for R and Python, optimized for use in high-performance computing environments. Across all projects, I design with performance and usability in mind, ensuring that complex methods can be both scalable and accessible.
 
 The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on [my GitHub](https://github.com/gvegayon)
 

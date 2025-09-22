@@ -1,9 +1,10 @@
 ---
-title: Teaching
 ---
 
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('img/usc_r_bootcamp_clip.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('img/usc_r_bootcamp_clip.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: center; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
 :::
+
+# Teaching
 
 I am a dedicated educator who enjoys sharing knowledge and fostering an open and inclusive learning environment. Most of my teaching experience has been in the areas of data science, statistics, and network science. Committed to open science, I ensure all my educational contents are freely available online.
 
