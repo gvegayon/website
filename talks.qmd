@@ -1,6 +1,10 @@
 ---
 ---
 
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('img/george_sonic_talk.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
+:::
+
+
 ```{r}
 #| label: fetch-talks
 #| echo: false
@@ -15,6 +19,10 @@ ans <- download.file(
 # We should have no error
 stopifnot(ans == 0)
 
-readLines(tmp) |>
+# Removing the header
+ans <- readLines(tmp) |>
+  gsub(pattern = "^# List of talks.+", replacement = "")
+
+ans |>
   cat(sep = "\n")
 ```
