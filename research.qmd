@@ -1,0 +1,36 @@
+---
+bibliography: papers.bib
+csl: apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+---
+
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('img/collage_research.png'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
+:::
+
+
+# Research
+
+I am a methodologist working at the intersection of complex systems and statistical computing, with a focus on **high-performance computing** and **machine learning**. A central part of my work is the development of scientific software: as a **professional software engineer**, I dedicate significant effort to ensuring that the methods and tools I create are reliable, open, and widely accessible to the research community. My collaborations span diverse fields, including **epidemiology**, **public health**, **social network analysis**, and **genomics**, but they all share a common foundation in heavy computation and advanced statistical methods.
+
+For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}.
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "papers.bib")
+```
