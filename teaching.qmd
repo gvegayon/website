@@ -38,9 +38,9 @@ Spanish version: <https://book-hpc.ggvy.cl/es>
 
 ## Courses
 
-- **PHS 7045: Advanced Programming with R and HPC** (University of Utah, Graduate Programs) ([link](https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023){target="_blank"}): I co-designed this class with faculty from the USC Division of Biostatistics as the introductory class to the USC Masters degree in Health Data Science.
+- **PHS 7045: Advanced Programming with R and HPC** (University of Utah, Graduate Programs) ([link](https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023){target="_blank"}): I co-design and teach this class with my colleague Dr. Jonathan Chipman to graduate students in the University of Utah Department of Population Health Sciences.
 
-- **PM 566: Introduction to Health Data Science** (USC, Graduate Programs) ([link](https://github.com/USCbiostats/PM566/tree/fall2021){target="_blank"}): I co-design and teach this class with my colleague Dr. Jonathan Chipman to graduate students in the University of Utah Department of Population Health Sciences.
+- **PM 566: Introduction to Health Data Science** (USC, Graduate Programs) ([link](https://github.com/USCbiostats/PM566/tree/fall2021){target="_blank"}): I co-designed this class with faculty from the USC's Division of Biostatistics as the introductory class to the USC Masters degree in Health Data Science.
 
 ## Workshops and Tutorials
 

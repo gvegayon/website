@@ -65,6 +65,14 @@ h1, h2, h3, h4 {
 	color: darkslategray;
 }
 
+/* Bold text styling for better visibility */
+b, strong, .bold {
+	font-weight: 1000;
+    color: #1f1f1f;
+    text-shadow: -2px 2px 4px rgb(139 139 139 / 77%);
+}
+
+
 /*
 h1 a, h2 a, h3 a {
 	text-decoration: none;
@@ -92,5 +100,5 @@ a {
 
 a:hover {
   text-decoration: underline;
-} 
+}
 
