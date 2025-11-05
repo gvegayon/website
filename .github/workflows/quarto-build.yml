@@ -27,6 +27,7 @@ jobs:
         ARCH=$(dpkg --print-architecture)
         URL="https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.21/quarto-1.8.21-linux-$(ARCH).deb"
         wget "$URL" -O quarto.deb && dpkg -i quarto.deb
+      shell: bash
 
     - name: Render Quarto website
       run: |
