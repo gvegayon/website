@@ -11,7 +11,8 @@ project:
 website:
   title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg
-  description: "Ph.D., Statistical Computing, Complex Systems"
+  description: |
+    Personal website of Doctor George G. Vega Yon, an Assistant Professor of Data Science at the University of Utah. Dr. Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.
   navbar:
     logo: img/logo.svg
     background: "#ff8000ff"
@@ -45,6 +46,7 @@ website:
         icon: bluesky
       - href: https://orcid.org/0000-0002-3171-0844
         text: ORCID
+  google-analytics: UA-40608305-3
 
   page-footer:
     center: |

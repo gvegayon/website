@@ -3,6 +3,8 @@ bibliography: software.bib
 csl: apa-7th-curriculum-vitae.csl
 nocite: |
   @*
+description: |
+  List of software packages and tools developed by Doctor George G. Vega Yon
 ---
 
 ::: {style="text-align: center;"}
