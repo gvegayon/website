@@ -9,7 +9,7 @@ project:
     - "img/"
 
 website:
-  title: "G Vega Yon"
+  title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg
   description: "Ph.D., Statistical Computing, Complex Systems"
   navbar:
@@ -28,6 +28,12 @@ website:
         text: Talks
       - href: teaching.qmd
         text: Teaching
+      - text: 'Resume/CV'
+        menu:
+          - text: Resume (brief)
+            href: https://raw.githubusercontent.com/gvegayon/resume/master/resume.pdf
+          - text: CV (academic)
+            href: https://raw.githubusercontent.com/gvegayon/resume/master/cv.pdf
     right:
       - href: https://github.com/gvegayon
         icon: github
