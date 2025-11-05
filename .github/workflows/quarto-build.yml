@@ -22,10 +22,9 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Get quarto 1.8.21
+    - name: Get quarto 1.9.9
       run: |
-        ARCH=$(dpkg --print-architecture)
-        URL="https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.21/quarto-1.8.21-linux-$(ARCH).deb"
+        URL="https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.9/quarto-1.9.9-linux-x86_64.deb"
         wget "$URL" -O quarto.deb && dpkg -i quarto.deb
       shell: bash
 
