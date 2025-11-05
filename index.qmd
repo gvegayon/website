@@ -1,0 +1,23 @@
+---
+title: ""
+# page-layout: full
+toc: false
+title-prefix: G Vega Yon
+---
+
+<!-- Background Header Section - 30vh -->
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center;"}
+![](img/george_darwin.jpg){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;"}
+:::
+
+
+
+::: {style="text-align: center; line-height: 1.6;"}
+I am an Assistant Professor of Research at the [Division of Epidemiology at the University of Utah](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}. I work on studying [Complex Systems](https://cssociety.org/about-us/what-are-cs){target="_blank"} using [Statistical Computing](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}. I have over ten years of experience developing scientific software focusing on high-performance computing, data visualization, and social network analysis.
+
+My training is in Public Policy (M.A. [UAI](https://www.uai.cl/){target="_blank"}, 2011), Economics (M.Sc. [Caltech](https://caltech.edu){target="_blank"}, 2015), and Biostatistics (Ph.D. [USC](https://usc.edu){target="_blank"}, 2020).
+
+I obtained my Ph.D. in Biostatistics under the supervision of [Prof. Paul Marjoram](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"} and [Prof. Kayla de la Haye](https://kayladelahaye.net){target="_blank"}, with my dissertation titled "[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](thesis.pdf){target="_blank"}."
+
+I'm available for coding, data science, network science, and data visualization consulting.
+:::

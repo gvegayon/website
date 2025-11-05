@@ -1,0 +1,104 @@
+/* CSS styles matching the lab website */
+@import url('https://fonts.googleapis.com/css?family=Jost');
+
+/* CSS Variables matching lab website */
+:root {
+	--link-on: white;
+	--link-off: brown;
+	--main-color: #ff8000ff;
+}
+
+*,p {
+    font-family: 'Jost', sans-serif;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+/* Header Section */
+.header {
+	position: relative;
+}
+
+.header img {
+	filter: drop-shadow(2px 2px 2px white);
+}
+
+/* Navigation Bar Styling - More specific selectors to override Bootstrap */
+.navbar[data-bs-theme="dark"] {
+	background-color: var(--main-color) !important;
+	color: white !important;
+}
+
+.navbar {
+	background-color: var(--main-color) !important;
+	color: white !important;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar-nav .nav-link {
+	color: white !important;
+	text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+	/* color: white !important;
+	text-shadow: 0 2px 1px rgb(255, 255, 255);
+	text-decoration: none; */
+  text-decoration: underline;
+}
+
+.navbar-nav .nav-link:visited {
+	color: white !important;
+	text-decoration: none;
+}
+
+.navbar-nav .nav-link:active {
+	color: rgb(255, 255, 255) !important;
+	text-decoration: none;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+	color: darkslategray;
+}
+
+/* Bold text styling for better visibility */
+b, strong, .bold {
+	font-weight: 1000;
+    color: #1f1f1f;
+    text-shadow: -2px 2px 4px rgb(139 139 139 / 77%);
+}
+
+
+/*
+h1 a, h2 a, h3 a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--main-color) !important;
+} */
+
+p {
+	color: gray;
+}
+
+/* p a {
+	text-decoration: none;
+	font-weight: bolder;
+	color: var(--main-color) !important;
+}
+
+/* General link styling */
+
+a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: var(--main-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+

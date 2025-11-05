@@ -1,0 +1,57 @@
+project:
+  type: website
+  output-dir: public
+  render: 
+    - "*.qmd"
+    - "!README.md"
+
+  resources:
+    - "img/"
+
+website:
+  title: "G Vega Yon"
+  image: img/logo.svg
+  description: "Ph.D., Statistical Computing, Complex Systems"
+  navbar:
+    logo: img/logo.svg
+    background: "#ff8000ff"
+    foreground: white
+    collapse-below: lg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: research.qmd
+        text: Research
+      - href: software.qmd
+        text: Software
+      - href: talks.qmd
+        text: Talks
+      - href: teaching.qmd
+        text: Teaching
+    right:
+      - href: https://github.com/gvegayon
+        icon: github
+      - href: https://linkedin.com/in/georgevegayon
+        icon: linkedin
+      - href: https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en
+        icon: mortarboard-fill
+      - href: https://bsky.app/profile/gvegayon.bsky.social
+        icon: bluesky
+      - href: https://orcid.org/0000-0002-3171-0844
+        text: ORCID
+
+  page-footer:
+    center: |
+      © 2025 George G. Vega Yon. All rights reserved.
+
+format:
+  html:
+    theme: 
+      - default
+    css: styles.css
+    toc: false
+    page-layout: article
+    include-in-header: fontawesome.html
+
+execute:
+  freeze: auto

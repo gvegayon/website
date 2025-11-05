@@ -1,0 +1,69 @@
+---
+bibliography: software.bib
+csl: apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+---
+
+::: {style="text-align: center;"}
+![](img/hexlogos.png){width="70%" fig-alt="A handful of hex logos for the software I am working on"}
+:::
+
+# Software
+
+I am deeply committed to **open-source software** and have been building professional-grade tools for over 15 years—going back to the days of [Google Code here](https://code.google.com/archive/p/rdspl/){target="_blank"}. My work combines rigorous statistical methods with modern software engineering practices, including **version control** (Git/GitHub), **continuous integration**, **agentic AI**, **container technologies**, and **agile methodologies**. I have led scientific software development teams to deliver **high-performance**, **reliable**, and **user-friendly tools** that are widely adopted by researchers and practitioners. Most of my work is built in C++ with wrappers for R and Python, optimized for use in high-performance computing environments. Across all projects, I design with performance and usability in mind, ensuring that complex methods can be both scalable and accessible.
+
+A couple of projects to highlight include:
+
+
+```{r}
+#| label: cards
+#| results: asis
+#| echo: false
+#| eval: true
+x <- yaml::read_yaml("software_highlights.yaml")
+for (n in names(x)) {
+
+  cat('::: {.columns style="display: flex;"}\n')
+  with(x[[n]], {
+    cat('::: {.column style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center"}\n')
+    cat('![](', img, ')\n')
+    cat(':::\n')
+    cat('::: {.column style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px"}\n')
+    cat(description)
+
+    # Now, pasting a GitHub icon with a link to the repository
+    cat(
+      sprintf(
+        '[![](%s){width="20px"}](%s)\n',
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        github
+        )
+    )
+    cat(':::\n')
+  })
+  cat(':::\n\n')
+}
+```
+
+The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on [my GitHub](https://github.com/gvegayon)
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "software.bib")
+```
