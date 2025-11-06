@@ -8,7 +8,7 @@ description: |
 ---
 
 ::: {style="text-align: center;"}
-![](img/hexlogos.png){width="70%" alt="A handful of hex logos for the software I am working on"}
+![](img/hexlogos.webp){width="70%" alt="A handful of hex logos for the software I am working on"}
 :::
 
 # Software

@@ -16,7 +16,7 @@ I am a dedicated educator who enjoys sharing knowledge and fostering an open and
 ::: {.columns style="text-align: center;"}
 ::: {.column width="50%"}
 ### Applied Network Science With R
-![](img/cover-book-sna.png){width="50%"}
+![](img/cover-book-sna.webp){width="50%"}
 
 The book is a collection of presentations, workshops, and tutorials I have developed over the years to teach network science with R. The book mostly deals with ERGM models and network data processing. The book was written entirely in quarto, which makes it completely reproducible.
 
@@ -28,7 +28,7 @@ Spanish version: <https://book.ggvy.cl/es>
 ::: {.column width="50%"}
 ### Applied HPC with R
 
-![](img/cover-book-hpc.png){width="50%"}
+![](img/cover-book-hpc.webp){width="50%"}
 
 This book provides a practical overview of how to accelerate R code. With a focus on parallel computing and writing efficient R code, the book also provides an introduction to how to use R in HPC environments with the slurmR R package and ready-to-use examples with C++ via Rcpp.
 
