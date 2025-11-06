@@ -11,6 +11,7 @@ project:
 website:
   title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg
+  search: false
   description: |
     Personal website of Doctor George G. Vega Yon, an Assistant Professor of Data Science at the University of Utah. Dr. Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.
   navbar:
@@ -59,7 +60,6 @@ format:
     css: styles.css
     toc: false
     page-layout: article
-    include-in-header: fontawesome.html
 
 execute:
   freeze: auto

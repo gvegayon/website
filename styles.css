@@ -1,5 +1,5 @@
 /* CSS styles matching the lab website */
-@import url('https://fonts.googleapis.com/css?family=Jost');
+/* @import url('https://fonts.googleapis.com/css?family=Jost'); */
 
 /* CSS Variables matching lab website */
 :root {
@@ -9,11 +9,11 @@
 }
 
 *,p {
-    font-family: 'Jost', sans-serif;
+    font-family: sans-serif;
 }
 
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: sans-serif;
 }
 
 /* Header Section */
@@ -68,7 +68,7 @@ h1, h2, h3, h4 {
 /* Bold text styling for better visibility */
 b, strong, .bold {
 	font-weight: 1000;
-    color: #1f1f1f;
+    /* color: #ff8000ff; */
     text-shadow: -2px 2px 4px rgb(139 139 139 / 77%);
 }
 
