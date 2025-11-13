@@ -1,0 +1,16 @@
+epiworld:
+  description: |
+    *El framework **epiworld*** es un framework avanzado de modelado basado en agentes escrito en C++ que fue diseñado para la creación rápida de prototipos de modelos de simulación enfocados en modelado epidemiológico. La biblioteca está disponible en R, Python, así como en un paquete shiny.<br>La aplicación más notable de `epiworld` es con el modelado del sarampión durante los recientes brotes en EE. UU. Puede ver una versión de la aplicación shiny que se desarrolló [aquí](https://ggvy.cl/shiny/measles).
+  img: ../img/epiworld.webp
+  github: https://github.com/UofUEpiBio/epiworld
+rgexf:
+  description: |
+    *El paquete **rgexf**.* Crea, lee y escribe archivos de grafos 'GEXF' (Graph Exchange 'XML' Format) (utilizados en 'Gephi' y otros). Usando el paquete 'XML', rgexf permite leer y escribir archivos GEXF, incluyendo atributos, atributos visuales 'GEXF' (como color, tamaño y posición), dinámica de redes (tanto para aristas como nodos) y pesos de aristas. Los usuarios pueden construir/manejar grafos elemento por elemento o masivamente a través de data frames, visualizar el grafo en un navegador web a través de 'gexf-js' (una biblioteca 'javascript'), e interactuar con el paquete 'igraph'.<br>Puede ver una versión en vivo de la biblioteca `gexf-js` en acción [aquí](https://gvegayon.github.io/rgexf/lesmiserables/).
+  img: ../img/rgexf.webp
+  github: https://github.com/gvegayon/rgexf
+ergmito:
+  description: |
+    *El paquete **ergmito** de R*. Simulación y estimación de Modelos de Grafos Aleatorios Exponenciales (ERGMs) para redes pequeñas usando estadísticas exactas como se muestra en Vega Yon et al. (2020) <https://doi.org/10.1016/j.socnet.2020.07.005>. A diferencia del paquete 'ergm', 'ergmito' evita usar el Estimador de Máxima Verosimilitud de Cadena de Markov (MC-MLE) y en su lugar usa el Estimador de Máxima Verosimilitud (MLE) para ajustar ERGMs para redes pequeñas. Como la enumeración exhaustiva es computacionalmente factible para redes pequeñas, este paquete de R aprovecha esto y proporciona herramientas para calcular funciones de verosimilitud y otras funciones relevantes directamente, lo que significa que en muchos casos tanto la estimación como la simulación de ERGMs para redes pequeñas pueden ser más rápidas y precisas que los algoritmos basados en simulación.
+  img: ../img/ergmito.webp
+  github: https://github.com/muriteams/ergmito
+

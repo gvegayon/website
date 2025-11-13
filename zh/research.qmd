@@ -1,0 +1,44 @@
+---
+bibliography: ../papers.bib
+csl: ../apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+description: |
+  George G. Vega Yon 博士的科學論文列表
+---
+
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/collage_research.webp'); background-size: cover; background-repeat: repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
+:::
+
+
+# 研究
+
+我是一位方法論學者，專注於複雜系統和統計計算的交叉領域，重點關注**高性能計算**和**機器學習**。我工作的核心部分是開發科學軟件：作為一名**專業軟件工程師**，我投入大量精力確保我創建的方法和工具可靠、開放，並且研究社區可以廣泛使用。我的合作涵蓋多個領域，包括**流行病學**、**公共衛生**、**社交網絡分析**和**基因組學**，但它們都有一個共同的基礎——密集計算和先進的統計方法。
+
+欲獲取我最新的出版物列表，請訪問我的 [Google Scholar 個人資料](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}。
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "../papers.bib")
+```
+
+---
+
+::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+:::

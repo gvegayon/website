@@ -1,0 +1,16 @@
+epiworld:
+  description: |
+    ***epiworld** 框架*是一個用 C++ 編寫的高級基於代理的建模框架，專為流行病學建模的快速原型設計而設計。該庫可在 R、Python 以及 shiny 包中使用。<br>`epiworld` 最值得注意的應用是對美國近期麻疹爆發的建模。您可以在[此處](https://ggvy.cl/shiny/measles)查看開發的 shiny 應用程序版本。
+  img: ../img/epiworld.webp
+  github: https://github.com/UofUEpiBio/epiworld
+rgexf:
+  description: |
+    ***rgexf** 包。*創建、讀取和寫入 'GEXF'（圖形交換 'XML' 格式）圖形文件（用於 'Gephi' 等）。使用 'XML' 包，rgexf 允許讀取和寫入 GEXF 文件，包括屬性、'GEXF' 可視化屬性（如顏色、大小和位置）、網絡動態（節點和邊）以及邊的權重。用戶可以逐元素或通過數據框大量構建/處理圖形，通過 'gexf-js'（一個 'javascript' 庫）在網頁瀏覽器上可視化圖形，並與 'igraph' 包交互。<br>您可以在[此處](https://gvegayon.github.io/rgexf/lesmiserables/)查看 `gexf-js` 庫的實際應用版本。
+  img: ../img/rgexf.webp
+  github: https://github.com/gvegayon/rgexf
+ergmito:
+  description: |
+    ***ergmito** R 包*。使用精確統計量對小型網絡的指數隨機圖模型（ERGMs）進行模擬和估計，如 Vega Yon 等人（2020）所示 <https://doi.org/10.1016/j.socnet.2020.07.005>。與 'ergm' 包不同，'ergmito' 避免使用馬爾可夫鏈最大似然估計器（MC-MLE），而是使用最大似然估計器（MLE）來擬合小型網絡的 ERGMs。由於對小型網絡來說詳盡枚舉在計算上是可行的，因此這個 R 包利用了這一點，並提供了直接計算似然函數和其他相關函數的工具，這意味著在許多情況下，小型網絡的 ERGMs 估計和模擬都可以比基於模擬的算法更快、更準確。
+  img: ../img/ergmito.webp
+  github: https://github.com/muriteams/ergmito
+
