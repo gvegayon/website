@@ -1,46 +1,45 @@
 project:
   type: website
-  output-dir: public
+  output-dir: ../public/zh
   render: 
     - "*.qmd"
-    - "!README.md"
 
   resources:
-    - "img/"
+    - "../img/"
 
 website:
   title: "George G. Vega Yon, Ph.D."
-  image: img/logo.svg
+  image: ../img/logo.svg
   search: false
   description: |
-    Personal website of Doctor George G. Vega Yon, an Assistant Professor of Data Science at the University of Utah. Dr. Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.
+    George G. Vega Yon 博士的個人網站，猶他大學數據科學助理教授。Vega Yon 博士從事統計計算、數據科學和科學軟件開發工作。
   navbar:
-    logo: img/logo.svg
+    logo: ../img/logo.svg
     background: "#ff8000ff"
     foreground: white
     collapse-below: lg
     left:
       - href: index.qmd
-        text: Home
+        text: 主頁
       - href: research.qmd
-        text: Research
+        text: 研究
       - href: software.qmd
-        text: Software
+        text: 軟件
       - href: talks.qmd
-        text: Talks
+        text: 演講
       - href: teaching.qmd
-        text: Teaching
-      - text: 'Resume/CV'
+        text: 教學
+      - text: '簡歷'
         menu:
-          - text: Resume (brief)
+          - text: Resume (簡要)
             href: https://raw.githubusercontent.com/gvegayon/resume/master/resume.pdf
-          - text: CV (academic)
+          - text: CV (學術)
             href: https://raw.githubusercontent.com/gvegayon/resume/master/cv.pdf
     right:
-      - href: es/index.html
+      - href: ../index.html
+        text: 🇺🇸
+      - href: ../es/index.html
         text: 🇪🇸
-      - href: zh/index.html
-        text: 🇨🇳
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon
@@ -55,13 +54,13 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. All rights reserved.
+      © 2025 George G. Vega Yon. 版權所有。
 
 format:
   html:
     theme: 
       - default
-    css: styles.css
+    css: ../styles.css
     toc: false
     page-layout: article
 

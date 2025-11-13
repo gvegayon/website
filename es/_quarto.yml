@@ -1,45 +1,44 @@
 project:
   type: website
-  output-dir: public
+  output-dir: ../public/es
   render: 
     - "*.qmd"
-    - "!README.md"
 
   resources:
-    - "img/"
+    - "../img/"
 
 website:
   title: "George G. Vega Yon, Ph.D."
-  image: img/logo.svg
+  image: ../img/logo.svg
   search: false
   description: |
-    Personal website of Doctor George G. Vega Yon, an Assistant Professor of Data Science at the University of Utah. Dr. Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.
+    Sitio web personal del Doctor George G. Vega Yon, Profesor Asistente de Ciencia de Datos en la Universidad de Utah. El Dr. Vega Yon trabaja en Computación Estadística, Ciencia de Datos y Desarrollo de Software Científico.
   navbar:
-    logo: img/logo.svg
+    logo: ../img/logo.svg
     background: "#ff8000ff"
     foreground: white
     collapse-below: lg
     left:
       - href: index.qmd
-        text: Home
+        text: Inicio
       - href: research.qmd
-        text: Research
+        text: Investigación
       - href: software.qmd
         text: Software
       - href: talks.qmd
-        text: Talks
+        text: Charlas
       - href: teaching.qmd
-        text: Teaching
-      - text: 'Resume/CV'
+        text: Enseñanza
+      - text: 'Currículum'
         menu:
-          - text: Resume (brief)
+          - text: Resume (breve)
             href: https://raw.githubusercontent.com/gvegayon/resume/master/resume.pdf
-          - text: CV (academic)
+          - text: CV (académico)
             href: https://raw.githubusercontent.com/gvegayon/resume/master/cv.pdf
     right:
-      - href: es/index.html
-        text: 🇪🇸
-      - href: zh/index.html
+      - href: ../index.html
+        text: 🇺🇸
+      - href: ../zh/index.html
         text: 🇨🇳
       - href: https://github.com/gvegayon
         icon: github
@@ -55,13 +54,13 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. All rights reserved.
+      © 2025 George G. Vega Yon. Todos los derechos reservados.
 
 format:
   html:
     theme: 
       - default
-    css: styles.css
+    css: ../styles.css
     toc: false
     page-layout: article
 

@@ -1,0 +1,77 @@
+---
+bibliography: ../software.bib
+csl: ../apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+description: |
+  Lista de paquetes de software y herramientas desarrolladas por el Doctor George G. Vega Yon
+---
+
+::: {style="text-align: center;"}
+![](../img/hexlogos.webp){width="70%" alt="Un conjunto de logotipos hexagonales del software en el que estoy trabajando"}
+:::
+
+# Software
+
+Estoy profundamente comprometido con el **software de código abierto** y he estado construyendo herramientas de nivel profesional durante más de 15 años—remontándose a los días de [Google Code aquí](https://code.google.com/archive/p/rdspl/){target="_blank"}. Mi trabajo combina métodos estadísticos rigurosos con prácticas modernas de ingeniería de software, incluyendo **control de versiones** (Git/GitHub), **integración continua**, **IA agéntica**, **tecnologías de contenedores** y **metodologías ágiles**. He liderado equipos de desarrollo de software científico para entregar herramientas **de alto rendimiento**, **confiables** y **fáciles de usar** que son ampliamente adoptadas por investigadores y profesionales. La mayor parte de mi trabajo está construido en C++ con wrappers para R y Python, optimizado para su uso en entornos de computación de alto rendimiento. En todos los proyectos, diseño con el rendimiento y la usabilidad en mente, asegurando que los métodos complejos puedan ser tanto escalables como accesibles.
+
+Un par de proyectos a destacar incluyen:
+
+
+```{r}
+#| label: cards
+#| results: asis
+#| echo: false
+#| eval: true
+x <- yaml::read_yaml("../software_highlights.yaml")
+for (n in names(x)) {
+
+  cat('::: {.columns style="display: flex;"}\n')
+  with(x[[n]], {
+    cat('::: {.column style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center"}\n')
+    cat('![](../', img, ')\n')
+    cat(':::\n')
+    cat('::: {.column style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px"}\n')
+    cat(description)
+
+    # Now, pasting a GitHub icon with a link to the repository
+    cat(
+      sprintf(
+        '[![](%s){width="20px"}](%s)\n',
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        github
+        )
+    )
+    cat(':::\n')
+  })
+  cat(':::\n\n')
+}
+```
+
+La siguiente es una lista exhaustiva de los paquetes de software que he construido o a los que he contribuido. Puede echar un vistazo a mis contribuciones más recientes y proyectos de código abierto en curso en [mi GitHub](https://github.com/gvegayon)
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "../software.bib")
+```
+
+---
+
+::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+*Esta versión del sitio web fue traducida automáticamente de la versión original en inglés usando GitHub Copilot y aún no ha sido verificada por un humano.*
+:::
