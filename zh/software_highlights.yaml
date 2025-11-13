@@ -1,15 +1,16 @@
 epiworld:
   description: |
-    *The **epiworld** framework* is an advanced agent-based modeling framework written in C++ that was designed for rapid prototyping of simulation models focused on epidemiological modeling. The library is available in R, Python, as well as a shiny package.<br>The most notable application of `epiworld` is with the modeling of measles during the recent US outbreaks. You can see a version of the shiny app that was developed [here](https://ggvy.cl/shiny/measles).
+    ***epiworld** 框架*是一個用 C++ 編寫的高級基於代理的建模框架，專為流行病學建模的快速原型設計而設計。該庫可在 R、Python 以及 shiny 包中使用。<br>`epiworld` 最值得注意的應用是對美國近期麻疹爆發的建模。您可以在[此處](https://ggvy.cl/shiny/measles)查看開發的 shiny 應用程序版本。
   img: ../img/epiworld.webp
   github: https://github.com/UofUEpiBio/epiworld
 rgexf:
   description: |
-    *The **rgexf** package.* Create, read, and write 'GEXF' (Graph Exchange 'XML' Format) graph files (used in 'Gephi' and others). Using the 'XML' package, rgexf allows reading and writing GEXF files, including attributes, 'GEXF' visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges' weights. Users can build/handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through 'gexf-js' (a 'javascript' library), and interact with the 'igraph' package.<br>You can see a live version of the `gexf-js` library in action [here](https://gvegayon.github.io/rgexf/lesmiserables/).
+    ***rgexf** 包。*創建、讀取和寫入 'GEXF'（圖形交換 'XML' 格式）圖形文件（用於 'Gephi' 等）。使用 'XML' 包，rgexf 允許讀取和寫入 GEXF 文件，包括屬性、'GEXF' 可視化屬性（如顏色、大小和位置）、網絡動態（節點和邊）以及邊的權重。用戶可以逐元素或通過數據框大量構建/處理圖形，通過 'gexf-js'（一個 'javascript' 庫）在網頁瀏覽器上可視化圖形，並與 'igraph' 包交互。<br>您可以在[此處](https://gvegayon.github.io/rgexf/lesmiserables/)查看 `gexf-js` 庫的實際應用版本。
   img: ../img/rgexf.webp
   github: https://github.com/gvegayon/rgexf
 ergmito:
   description: |
-    *The **ergmito** R packagee*. Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics as shown in Vega Yon et al. (2020) <https://doi.org/10.1016/j.socnet.2020.07.005>. As a difference from the 'ergm' package, 'ergmito' circumvents using Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions, and other relevant functions, directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms.
+    ***ergmito** R 包*。使用精確統計量對小型網絡的指數隨機圖模型（ERGMs）進行模擬和估計，如 Vega Yon 等人（2020）所示 <https://doi.org/10.1016/j.socnet.2020.07.005>。與 'ergm' 包不同，'ergmito' 避免使用馬爾可夫鏈最大似然估計器（MC-MLE），而是使用最大似然估計器（MLE）來擬合小型網絡的 ERGMs。由於對小型網絡來說詳盡枚舉在計算上是可行的，因此這個 R 包利用了這一點，並提供了直接計算似然函數和其他相關函數的工具，這意味著在許多情況下，小型網絡的 ERGMs 估計和模擬都可以比基於模擬的算法更快、更準確。
   img: ../img/ergmito.webp
   github: https://github.com/muriteams/ergmito
+
