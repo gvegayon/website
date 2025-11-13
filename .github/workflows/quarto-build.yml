@@ -68,8 +68,13 @@ jobs:
         path: public/
         retention-days: 7
 
+  post-artifact:
+    needs: build-deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
     - name: Post artifact comment on PR
-      if: github.event_name == 'pull_request'
       uses: CDCgov/cfa-actions/post-artifact@main
       with:
         artifact-name: built-site

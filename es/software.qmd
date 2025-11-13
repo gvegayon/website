@@ -23,13 +23,13 @@ Un par de proyectos a destacar incluyen:
 #| results: asis
 #| echo: false
 #| eval: true
-x <- yaml::read_yaml("../software_highlights.yaml")
+x <- yaml::read_yaml("software_highlights.yaml")
 for (n in names(x)) {
 
   cat('::: {.columns style="display: flex;"}\n')
   with(x[[n]], {
     cat('::: {.column style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center"}\n')
-    cat('![](../', img, ')\n')
+    cat('![](', img, ')\n')
     cat(':::\n')
     cat('::: {.column style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px"}\n')
     cat(description)
