@@ -15,7 +15,7 @@ description: |
 
 Estoy profundamente comprometido con el **software de código abierto** y he estado construyendo herramientas de nivel profesional durante más de 15 años—remontándose a los días de [Google Code aquí](https://code.google.com/archive/p/rdspl/){target="_blank"}. Mi trabajo combina métodos estadísticos rigurosos con prácticas modernas de ingeniería de software, incluyendo **control de versiones** (Git/GitHub), **integración continua**, **IA agéntica**, **tecnologías de contenedores** y **metodologías ágiles**. He liderado equipos de desarrollo de software científico para entregar herramientas **de alto rendimiento**, **confiables** y **fáciles de usar** que son ampliamente adoptadas por investigadores y profesionales. La mayor parte de mi trabajo está construido en C++ con wrappers para R y Python, optimizado para su uso en entornos de computación de alto rendimiento. En todos los proyectos, diseño con el rendimiento y la usabilidad en mente, asegurando que los métodos complejos puedan ser tanto escalables como accesibles.
 
-Recientemente, durante los últimos años, he **incorporado IA en mi trabajo**, influyendo en el desarrollo e innovación (vea [aquí](https://github.com/gvegayon/ai-examples){target="_blank"} algunos ejemplos).
+Recientemente, durante los últimos años, he **incorporado IA en mi trabajo**, influyendo en el desarrollo e innovación (vea [aquí](https://github.com/gvegayon/ai-examples){target="_blank" rel="noopener noreferrer"} algunos ejemplos).
 
 Un par de proyectos a destacar incluyen:
 

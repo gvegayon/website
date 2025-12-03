@@ -19,7 +19,7 @@ Soy Profesor Asistente de Investigación en la
 
 Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
-Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof. Paul Marjoram</a> y <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, con la tesis titulada "<a href="../thesis.pdf" target="_blank">Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos</a>".
+Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof. Paul Marjoram</a> y <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, con la tesis titulada "<a href="../thesis.pdf" target="_blank" rel="noopener noreferrer">Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos</a>".
 
 Estoy disponible para consultorías en programación, ciencia de datos, ciencia de redes, desarrollo de software científico, visualización de datos y la integración de métodos basados en IA/LLM en investigaciones y flujos analíticos.
 :::
