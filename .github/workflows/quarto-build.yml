@@ -10,6 +10,11 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
@@ -39,6 +44,7 @@ jobs:
         git config --global --add safe.directory /__w/website/website
 
     - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
       run: |
         # Check if there are any changes in public directory
         if [ -d "public" ]; then
@@ -54,10 +60,22 @@ jobs:
           exit 1
         fi
 
-    - name: Upload site as artifact (on failure)
+    - name: Upload site as artifact
       if: always()
       uses: actions/upload-artifact@v4
       with:
         name: built-site
         path: public/
         retention-days: 7
+
+  post-artifact:
+    needs: build-deploy
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - name: Post artifact comment on PR
+      uses: CDCgov/cfa-actions/post-artifact@main
+      with:
+        artifact-name: built-site
+        gh-token: ${{ secrets.GITHUB_TOKEN }}

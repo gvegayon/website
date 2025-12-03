@@ -1,0 +1,30 @@
+---
+title: ""
+# page-layout: full
+toc: false
+title-prefix: G Vega Yon
+description: |
+    George G. Vega Yon 博士的主頁，猶他大學教授、數據科學家和軟件工程師
+---
+
+<!-- Background Header Section - 30vh -->
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('../img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center; flex-direction: column;"}
+![](../img/george_darwin.webp){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;" alt="George G. Vega Yon 博士與大英博物館查爾斯·達爾文雕像"}
+:::
+
+::: {style="text-align: center; line-height: 1.6;"}
+
+我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究助理教授。我使用[統計計算](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}研究[複雜系統](https://cssociety.org/about-us/what-are-cs){target="_blank"}。我擁有超過十年的科學軟件開發經驗，專注於高性能計算、數據可視化和社交網絡分析。近年來，我將現代 **AI** 與**代理式 AI**工具融入工作流程，使用 LLM 加速模型開發並推進分析。
+
+我的學術背景包括公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}，2011）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}，2015）和生物統計學（博士，[USC](https://usc.edu){target="_blank"}，2020）。
+
+我在[Paul Marjoram 教授](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}和[Kayla de la Haye 教授](https://kayladelahaye.net){target="_blank"}的指導下獲得生物統計學博士學位，論文題為"[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](../thesis.pdf){target="_blank"}"。
+
+我提供編程、數據科學、網絡科學、科學軟件開發、數據可視化，以及將 AI/LLM 方法整合進研究與分析流程的諮詢服務。
+:::
+
+---
+
+::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+:::

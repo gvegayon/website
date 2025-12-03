@@ -1,0 +1,44 @@
+---
+bibliography: ../papers.bib
+csl: ../apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+description: |
+  Lista de manuscritos científicos del Doctor George G. Vega Yon
+---
+
+::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/collage_research.webp'); background-size: cover; background-repeat: repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
+:::
+
+
+# Investigación
+
+Soy un metodólogo que trabaja en la intersección de sistemas complejos y computación estadística, con enfoque en **computación de alto rendimiento** y **aprendizaje automático**. Una parte central de mi trabajo es el desarrollo de software científico: como **ingeniero de software profesional**, dedico un esfuerzo significativo a asegurar que los métodos y herramientas que creo sean confiables, abiertos y ampliamente accesibles para la comunidad de investigación. Mis colaboraciones abarcan diversos campos, incluyendo **epidemiología**, **salud pública**, **análisis de redes sociales** y **genómica**, pero todas comparten una base común en computación intensiva y métodos estadísticos avanzados.
+
+Para la lista más actualizada de mis publicaciones, por favor visite mi [perfil de Google Scholar](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}.
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "../papers.bib")
+```
+
+---
+
+::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+*Esta versión del sitio web fue traducida automáticamente de la versión original en inglés usando GitHub Copilot y aún no ha sido verificada por un humano.*
+:::

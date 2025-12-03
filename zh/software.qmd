@@ -1,0 +1,79 @@
+---
+bibliography: ../software.bib
+csl: ../apa-7th-curriculum-vitae.csl
+nocite: |
+  @*
+description: |
+  George G. Vega Yon 博士開發的軟件包和工具列表
+---
+
+::: {style="text-align: center;"}
+![](../img/hexlogos.webp){width="70%" alt="我正在開發的軟件的一些六邊形標誌"}
+:::
+
+# 軟件
+
+我深深致力於**開源軟件**，並在15年多的時間裡一直在構建專業級工具——可以追溯到 [Google Code 時代](https://code.google.com/archive/p/rdspl/){target="_blank"}。我的工作將嚴格的統計方法與現代軟件工程實踐相結合，包括**版本控制**（Git/GitHub）、**持續集成**、**代理 AI**、**容器技術**和**敏捷方法**。我領導科學軟件開發團隊交付**高性能**、**可靠**且**用戶友好的工具**，這些工具被研究人員和從業者廣泛採用。我的大部分工作是用 C++ 構建的，為 R 和 Python 提供包裝器，針對高性能計算環境進行優化。在所有項目中，我在設計時都考慮到性能和可用性，確保複雜的方法既可擴展又易於訪問。
+
+近年來，我也將 **AI** 融入工作，推動研發與創新（一些示例見[此處](https://github.com/gvegayon/ai-examples){target="_blank"}）。
+
+重點項目包括：
+
+
+```{r}
+#| label: cards
+#| results: asis
+#| echo: false
+#| eval: true
+x <- yaml::read_yaml("software_highlights.yaml")
+for (n in names(x)) {
+
+  cat('::: {.columns style="display: flex;"}\n')
+  with(x[[n]], {
+    cat('::: {.column style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center"}\n')
+    cat('![](', img, ')\n')
+    cat(':::\n')
+    cat('::: {.column style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px"}\n')
+    cat(description)
+
+    # Now, pasting a GitHub icon with a link to the repository
+    cat(
+      sprintf(
+        '[![](%s){width="20px"}](%s)\n',
+        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
+        github
+        )
+    )
+    cat(':::\n')
+  })
+  cat(':::\n\n')
+}
+```
+
+以下是我構建或貢獻的軟件包的詳盡列表。您可以在 [我的 GitHub](https://github.com/gvegayon) 上查看我最近的貢獻和正在進行的開源項目
+
+::: {#refs}
+:::
+
+```{r}
+#| label: fetchit
+#| echo: false
+#| warning: false
+tmp <- tempfile(fileext = ".bib")
+file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
+
+ans <- download.file(
+  url = file_url,
+  destfile = tmp
+)
+
+stopifnot(ans == 0)
+
+ans <- file.copy(from = tmp, to = "../software.bib")
+```
+
+---
+
+::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+:::
