@@ -30,7 +30,7 @@
   status = 301
 [[redirects]]
   from = "posit.cloud"
-  to = "https://posit.cloud/spaces/670492/join?access_code=HkO5Cug1iuebqm3K10klwIiUEXEhW_tKLMqfB5WO"
+  to = "https://posit.cloud/spaces/735021/join?access_code=y77w_GfFVKSHiIvQBFpzjKVHl-hPrgYfEC6t46BW"
   force = true
   status = 301
 [[redirects]]
