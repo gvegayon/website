@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "rstudio.chisocnet"
+  to = "https://posit.cloud/spaces/738460/join?access_code=xARLOs68LD39mlPh4MG-q0sHkMQIOHWI3OuMZxPa"
+  force = true
+  status = 301
+[[redirects]]
   from = "ai/chatgpt-paper"
   to = "https://chatgpt.com/share/68a4ec43-3a00-800d-ad35-9e53238f41cf"
   force = true
