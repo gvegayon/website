@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "gdrive.chisocnet"
+  to = "https://drive.google.com/drive/folders/1p3bI72l8NcegFr929ymWiTp-C2S-fooY?usp=sharing"
+  force = true
+  status = 301
+[[redirects]]
   from = "rstudio.chisocnet"
   to = "https://posit.cloud/spaces/738460/join?access_code=xARLOs68LD39mlPh4MG-q0sHkMQIOHWI3OuMZxPa"
   force = true
