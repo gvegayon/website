@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "measles"
+  to = "https://github.com/EpiForeSITE/measles"
+  force = true
+  status = 301
+[[redirects]]
   from = "gdrive.chisocnet"
   to = "https://drive.google.com/drive/folders/1p3bI72l8NcegFr929ymWiTp-C2S-fooY?usp=sharing"
   force = true
