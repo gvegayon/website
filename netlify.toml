@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/epicorner"
+  to = "https://docs.google.com/presentation/d/1tRYpRmqojL2exDZ4q494TobGHJgBJ4igmiWvZbkRKbk/edit?usp=sharing"
+  force = true
+  status = 301
+[[redirects]]
   from = "measles"
   to = "https://github.com/EpiForeSITE/measles"
   force = true
