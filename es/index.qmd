@@ -14,8 +14,8 @@ description: |
 
 ::: {style="text-align: center; line-height: 1.6;"}
 
-Soy Profesor Asistente de Investigación en la 
-<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>. Trabajo estudiando <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Sistemas Complejos</a> utilizando <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Computación Estadística</a>. Tengo más de diez años de experiencia desarrollando software científico enfocado en computación de alto rendimiento, visualización de datos y análisis de redes sociales. En los últimos años he incorporado herramientas modernas de IA y **IA agente** a mis flujos de trabajo, usando LLMs para acelerar el desarrollo de modelos y avanzar la analítica.
+Soy Profesor Asociado de Investigación en la
+<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, además de ser profesor adjunto en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Trabajo estudiando <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Sistemas Complejos</a> utilizando <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Computación Estadística</a>. Tengo más de diez años de experiencia desarrollando software científico enfocado en computación de alto rendimiento, visualización de datos y análisis de redes sociales. En los últimos años he incorporado herramientas modernas de IA y **IA agente** a mis flujos de trabajo, usando LLMs para acelerar el desarrollo de modelos y avanzar la analítica.
 
 Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
