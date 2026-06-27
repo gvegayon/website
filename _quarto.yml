@@ -66,4 +66,4 @@ format:
     page-layout: article
 
 execute:
-  freeze: auto
+  freeze: false

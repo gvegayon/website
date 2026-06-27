@@ -67,5 +67,5 @@ ans <- download.file(
 
 stopifnot(ans == 0)
 
-ans <- file.copy(from = tmp, to = "software.bib")
+ans <- file.copy(from = tmp, to = "software.bib", overwrite = TRUE)
 ```

@@ -34,5 +34,5 @@ ans <- download.file(
 
 stopifnot(ans == 0)
 
-ans <- file.copy(from = tmp, to = "papers.bib")
+ans <- file.copy(from = tmp, to = "papers.bib", overwrite = TRUE)
 ```
