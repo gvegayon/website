@@ -264,7 +264,7 @@
   status = 301
   force = true
 [[redirects]]
-  from   = "/meetme/*"
-  to     = "https://calendar.app.google/LxNeGy5CtzaDroFv6"
+  from   = "/meetme"
+  to     = "https://outlook.office.com/bookwithme/user/2b0ce7630ff348a88c23c82847beef52@umail.utah.edu/meetingtype/oAPRWNYkaU-VaGvNTTByjA2?anonymous&ismsaljsauthenabled&ep=mlink"
   status = 301
   force  = true
