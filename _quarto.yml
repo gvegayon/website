@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: public
-  render: 
+  render:
     - "*.qmd"
     - "!README.md"
 
@@ -30,6 +30,8 @@ website:
         text: Talks
       - href: teaching.qmd
         text: Teaching
+      - href: people.qmd
+        text: People
       - text: 'Resume/CV'
         menu:
           - text: Resume (brief)
@@ -59,11 +61,13 @@ website:
 
 format:
   html:
-    theme: 
+    theme:
       - default
     css: styles.css
     toc: false
     page-layout: article
+    include-in-header:
+      - file: _includes/person-jsonld.html
 
 execute:
   freeze: false

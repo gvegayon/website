@@ -29,6 +29,8 @@ website:
         text: Charlas
       - href: teaching.qmd
         text: Enseñanza
+      - href: people.qmd
+        text: Personas
       - text: 'Currículum'
         menu:
           - text: Resume (breve)
@@ -58,11 +60,13 @@ website:
 
 format:
   html:
-    theme: 
+    theme:
       - default
     css: ../styles.css
     toc: false
     page-layout: article
+    include-in-header:
+      - file: ../_includes/person-jsonld.html
 
 execute:
   freeze: false
