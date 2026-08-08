@@ -1,8 +1,6 @@
 ---
 bibliography: papers.bib
 csl: apa-7th-curriculum-vitae.csl
-nocite: |
-  @*
 description: |
   List of scientific manuscripts by Doctor George G. Vega Yon
 ---
@@ -15,24 +13,20 @@ description: |
 
 I am a methodologist working at the intersection of complex systems and statistical computing, with a focus on **high-performance computing** and **machine learning**. A central part of my work is the development of scientific software: as a **professional software engineer**, I dedicate significant effort to ensuring that the methods and tools I create are reliable, open, and widely accessible to the research community. My collaborations span diverse fields, including **epidemiology**, **public health**, **social network analysis**, and **genomics**, but they all share a common foundation in heavy computation and advanced statistical methods.
 
-For the most up-to-date list of my publications, please visit my [Google Scholar profile](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}.
-
-::: {#refs}
-:::
+For a complete and always-current publication index, see [Google Scholar](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}. You can also follow related work and software on [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}, [GitHub](https://github.com/gvegayon){target='_blank'}, and [my software page](software.qmd).
 
 ```{r}
-#| label: fetchit
+#| label: sync-papers-bib
+#| include: false
+source("R/research_publications.R")
+sync_papers_bib("papers.bib")
+```
+
+```{r}
+#| label: render-research-cards
 #| echo: false
 #| warning: false
-tmp <- tempfile(fileext = ".bib")
-file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib"
-
-ans <- download.file(
-  url = file_url,
-  destfile = tmp
-)
-
-stopifnot(ans == 0)
-
-ans <- file.copy(from = tmp, to = "papers.bib", overwrite = TRUE)
+#| results: asis
+source("R/research_publications.R")
+render_research_cards("papers.bib", language = "en")
 ```
