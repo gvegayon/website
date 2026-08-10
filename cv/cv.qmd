@@ -125,9 +125,7 @@ counts <- read_downloads()             # cached; `make downloads` to refresh
 
 # Major Areas of Research Interest
 
-Social Networks and Complex Systems · Statistical Computing · Scientific
-Software Development · Mechanistic Machine Learning · Statistical Methods
-Development
+Social Networks and Complex Systems · Network Science · Statistical Computing · Scientific Software Development · Mechanistic Machine Learning · Statistical Methods Development
 
 # Education
 
@@ -192,19 +190,19 @@ emit_section(pubs, "wip", fmt_pub)
 
 ```{r}
 #| results: asis
+if (length(counts)) cat(sprintf(
+  "\n_Badges show total CRAN downloads (%s across %d packages), as of %s._\n",
+  format(sum(counts), big.mark = ","), length(counts),
+  format(file.mtime("data/downloads.csv"), "%B %Y")))
+```
+
+```{r}
+#| results: asis
 es <- sort_entries(soft)
 for (i in seq_along(es)) {
   cat(sprintf("%d. %s%s\n\n", i, fmt_software(es[[i]]),
               dl_badge(pkg_name(es[[i]]), counts)))
 }
-```
-
-```{r}
-#| results: asis
-if (length(counts)) cat(sprintf(
-  "\n_Badges show total CRAN downloads (%s across %d packages), as of %s._\n",
-  format(sum(counts), big.mark = ","), length(counts),
-  format(file.mtime("data/downloads.csv"), "%B %Y")))
 ```
 
 # Grants
