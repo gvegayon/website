@@ -34,9 +34,9 @@ website:
       - text: '簡歷'
         menu:
           - text: Resume (簡要)
-            href: https://raw.githubusercontent.com/gvegayon/resume/master/resume.pdf
+            href: ../cv/resume.docx
           - text: CV (學術)
-            href: https://raw.githubusercontent.com/gvegayon/resume/master/cv.pdf
+            href: ../cv/cv.pdf
     right:
       - href: ../index.html
         text: 🇺🇸
