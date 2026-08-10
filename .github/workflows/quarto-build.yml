@@ -33,6 +33,16 @@ jobs:
         wget "$URL" -O quarto.deb && dpkg -i quarto.deb
       shell: bash
 
+    # cv/cv.qmd renders to PDF via Typst, which resolves fonts from the system.
+    # Keep this in step with .devcontainer/Containerfile.
+    - name: Install CV fonts
+      run: |
+        apt-get update
+        DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+          fonts-open-sans fonts-dejavu-core
+        fc-cache -f
+      shell: bash
+
     - name: Render Quarto website
       run: |
         make

@@ -1,0 +1,366 @@
+---
+# No `title:` on purpose -- the default Typst article template centres it.
+# The name block below is rendered directly instead.
+format:
+  typst:
+    papersize: us-letter
+    margin:
+      x: 1.7cm
+      y: 1.6cm
+    fontsize: 9.5pt
+    # Open Sans is the typeface the LaTeX CV used (\usepackage{opensans}) and,
+    # unlike Avenir Next, it is installable on Linux -- see fonts-open-sans in
+    # .devcontainer/Containerfile and in the CI workflow. Quarto collapses a
+    # comma-separated `mainfont` into a single family name rather than a
+    # fallback stack, so this must name exactly one installed family.
+    mainfont: "Open Sans"
+    include-in-header:
+      - text: |
+          #let accent = rgb("#00707a")
+          #let muted  = rgb("#6b7280")
+
+          // 1.5 line spacing, exactly: pin the line box to 1em via the text
+          // edges, then a 0.5em gap gives a 1.5em baseline-to-baseline step.
+          #set text(top-edge: 0.75em, bottom-edge: -0.25em)
+          #set par(justify: false, leading: 0.5em)
+          #set block(spacing: 1.05em)
+          #show link: set text(fill: accent)
+
+          // Running header from page 2 on: the network mark and the name.
+          // No page number here -- the template already numbers pages at the
+          // foot, and setting `numbering` back to none would be overridden by
+          // the template's own `#set page(...)`, which comes after this block.
+          #set page(header: context {
+            if counter(page).get().first() > 1 {
+              set text(size: 8pt, fill: muted)
+              box(baseline: 0.3em, image("fig/ukfaculty.png", width: 0.85cm))
+              h(0.4em)
+              emph[George G. Vega Yon, Ph.D.]
+              v(-0.4em)
+              line(length: 100%, stroke: 0.4pt + luma(85%))
+            }
+          })
+
+          // Section heading: small, spaced caps with a hairline rule.
+          #show heading.where(level: 1): it => block(width: 100%, breakable: false, below: 0.85em, above: 1.5em)[
+            #text(size: 10pt, weight: "bold", fill: accent, tracking: 0.09em)[
+              #upper(it.body)
+            ]
+            #v(-0.45em)
+            #line(length: 100%, stroke: 0.6pt + accent.lighten(55%))
+          ]
+
+          // Tighter numbered/bulleted lists for the bibliography sections.
+          #set enum(indent: 0pt, body-indent: 0.55em, spacing: 0.72em)
+          #set list(indent: 0pt, body-indent: 0.55em, spacing: 0.72em)
+
+          // A titled entry with a right-aligned date.
+          #let dated(title, date, ..rest) = block(below: 0.75em, breakable: false)[
+            #grid(columns: (1fr, auto), column-gutter: 1em,
+              text(weight: "bold")[#title],
+              text(fill: muted, size: 9pt)[#date])
+            #for r in rest.pos() [ #text(size: 9pt)[#r] \ ]
+          ]
+
+          // A one-line item with a right-aligned date (awards, books).
+          #let oneline(body, date) = block(below: 0.5em)[
+            #grid(columns: (1fr, auto), column-gutter: 1em,
+              body, text(fill: muted, size: 9pt)[#date])
+          ]
+
+          // CRAN download badge, emitted inline by R/downloads.R.
+          #let dlbadge(n) = box(
+            baseline: 0.15em,
+            fill: accent.lighten(88%),
+            inset: (x: 0.42em, y: 0.22em),
+            radius: 2.5pt,
+            text(size: 7pt, fill: accent.darken(12%), weight: "medium")[↓ #n]
+          )
+execute:
+  echo: false
+  warning: false
+knitr:
+  opts_chunk:
+    # The default SVG device needs cairo/X11, which isn't present here; this
+    # document has no figures, so a plain PNG device is enough.
+    dev: png
+---
+
+```{r}
+#| include: false
+source("R/bib.R")
+source("R/downloads.R")
+
+bibs <- c("../papers.bib", "../software.bib",
+          "../presentations-conference.bib", "../presentations-invited.bib",
+          "../presentations-other.bib")
+assert_no_accent_macros(bibs)          # accents must be literal UTF-8
+
+pubs   <- read_bibs(bibs[1])
+soft   <- read_bibs(bibs[2])
+talks  <- read_bibs(bibs[3], bibs[4], bibs[5])
+counts <- read_downloads()             # cached; `make downloads` to refresh
+```
+
+```{=typst}
+// The network sits top-right, out of the text flow, like the LaTeX original.
+// Raised so it clears the contact line, which runs close to the right margin.
+#place(top + right, dy: -1.1cm, image("fig/ukfaculty.png", width: 5cm))
+
+#block(below: 1.5em)[
+  #text(size: 20pt, weight: "bold")[George G. Vega Yon, Ph.D.]
+  #v(0.15em)
+  #text(size: 9.5pt, fill: muted)[
+    Research Associate Professor, Division of Epidemiology, University of Utah
+  ]
+  #v(0.35em)
+  #text(size: 9pt)[
+    #link("mailto:g.vegayon@gmail.com")[g.vegayon\@gmail.com]
+    #h(0.5em) · #h(0.5em) #link("https://ggvy.cl")[ggvy.cl]
+    #h(0.5em) · #h(0.5em) #link("https://github.com/gvegayon")[github.com/gvegayon]
+    #h(0.5em) · #h(0.5em) #link("https://orcid.org/0000-0002-3171-0844")[orcid.org/0000-0002-3171-0844]
+  ]
+]
+```
+
+# Major Areas of Research Interest
+
+Social Networks and Complex Systems · Statistical Computing · Scientific
+Software Development · Mechanistic Machine Learning · Statistical Methods
+Development
+
+# Education
+
+```{=typst}
+#dated[Ph.D. in Biostatistics (concentration in Statistical Computing)][2020][University of Southern California, USA][
+  Dissertation: _Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems._]
+#dated[M.Sc. in Social Sciences (concentration in Economics)][2016][California Institute of Technology, USA]
+#dated[Master in Economics and Public Policy][2011][Universidad Adolfo Ibáñez, Chile]
+#dated[B.S. in Business Administration (minor in Political Science)][2011][Universidad Adolfo Ibáñez, Chile]
+```
+
+# Academic and Professional Experience
+
+```{=typst}
+#dated[Research Associate Professor][July 2026 -- Present][Division of Epidemiology, University of Utah]
+#dated[Adjunct Assistant Professor][July 2026 -- Present][Kahlert School of Computing, University of Utah]
+#dated[Adjunct Assistant Professor][Jan 2023 -- Present][Division of Population Health Sciences, University of Utah]
+#dated[Research Assistant Professor][Nov 2021 -- June 2026][Division of Epidemiology, University of Utah]
+#dated[Data Scientist (contractor)][May 2024 -- Dec 2025][Center for Forecasting and Outbreaks Analytics, CDC]
+#dated[Lead Data Scientist (Associate)][Nov 2023 -- May 2024][Booz Allen Hamilton]
+#dated[Research Programmer][Feb 2018 -- Nov 2021][Department of Preventive Medicine, University of Southern California]
+#dated[Programmer Analyst][Oct 2015 -- Feb 2018][Department of Preventive Medicine, University of Southern California]
+#dated[Graduate Student Researcher][Aug 2011 -- Oct 2015][Division of Social Sciences, California Institute of Technology]
+#dated[Analyst][Aug 2011 -- Aug 2014][Research Division, Chilean Pension Supervisor]
+#dated[Founding Partner][Jan 2012 -- Jan 2014][Nodos Chile Social Network Analysis Ltda.]
+#dated[Adjunct Professor of Statistical Computing][Jan 2011 -- Jun 2012][School of Government, Universidad Adolfo Ibáñez]
+```
+
+# Awards
+
+```{=typst}
+#oneline[Top paper award, International Communication Association][2022]
+#oneline[Travel Grant, Society of Young Network Scientists][2019]
+#oneline[Fellowship, California Institute of Technology][2014]
+#oneline[Honorable Mention (Posters Session), Chilean Economics Society][2012]
+#oneline[Scholarship, Universidad Adolfo Ibáñez][2006]
+```
+
+# Peer Reviewed Publications
+
+```{r}
+#| results: asis
+emit_section(pubs, "published", fmt_pub)
+```
+
+# Work in Progress and Technical Reports
+
+```{r}
+#| results: asis
+emit_section(pubs, "wip", fmt_pub)
+```
+
+# Books
+
+```{=typst}
+#oneline[_Applied Network Science with R_ (in development). #link("https://book.ggv.cl/")[book.ggv.cl]][]
+#oneline[_Applied HPC with R_ (in development). #link("https://book-hpc.ggv.cl/")[book-hpc.ggv.cl]][]
+#oneline[_AI for the Scientist in a Hurry_ (in development). #link("https://book-ai.ggv.cl/")[book-ai.ggv.cl]][]
+```
+
+# Software Packages
+
+```{r}
+#| results: asis
+es <- sort_entries(soft)
+for (i in seq_along(es)) {
+  cat(sprintf("%d. %s%s\n\n", i, fmt_software(es[[i]]),
+              dl_badge(pkg_name(es[[i]]), counts)))
+}
+```
+
+```{r}
+#| results: asis
+if (length(counts)) cat(sprintf(
+  "\n_Badges show total CRAN downloads (%s across %d packages), as of %s._\n",
+  format(sum(counts), big.mark = ","), length(counts),
+  format(file.mtime("data/downloads.csv"), "%B %Y")))
+```
+
+# Grants
+
+```{=typst}
+#dated[Quantum-Enhanced Epidemiological Modeling for Public Health Decision-Making][2026 -- 2027][
+  University of Utah Seed Grant (PIs: Vega Yon, Basu Roy). Role: Co-PI. Total award: \$50,000.][
+  Explores the potential of quantum computing to enhance epidemiological modeling and public
+  health decision-making, by implementing a quantum-enhanced version of an epidemiological ABM.]
+
+#dated[Statistical Methods for Integrative Genomics in Cancer][07-01-2016 -- 08-31-2027][
+  5P01CA196569-08, National Cancer Institute (PIs: Gauderman, Siegmund). Role: Co-Investigator.
+  0.6 calendar months/year. Total award (incl. indirect): \$12,894,663.][
+  Develops novel statistical methods for integrating multi-omic data to address cancer etiology,
+  prognosis, and treatment. I am Co-I on the project using evolutionary models for annotating genes.]
+
+#dated[Phenotypes of Epilepsy Etiology and Drug Resistance (PEER)][07-01-2023 -- 06-30-2026][
+  HT94252310221, U.S. Army Medical Research and Development Command (PI: Kennedy).
+  Role: Co-Investigator. 1.8 calendar months/year. Total award (incl. indirect): \$846,484.][
+  Investigates the causes and mechanisms of epilepsy using new data science methods, generating
+  risk scores for epilepsy after head injury among military personnel.]
+
+#dated[TRANSMIT: Training Research Acumen in Students Modeling Infectious Threats][09-30-2022 -- 09-29-2025][
+  5U01CK000675-01, National Center for Emerging and Zoonotic Infectious Diseases (PI: Keegan).
+  Role: Co-Investigator. 0.3 calendar months/year. Total award (incl. indirect): \$891,356.][
+  A fellowship program training students in mathematical modeling and computational methods
+  for the study of infectious diseases.]
+
+#v(0.4em)
+#text(style: "italic", fill: muted)[Submitted but not funded]
+#v(0.4em)
+
+#dated[Improving our Predictive Capability of Gene Functions by Leveraging Biological Insights with Advanced Statistical Computing][12-01-2022 -- 11-30-2027][
+  1R01HG012878-01, National Human Genome Research Institute (PI: Vega Yon). Role: PI.][
+  Uses discrete exponential-family models to build a mechanistic gene function evolution model
+  incorporating biological processes such as neofunctionalization.]
+
+#dated[Building a Novel Prediction Framework Leveraging Biological Insights to Boost Machine Learning Algorithms for Annotating Gene Function][12-01-2023 -- 11-30-2028][
+  1R01HG012878-01A1, National Human Genome Research Institute (PI: Vega Yon). Role: PI.][
+  Extends the model of function evolution using discrete exponential-family models, embedding it
+  into a mechanistic machine learning framework.]
+```
+
+# Teaching
+
+```{=typst}
+#dated[(PHS 7045) Advanced Programming with R and HPC][Fall 2024][The University of Utah, USA][Co-instructor, PHS Ph.D. Program]
+#dated[(PHS 7045) Advanced Programming with R and HPC][Fall 2022][The University of Utah, USA][Co-instructor, PHS Ph.D. Program]
+#dated[(PM 566) Introduction to Health Data Science][Fall 2021][University of Southern California, USA][Instructor, M.Sc. in Public Health Data Science]
+#dated[(PM 566) Introduction to Health Data Science][Fall 2020][University of Southern California, USA][Co-instructor, M.Sc. in Public Health Data Science]
+#dated[Statistical Computing with Stata][2012][Universidad Adolfo Ibáñez, Chile][Instructor, Masters in Economics and Public Policy]
+#dated[Microeconomics][2012][Universidad Adolfo Ibáñez, Chile][Co-instructor, B.A. in Business Administration]
+#dated[Introduction to Economics][2011--2012][Universidad Adolfo Ibáñez, Chile][Co-instructor, B.A. in Business Administration]
+```
+
+# Mentoring and Advising
+
+```{=typst}
+#dated[Sima Najafzadehkhoei --- Mentor, RA][2024 -- Present][
+  University of Utah, Population Health Sciences, Ph.D. in Biostatistics.
+  Computational epidemiology, agent-based models and ML.]
+#dated[Anibal Olivera --- Mentor, RA][2024 -- Present][
+  Universidad del Desarrollo, Chile, Ph.D. in Social Complexity. Network science and R package development.]
+#dated[Olivia Banks --- Mentor, RA][2024 -- Present][
+  University of Utah, undergraduate double major in Computer Science and Cellular and Molecular Biology.
+  Software development and computational epidemiology.]
+#dated[Eric Anto --- Ph.D. Dissertation Committee Member][2023 -- Present][
+  University of Utah, Population Health Sciences, Biostatistics Ph.D. program.]
+#dated[Hyrum Thomas Diesen --- Mentor, RA][2024 -- 2025][
+  University of Utah, School of Biological Sciences, Molecular Cellular Evolutionary Biology Ph.D. program.]
+#dated[Katherine Lawson Michod --- Qualifying Exam Chair and Dissertation Committee Member][2022 -- 2024][
+  University of Utah, Population Health Sciences, Clinical and Translational Epidemiology Ph.D. program.]
+#dated[Derek Meyer --- Supervisor, RA, and M.Sc. Dissertation Committee Member][2022 -- 2024][
+  University of Utah, Population Health Sciences. Agent-based models for epidemics.]
+#dated[Jacqueline M. Kent-Marvik --- Mentor][2022 -- 2024][
+  University of Utah, Nursing School, Ph.D. Health Sciences. Network science and social network analysis.]
+#dated[Porter Bischoff --- Mentor, RA][Summer 2023][
+  University of Utah + Utah Valley University, Summer Program for Undergraduate Research (SPUR).
+  Network visualization using R.]
+#dated[Luis Lopez --- Mentor][2022][NIH Postbac program. Exponential-family random graph models.]
+```
+
+# Conference Talks and Workshops
+
+```{r}
+#| results: asis
+emit_section(talks, "conferencetalk", fmt_talk)
+```
+
+# Invited Talks
+
+```{r}
+#| results: asis
+emit_section(talks, "invitedtalk", fmt_talk)
+```
+
+# Other Talks
+
+```{r}
+#| results: asis
+emit_section(talks, "othertalk", fmt_talk)
+```
+
+# Honors and Services to the Profession
+
+**Manuscript review (ad hoc).**
+Journal of the American Statistical Association ·
+American Sociological Review ·
+Communications Physics ·
+PLOS ONE ·
+BMC Infectious Diseases ·
+The Official Journal of the Society for Computational Economics ·
+The R Journal ·
+The Stata Journal ·
+Social Networks ·
+Journal of Mathematical Sociology ·
+Computer Methods and Programs in Biomedicine Update ·
+Journal of Open Source Software ·
+Bioinformatics
+
+**Abstract review.**
+International Conference on Computational Social Science (2019--2021) ·
+SUNBELT Conference (2016)
+
+**Panelist / discussant.**
+"Learning tips for your PhD from other researchers in the community,"
+Early and Middle Career Researchers (EMCRs) on Social Networks workshops, October 2023 ·
+"JASA A&CS Special Invited Session: A Tale of Two Datasets --- Representativeness and
+Generalisability of Inference for Samples of Networks," Joint Statistical Meetings (JSM),
+August 2023 ·
+"Social Network Diffusion of Individual Behavior Change Interventions Virtual Workshop,"
+National Institute on Aging, Division of Behavioral and Social Research, March 2022
+
+**Book review.**
+*Microeconometrics and Matlab: An Introduction*, by Adams, Clarke and Quinn,
+Oxford University Press, 2015 ·
+*Mastering Gephi Network Visualization*, by Ken Cherven, Packt Publishing, 2015 ·
+*Network Graph Analysis and Visualization with Gephi*, by Ken Cherven, Packt Publishing, 2013
+
+**Memberships and organizing.**
+Core member, [University of Utah's Center for Data Science](https://datascience.utah.edu) (2023--Present) ·
+Lead, [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu) (2022--Present) ·
+Member, Center for Applied Network Analysis (CANA) at USC (2016--Present) ·
+Co-organizer, [USC Networks Meeting](https://networkanalysis.usc.edu) (2020, 2021) ·
+Founder, the first [R Users Group in Chile](https://www.meetup.com/useRchile/) (2013) ·
+Co-organizer, [East LA R User Group](https://socalr.org)
+
+# Technical Skills
+
+R · C++ · Python · LaTeX · SQL · XML · regex · Stata+Mata · VBA · Gephi ·
+Pajek · Mathematica · MS Office · Git · Unix · Docker · Visual Studio Code
+
+```{r}
+#| results: asis
+cat(sprintf(paste0(
+  "\n```{=typst}\n#v(1em)\n#align(center)[#text(size: 8pt, fill: muted)[",
+  "last update: %s \\\n #link(\"https://ggvy.cl\")[ggvy.cl]]]\n```\n"),
+  format(Sys.Date(), "%B %d, %Y")))
+```

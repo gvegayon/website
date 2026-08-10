@@ -120,12 +120,12 @@
   force = true
 [[redirects]]
   from = "cv"
-  to = "https://github.com/gvegayon/resume/raw/master/cv.pdf"
+  to = "/cv/cv.pdf"
   status = 301
   force = true
 [[redirects]]
   from = "resume"
-  to = "https://github.com/gvegayon/resume/raw/master/resume.docx"
+  to = "/cv/resume.docx"
   status = 301
   force = true
 [[redirects]]

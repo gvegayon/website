@@ -8,4 +8,15 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/qua
     dpkg -i quarto-1.10.18-linux-${TARGETARCH}.deb && \
     rm quarto-1.10.18-linux-${TARGETARCH}.deb
 
+# Fonts for the Typst CV (cv/cv.qmd). Typst resolves fonts from the system,
+# and the base image ships only the URW/TeX Gyre set, so `mainfont` has to be
+# installed here. Open Sans matches the typeface the LaTeX CV used via
+# \usepackage{opensans}; DejaVu covers stray glyphs (arrows, symbols).
+RUN apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+        fonts-open-sans \
+        fonts-dejavu-core && \
+    fc-cache -f && \
+    rm -rf /var/lib/apt/lists/*
+
 CMD ["bash"]
