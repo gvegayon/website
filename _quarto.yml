@@ -35,9 +35,9 @@ website:
       - text: 'Resume/CV'
         menu:
           - text: Resume (brief)
-            href: https://raw.githubusercontent.com/gvegayon/resume/master/resume.pdf
+            href: cv/resume.docx
           - text: CV (academic)
-            href: https://raw.githubusercontent.com/gvegayon/resume/master/cv.pdf
+            href: cv/cv.pdf
     right:
       - href: es/index.html
         text: 🇨🇱
