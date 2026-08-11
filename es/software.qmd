@@ -1,8 +1,4 @@
 ---
-bibliography: ../software.bib
-csl: ../apa-7th-curriculum-vitae.csl
-nocite: |
-  @*
 description: |
   Lista de paquetes de software y herramientas desarrolladas por el Doctor George G. Vega Yon
 ---
@@ -52,24 +48,21 @@ for (n in names(x)) {
 
 La siguiente es una lista exhaustiva de los paquetes de software que he construido o a los que he contribuido. Puede echar un vistazo a mis contribuciones más recientes y proyectos de código abierto en curso en [mi GitHub](https://github.com/gvegayon)
 
-::: {#refs}
-:::
+```{r}
+#| label: render-software-cards
+#| results: asis
+#| echo: false
+#| warning: false
+source("../R/research_publications.R")
+render_software_cards("../software.toml")
+```
 
 ```{r}
 #| label: fetchit
 #| echo: false
 #| warning: false
-tmp <- tempfile(fileext = ".bib")
-file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
-
-ans <- download.file(
-  url = file_url,
-  destfile = tmp
-)
-
-stopifnot(ans == 0)
-
-ans <- file.copy(from = tmp, to = "../software.bib", overwrite = TRUE)
+source("../R/research_publications.R")
+sync_papers_toml("../software.toml", "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.toml")
 ```
 
 ---

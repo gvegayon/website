@@ -16,10 +16,10 @@ description: |
 若要查看完整且持續更新的出版物索引，請參閱 [Google Scholar 個人資料](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}。您也可以透過 [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}、[GitHub](https://github.com/gvegayon){target='_blank'} 與 [軟體頁面](software.qmd) 追蹤相關研究與程式。
 
 ```{r}
-#| label: sync-papers-bib
+#| label: sync-papers-toml
 #| include: false
 source("../R/research_publications.R")
-sync_papers_bib("../papers.bib")
+sync_papers_toml("../papers.toml")
 ```
 
 ```{r}
@@ -28,7 +28,7 @@ sync_papers_bib("../papers.bib")
 #| warning: false
 #| results: asis
 source("../R/research_publications.R")
-render_research_cards("../papers.bib", language = "zh")
+render_research_cards("../papers.toml", language = "zh")
 ```
 
 ---

@@ -98,20 +98,22 @@ parse_entry <- function(entry) {
   list(type = type, key = key, fields = fields)
 }
 
-parse_bib <- function(path) {
-  txt <- paste(readLines(path, warn = FALSE), collapse = "\n")
-  starts <- gregexpr("@[[:alpha:]]+\\s*\\{", txt, perl = TRUE)[[1]]
-  if (length(starts) == 1 && starts[1] == -1) return(list())
-
+parse_toml <- function(path) {
+  if (!requireNamespace("toml", quietly = TRUE)) return(list())
+  data <- toml::parseTOML(path)
+  
   entries <- list()
-  for (j in seq_along(starts)) {
-    s <- starts[j]
-    e <- if (j < length(starts)) starts[j + 1] - 1 else nchar(txt)
-    chunk <- trimws(substr(txt, s, e))
-    parsed <- parse_entry(chunk)
-    if (!is.null(parsed)) entries[[length(entries) + 1]] <- parsed
+  for (key in names(data)) {
+    f <- data[[key]]
+    type <- f$ENTRYTYPE %||% "misc"
+    
+    entries[[length(entries) + 1]] <- list(
+      type = type,
+      key = key,
+      fields = f
+    )
   }
-
+  
   entries
 }
 
@@ -180,8 +182,8 @@ get_research_i18n <- function(language = "en") {
   lookup[[language]] %||% lookup$en
 }
 
-sync_papers_bib <- function(output_path, file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib") {
-  tmp <- tempfile(fileext = ".bib")
+sync_papers_toml <- function(output_path, file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.toml") {
+  tmp <- tempfile(fileext = ".toml")
   ans <- tryCatch(
     download.file(url = file_url, destfile = tmp, quiet = TRUE),
     error = function(e) 1
@@ -192,9 +194,9 @@ sync_papers_bib <- function(output_path, file_url = "https://raw.githubuserconte
   }
 }
 
-render_research_cards <- function(bib_path, language = "en") {
+render_research_cards <- function(toml_path, language = "en") {
   i18n <- get_research_i18n(language)
-  entries <- parse_bib(bib_path)
+  entries <- parse_toml(toml_path)
 
   cat("\n```{=html}\n")
 
@@ -275,6 +277,86 @@ render_research_cards <- function(bib_path, language = "en") {
   cat('</div></div>')
 
   cat('<script>(() => { const search = document.getElementById("pub-search"); const cards = Array.from(document.querySelectorAll(".pub-card")); const filters = Array.from(document.querySelectorAll(".pub-filter")); let mode = "all"; function update() { const q = (search && search.value || "").trim().toLowerCase(); cards.forEach((card) => { const matchesText = !q || card.dataset.search.includes(q); const matchesMode = mode === "all" || card.dataset.status === mode; card.style.display = matchesText && matchesMode ? "block" : "none"; }); } if (search) search.addEventListener("input", update); filters.forEach((btn) => { btn.addEventListener("click", () => { filters.forEach((b) => b.classList.remove("is-active")); btn.classList.add("is-active"); mode = btn.dataset.filter; update(); }); }); update(); })();</script>')
+
+  cat("\n```\n")
+  invisible(NULL)
+}
+
+render_software_cards <- function(toml_path) {
+  entries <- parse_toml(toml_path)
+
+  cat("\n```{=html}\n")
+
+  if (!length(entries)) {
+    cat("<p>Software list temporarily unavailable.</p>")
+    cat("\n```\n")
+    return(invisible(NULL))
+  }
+
+  years <- sapply(entries, function(e) as.integer(gsub("[^0-9]", "", e$fields$year %||% "0")))
+  years[is.na(years)] <- 0
+  entries <- entries[order(years, decreasing = TRUE)]
+
+  cat('<div class="research-shell">')
+  cat('<div class="research-controls">')
+  cat('<input id="pub-search" class="pub-search" type="search" placeholder="Search software..." aria-label="Search software">')
+  cat('</div>')
+  cat('<div id="pub-list" class="pub-list">')
+
+  for (e in entries) {
+    f <- e$fields
+    authors <- clean_text(f$author %||% "")
+    title <- clean_text(f$title %||% "Untitled")
+    year <- clean_text(f$year %||% "n.d.")
+    abstract <- clean_text(f$abstract %||% f$note %||% "")
+
+    url <- clean_text(f$url %||% "")
+    
+    links <- c()
+    github_badges <- ""
+    
+    if (nzchar(url)) {
+      links <- c(links, safe_link(url, "Link"))
+      
+      # Check if it's a GitHub URL
+      gh_match <- regmatches(url, regexec("github\\.com/([^/]+)/([^/]+)/?", url))[[1]]
+      if (length(gh_match) >= 3) {
+        owner <- gh_match[2]
+        repo <- gsub("/.*", "", gh_match[3])
+        github_badges <- sprintf(
+          '<a href="%s" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/%s/%s.svg?style=social&label=Stars" alt="GitHub Stars" style="vertical-align: middle; margin-left: 10px;"></a><a href="%s/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads/%s/%s/total.svg?style=social&label=Downloads" alt="GitHub Downloads" style="vertical-align: middle; margin-left: 10px;"></a>',
+          url, owner, repo, url, owner, repo
+        )
+      }
+    }
+
+    link_block <- if (length(links)) {
+      paste(links, collapse = '<span class="sep">•</span>')
+    } else {
+      '<span class="muted">No external link listed</span>'
+    }
+
+    abstract_html <- if (nzchar(abstract)) {
+      sprintf('<details class="pub-abstract"><summary>Details</summary><p>%s</p></details>', abstract)
+    } else {
+      ''
+    }
+
+    cat(sprintf(
+      '<article class="pub-card" data-status="published" data-search="%s">\n<h3>%s</h3>\n<p class="pub-meta">%s (%s)</p>\n<p class="pub-links">%s%s</p>\n%s\n</article>',
+      tolower(paste(title, authors, year, abstract)),
+      title,
+      authors,
+      year,
+      link_block,
+      github_badges,
+      abstract_html
+    ))
+  }
+
+  cat('</div></div>')
+
+  cat('<script>(() => { const search = document.getElementById("pub-search"); const cards = Array.from(document.querySelectorAll(".pub-card")); function update() { const q = (search && search.value || "").trim().toLowerCase(); cards.forEach((card) => { const matchesText = !q || card.dataset.search.includes(q); card.style.display = matchesText ? "block" : "none"; }); } if (search) search.addEventListener("input", update); update(); })();</script>')
 
   cat("\n```\n")
   invisible(NULL)

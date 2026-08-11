@@ -1,4 +1,5 @@
 build:
+	Rscript -e 'if (!requireNamespace("toml", quietly = TRUE)) install.packages("toml", repos="https://cloud.r-project.org")'
 	quarto render .
 	quarto render es
 	quarto render zh
