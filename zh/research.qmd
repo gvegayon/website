@@ -1,6 +1,4 @@
 ---
-bibliography: ../papers.bib
-csl: ../apa-7th-curriculum-vitae.csl
 description: |
   George G. Vega Yon 博士的科學論文列表
 ---

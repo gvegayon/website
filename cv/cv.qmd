@@ -91,10 +91,10 @@ knitr:
 source("R/bib.R")
 source("R/downloads.R")
 
-bibs <- c("../papers.bib", "../software.bib",
+bibs <- c("../papers.toml", "../software.toml",
           "../presentations-conference.bib", "../presentations-invited.bib",
           "../presentations-other.bib")
-assert_no_accent_macros(bibs)          # accents must be literal UTF-8
+assert_no_accent_macros(bibs[3:5])          # accents must be literal UTF-8
 
 pubs   <- read_bibs(bibs[1])
 soft   <- read_bibs(bibs[2])

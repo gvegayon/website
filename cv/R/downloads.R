@@ -11,9 +11,9 @@ CRAN_EPOCH <- "2012-10-01"   # start of cranlogs coverage
 # ("rgexf: Build, Import and Export GEXF Graph Files" -> "rgexf").
 pkg_name <- function(e) trimws(sub(":.*$", "", clean_tex(e$fields$title %||% "")))
 
-fetch_downloads <- function(bib = "../software.bib", out = "data/downloads.csv") {
+fetch_downloads <- function(bib = "../software.toml", out = "data/downloads.csv") {
   stopifnot(requireNamespace("jsonlite", quietly = TRUE))
-  pkgs <- unique(Filter(nzchar, vapply(parse_bib(bib), pkg_name, character(1))))
+  pkgs <- unique(Filter(nzchar, vapply(read_bibs(bib), pkg_name, character(1))))
 
   url <- sprintf("https://cranlogs.r-pkg.org/downloads/total/%s:%s/%s",
                  CRAN_EPOCH, Sys.Date(), paste(pkgs, collapse = ","))

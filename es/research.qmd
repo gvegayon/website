@@ -1,6 +1,4 @@
 ---
-bibliography: ../papers.bib
-csl: ../apa-7th-curriculum-vitae.csl
 description: |
   Lista de manuscritos científicos del Doctor George G. Vega Yon
 ---

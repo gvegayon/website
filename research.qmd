@@ -1,6 +1,4 @@
 ---
-bibliography: papers.bib
-csl: apa-7th-curriculum-vitae.csl
 description: |
   List of scientific manuscripts by Doctor George G. Vega Yon
 ---

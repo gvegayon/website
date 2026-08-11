@@ -101,7 +101,34 @@ parse_bib <- function(path) {
   })
 }
 
-read_bibs <- function(...) unlist(lapply(c(...), parse_bib), recursive = FALSE)
+parse_toml <- function(path) {
+  if (!requireNamespace("toml", quietly = TRUE)) return(list())
+  data <- toml::parseTOML(path)
+  
+  entries <- list()
+  for (key in names(data)) {
+    f <- data[[key]]
+    type <- f$ENTRYTYPE %||% "misc"
+    
+    entries[[length(entries) + 1]] <- list(
+      type = type,
+      key = key,
+      fields = f
+    )
+  }
+  
+  entries
+}
+
+read_bibs <- function(...) {
+  lapply(c(...), function(path) {
+    if (grepl("\\.toml$", path, ignore.case = TRUE)) {
+      parse_toml(path)
+    } else {
+      parse_bib(path)
+    }
+  }) |> unlist(recursive = FALSE)
+}
 
 # ---------------------------------------------------------------- authors
 

@@ -6,7 +6,7 @@
 # installed in .devcontainer/Containerfile and in the CI workflow; on a bare
 # macOS host Typst will warn and fall back to its default.
 
-BIBS = ../papers.bib ../software.bib ../presentations-conference.bib \
+BIBS = ../papers.toml ../software.toml ../presentations-conference.bib \
        ../presentations-invited.bib ../presentations-other.bib
 
 # cv.qmd sits inside the website project, so Quarto writes the PDF to the
