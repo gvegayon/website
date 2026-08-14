@@ -6,14 +6,14 @@
 # installed in .devcontainer/Containerfile and in the CI workflow; on a bare
 # macOS host Typst will warn and fall back to its default.
 
-BIBS = ../papers.toml ../software.toml ../presentations-conference.bib \
-       ../presentations-invited.bib ../presentations-other.bib
+SRC = ../papers.toml ../software.toml ../presentations-conference.toml \
+      ../presentations-invited.toml ../presentations-other.toml
 
 # cv.qmd sits inside the website project, so Quarto writes the PDF to the
 # project's output-dir rather than next to the source.
 OUT = ../public/cv/cv.pdf
 
-$(OUT): cv.qmd R/bib.R R/downloads.R $(BIBS)
+$(OUT): cv.qmd R/bib.R R/downloads.R $(SRC)
 	quarto render cv.qmd --to typst
 
 # Refresh the CRAN download cache. Deliberately NOT a dependency of the PDF:

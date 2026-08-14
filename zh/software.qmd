@@ -57,14 +57,6 @@ source("../R/research_publications.R")
 render_software_cards("../software.toml", language = "zh")
 ```
 
-```{r}
-#| label: fetchit
-#| echo: false
-#| warning: false
-source("../R/research_publications.R")
-sync_papers_bib("../software.bib", "../software.toml", "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib")
-```
-
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}

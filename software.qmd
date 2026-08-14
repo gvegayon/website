@@ -54,11 +54,3 @@ The following is an exhaustive list of the software packages I have either built
 source("R/research_publications.R")
 render_software_cards("software.toml")
 ```
-
-```{r}
-#| label: fetchit
-#| echo: false
-#| warning: false
-source("R/research_publications.R")
-sync_papers_bib("software.bib", "software.toml", "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib")
-```

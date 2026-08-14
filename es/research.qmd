@@ -14,13 +14,6 @@ Soy un metodólogo que trabaja en la intersección de sistemas complejos y compu
 Para un índice completo y actualizado de publicaciones, visite [Google Scholar](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}. También puede seguir trabajo relacionado y software en [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}, [GitHub](https://github.com/gvegayon){target='_blank'} y [la página de software](software.qmd).
 
 ```{r}
-#| label: sync-papers-bib
-#| include: false
-source("../R/research_publications.R")
-sync_papers_bib("../papers.bib", "../papers.toml")
-```
-
-```{r}
 #| label: render-research-cards
 #| echo: false
 #| warning: false

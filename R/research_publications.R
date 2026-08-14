@@ -16,25 +16,20 @@
   a
 }
 
-clean_text <- function(x) {
-  x <- gsub("\\\\textbf\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\textit\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\emph\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\color\\{[^}]*\\}", "", x)
-  x <- gsub("\\\\bf\\b\\s*", "", x)
-  x <- gsub("\\\\&", "&", x)
-  x <- gsub("\\\\%", "%", x)
-  x <- gsub("\\\\_", "_", x)
-  x <- gsub("\\\\#", "#", x)
-  x <- gsub("[{}]", "", x)
-  x <- gsub("\n+", " ", x)
-  x <- gsub("\\s+", " ", x)
-  trimws(x)
+# Field values are plain text in the .toml files, so the only job left is
+# escaping them for the HTML they are about to be pasted into.
+esc <- function(x) {
+  x <- trimws(gsub("\\s+", " ", paste(x, collapse = ", "), perl = TRUE))
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  gsub(">", "&gt;", x, fixed = TRUE)
 }
 
-# One TOML table per entry, keyed by citation key -- see tools/bib2toml.R.
-# A missing `toml` package is an error rather than an empty list: silently
-# rendering a publication page with no publications is the worst outcome.
+# One TOML table per entry, keyed by citation key. `author` and `keywords`
+# arrive as arrays. A missing `toml` package is an error rather than an empty
+# list: silently rendering a publications page with no publications is the
+# worst outcome.
 parse_toml <- function(path) {
   if (!requireNamespace("toml", quietly = TRUE)) {
     stop("the 'toml' package is required to read ", path, call. = FALSE)
@@ -43,7 +38,7 @@ parse_toml <- function(path) {
 
   lapply(names(data), function(key) {
     f <- data[[key]]
-    list(type = f$ENTRYTYPE %||% "misc", key = key, fields = f)
+    list(type = f$entrytype %||% "misc", key = key, fields = f)
   })
 }
 
@@ -52,18 +47,9 @@ safe_link <- function(url, label) {
   sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', url, label)
 }
 
-# The search index goes into a double-quoted HTML attribute, and abstracts do
-# contain quotes and ampersands.
-attr_escape <- function(x) {
-  x <- gsub("&", "&amp;", x, fixed = TRUE)
-  x <- gsub('"', "&quot;", x, fixed = TRUE)
-  x <- gsub("<", "&lt;", x, fixed = TRUE)
-  gsub(">", "&gt;", x, fixed = TRUE)
-}
-
 entry_status <- function(fields) {
-  key <- tolower(fields$keywords %||% "")
-  if (grepl("wip|preprint|working", key)) return("wip")
+  kw <- tolower(as.character(fields$keywords %||% character(0)))
+  if (any(grepl("wip|preprint|working", kw))) return("wip")
   "published"
 }
 
@@ -133,36 +119,6 @@ get_research_i18n <- function(language = "en") {
   lookup[[language]] %||% lookup$en
 }
 
-# Resolve a repo file from either the project root or a translation
-# subdirectory (es/, zh/), which is where Quarto runs for the translated pages.
-repo_file <- function(rel) {
-  hit <- Filter(file.exists, c(rel, file.path("..", rel)))
-  if (!length(hit)) stop("cannot find ", rel, " from ", getwd(), call. = FALSE)
-  hit[[1]]
-}
-
-# gvegayon/resume publishes BibTeX, not TOML, so the sync fetches the .bib and
-# converts it. The .bib stays checked in as the upstream mirror; the .toml is
-# the derived file the pages and the CV actually read.
-sync_papers_bib <- function(bib_path, toml_path,
-                            file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib") {
-  tmp <- tempfile(fileext = ".bib")
-  ans <- tryCatch(
-    download.file(url = file_url, destfile = tmp, quiet = TRUE),
-    error = function(e) 1L
-  )
-
-  # A network hiccup must not silently publish a stale-but-empty page: keep the
-  # checked-in copies and carry on.
-  if (!identical(ans, 0L)) return(invisible(FALSE))
-
-  file.copy(from = tmp, to = bib_path, overwrite = TRUE)
-  conv <- new.env(parent = globalenv())
-  sys.source(repo_file("tools/bib2toml.R"), envir = conv)
-  conv$bib_to_toml(bib_path, toml_path)
-  invisible(TRUE)
-}
-
 render_research_cards <- function(toml_path, language = "en") {
   i18n <- get_research_i18n(language)
   entries <- parse_toml(toml_path)
@@ -195,16 +151,16 @@ render_research_cards <- function(toml_path, language = "en") {
 
   for (e in entries) {
     f <- e$fields
-    authors <- clean_text(f$author %||% "")
-    title <- clean_text(f$title %||% i18n$untitled)
-    year <- clean_text(f$year %||% i18n$no_date)
-    venue <- clean_text(f$journal %||% f$booktitle %||% f$publisher %||% f$institution %||% "")
-    abstract <- clean_text(f$abstract %||% "")
+    authors <- esc(f$author %||% "")
+    title <- esc(f$title %||% i18n$untitled)
+    year <- esc(f$year %||% i18n$no_date)
+    venue <- esc(f$journal %||% f$booktitle %||% f$publisher %||% f$institution %||% "")
+    abstract <- esc(f$abstract %||% "")
     status <- entry_status(f)
 
-    doi <- clean_text(f$doi %||% "")
-    url <- clean_text(f$url %||% f$URL %||% "")
-    arxiv <- clean_text(f$eprint %||% "")
+    doi <- esc(f$doi %||% "")
+    url <- esc(f$url %||% f$URL %||% "")
+    arxiv <- esc(f$eprint %||% "")
 
     doi_url <- if (nzchar(doi)) paste0("https://doi.org/", doi) else ""
     links <- c(
@@ -231,7 +187,7 @@ render_research_cards <- function(toml_path, language = "en") {
       status,
       tolower(paste(title, authors, year, venue)),
       tolower(status),
-      tolower(f$keywords %||% ""),
+      tolower(esc(f$keywords %||% "")),
       tolower(e$key),
       title,
       authors,
@@ -279,12 +235,12 @@ render_software_cards <- function(toml_path, language = "en") {
 
   for (e in entries) {
     f <- e$fields
-    authors <- clean_text(f$author %||% "")
-    title <- clean_text(f$title %||% i18n$untitled)
-    year <- clean_text(f$year %||% i18n$no_date)
-    abstract <- clean_text(f$abstract %||% f$note %||% "")
+    authors <- esc(f$author %||% "")
+    title <- esc(f$title %||% i18n$untitled)
+    year <- esc(f$year %||% i18n$no_date)
+    abstract <- esc(f$abstract %||% f$note %||% "")
 
-    url <- clean_text(f$url %||% "")
+    url <- esc(f$url %||% "")
 
     links <- c()
     github_badges <- ""
@@ -322,7 +278,7 @@ render_software_cards <- function(toml_path, language = "en") {
 
     cat(sprintf(
       '<article class="pub-card" data-status="published" data-search="%s">\n<h3>%s</h3>\n<p class="pub-meta">%s (%s)</p>\n<p class="pub-links">%s%s</p>\n%s\n</article>',
-      attr_escape(tolower(paste(title, authors, year, abstract))),
+      tolower(paste(title, authors, year, abstract)),
       title,
       authors,
       year,
