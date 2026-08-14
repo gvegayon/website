@@ -1,227 +1,228 @@
 [googlePublicData]
-doi = "10.32614/CRAN.package.googlePublicData"
-url = "https://CRAN.R-project.org/package=googlePublicData"
-note = "R package version 0.16.1"
-year = "2017"
-author = "Vega Yon, George G."
 title = "googlePublicData: Working with Google's 'Public Data Explorer' DSPL Metadata Files"
-ENTRYTYPE = "manual"
-ID = "googlePublicData"
+author = 'Vega Yon, George G.'
+year = '2017'
+note = 'R package version 0.16.1'
+url = 'https://CRAN.R-project.org/package=googlePublicData'
+doi = '10.32614/CRAN.package.googlePublicData'
+ENTRYTYPE = 'manual'
+ID = 'googlePublicData'
 
 [rgexf]
-doi = "10.32614/CRAN.package.rgexf"
-url = "https://CRAN.R-project.org/package=rgexf"
-note = "R package version 0.17.0"
-year = "2026"
-author = "Vega Yon, George G."
-title = "rgexf: Build, Import and Export GEXF Graph Files"
-ENTRYTYPE = "manual"
-ID = "rgexf"
+title = 'rgexf: Build, Import and Export GEXF Graph Files'
+author = 'Vega Yon, George G.'
+year = '2026'
+note = 'R package version 0.17.0'
+url = 'https://CRAN.R-project.org/package=rgexf'
+doi = '10.32614/CRAN.package.rgexf'
+ENTRYTYPE = 'manual'
+ID = 'rgexf'
 
 [ABCoptim]
-doi = "10.32614/CRAN.package.ABCoptim"
-url = "https://CRAN.R-project.org/package=ABCoptim"
-note = "R package version 0.15.0"
-year = "2017"
-author = "George Vega Yon and Muñoz, Enyelbert"
-title = "ABCoptim: Implementation of Artificial Bee Colony (ABC) Optimization"
-ENTRYTYPE = "manual"
-ID = "ABCoptim"
+title = 'ABCoptim: Implementation of Artificial Bee Colony (ABC) Optimization'
+author = 'George Vega Yon and Muñoz, Enyelbert'
+year = '2017'
+note = 'R package version 0.15.0'
+url = 'https://CRAN.R-project.org/package=ABCoptim'
+doi = '10.32614/CRAN.package.ABCoptim'
+ENTRYTYPE = 'manual'
+ID = 'ABCoptim'
 
 [netdiffuseR]
-doi = "10.32614/CRAN.package.netdiffuseR"
-url = "https://cran.r-project.org/package=netdiffuseR"
-note = "R package version 1.25.0"
-year = "2026"
-author = "George Vega Yon and Thomas Valente"
-title = "{{netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks}}"
-ENTRYTYPE = "manual"
-ID = "netdiffuseR"
+title = '{{netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks}}'
+author = 'George Vega Yon and Thomas Valente'
+year = '2026'
+note = 'R package version 1.25.0'
+url = 'https://cran.r-project.org/package=netdiffuseR'
+doi = '10.32614/CRAN.package.netdiffuseR'
+ENTRYTYPE = 'manual'
+ID = 'netdiffuseR'
 
 [ergmito]
-doi = "10.32614/CRAN.package.ergmito"
-month = "dec"
-note = "R package version 0.3-2"
-year = "2025"
-url = "https://cran.r-project.org/package=ergmito"
-author = "Vega Yon, George G. and {{de la Haye}}, Kayla"
-title = "ergmito: Exponential Random Graph Models for Small Networks"
-ENTRYTYPE = "manual"
-ID = "ergmito"
+title = 'ergmito: Exponential Random Graph Models for Small Networks'
+author = 'Vega Yon, George G. and {{de la Haye}}, Kayla'
+url = 'https://cran.r-project.org/package=ergmito'
+year = '2025'
+note = 'R package version 0.3-2'
+month = 'dec'
+doi = '10.32614/CRAN.package.ergmito'
+ENTRYTYPE = 'manual'
+ID = 'ergmito'
 
 [slurmR]
-doi = "10.32614/CRAN.package.slurmR"
-url = "https://CRAN.R-project.org/package=slurmR"
-note = "R package version 0.5-4"
-year = "2023"
-author = "Vega Yon, George G."
 title = "slurmR: A Lightweight Wrapper for 'Slurm'"
-ENTRYTYPE = "manual"
-ID = "slurmR"
+author = 'Vega Yon, George G.'
+year = '2023'
+note = 'R package version 0.5-4'
+url = 'https://CRAN.R-project.org/package=slurmR'
+doi = '10.32614/CRAN.package.slurmR'
+ENTRYTYPE = 'manual'
+ID = 'slurmR'
 
 [fmcmc]
-doi = "10.32614/CRAN.package.fmcmc"
-url = "https://CRAN.R-project.org/package=fmcmc"
-note = "R package version 0.5-2"
-year = "2023"
-author = "Vega Yon, George G."
-title = "fmcmc: A friendly MCMC framework"
-ENTRYTYPE = "manual"
-ID = "fmcmc"
+title = 'fmcmc: A friendly MCMC framework'
+author = 'Vega Yon, George G.'
+year = '2023'
+note = 'R package version 0.5-2'
+url = 'https://CRAN.R-project.org/package=fmcmc'
+doi = '10.32614/CRAN.package.fmcmc'
+ENTRYTYPE = 'manual'
+ID = 'fmcmc'
 
 [parallel]
-url = "https://github.com/gvegayon/parallel"
-note = "Stata Module version 1.20.0"
-year = "2019"
-author = "George {Vega Yon} and Brian Quistorff"
-title = "parallel: Stata Module for Parallel Computing"
-ENTRYTYPE = "manual"
-ID = "parallel"
+title = 'parallel: Stata Module for Parallel Computing'
+author = 'George {Vega Yon} and Brian Quistorff'
+year = '2019'
+note = 'Stata Module version 1.20.0'
+url = 'https://github.com/gvegayon/parallel'
+ENTRYTYPE = 'manual'
+ID = 'parallel'
 
 [aphylo]
-doi = "10.32614/CRAN.package.aphylo"
-url = "https://cran.r-project.org/package=aphylo"
-note = "R package version 0.3-6"
-year = "2026"
-author = "George {Vega Yon}"
-title = "aphylo: Statistical Inference of Annotated Phylogenetic Trees"
-ENTRYTYPE = "manual"
-ID = "aphylo"
+title = 'aphylo: Statistical Inference of Annotated Phylogenetic Trees'
+author = 'George {Vega Yon}'
+year = '2026'
+note = 'R package version 0.3-6'
+url = 'https://cran.r-project.org/package=aphylo'
+doi = '10.32614/CRAN.package.aphylo'
+ENTRYTYPE = 'manual'
+ID = 'aphylo'
 
 [netplot]
-doi = "10.32614/CRAN.package.netplot"
-url = "https://cran.r-project.org/package=netplot"
-year = "2026"
-note = "R package version 0.4-0"
-author = "George {Vega Yon}"
-title = "netplot: Beautiful graph drawing"
-ENTRYTYPE = "manual"
-ID = "netplot"
+title = 'netplot: Beautiful graph drawing'
+author = 'George {Vega Yon}'
+note = 'R package version 0.4-0'
+year = '2026'
+url = 'https://cran.r-project.org/package=netplot'
+doi = '10.32614/CRAN.package.netplot'
+ENTRYTYPE = 'manual'
+ID = 'netplot'
 
 [barry]
-doi = "10.32614/CRAN.package.barry"
-url = "https://cran.r-project.org/package=barry"
-note = "R package version 0.2.2"
-year = "2026"
-author = "Vega Yon, George G."
-title = "barry: your to-go motif accountant"
-ENTRYTYPE = "manual"
-ID = "barry"
+title = 'barry: your to-go motif accountant'
+author = 'Vega Yon, George G.'
+year = '2026'
+note = 'R package version 0.2.2'
+url = 'https://cran.r-project.org/package=barry'
+doi = '10.32614/CRAN.package.barry'
+ENTRYTYPE = 'manual'
+ID = 'barry'
 
 [pruner]
-url = "https://github.com/USCbiostats/pruner"
-note = "C++ library version 0.0-1"
-year = "2020"
-author = "Vega Yon, George G."
 title = "pruner: Implementing the Felsenstein's Tree Pruning algorithm"
-ENTRYTYPE = "manual"
-ID = "pruner"
+author = 'Vega Yon, George G.'
+year = '2020'
+note = 'C++ library version 0.0-1'
+url = 'https://github.com/USCbiostats/pruner'
+ENTRYTYPE = 'manual'
+ID = 'pruner'
 
 [defm]
-doi = "10.32614/CRAN.package.defm"
-url = "https://cran.r-project.org/package=defm"
-note = "R package version 0.2.1.0"
-year = "2026"
-author = "George {Vega Yon}"
-title = "defm: Estimation and simulation of Multi-binary response models"
-ENTRYTYPE = "manual"
-ID = "defm"
+title = 'defm: Estimation and simulation of Multi-binary response models'
+author = 'George {Vega Yon}'
+year = '2026'
+note = 'R package version 0.2.1.0'
+url = 'https://cran.r-project.org/package=defm'
+doi = '10.32614/CRAN.package.defm'
+ENTRYTYPE = 'manual'
+ID = 'defm'
 
 [epiworldR]
-doi = "10.32614/CRAN.package.epiworldR"
-url = "https://cran.r-project.org/package=epiworldR"
-note = "R package version 0.14.0.0"
-year = "2026"
-author = "Derek Meyer and George {Vega Yon}"
-title = "epiworldR: Fast Agent-Based Epi Models"
-ENTRYTYPE = "manual"
-ID = "epiworldR"
+title = 'epiworldR: Fast Agent-Based Epi Models'
+author = 'Derek Meyer and George {Vega Yon}'
+year = '2026'
+note = 'R package version 0.14.0.0'
+url = 'https://cran.r-project.org/package=epiworldR'
+doi = '10.32614/CRAN.package.epiworldR'
+ENTRYTYPE = 'manual'
+ID = 'epiworldR'
 
 [epiworldRShiny]
-doi = "10.32614/CRAN.package.epiworldRShiny"
-url = "https://cran.r-project.org/package=epiworldRShiny"
-note = "R package version 0.2.3"
-year = "2025"
-author = "Derek Meyer and George {Vega Yon}"
-title = "epiworldRShiny: Shiny interface for epiworldR"
-ENTRYTYPE = "manual"
-ID = "epiworldRShiny"
+title = 'epiworldRShiny: Shiny interface for epiworldR'
+author = 'Derek Meyer and George {Vega Yon}'
+year = '2025'
+note = 'R package version 0.2.3'
+url = 'https://cran.r-project.org/package=epiworldRShiny'
+doi = '10.32614/CRAN.package.epiworldRShiny'
+ENTRYTYPE = 'manual'
+ID = 'epiworldRShiny'
 
 [twitterreport]
-note = "R package version 0.16"
-url = "https://doi.org/10.5281/zenodo.44528"
-doi = "10.5281/zenodo.44528"
-version = "v0.16"
-publisher = "Zenodo"
-year = "2016"
-month = "January"
-title = "{twitterreport: Out-of-the-box analysis and \nreporting tools for twitter}"
-author = "George G. Vega Yon"
-ENTRYTYPE = "manual"
-ID = "twitterreport"
+author = 'George G. Vega Yon'
+title = '{twitterreport: Out-of-the-box analysis and reporting tools for twitter}'
+month = 'jan'
+year = '2016'
+publisher = 'Zenodo'
+version = 'v0.16'
+doi = '10.5281/zenodo.44528'
+url = 'https://doi.org/10.5281/zenodo.44528'
+note = 'R package version 0.16'
+ENTRYTYPE = 'manual'
+ID = 'twitterreport'
 
 [epiworld]
-url = "https://github.com/UofUEpiBio/epiworld"
-note = "C++ library version 0.0-1"
-year = "2022"
-author = "Vega Yon, George G."
-title = "{epiworld}: A Flexible and General Agent Based Model Engine"
-ENTRYTYPE = "manual"
-ID = "epiworld"
+title = '{epiworld}: A Flexible and General Agent Based Model Engine'
+author = 'Vega Yon, George G.'
+year = '2022'
+note = 'C++ library version 0.0-1'
+url = 'https://github.com/UofUEpiBio/epiworld'
+ENTRYTYPE = 'manual'
+ID = 'epiworld'
 
 [pyrenew]
-url = "https://github.com/CDCgov/PyRenew"
-note = "Python package version 0.1.0"
-year = "2024"
-author = "Damon Bayer and Dylan H Morris and George {Vega Yon} and Trevor Martin and Subekshya Bidari"
-title = "{PyRenew}: A Package for Bayesian Renewal Modeling with {JAX} and {NumPyro}"
-ENTRYTYPE = "manual"
-ID = "pyrenew"
+title = '{PyRenew}: A Package for Bayesian Renewal Modeling with {JAX} and {NumPyro}'
+author = 'Damon Bayer and Dylan H Morris and George {Vega Yon} and Trevor Martin and Subekshya Bidari'
+year = '2024'
+note = 'Python package version 0.1.0'
+url = 'https://github.com/CDCgov/PyRenew'
+ENTRYTYPE = 'manual'
+ID = 'pyrenew'
 
 [wwinference]
-url = "https://github.com/cdcgov/ww-inference-model/"
-note = "R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/"
-year = "2024"
-author = "Kaitlyn Johnson and Dylan Morris and Sam Abbott and Christian {Bernal Zelaya} and George {Vega Yon} and Damon Bayer and Andrew Magee and Scott Olesen"
-title = "wwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators"
-ENTRYTYPE = "manual"
-ID = "wwinference"
+title = 'wwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators'
+author = 'Kaitlyn Johnson and Dylan Morris and Sam Abbott and Christian {Bernal Zelaya} and George {Vega Yon} and Damon Bayer and Andrew Magee and Scott Olesen'
+year = '2024'
+note = 'R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/'
+url = 'https://github.com/cdcgov/ww-inference-model/'
+ENTRYTYPE = 'manual'
+ID = 'wwinference'
 
-["multigroup.vaccine"]
-url = "https://epiforesite.github.io/multigroup-vaccine/"
-note = "R package version 0.1.1"
-year = "2026"
-author = "Damon Toth and Jake Wagoner and Willy Ray and George\n{Vega Yon}"
-title = "multigroup.vaccine: Analyze Outbreak Models of Multi-Group\nPopulations with Vaccination"
-ENTRYTYPE = "manual"
-ID = "multigroup.vaccine"
+['multigroup.vaccine']
+title = 'multigroup.vaccine: Analyze Outbreak Models of Multi-Group Populations with Vaccination'
+author = 'Damon Toth and Jake Wagoner and Willy Ray and George {Vega Yon}'
+year = '2026'
+note = 'R package version 0.1.1'
+url = 'https://epiforesite.github.io/multigroup-vaccine/'
+ENTRYTYPE = 'manual'
+ID = 'multigroup.vaccine'
 
 [measles]
-doi = "10.32614/CRAN.package.measles"
-url = "https://cran.r-project.org/package=measles"
-note = "R package version 0.2.0"
-year = "2026"
-author = "George {Vega Yon}"
-title = "{{measles: Measles Epidemiological Models}}"
-ENTRYTYPE = "manual"
-ID = "measles"
+title = '{{measles: Measles Epidemiological Models}}'
+author = 'George {Vega Yon}'
+year = '2026'
+note = 'R package version 0.2.0'
+url = 'https://cran.r-project.org/package=measles'
+doi = '10.32614/CRAN.package.measles'
+ENTRYTYPE = 'manual'
+ID = 'measles'
 
 [epiworldRcalibrate]
-doi = "10.32614/CRAN.package.epiworldRcalibrate"
-url = "https://cran.r-project.org/package=epiworldRcalibrate"
-note = "R package version 0.1.4"
-year = "2026"
-author = "Sima Najafzadehkhoei and George {Vega Yon} and Bernardo\nModenesi"
-title = "epiworldRcalibrate: Fast and Effortless Calibration of\nAgent-Based Models using Machine Learning"
-ENTRYTYPE = "manual"
-ID = "epiworldRcalibrate"
+title = 'epiworldRcalibrate: Fast and Effortless Calibration of Agent-Based Models using Machine Learning'
+author = 'Sima Najafzadehkhoei and George {Vega Yon} and Bernardo Modenesi'
+year = '2026'
+note = 'R package version 0.1.4'
+url = 'https://cran.r-project.org/package=epiworldRcalibrate'
+doi = '10.32614/CRAN.package.epiworldRcalibrate'
+ENTRYTYPE = 'manual'
+ID = 'epiworldRcalibrate'
 
 [imaginarycss]
-doi = "10.32614/CRAN.package.imaginarycss"
-url = "https://cran.r-project.org/package=imaginarycss"
-note = "R package version 0.1.0"
-year = "2026"
-author = "Sima Najafzadehkhoei and George {Vega Yon} and Kyosuke\nTanaka"
-title = "imaginarycss: Tools for Studying Imaginary Cognitive\nSocial Structure"
-ENTRYTYPE = "manual"
-ID = "imaginarycss"
+title = 'imaginarycss: Tools for Studying Imaginary Cognitive Social Structure'
+author = 'Sima Najafzadehkhoei and George {Vega Yon} and Kyosuke Tanaka'
+year = '2026'
+note = 'R package version 0.1.0'
+url = 'https://cran.r-project.org/package=imaginarycss'
+doi = '10.32614/CRAN.package.imaginarycss'
+ENTRYTYPE = 'manual'
+ID = 'imaginarycss'
+

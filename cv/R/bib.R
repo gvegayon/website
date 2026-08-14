@@ -74,7 +74,9 @@ parse_bib <- function(path) {
   txt <- paste(grep("^\\s*%", strsplit(txt, "\n")[[1]], value = TRUE, invert = TRUE),
                collapse = "\n")
 
-  starts <- gregexpr("(?m)^@[[:alpha:]]+\\s*\\{", txt, perl = TRUE)[[1]]
+  # tolerate indented entry headers -- software.bib has at least one "@Manual"
+  # that is not flush left, and anchoring on "^@" silently drops it
+  starts <- gregexpr("(?m)^[ \t]*@[[:alpha:]]+\\s*\\{", txt, perl = TRUE)[[1]]
   if (length(starts) == 1L && starts[1] == -1L) return(list())
 
   lapply(seq_along(starts), function(j) {
@@ -101,23 +103,19 @@ parse_bib <- function(path) {
   })
 }
 
+# papers.toml / software.toml hold one table per entry, keyed by citation key
+# (see tools/bib2toml.R). Field values keep their LaTeX markup, exactly as the
+# .bib had it, so everything downstream of here is unchanged.
 parse_toml <- function(path) {
-  if (!requireNamespace("toml", quietly = TRUE)) return(list())
-  data <- toml::parseTOML(path)
-  
-  entries <- list()
-  for (key in names(data)) {
-    f <- data[[key]]
-    type <- f$ENTRYTYPE %||% "misc"
-    
-    entries[[length(entries) + 1]] <- list(
-      type = type,
-      key = key,
-      fields = f
-    )
+  if (!requireNamespace("toml", quietly = TRUE)) {
+    stop("the 'toml' package is required to read ", path, call. = FALSE)
   }
-  
-  entries
+  data <- toml::read_toml(path)
+
+  lapply(names(data), function(key) {
+    f <- data[[key]]
+    list(type = f$ENTRYTYPE %||% "misc", key = key, fields = f)
+  })
 }
 
 read_bibs <- function(...) {

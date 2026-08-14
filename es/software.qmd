@@ -54,7 +54,7 @@ La siguiente es una lista exhaustiva de los paquetes de software que he construi
 #| echo: false
 #| warning: false
 source("../R/research_publications.R")
-render_software_cards("../software.toml")
+render_software_cards("../software.toml", language = "es")
 ```
 
 ```{r}
@@ -62,7 +62,7 @@ render_software_cards("../software.toml")
 #| echo: false
 #| warning: false
 source("../R/research_publications.R")
-sync_papers_toml("../software.toml", "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.toml")
+sync_papers_bib("../software.bib", "../software.toml", "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib")
 ```
 
 ---

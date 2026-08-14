@@ -32,94 +32,33 @@ clean_text <- function(x) {
   trimws(x)
 }
 
-parse_value <- function(chars, i) {
-  n <- length(chars)
-  while (i <= n && grepl("\\s", chars[i])) i <- i + 1
-  if (i > n) return(list(value = "", next_i = i))
-
-  if (chars[i] == "{") {
-    depth <- 1
-    i <- i + 1
-    start <- i
-    while (i <= n && depth > 0) {
-      if (chars[i] == "{") depth <- depth + 1
-      if (chars[i] == "}") depth <- depth - 1
-      i <- i + 1
-    }
-    val <- paste(chars[start:(i - 2)], collapse = "")
-    return(list(value = clean_text(val), next_i = i))
-  }
-
-  if (chars[i] == '"') {
-    i <- i + 1
-    start <- i
-    while (i <= n && chars[i] != '"') i <- i + 1
-    val <- paste(chars[start:(i - 1)], collapse = "")
-    i <- i + 1
-    return(list(value = clean_text(val), next_i = i))
-  }
-
-  start <- i
-  while (i <= n && chars[i] != ',') i <- i + 1
-  val <- paste(chars[start:(i - 1)], collapse = "")
-  list(value = clean_text(val), next_i = i)
-}
-
-parse_entry <- function(entry) {
-  m <- regexec("^@([[:alpha:]]+)\\s*\\{([^,]+),", entry)
-  reg <- regmatches(entry, m)[[1]]
-  if (length(reg) < 3) return(NULL)
-
-  type <- tolower(reg[2])
-  key <- reg[3]
-  body <- sub("^@[[:alpha:]]+\\s*\\{[^,]+,", "", entry)
-  body <- sub("\\}\\s*$", "", body)
-
-  chars <- strsplit(body, "")[[1]]
-  n <- length(chars)
-  i <- 1
-  fields <- list()
-
-  while (i <= n) {
-    while (i <= n && (grepl("\\s", chars[i]) || chars[i] == ",")) i <- i + 1
-    if (i > n) break
-
-    start <- i
-    while (i <= n && chars[i] != '=') i <- i + 1
-    if (i > n) break
-
-    fname <- tolower(trimws(paste(chars[start:(i - 1)], collapse = "")))
-    i <- i + 1
-    parsed <- parse_value(chars, i)
-    fields[[fname]] <- parsed$value
-    i <- parsed$next_i
-  }
-
-  list(type = type, key = key, fields = fields)
-}
-
+# One TOML table per entry, keyed by citation key -- see tools/bib2toml.R.
+# A missing `toml` package is an error rather than an empty list: silently
+# rendering a publication page with no publications is the worst outcome.
 parse_toml <- function(path) {
-  if (!requireNamespace("toml", quietly = TRUE)) return(list())
-  data <- toml::parseTOML(path)
-  
-  entries <- list()
-  for (key in names(data)) {
-    f <- data[[key]]
-    type <- f$ENTRYTYPE %||% "misc"
-    
-    entries[[length(entries) + 1]] <- list(
-      type = type,
-      key = key,
-      fields = f
-    )
+  if (!requireNamespace("toml", quietly = TRUE)) {
+    stop("the 'toml' package is required to read ", path, call. = FALSE)
   }
-  
-  entries
+  data <- toml::read_toml(path)
+
+  lapply(names(data), function(key) {
+    f <- data[[key]]
+    list(type = f$ENTRYTYPE %||% "misc", key = key, fields = f)
+  })
 }
 
 safe_link <- function(url, label) {
   if (!nzchar(url)) return("")
   sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', url, label)
+}
+
+# The search index goes into a double-quoted HTML attribute, and abstracts do
+# contain quotes and ampersands.
+attr_escape <- function(x) {
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  gsub(">", "&gt;", x, fixed = TRUE)
 }
 
 entry_status <- function(fields) {
@@ -145,7 +84,11 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "Abstract unavailable.",
       untitled = "Untitled",
       no_date = "n.d.",
-      link_publisher = "Publisher / Preprint"
+      link_publisher = "Publisher / Preprint",
+      software_unavailable = "Software list temporarily unavailable.",
+      search_software = "Search software...",
+      search_software_label = "Search software",
+      details = "Details"
     ),
     es = list(
       unavailable = "La lista de publicaciones no esta disponible temporalmente.",
@@ -160,7 +103,11 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "Resumen no disponible.",
       untitled = "Sin titulo",
       no_date = "s.f.",
-      link_publisher = "Editorial / Preprint"
+      link_publisher = "Editorial / Preprint",
+      software_unavailable = "La lista de software no esta disponible temporalmente.",
+      search_software = "Buscar software...",
+      search_software_label = "Buscar software",
+      details = "Detalles"
     ),
     zh = list(
       unavailable = "出版列表暂时不可用。",
@@ -175,23 +122,45 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "暂无摘要。",
       untitled = "无标题",
       no_date = "无日期",
-      link_publisher = "期刊 / 预印本"
+      link_publisher = "期刊 / 预印本",
+      software_unavailable = "软件列表暂时不可用。",
+      search_software = "搜索软件...",
+      search_software_label = "搜索软件",
+      details = "详情"
     )
   )
 
   lookup[[language]] %||% lookup$en
 }
 
-sync_papers_toml <- function(output_path, file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.toml") {
-  tmp <- tempfile(fileext = ".toml")
+# Resolve a repo file from either the project root or a translation
+# subdirectory (es/, zh/), which is where Quarto runs for the translated pages.
+repo_file <- function(rel) {
+  hit <- Filter(file.exists, c(rel, file.path("..", rel)))
+  if (!length(hit)) stop("cannot find ", rel, " from ", getwd(), call. = FALSE)
+  hit[[1]]
+}
+
+# gvegayon/resume publishes BibTeX, not TOML, so the sync fetches the .bib and
+# converts it. The .bib stays checked in as the upstream mirror; the .toml is
+# the derived file the pages and the CV actually read.
+sync_papers_bib <- function(bib_path, toml_path,
+                            file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib") {
+  tmp <- tempfile(fileext = ".bib")
   ans <- tryCatch(
     download.file(url = file_url, destfile = tmp, quiet = TRUE),
-    error = function(e) 1
+    error = function(e) 1L
   )
 
-  if (identical(ans, 0L)) {
-    invisible(file.copy(from = tmp, to = output_path, overwrite = TRUE))
-  }
+  # A network hiccup must not silently publish a stale-but-empty page: keep the
+  # checked-in copies and carry on.
+  if (!identical(ans, 0L)) return(invisible(FALSE))
+
+  file.copy(from = tmp, to = bib_path, overwrite = TRUE)
+  conv <- new.env(parent = globalenv())
+  sys.source(repo_file("tools/bib2toml.R"), envir = conv)
+  conv$bib_to_toml(bib_path, toml_path)
+  invisible(TRUE)
 }
 
 render_research_cards <- function(toml_path, language = "en") {
@@ -282,55 +251,14 @@ render_research_cards <- function(toml_path, language = "en") {
   invisible(NULL)
 }
 
-fetch_github_badges <- function(owner, repo) {
-  urls_to_try <- c(
-    sprintf("https://raw.githubusercontent.com/%s/%s/main/README.md", owner, repo),
-    sprintf("https://raw.githubusercontent.com/%s/%s/master/README.md", owner, repo)
-  )
-  
-  ans <- character(0)
-  for (u in urls_to_try) {
-    res <- tryCatch({
-      suppressWarnings(readLines(u, warn = FALSE))
-    }, error = function(e) character(0))
-    if (length(res) > 0) {
-      ans <- res
-      break
-    }
-  }
-  
-  if (length(ans) == 0) return("")
-  
-  txt <- paste(ans[1:min(50, length(ans))], collapse = "\n")
-  
-  pattern <- "(?i)\\[\\!\\[([^\\]]*)\\]\\(([^)]+)\\)\\]\\(([^)]+)\\)"
-  m <- gregexpr(pattern, txt, perl = TRUE)
-  
-  badges_html <- ""
-  if (m[[1]][1] != -1) {
-     starts <- attr(m[[1]], "capture.start")
-     lengths <- attr(m[[1]], "capture.length")
-     for (i in 1:nrow(starts)) {
-        alt_text <- substr(txt, starts[i, 1], starts[i, 1] + lengths[i, 1] - 1)
-        img_url <- substr(txt, starts[i, 2], starts[i, 2] + lengths[i, 2] - 1)
-        link_url <- substr(txt, starts[i, 3], starts[i, 3] + lengths[i, 3] - 1)
-        badges_html <- paste0(badges_html, sprintf(
-          '<a href="%s" target="_blank" rel="noopener"><img src="%s" alt="%s" style="vertical-align: middle; margin-left: 10px; max-height: 20px;"></a>', 
-          link_url, img_url, alt_text
-        ))
-     }
-  }
-  
-  return(badges_html)
-}
-
-render_software_cards <- function(toml_path) {
+render_software_cards <- function(toml_path, language = "en") {
+  i18n <- get_research_i18n(language)
   entries <- parse_toml(toml_path)
 
   cat("\n```{=html}\n")
 
   if (!length(entries)) {
-    cat("<p>Software list temporarily unavailable.</p>")
+    cat(sprintf("<p>%s</p>", i18n$software_unavailable))
     cat("\n```\n")
     return(invisible(NULL))
   }
@@ -341,55 +269,60 @@ render_software_cards <- function(toml_path) {
 
   cat('<div class="research-shell">')
   cat('<div class="research-controls">')
-  cat('<input id="pub-search" class="pub-search" type="search" placeholder="Search software..." aria-label="Search software">')
+  cat(sprintf(
+    '<input id="pub-search" class="pub-search" type="search" placeholder="%s" aria-label="%s">',
+    i18n$search_software,
+    i18n$search_software_label
+  ))
   cat('</div>')
   cat('<div id="pub-list" class="pub-list">')
 
   for (e in entries) {
     f <- e$fields
     authors <- clean_text(f$author %||% "")
-    title <- clean_text(f$title %||% "Untitled")
-    year <- clean_text(f$year %||% "n.d.")
+    title <- clean_text(f$title %||% i18n$untitled)
+    year <- clean_text(f$year %||% i18n$no_date)
     abstract <- clean_text(f$abstract %||% f$note %||% "")
 
     url <- clean_text(f$url %||% "")
-    
+
     links <- c()
     github_badges <- ""
-    
+
     if (nzchar(url)) {
       links <- c(links, safe_link(url, "Link"))
-      
-      # Check if it's a GitHub URL
-      gh_match <- regmatches(url, regexec("github\\.com/([^/]+)/([^/]+)/?", url))[[1]]
+
+      # Badges are built from the owner/repo pair alone -- shields.io renders
+      # them client side, so nothing is fetched at render time.
+      gh_match <- regmatches(url, regexec("github\\.com/([^/]+)/([^/?#]+)", url))[[1]]
       if (length(gh_match) >= 3) {
         owner <- gh_match[2]
-        repo <- gsub("/.*", "", gh_match[3])
+        repo <- sub("\\.git$", "", gh_match[3])
         github_badges <- sprintf(
-          '<a href="%s" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/%s/%s.svg?style=social&label=Stars" alt="GitHub Stars" style="vertical-align: middle; margin-left: 10px;"></a><a href="%s/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads/%s/%s/total.svg?style=social&label=Downloads" alt="GitHub Downloads" style="vertical-align: middle; margin-left: 10px;"></a>',
+          paste0(
+            '<a href="%s" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/%s/%s.svg?style=social&amp;label=Stars" alt="GitHub stars" style="vertical-align: middle; margin-left: 10px;"></a>',
+            '<a href="%s/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads/%s/%s/total.svg?style=social&amp;label=Downloads" alt="GitHub downloads" style="vertical-align: middle; margin-left: 10px;"></a>'
+          ),
           url, owner, repo, url, owner, repo
         )
-        
-        readme_badges <- fetch_github_badges(owner, repo)
-        github_badges <- paste0(github_badges, readme_badges)
       }
     }
 
     link_block <- if (length(links)) {
       paste(links, collapse = '<span class="sep">•</span>')
     } else {
-      '<span class="muted">No external link listed</span>'
+      sprintf('<span class="muted">%s</span>', i18n$no_link)
     }
 
     abstract_html <- if (nzchar(abstract)) {
-      sprintf('<details class="pub-abstract"><summary>Details</summary><p>%s</p></details>', abstract)
+      sprintf('<details class="pub-abstract"><summary>%s</summary><p>%s</p></details>', i18n$details, abstract)
     } else {
       ''
     }
 
     cat(sprintf(
       '<article class="pub-card" data-status="published" data-search="%s">\n<h3>%s</h3>\n<p class="pub-meta">%s (%s)</p>\n<p class="pub-links">%s%s</p>\n%s\n</article>',
-      tolower(paste(title, authors, year, abstract)),
+      attr_escape(tolower(paste(title, authors, year, abstract))),
       title,
       authors,
       year,
