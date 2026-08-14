@@ -1,18 +1,21 @@
-# Generate CV entries directly from the .bib files.
+# Generate CV entries directly from the .toml files.
 #
 # This replaces biblatex: instead of letting a bibliography engine format the
-# entries, we parse the .bib ourselves and emit markdown. That buys us the
+# entries, we read the data ourselves and emit markdown. That buys us the
 # three things biblatex was doing that Typst cannot do natively -- bolding the
 # author's own name, filtering sections by `keywords`, and the year/month
 # descending sort -- without depending on any bibliography engine.
+#
+# The .toml files are the source of truth (see the repo README): `author` and
+# `keywords` are arrays, and values are plain text/markdown, not LaTeX.
 
 `%||%` <- function(a, b) if (is.null(a) || !length(a) || !nzchar(trimws(a[1]))) b else a
 
 # ---------------------------------------------------------------- parsing
 
-# Accented characters are stored as literal UTF-8 in the .bib files, so there
-# is no accent post-processing here. This guard keeps it that way: if a LaTeX
-# accent macro ever creeps back in (e.g. pasted from a publisher's export), the
+# Accented characters are stored as literal UTF-8, so there is no accent
+# post-processing here. This guard keeps it that way: if a LaTeX accent macro
+# ever creeps back in (e.g. pasted from a publisher's BibTeX export), the
 # render fails loudly rather than silently printing "Cesantia".
 assert_no_accent_macros <- function(...) {
   pat <- "\\\\[`'\"^~][{\\\\a-zA-Z]|\\\\(ss|aa|oe|ae)\\b"
@@ -23,85 +26,28 @@ assert_no_accent_macros <- function(...) {
     if (length(hit)) bad <- c(bad, sprintf("%s:%d: %s", path, hit, trimws(ln[hit])))
   }
   if (length(bad)) {
-    stop("LaTeX accent macros found in .bib -- replace them with UTF-8:\n",
+    stop("LaTeX accent macros found -- replace them with UTF-8:\n",
          paste(bad, collapse = "\n"), call. = FALSE)
   }
   invisible(TRUE)
 }
 
-# Strip the LaTeX markup that appears inside .bib field values. Note we drop
-# \textbf/\bf entirely: the author's name is re-bolded later by matching on the
-# name itself, which is more reliable than the (inconsistent) markup.
-clean_tex <- function(x) {
-  x <- gsub("\\\\href\\{([^}]*)\\}\\{([^}]*)\\}", "[\\2](\\1)", x)
-  x <- gsub("\\\\url\\{([^}]*)\\}", "<\\1>", x)
-  x <- gsub("\\\\textbf\\{", "{", x)
-  x <- gsub("\\\\textit\\{|\\\\emph\\{", "{", x)
-  x <- gsub("\\\\color\\{[^}]*\\}", "", x)
-  x <- gsub("\\\\bf\\b\\s*", "", x)
-  x <- gsub("``", "“", x); x <- gsub("''", "”", x)
-  x <- gsub("---", "—", x); x <- gsub("--", "–", x)
-  x <- gsub("\\\\&", "&", x)
-  x <- gsub("\\\\%", "%", x)
-  x <- gsub("\\\\_", "_", x)
-  x <- gsub("\\\\#", "#", x)
-  x <- gsub("[{}]", "", x)
-  x <- gsub("\\s+", " ", x)
-  trimws(x)
-}
-
-# Split on a separator only at brace depth 0.
-split_depth0 <- function(s, sep) {
-  chars <- strsplit(s, "")[[1]]
-  out <- character(0); cur <- ""; depth <- 0L; i <- 1L
-  n <- length(chars); k <- nchar(sep)
-  while (i <= n) {
-    ch <- chars[i]
-    if (ch == "{") depth <- depth + 1L
-    if (ch == "}") depth <- depth - 1L
-    if (depth == 0L && i + k - 1L <= n &&
-        paste(chars[i:(i + k - 1L)], collapse = "") == sep) {
-      out <- c(out, cur); cur <- ""; i <- i + k; next
-    }
-    cur <- paste0(cur, ch); i <- i + 1L
+# One TOML table per entry, keyed by citation key. `author`/`editor` and
+# `keywords` arrive as arrays; everything else is a string.
+read_entries <- function(...) {
+  if (!requireNamespace("toml", quietly = TRUE)) {
+    stop("the 'toml' package is required to read the entry files", call. = FALSE)
   }
-  c(out, cur)
+
+  paths <- c(...)
+  unlist(lapply(paths, function(path) {
+    data <- toml::read_toml(path)
+    lapply(names(data), function(key) {
+      f <- data[[key]]
+      list(type = f$entrytype %||% "misc", key = key, fields = f)
+    })
+  }), recursive = FALSE)
 }
-
-parse_bib <- function(path) {
-  txt <- paste(readLines(path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
-  # drop whole-line comments; BibTeX ignores them but they confuse field splitting
-  txt <- paste(grep("^\\s*%", strsplit(txt, "\n")[[1]], value = TRUE, invert = TRUE),
-               collapse = "\n")
-
-  starts <- gregexpr("(?m)^@[[:alpha:]]+\\s*\\{", txt, perl = TRUE)[[1]]
-  if (length(starts) == 1L && starts[1] == -1L) return(list())
-
-  lapply(seq_along(starts), function(j) {
-    s <- starts[j]
-    e <- if (j < length(starts)) starts[j + 1L] - 1L else nchar(txt)
-    chunk <- trimws(substr(txt, s, e))
-
-    hdr <- regmatches(chunk, regexec("^@([[:alpha:]]+)\\s*\\{([^,]+),", chunk))[[1]]
-    body <- sub("^@[[:alpha:]]+\\s*\\{[^,]+,", "", chunk)
-    body <- sub("\\}\\s*$", "", trimws(body))
-
-    fields <- list()
-    for (part in split_depth0(body, ",")) {
-      if (!grepl("=", part, fixed = TRUE)) next
-      nm  <- tolower(trimws(sub("=.*$", "", part)))
-      val <- trimws(sub("^[^=]*=", "", part))
-      val <- sub('^\\{(.*)\\}$', "\\1", trimws(val))
-      val <- sub('^"(.*)"$', "\\1", trimws(val))
-      if (!nzchar(nm)) next
-      # keep the first occurrence, matching biber's behaviour on duplicates
-      if (is.null(fields[[nm]])) fields[[nm]] <- val
-    }
-    list(type = tolower(hdr[2]), key = hdr[3], fields = fields)
-  })
-}
-
-read_bibs <- function(...) unlist(lapply(c(...), parse_bib), recursive = FALSE)
 
 # ---------------------------------------------------------------- authors
 
@@ -132,15 +78,14 @@ one_author <- function(a) {
 
 SELF <- "Vega Yon"
 
-fmt_authors <- function(raw, self = SELF) {
-  raw <- clean_tex(raw %||% "")
-  if (!nzchar(raw)) return("")
-  people <- split_depth0(raw, " and ")
-  people <- trimws(people[nzchar(trimws(people))])
+fmt_authors <- function(people, self = SELF) {
+  people <- trimws(as.character(people %||% character(0)))
+  people <- people[nzchar(people)]
+  if (!length(people)) return("")
 
   out <- vapply(people, function(p) {
     if (grepl(self, p, fixed = TRUE)) {
-      # canonicalise: the .bib spells this name a half-dozen different ways
+      # canonicalise: the source spells this name a half-dozen different ways
       paste0("**", self, ", G. G.**")
     } else {
       one_author(sub("\\.$", "", p))
@@ -160,16 +105,16 @@ fmt_authors <- function(raw, self = SELF) {
 md_escape <- function(x) gsub("([<>])", "\\\\\\1", x)
 
 venue_of <- function(f) {
-  clean_tex(f$journal %||% f$journaltitle %||% f$booktitle %||% f$eventtitle %||%
-            f$publisher %||% f$institution %||% "")
+  f$journal %||% f$journaltitle %||% f$booktitle %||% f$eventtitle %||%
+    f$publisher %||% f$institution %||% ""
 }
 
 # Returns a ready-made markdown link, or "". Built here (rather than escaped
 # later) so the link syntax survives md_escape().
 link_of <- function(f) {
-  doi <- clean_tex(f$doi %||% "")
-  url <- clean_tex(f$url %||% "")
-  ep  <- clean_tex(f$eprint %||% "")
+  doi <- f$doi %||% ""
+  url <- f$url %||% ""
+  ep  <- f$eprint %||% ""
   if (nzchar(doi)) return(sprintf("[doi:%s](https://doi.org/%s)", doi, doi))
   if (nzchar(ep))  return(sprintf("[arXiv:%s](https://arxiv.org/abs/%s)", ep, ep))
   if (nzchar(url)) return(sprintf("[%s](%s)", sub("^https?://(www\\.)?", "", url), url))
@@ -179,17 +124,17 @@ link_of <- function(f) {
 fmt_pub <- function(e) {
   f <- e$fields
   au <- md_escape(fmt_authors(f$author))
-  ti <- md_escape(clean_tex(f$title %||% ""))
-  yr <- sub("^(\\d{4}).*$", "\\1", clean_tex(f$year %||% f$date %||% "n.d."))
+  ti <- md_escape(f$title %||% "")
+  yr <- sub("^(\\d{4}).*$", "\\1", f$year %||% f$date %||% "n.d.")
   ve <- md_escape(venue_of(f))
 
   bits <- character(0)
   if (nzchar(au)) bits <- c(bits, paste0(au, " "))
   bits <- c(bits, paste0("(", yr, "). "), ti, ". ")
   if (nzchar(ve)) {
-    det <- clean_tex(f$volume %||% "")
-    if (nzchar(clean_tex(f$number %||% ""))) det <- paste0(det, "(", clean_tex(f$number), ")")
-    pg <- clean_tex(f$pages %||% "")   # clean_tex already makes "--" an en dash
+    det <- f$volume %||% ""
+    if (nzchar(f$number %||% "")) det <- paste0(det, "(", f$number, ")")
+    pg <- f$pages %||% ""            # already an en dash in the source data
     tail <- paste(c(det, pg)[nzchar(c(det, pg))], collapse = ", ")
     bits <- c(bits, paste0("*", ve, "*", if (nzchar(tail)) paste0(", ", tail) else "", ". "))
   }
@@ -200,10 +145,10 @@ fmt_pub <- function(e) {
 
 fmt_talk <- function(e) {
   f <- e$fields
-  ti <- clean_tex(f$title %||% "")
-  yr <- sub("^(\\d{4}).*$", "\\1", clean_tex(f$year %||% ""))
-  ev <- clean_tex(f$eventtitle %||% "")
-  nt <- clean_tex(f$note %||% "")
+  ti <- f$title %||% ""
+  yr <- sub("^(\\d{4}).*$", "\\1", f$year %||% "")
+  ev <- f$eventtitle %||% ""
+  nt <- f$note %||% ""
   paste0(md_escape(ti), ". ", if (nzchar(ev)) paste0("*", md_escape(ev), "*. ") else "",
          "(", yr, ") ", md_escape(nt))
 }
@@ -211,9 +156,9 @@ fmt_talk <- function(e) {
 fmt_software <- function(e) {
   f <- e$fields
   au <- md_escape(fmt_authors(f$author))
-  ti <- md_escape(clean_tex(f$title %||% ""))
-  yr <- sub("^(\\d{4}).*$", "\\1", clean_tex(f$year %||% ""))
-  nt <- md_escape(clean_tex(f$note %||% ""))
+  ti <- md_escape(f$title %||% "")
+  yr <- sub("^(\\d{4}).*$", "\\1", f$year %||% "")
+  nt <- md_escape(f$note %||% "")
   lk <- link_of(f)
   paste0(au, " *", ti, "* (", yr, ").",
          if (nzchar(nt)) paste0(" ", nt, ".") else "",
@@ -223,15 +168,14 @@ fmt_software <- function(e) {
 # ---------------------------------------------------------------- sections
 
 has_kw <- function(e, kw) {
-  k <- tolower(clean_tex(e$fields$keywords %||% ""))
-  kw %in% trimws(strsplit(k, ",")[[1]])
+  kw %in% tolower(trimws(as.character(e$fields$keywords %||% character(0))))
 }
 
 # year desc, then month desc -- the `ndymdt` sort from cv.tex
 sort_entries <- function(es) {
   num <- function(x) suppressWarnings(as.integer(gsub("\\D", "", x %||% "")))
   mon <- function(x) {
-    x <- tolower(clean_tex(x %||% ""))
+    x <- tolower(x %||% "")
     m <- match(substr(x, 1, 3), tolower(month.abb))
     if (!is.na(m)) return(m)
     v <- num(x); if (is.na(v)) 0L else v

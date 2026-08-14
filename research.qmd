@@ -1,6 +1,4 @@
 ---
-bibliography: papers.bib
-csl: apa-7th-curriculum-vitae.csl
 description: |
   List of scientific manuscripts by Doctor George G. Vega Yon
 ---
@@ -16,17 +14,10 @@ I am a methodologist working at the intersection of complex systems and statisti
 For a complete and always-current publication index, see [Google Scholar](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}. You can also follow related work and software on [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}, [GitHub](https://github.com/gvegayon){target='_blank'}, and [my software page](software.qmd).
 
 ```{r}
-#| label: sync-papers-bib
-#| include: false
-source("R/research_publications.R")
-sync_papers_bib("papers.bib")
-```
-
-```{r}
 #| label: render-research-cards
 #| echo: false
 #| warning: false
 #| results: asis
 source("R/research_publications.R")
-render_research_cards("papers.bib", language = "en")
+render_research_cards("papers.toml", language = "en")
 ```

@@ -16,103 +16,30 @@
   a
 }
 
-clean_text <- function(x) {
-  x <- gsub("\\\\textbf\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\textit\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\emph\\{([^}]*)\\}", "\\1", x)
-  x <- gsub("\\\\color\\{[^}]*\\}", "", x)
-  x <- gsub("\\\\bf\\b\\s*", "", x)
-  x <- gsub("\\\\&", "&", x)
-  x <- gsub("\\\\%", "%", x)
-  x <- gsub("\\\\_", "_", x)
-  x <- gsub("\\\\#", "#", x)
-  x <- gsub("[{}]", "", x)
-  x <- gsub("\n+", " ", x)
-  x <- gsub("\\s+", " ", x)
-  trimws(x)
+# Field values are plain text in the .toml files, so the only job left is
+# escaping them for the HTML they are about to be pasted into.
+esc <- function(x) {
+  x <- trimws(gsub("\\s+", " ", paste(x, collapse = ", "), perl = TRUE))
+  x <- gsub("&", "&amp;", x, fixed = TRUE)
+  x <- gsub('"', "&quot;", x, fixed = TRUE)
+  x <- gsub("<", "&lt;", x, fixed = TRUE)
+  gsub(">", "&gt;", x, fixed = TRUE)
 }
 
-parse_value <- function(chars, i) {
-  n <- length(chars)
-  while (i <= n && grepl("\\s", chars[i])) i <- i + 1
-  if (i > n) return(list(value = "", next_i = i))
-
-  if (chars[i] == "{") {
-    depth <- 1
-    i <- i + 1
-    start <- i
-    while (i <= n && depth > 0) {
-      if (chars[i] == "{") depth <- depth + 1
-      if (chars[i] == "}") depth <- depth - 1
-      i <- i + 1
-    }
-    val <- paste(chars[start:(i - 2)], collapse = "")
-    return(list(value = clean_text(val), next_i = i))
+# One TOML table per entry, keyed by citation key. `author` and `keywords`
+# arrive as arrays. A missing `toml` package is an error rather than an empty
+# list: silently rendering a publications page with no publications is the
+# worst outcome.
+parse_toml <- function(path) {
+  if (!requireNamespace("toml", quietly = TRUE)) {
+    stop("the 'toml' package is required to read ", path, call. = FALSE)
   }
+  data <- toml::read_toml(path)
 
-  if (chars[i] == '"') {
-    i <- i + 1
-    start <- i
-    while (i <= n && chars[i] != '"') i <- i + 1
-    val <- paste(chars[start:(i - 1)], collapse = "")
-    i <- i + 1
-    return(list(value = clean_text(val), next_i = i))
-  }
-
-  start <- i
-  while (i <= n && chars[i] != ',') i <- i + 1
-  val <- paste(chars[start:(i - 1)], collapse = "")
-  list(value = clean_text(val), next_i = i)
-}
-
-parse_entry <- function(entry) {
-  m <- regexec("^@([[:alpha:]]+)\\s*\\{([^,]+),", entry)
-  reg <- regmatches(entry, m)[[1]]
-  if (length(reg) < 3) return(NULL)
-
-  type <- tolower(reg[2])
-  key <- reg[3]
-  body <- sub("^@[[:alpha:]]+\\s*\\{[^,]+,", "", entry)
-  body <- sub("\\}\\s*$", "", body)
-
-  chars <- strsplit(body, "")[[1]]
-  n <- length(chars)
-  i <- 1
-  fields <- list()
-
-  while (i <= n) {
-    while (i <= n && (grepl("\\s", chars[i]) || chars[i] == ",")) i <- i + 1
-    if (i > n) break
-
-    start <- i
-    while (i <= n && chars[i] != '=') i <- i + 1
-    if (i > n) break
-
-    fname <- tolower(trimws(paste(chars[start:(i - 1)], collapse = "")))
-    i <- i + 1
-    parsed <- parse_value(chars, i)
-    fields[[fname]] <- parsed$value
-    i <- parsed$next_i
-  }
-
-  list(type = type, key = key, fields = fields)
-}
-
-parse_bib <- function(path) {
-  txt <- paste(readLines(path, warn = FALSE), collapse = "\n")
-  starts <- gregexpr("@[[:alpha:]]+\\s*\\{", txt, perl = TRUE)[[1]]
-  if (length(starts) == 1 && starts[1] == -1) return(list())
-
-  entries <- list()
-  for (j in seq_along(starts)) {
-    s <- starts[j]
-    e <- if (j < length(starts)) starts[j + 1] - 1 else nchar(txt)
-    chunk <- trimws(substr(txt, s, e))
-    parsed <- parse_entry(chunk)
-    if (!is.null(parsed)) entries[[length(entries) + 1]] <- parsed
-  }
-
-  entries
+  lapply(names(data), function(key) {
+    f <- data[[key]]
+    list(type = f$entrytype %||% "misc", key = key, fields = f)
+  })
 }
 
 safe_link <- function(url, label) {
@@ -121,8 +48,8 @@ safe_link <- function(url, label) {
 }
 
 entry_status <- function(fields) {
-  key <- tolower(fields$keywords %||% "")
-  if (grepl("wip|preprint|working", key)) return("wip")
+  kw <- tolower(as.character(fields$keywords %||% character(0)))
+  if (any(grepl("wip|preprint|working", kw))) return("wip")
   "published"
 }
 
@@ -143,7 +70,11 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "Abstract unavailable.",
       untitled = "Untitled",
       no_date = "n.d.",
-      link_publisher = "Publisher / Preprint"
+      link_publisher = "Publisher / Preprint",
+      software_unavailable = "Software list temporarily unavailable.",
+      search_software = "Search software...",
+      search_software_label = "Search software",
+      details = "Details"
     ),
     es = list(
       unavailable = "La lista de publicaciones no esta disponible temporalmente.",
@@ -158,7 +89,11 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "Resumen no disponible.",
       untitled = "Sin titulo",
       no_date = "s.f.",
-      link_publisher = "Editorial / Preprint"
+      link_publisher = "Editorial / Preprint",
+      software_unavailable = "La lista de software no esta disponible temporalmente.",
+      search_software = "Buscar software...",
+      search_software_label = "Buscar software",
+      details = "Detalles"
     ),
     zh = list(
       unavailable = "出版列表暂时不可用。",
@@ -173,28 +108,20 @@ get_research_i18n <- function(language = "en") {
       abstract_unavailable = "暂无摘要。",
       untitled = "无标题",
       no_date = "无日期",
-      link_publisher = "期刊 / 预印本"
+      link_publisher = "期刊 / 预印本",
+      software_unavailable = "软件列表暂时不可用。",
+      search_software = "搜索软件...",
+      search_software_label = "搜索软件",
+      details = "详情"
     )
   )
 
   lookup[[language]] %||% lookup$en
 }
 
-sync_papers_bib <- function(output_path, file_url = "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/papers.bib") {
-  tmp <- tempfile(fileext = ".bib")
-  ans <- tryCatch(
-    download.file(url = file_url, destfile = tmp, quiet = TRUE),
-    error = function(e) 1
-  )
-
-  if (identical(ans, 0L)) {
-    invisible(file.copy(from = tmp, to = output_path, overwrite = TRUE))
-  }
-}
-
-render_research_cards <- function(bib_path, language = "en") {
+render_research_cards <- function(toml_path, language = "en") {
   i18n <- get_research_i18n(language)
-  entries <- parse_bib(bib_path)
+  entries <- parse_toml(toml_path)
 
   cat("\n```{=html}\n")
 
@@ -224,16 +151,16 @@ render_research_cards <- function(bib_path, language = "en") {
 
   for (e in entries) {
     f <- e$fields
-    authors <- clean_text(f$author %||% "")
-    title <- clean_text(f$title %||% i18n$untitled)
-    year <- clean_text(f$year %||% i18n$no_date)
-    venue <- clean_text(f$journal %||% f$booktitle %||% f$publisher %||% f$institution %||% "")
-    abstract <- clean_text(f$abstract %||% "")
+    authors <- esc(f$author %||% "")
+    title <- esc(f$title %||% i18n$untitled)
+    year <- esc(f$year %||% i18n$no_date)
+    venue <- esc(f$journal %||% f$booktitle %||% f$publisher %||% f$institution %||% "")
+    abstract <- esc(f$abstract %||% "")
     status <- entry_status(f)
 
-    doi <- clean_text(f$doi %||% "")
-    url <- clean_text(f$url %||% f$URL %||% "")
-    arxiv <- clean_text(f$eprint %||% "")
+    doi <- esc(f$doi %||% "")
+    url <- esc(f$url %||% f$URL %||% "")
+    arxiv <- esc(f$eprint %||% "")
 
     doi_url <- if (nzchar(doi)) paste0("https://doi.org/", doi) else ""
     links <- c(
@@ -260,7 +187,7 @@ render_research_cards <- function(bib_path, language = "en") {
       status,
       tolower(paste(title, authors, year, venue)),
       tolower(status),
-      tolower(f$keywords %||% ""),
+      tolower(esc(f$keywords %||% "")),
       tolower(e$key),
       title,
       authors,
@@ -275,6 +202,95 @@ render_research_cards <- function(bib_path, language = "en") {
   cat('</div></div>')
 
   cat('<script>(() => { const search = document.getElementById("pub-search"); const cards = Array.from(document.querySelectorAll(".pub-card")); const filters = Array.from(document.querySelectorAll(".pub-filter")); let mode = "all"; function update() { const q = (search && search.value || "").trim().toLowerCase(); cards.forEach((card) => { const matchesText = !q || card.dataset.search.includes(q); const matchesMode = mode === "all" || card.dataset.status === mode; card.style.display = matchesText && matchesMode ? "block" : "none"; }); } if (search) search.addEventListener("input", update); filters.forEach((btn) => { btn.addEventListener("click", () => { filters.forEach((b) => b.classList.remove("is-active")); btn.classList.add("is-active"); mode = btn.dataset.filter; update(); }); }); update(); })();</script>')
+
+  cat("\n```\n")
+  invisible(NULL)
+}
+
+render_software_cards <- function(toml_path, language = "en") {
+  i18n <- get_research_i18n(language)
+  entries <- parse_toml(toml_path)
+
+  cat("\n```{=html}\n")
+
+  if (!length(entries)) {
+    cat(sprintf("<p>%s</p>", i18n$software_unavailable))
+    cat("\n```\n")
+    return(invisible(NULL))
+  }
+
+  years <- sapply(entries, function(e) as.integer(gsub("[^0-9]", "", e$fields$year %||% "0")))
+  years[is.na(years)] <- 0
+  entries <- entries[order(years, decreasing = TRUE)]
+
+  cat('<div class="research-shell">')
+  cat('<div class="research-controls">')
+  cat(sprintf(
+    '<input id="pub-search" class="pub-search" type="search" placeholder="%s" aria-label="%s">',
+    i18n$search_software,
+    i18n$search_software_label
+  ))
+  cat('</div>')
+  cat('<div id="pub-list" class="pub-list">')
+
+  for (e in entries) {
+    f <- e$fields
+    authors <- esc(f$author %||% "")
+    title <- esc(f$title %||% i18n$untitled)
+    year <- esc(f$year %||% i18n$no_date)
+    abstract <- esc(f$abstract %||% f$note %||% "")
+
+    url <- esc(f$url %||% "")
+
+    links <- c()
+    github_badges <- ""
+
+    if (nzchar(url)) {
+      links <- c(links, safe_link(url, "Link"))
+
+      # Badges are built from the owner/repo pair alone -- shields.io renders
+      # them client side, so nothing is fetched at render time.
+      gh_match <- regmatches(url, regexec("github\\.com/([^/]+)/([^/?#]+)", url))[[1]]
+      if (length(gh_match) >= 3) {
+        owner <- gh_match[2]
+        repo <- sub("\\.git$", "", gh_match[3])
+        github_badges <- sprintf(
+          paste0(
+            '<a href="%s" target="_blank" rel="noopener"><img src="https://img.shields.io/github/stars/%s/%s.svg?style=social&amp;label=Stars" alt="GitHub stars" style="vertical-align: middle; margin-left: 10px;"></a>',
+            '<a href="%s/releases" target="_blank" rel="noopener"><img src="https://img.shields.io/github/downloads/%s/%s/total.svg?style=social&amp;label=Downloads" alt="GitHub downloads" style="vertical-align: middle; margin-left: 10px;"></a>'
+          ),
+          url, owner, repo, url, owner, repo
+        )
+      }
+    }
+
+    link_block <- if (length(links)) {
+      paste(links, collapse = '<span class="sep">•</span>')
+    } else {
+      sprintf('<span class="muted">%s</span>', i18n$no_link)
+    }
+
+    abstract_html <- if (nzchar(abstract)) {
+      sprintf('<details class="pub-abstract"><summary>%s</summary><p>%s</p></details>', i18n$details, abstract)
+    } else {
+      ''
+    }
+
+    cat(sprintf(
+      '<article class="pub-card" data-status="published" data-search="%s">\n<h3>%s</h3>\n<p class="pub-meta">%s (%s)</p>\n<p class="pub-links">%s%s</p>\n%s\n</article>',
+      tolower(paste(title, authors, year, abstract)),
+      title,
+      authors,
+      year,
+      link_block,
+      github_badges,
+      abstract_html
+    ))
+  }
+
+  cat('</div></div>')
+
+  cat('<script>(() => { const search = document.getElementById("pub-search"); const cards = Array.from(document.querySelectorAll(".pub-card")); function update() { const q = (search && search.value || "").trim().toLowerCase(); cards.forEach((card) => { const matchesText = !q || card.dataset.search.includes(q); card.style.display = matchesText ? "block" : "none"; }); } if (search) search.addEventListener("input", update); update(); })();</script>')
 
   cat("\n```\n")
   invisible(NULL)

@@ -1,19 +1,19 @@
 # CRAN download counts for the software section.
 #
 # Deliberately cached to disk rather than fetched at render time: a render that
-# silently depends on the network is the same trap as sync_papers_bib(). Run
+# silently depends on the network fails in ways that are hard to see. Run
 # `make downloads` to refresh; the render only ever reads the cache, and simply
 # omits the badges if it is missing.
 
 CRAN_EPOCH <- "2012-10-01"   # start of cranlogs coverage
 
-# Package name = the token before the first ":" in the bib title
+# Package name = the token before the first ":" in the title
 # ("rgexf: Build, Import and Export GEXF Graph Files" -> "rgexf").
-pkg_name <- function(e) trimws(sub(":.*$", "", clean_tex(e$fields$title %||% "")))
+pkg_name <- function(e) trimws(sub(":.*$", "", e$fields$title %||% ""))
 
-fetch_downloads <- function(bib = "../software.bib", out = "data/downloads.csv") {
+fetch_downloads <- function(src = "../software.toml", out = "data/downloads.csv") {
   stopifnot(requireNamespace("jsonlite", quietly = TRUE))
-  pkgs <- unique(Filter(nzchar, vapply(parse_bib(bib), pkg_name, character(1))))
+  pkgs <- unique(Filter(nzchar, vapply(read_entries(src), pkg_name, character(1))))
 
   url <- sprintf("https://cranlogs.r-pkg.org/downloads/total/%s:%s/%s",
                  CRAN_EPOCH, Sys.Date(), paste(pkgs, collapse = ","))

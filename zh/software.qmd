@@ -1,8 +1,4 @@
 ---
-bibliography: ../software.bib
-csl: ../apa-7th-curriculum-vitae.csl
-nocite: |
-  @*
 description: |
   George G. Vega Yon 博士開發的軟件包和工具列表
 ---
@@ -52,24 +48,13 @@ for (n in names(x)) {
 
 以下是我構建或貢獻的軟件包的詳盡列表。您可以在 [我的 GitHub](https://github.com/gvegayon) 上查看我最近的貢獻和正在進行的開源項目
 
-::: {#refs}
-:::
-
 ```{r}
-#| label: fetchit
+#| label: render-software-cards
+#| results: asis
 #| echo: false
 #| warning: false
-tmp <- tempfile(fileext = ".bib")
-file_url <- "https://raw.githubusercontent.com/gvegayon/resume/refs/heads/master/software.bib"
-
-ans <- download.file(
-  url = file_url,
-  destfile = tmp
-)
-
-stopifnot(ans == 0)
-
-ans <- file.copy(from = tmp, to = "../software.bib", overwrite = TRUE)
+source("../R/research_publications.R")
+render_software_cards("../software.toml", language = "zh")
 ```
 
 ---

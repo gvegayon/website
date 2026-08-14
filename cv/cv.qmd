@@ -91,14 +91,14 @@ knitr:
 source("R/bib.R")
 source("R/downloads.R")
 
-bibs <- c("../papers.bib", "../software.bib",
-          "../presentations-conference.bib", "../presentations-invited.bib",
-          "../presentations-other.bib")
-assert_no_accent_macros(bibs)          # accents must be literal UTF-8
+src <- c("../papers.toml", "../software.toml",
+         "../presentations-conference.toml", "../presentations-invited.toml",
+         "../presentations-other.toml")
+assert_no_accent_macros(src)           # accents must be literal UTF-8
 
-pubs   <- read_bibs(bibs[1])
-soft   <- read_bibs(bibs[2])
-talks  <- read_bibs(bibs[3], bibs[4], bibs[5])
+pubs   <- read_entries(src[1])
+soft   <- read_entries(src[2])
+talks  <- read_entries(src[3], src[4], src[5])
 counts <- read_downloads()             # cached; `make downloads` to refresh
 ```
 
