@@ -2,7 +2,9 @@
 title: ""
 # page-layout: full
 toc: false
-title-prefix: G Vega Yon
+# `title` is empty (the page opens with the portrait banner), so name the
+# page explicitly -- otherwise <title> and og:title both render as "– ".
+pagetitle: "George G. Vega Yon, Ph.D."
 description: |
     George G. Vega Yon 博士的主頁，猶他大學教授、數據科學家和軟件工程師
 ---

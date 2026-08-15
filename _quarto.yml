@@ -21,11 +21,26 @@ project:
   resources:
     - "img/"
     - "assets/"
+    - "robots.txt"
+    # public/_redirects was a second hand-maintained copy, free to drift from
+    # this one. Listing it here makes the render the single source of truth.
+    - "_redirects"
 
 website:
   title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg
   search: false
+  # The apex is canonical -- www.ggvy.cl 301s here, so never use the www form.
+  # site-url is what unlocks sitemap.xml, <link rel="canonical">, and the
+  # og:/twitter: tags below; without it Quarto emits none of them.
+  site-url: https://ggvy.cl
+  # Quarto reads og-card.png off disk for og:image:width/height, so the
+  # dimensions are never declared here -- any values given are overwritten.
+  open-graph:
+    image: /img/og-card.png
+  twitter-card:
+    card-style: summary_large_image
+    image: /img/og-card.png
   description: |
     Personal website of Doctor George G. Vega Yon, an Assistant Professor of Data Science at the University of Utah. Dr. Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.
   navbar:
@@ -82,6 +97,8 @@ format:
       - assets/css/cards.css
     toc: false
     page-layout: article
+    # Needs site-url; emits <link rel="canonical"> on every page.
+    canonical-url: true
     include-in-header:
       - file: _includes/person-jsonld.html
     include-after-body:

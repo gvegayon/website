@@ -70,6 +70,21 @@ To build the website locally:
 Or open the repository in the devcontainer (`.devcontainer/`), which already
 has Quarto, the CV fonts and the R packages.
 
+## Social share card
+
+`img/og-card.png` is the 1200x630 image Bluesky, LinkedIn, Slack and Mastodon
+show when a ggvy.cl link is posted. It is committed as a binary and is **not**
+rebuilt by `make` -- regenerate it by hand when the name, title or portrait
+changes:
+
+```sh
+Rscript R/build_og_card.R
+```
+
+All three projects point at the copy served from the apex
+(`https://ggvy.cl/img/og-card.png`); `es/` and `zh/` name it absolutely because
+Quarto resolves a root-relative image against each project's own `site-url`.
+
 ## Deployment
 
 The website is automatically built and deployed using GitHub Actions with the `rocker/tidyverse:4.5.1` container, which includes Quarto and all necessary R packages.

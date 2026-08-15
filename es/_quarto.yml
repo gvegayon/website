@@ -11,6 +11,17 @@ website:
   title: "George G. Vega Yon, Ph.D."
   image: ../img/logo.svg
   search: false
+  # Includes the /es segment: this project renders into ../public/es, so
+  # without it every canonical and sitemap entry would claim the English URL.
+  site-url: https://ggvy.cl/es
+  # Absolute, not /img/og-card.png: Quarto resolves a root-relative image
+  # against site-url, which here would yield the nonexistent
+  # https://ggvy.cl/es/img/og-card.png. The card lives only at the apex.
+  open-graph:
+    image: https://ggvy.cl/img/og-card.png
+  twitter-card:
+    card-style: summary_large_image
+    image: https://ggvy.cl/img/og-card.png
   description: |
     Sitio web personal del Doctor George G. Vega Yon, Profesor Asistente de Ciencia de Datos en la Universidad de Utah. El Dr. Vega Yon trabaja en Computación Estadística, Ciencia de Datos y Desarrollo de Software Científico.
   navbar:
@@ -67,6 +78,8 @@ format:
       - ../assets/css/cards.css
     toc: false
     page-layout: article
+    # Needs site-url; emits <link rel="canonical"> on every page.
+    canonical-url: true
     include-in-header:
       - file: ../_includes/person-jsonld.html
     include-after-body:
