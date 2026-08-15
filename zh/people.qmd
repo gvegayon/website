@@ -1,12 +1,13 @@
 ---
-description: |
-    George G. Vega Yon 博士指導的學生和研究人員名單
+title: "團隊"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/usc_r_bootcamp.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "George G. Vega Yon 博士在猶他大學指導與合作的學生和研究人員，以及 NetSNAU 研究小組。"
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/usc_r_bootcamp.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: 55%; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# 團隊
 
 我的大部分工作都是與學生和研究人員共同完成的。我領導 [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} 研究小組，並指導高中、本科、碩士和博士各階段的學生。
 

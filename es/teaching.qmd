@@ -1,12 +1,13 @@
 ---
-description: |
-    Lista de clases y libros del Doctor George G. Vega Yon
+title: "Enseñanza"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/usc_r_bootcamp_clip.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Cursos, libros y materiales docentes abiertos del Doctor George G. Vega Yon sobre ciencia de datos, estadística y ciencia de redes."
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/usc_r_bootcamp_clip.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: center; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# Enseñanza
 
 Soy un educador dedicado que disfruta compartir conocimiento y fomentar un ambiente de aprendizaje abierto e inclusivo. La mayor parte de mi experiencia docente ha sido en las áreas de ciencia de datos, estadística y ciencia de redes. Comprometido con la ciencia abierta, me aseguro de que todos mis contenidos educativos estén disponibles gratuitamente en línea.
 

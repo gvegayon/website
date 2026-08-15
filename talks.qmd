@@ -1,12 +1,13 @@
 ---
-description: |
-  List of talks and workshops given by Doctor George G. Vega Yon
+title: "Talks"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: img/george_sonic_talk.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Invited talks, conference presentations, and workshops given by George G. Vega Yon on network science, statistical computing, and scientific software."
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('img/george_sonic_talk.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# Talks
 
 ```{r}
 #| label: fetch-talks

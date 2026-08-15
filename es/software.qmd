@@ -1,13 +1,18 @@
 ---
-description: |
-  Lista de paquetes de software y herramientas desarrolladas por el Doctor George G. Vega Yon
+title: "Software"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: "#2f4f4f"
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Paquetes de código abierto y software científico desarrollados por el Doctor George G. Vega Yon en R, C++ y Python para ciencia de redes y epidemiología computacional."
 ---
 
 ::: {style="text-align: center;"}
 ![](../img/hexlogos.webp){width="70%" alt="Un conjunto de logotipos hexagonales del software en el que estoy trabajando"}
 :::
 
-# Software
 
 Estoy profundamente comprometido con el **software de código abierto** y he estado construyendo herramientas de nivel profesional durante más de 15 años—remontándose a los días de [Google Code aquí](https://code.google.com/archive/p/rdspl/){target="_blank"}. Mi trabajo combina métodos estadísticos rigurosos con prácticas modernas de ingeniería de software, incluyendo **control de versiones** (Git/GitHub), **integración continua**, **IA agéntica**, **tecnologías de contenedores** y **metodologías ágiles**. He liderado equipos de desarrollo de software científico para entregar herramientas **de alto rendimiento**, **confiables** y **fáciles de usar** que son ampliamente adoptadas por investigadores y profesionales. La mayor parte de mi trabajo está construido en C++ con wrappers para R y Python, optimizado para su uso en entornos de computación de alto rendimiento. En todos los proyectos, diseño con el rendimiento y la usabilidad en mente, asegurando que los métodos complejos puedan ser tanto escalables como accesibles.
 
