@@ -2,13 +2,24 @@ name: Build and Deploy Quarto Website
 
 on:
   schedule:
-    # Run every Sunday at 2 AM UTC (weekly update)
-    - cron: '0 2 * * 0'
+    # Sundays at 03:00 UTC, an hour after update-metrics. That job rebuilds on
+    # its own when a number moves; this run is the safety net for talks.qmd,
+    # whose content is fetched from the gvegayon/talks repo at render time and
+    # so can change in a week with no metric change.
+    - cron: '0 3 * * 0'
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
+  # Called by update-metrics.yml once it has committed a new metrics.toml.
+  workflow_call:
+    inputs:
+      ref:
+        description: 'Branch or SHA to build. Defaults to the triggering ref.'
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -26,6 +37,9 @@ jobs:
       uses: actions/checkout@v7
       with:
         fetch-depth: 0
+        # actions/checkout defaults to the SHA that triggered the run, which
+        # predates the metrics commit when update-metrics.yml calls us.
+        ref: ${{ inputs.ref }}
 
     - name: Get quarto 1.9.9
       run: |
@@ -43,19 +57,8 @@ jobs:
         fc-cache -f
       shell: bash
 
-    # Network-only step: refreshes metrics.toml from OpenAlex/CRAN/GitHub.
-    # Not run on push, so ordinary commits render from the committed cache.
-    # continue-on-error + the `-` in the Makefile target mean an API outage
-    # can never fail the build.
-    - name: Refresh metrics
-      if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
-      run: make refresh
-      continue-on-error: true
-
-    # Offline: everything it needs is in the repo.
+    # Offline: metrics.toml is committed, so this needs no network for data.
+    # Refreshing it is update-metrics.yml's job.
     - name: Render Quarto website
       run: |
         make
@@ -66,8 +69,8 @@ jobs:
         git config --global user.email "actions@github.com"
         git config --global --add safe.directory /__w/website/website
 
-    - name: Deploy to GitHub Pages
-      if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    - name: Commit rendered site
+      if: github.event_name != 'pull_request' && (github.ref_name == 'main' || github.ref_name == 'master')
       run: |
         # Check if there are any changes in public directory
         if [ -d "public" ]; then

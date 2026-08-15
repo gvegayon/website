@@ -1,0 +1,118 @@
+name: Update metrics
+
+# Weekly refresh of metrics.toml (OpenAlex citations, CRAN versions and
+# downloads, GitHub stars), followed by a site rebuild only when a number
+# actually moved.
+#
+# This is the only scheduled job that reaches the internet for data. The site
+# render itself is offline: it reads the committed metrics.toml, so the build
+# is reproducible and an API outage degrades to "last week's numbers" rather
+# than a failed deploy.
+
+on:
+  schedule:
+    # Sundays at 02:00 UTC. The site build has its own 03:00 slot as a safety
+    # net for talks.qmd, which pulls its content from the gvegayon/talks repo.
+    - cron: '0 2 * * 0'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Ignore the per-entry TTL and re-check everything'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  # Never let two refreshes race to commit metrics.toml.
+  group: update-metrics
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    container:
+      image: rocker/tidyverse:4.5.1
+    outputs:
+      changed: ${{ steps.diff.outputs.changed }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+
+    - name: Install R dependencies
+      run: make deps
+      shell: bash
+
+    - name: Refresh metrics
+      env:
+        # Unauthenticated GitHub API is 60 req/hr per IP and Actions runners
+        # share addresses, so 23 repo lookups will intermittently 403 without
+        # this. R/fetch_metrics.R reads GITHUB_TOKEN directly.
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # OpenAlex "polite pool" contact. Set it as a repository variable to
+        # override the default baked into R/fetch_metrics.R.
+        OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
+      run: |
+        if [ "${{ inputs.force }}" = "true" ]; then
+          Rscript R/fetch_metrics.R --force
+        else
+          make refresh
+        fi
+      shell: bash
+      # R/fetch_metrics.R always exits 0 and keeps previous values on failure,
+      # but belt and braces: a bad week must not fail the workflow.
+      continue-on-error: true
+
+    - name: Detect changes
+      id: diff
+      run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        # fetched_at changes on every run, so comparing the whole file would
+        # always report a change. Diff only the lines carrying real numbers.
+        if git diff --quiet -- metrics.toml; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "No change to metrics.toml." >> "$GITHUB_STEP_SUMMARY"
+        elif [ -z "$(git diff -U0 -- metrics.toml | grep -E '^[+-](citations|cran_downloads|cran_version|stars|pushed_at|archived|license|openalex|matched_by|miss) ' || true)" ]; then
+          echo "changed=false" >> "$GITHUB_OUTPUT"
+          echo "Only the \`fetched_at\` timestamp moved - not rebuilding." >> "$GITHUB_STEP_SUMMARY"
+          git checkout -- metrics.toml
+        else
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          {
+            echo "### Metrics changed"
+            echo ""
+            echo '```diff'
+            git diff -U0 -- metrics.toml \
+              | grep -E '^[+-](citations|cran_downloads|cran_version|stars|pushed_at|archived|openalex|matched_by|miss) |^\+\+\+|^---|^@@' \
+              | head -60
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+        fi
+      shell: bash
+
+    - name: Commit metrics.toml
+      if: steps.diff.outputs.changed == 'true'
+      run: |
+        git config --global user.name "GitHub Actions Bot"
+        git config --global user.email "actions@github.com"
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        git add metrics.toml
+        git commit -m "Update metrics - $(date -u '+%Y-%m-%d')"
+        git push
+      shell: bash
+
+  # A push made with GITHUB_TOKEN deliberately does not trigger other
+  # workflows, so the build cannot be started by the commit above. Call it
+  # directly instead.
+  rebuild:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    permissions:
+      contents: write
+      actions: read
+    uses: ./.github/workflows/quarto-build.yml
+    with:
+      # Pick up the metrics commit rather than the SHA that started this run.
+      ref: ${{ github.ref_name }}
