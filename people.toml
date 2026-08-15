@@ -1,0 +1,52 @@
+# Collaborator roster.
+#
+# One table per person, keyed by a short slug. Everything is optional except
+# `name`. Entries here are matched against the `author` arrays in papers.toml
+# and software.toml by surname + first initial, so a paper does not need to be
+# edited for a collaborator to gain a link and an affiliation.
+#
+# When a name is spelled several ways across the sources, list the variants in
+# `aka` and they will all resolve to this entry.
+#
+# This file is deliberately partial. Affiliations are only recorded here when
+# they come from a source in this repo (people.qmd, cv/cv.qmd); the rest are
+# filled in automatically from OpenAlex, which reports the institution on each
+# authorship. Do not guess -- a wrong affiliation is worse than none.
+
+[gvy]
+name = 'Vega Yon, George G.'
+url = 'https://ggvy.cl'
+orcid = '0000-0002-3171-0844'
+affiliation = 'University of Utah'
+self = true
+
+# --- mentees and group members who are also coauthors (see people.qmd) ---
+
+[najafzadehkhoei]
+name = 'Najafzadehkhoei, Sima'
+url = 'https://www.linkedin.com/in/sima-najafzadehkhoei-23961b345/'
+affiliation = 'Population Health Sciences, University of Utah'
+
+[meyer]
+name = 'Meyer, Derek'
+url = 'https://www.linkedin.com/in/derek-meyer-289126227/'
+affiliation = 'University of Utah Data Coordinating Center'
+
+[wagoner]
+name = 'Wagoner, Jake'
+url = 'https://www.linkedin.com/in/jake-wagoner-92123522b/'
+affiliation = 'Scientific Computing and Imaging Institute, University of Utah'
+
+[pulsipher]
+name = 'Pulsipher, Andrew'
+url = 'https://www.linkedin.com/in/a-pulsipher/'
+
+[olivera]
+name = 'Olivera, Anibal'
+url = 'https://aoliveram.cl/'
+affiliation = 'Universidad del Desarrollo'
+
+[banks]
+name = 'Banks, Olivia'
+url = 'https://oliviactl.net/'
+affiliation = 'University of Utah'

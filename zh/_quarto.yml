@@ -62,11 +62,15 @@ format:
   html:
     theme:
       - default
-    css: ../styles.css
+    css:
+      - ../styles.css
+      - ../assets/css/cards.css
     toc: false
     page-layout: article
     include-in-header:
       - file: ../_includes/person-jsonld.html
+    include-after-body:
+      - file: ../_includes/after-body-sub.html
 
 execute:
   freeze: false

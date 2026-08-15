@@ -48,9 +48,14 @@ The following is an exhaustive list of the software packages I have either built
 
 ```{r}
 #| label: render-software-cards
-#| results: asis
 #| echo: false
 #| warning: false
-source("R/research_publications.R")
-render_software_cards("software.toml")
+#| results: asis
+source("R/entries.R")
+source("R/html.R")
+source("R/people.R")
+source("R/metrics.R")
+source("R/i18n.R")
+source("R/cards.R")
+render_item_grid(read_entries("software.toml"), "software", language = "en")
 ```

@@ -1,20 +1,13 @@
-`%||%` <- function(a, b) {
-  if (is.null(a) || length(a) == 0) {
-    return(b)
-  }
-
-  if (length(a) == 1) {
-    if (is.atomic(a) && is.na(a)) {
-      return(b)
-    }
-
-    if (is.character(a) && !nzchar(trimws(a))) {
-      return(b)
-    }
-  }
-
-  a
-}
+# The reader and the shared derived values (fmt_authors, venue_of, has_kw,
+# sort_entries, entry_status, entry_slug) live in R/entries.R, which the CV
+# also uses. This file only renders HTML.
+#
+# Sourced from the repo root (research.qmd) and from es/ and zh/, so the path
+# to entries.R depends on where we are.
+local({
+  here <- if (file.exists("R/entries.R")) "R/entries.R" else "../R/entries.R"
+  source(here, local = FALSE)
+})
 
 # Field values are plain text in the .toml files, so the only job left is
 # escaping them for the HTML they are about to be pasted into.
@@ -26,31 +19,9 @@ esc <- function(x) {
   gsub(">", "&gt;", x, fixed = TRUE)
 }
 
-# One TOML table per entry, keyed by citation key. `author` and `keywords`
-# arrive as arrays. A missing `toml` package is an error rather than an empty
-# list: silently rendering a publications page with no publications is the
-# worst outcome.
-parse_toml <- function(path) {
-  if (!requireNamespace("toml", quietly = TRUE)) {
-    stop("the 'toml' package is required to read ", path, call. = FALSE)
-  }
-  data <- toml::read_toml(path)
-
-  lapply(names(data), function(key) {
-    f <- data[[key]]
-    list(type = f$entrytype %||% "misc", key = key, fields = f)
-  })
-}
-
 safe_link <- function(url, label) {
   if (!nzchar(url)) return("")
   sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', url, label)
-}
-
-entry_status <- function(fields) {
-  kw <- tolower(as.character(fields$keywords %||% character(0)))
-  if (any(grepl("wip|preprint|working", kw))) return("wip")
-  "published"
 }
 
 get_research_i18n <- function(language = "en") {
@@ -121,7 +92,7 @@ get_research_i18n <- function(language = "en") {
 
 render_research_cards <- function(toml_path, language = "en") {
   i18n <- get_research_i18n(language)
-  entries <- parse_toml(toml_path)
+  entries <- read_entries(toml_path)
 
   cat("\n```{=html}\n")
 
@@ -156,7 +127,7 @@ render_research_cards <- function(toml_path, language = "en") {
     year <- esc(f$year %||% i18n$no_date)
     venue <- esc(f$journal %||% f$booktitle %||% f$publisher %||% f$institution %||% "")
     abstract <- esc(f$abstract %||% "")
-    status <- entry_status(f)
+    status <- entry_status(e)
 
     doi <- esc(f$doi %||% "")
     url <- esc(f$url %||% f$URL %||% "")
@@ -209,7 +180,7 @@ render_research_cards <- function(toml_path, language = "en") {
 
 render_software_cards <- function(toml_path, language = "en") {
   i18n <- get_research_i18n(language)
-  entries <- parse_toml(toml_path)
+  entries <- read_entries(toml_path)
 
   cat("\n```{=html}\n")
 
