@@ -1,6 +1,12 @@
 ---
+pagetitle: "Scientific Software & R Packages | George G. Vega Yon"
+title-prefix: ""
 description: |
   List of software packages and tools developed by Doctor George G. Vega Yon
+open-graph:
+  title: "Scientific Software & R Packages | George G. Vega Yon"
+twitter-card:
+  title: "Scientific Software & R Packages | George G. Vega Yon"
 ---
 
 ::: {style="text-align: center;"}
