@@ -70,4 +70,10 @@ local({
   }
 
   message(sprintf("build_pages: %d written, %d unchanged", written, unchanged))
+
+  # hreflang alternates for the six shared pages (index/research/software/
+  # talks/teaching/people) -- unrelated to the toml-driven detail pages
+  # above, but generated from the same entry point so both `make pages` and
+  # the pre-render hook produce it.
+  source(file.path(root, "R", "build_hreflang.R"))
 })

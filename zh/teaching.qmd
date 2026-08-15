@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "George G. Vega Yon 博士在數據科學、統計學與網絡科學方面的課程、書籍與公開教學資料。"
+include-in-header:
+  - file: ../_includes/hreflang-teaching.html
 ---
 
 我是一位敬業的教育工作者，喜歡分享知識並營造開放和包容的學習環境。我的大部分教學經驗都在數據科學、統計學和網絡科學領域。致力於開放科學，我確保所有教育內容都可以在線免費獲取。

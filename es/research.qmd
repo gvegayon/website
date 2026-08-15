@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Publicaciones, preprints y manuscritos en revisión del Doctor George G. Vega Yon sobre computación estadística, ciencia de redes y epidemiología computacional."
+include-in-header:
+  - file: ../_includes/hreflang-research.html
 ---
 
 Soy un metodólogo que trabaja en la intersección de sistemas complejos y computación estadística, con enfoque en **computación de alto rendimiento** y **aprendizaje automático**. Una parte central de mi trabajo es el desarrollo de software científico: como **ingeniero de software profesional**, dedico un esfuerzo significativo a asegurar que los métodos y herramientas que creo sean confiables, abiertos y ampliamente accesibles para la comunidad de investigación. Mis colaboraciones abarcan diversos campos, incluyendo **epidemiología**, **salud pública**, **análisis de redes sociales** y **genómica**, pero todas comparten una base común en computación intensiva y métodos estadísticos avanzados.
