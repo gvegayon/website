@@ -219,6 +219,13 @@ a:hover {
   text-decoration-thickness: 2px;
 }
 
+/* Quarto renders bare URLs (for example, DOI links) with the `uri` class.
+   Allow them to wrap so the wider body face cannot force a horizontal scroll
+   on narrow screens. */
+.content a.uri {
+	overflow-wrap: anywhere;
+}
+
 /* Research page redesign */
 .research-shell {
 	margin-top: 1.5rem;
@@ -241,7 +248,7 @@ a:hover {
 }
 
 .pub-search:focus {
-	outline: 2px solid color-mix(in srgb, var(--main-color) 35%, transparent);
+	outline: 2px solid var(--main-color);
 	border-color: var(--main-color);
 }
 
@@ -332,4 +339,3 @@ a:hover {
 		padding: 0.9rem;
 	}
 }
-

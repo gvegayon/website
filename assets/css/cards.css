@@ -1,7 +1,7 @@
 /* Card grid for the research and software pages.
  *
- * Scoped under .item-grid so it cannot leak into the rest of the site, which
- * still uses the blunt global rules in styles.css.
+ * Scoped under .item-grid so it cannot leak into the rest of the site. Font
+ * roles are inherited through the site-wide --font-* tokens in styles.css.
  */
 
 .item-grid {
@@ -36,7 +36,7 @@
 }
 
 .ig-search:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--ig-accent) 45%, transparent);
+  outline: 2px solid var(--ig-accent);
   outline-offset: 1px;
   border-color: var(--ig-accent);
 }
@@ -143,7 +143,7 @@
 }
 
 .ig-chip:focus-visible {
-  outline: 2px solid color-mix(in srgb, var(--ig-accent) 55%, transparent);
+  outline: 2px solid var(--ig-accent);
   outline-offset: 2px;
 }
 
@@ -449,7 +449,7 @@
 
 .cite-copy:hover { background: #fff1e0; }
 .cite-copy.is-copied { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
-.cite-copy:focus-visible { outline: 2px solid color-mix(in srgb, var(--ig-accent) 55%, transparent); outline-offset: 2px; }
+.cite-copy:focus-visible { outline: 2px solid var(--ig-accent); outline-offset: 2px; }
 
 .back-link { margin-top: 2rem; font-size: 0.9rem; }
 
