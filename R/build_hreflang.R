@@ -16,6 +16,12 @@
 # build artifact, like research/*.qmd and software/*.qmd.
 
 local({
+  # Match build_pages.R's supported invocation points: the repository root
+  # (`make pages`) or one of the language project directories. Generated
+  # includes are shared by all three projects, so they must always land at
+  # the repository root rather than under the caller's working directory.
+  root <- if (file.exists("papers.toml")) "." else ".."
+
   site <- "https://ggvy.cl"
 
   # slug -> path segment under each language root ("" for the homepage,
@@ -31,7 +37,8 @@ local({
 
   langs <- c(en = "", es = "es/", `zh-Hant` = "zh/")
 
-  dir.create("_includes", showWarnings = FALSE)
+  include_dir <- file.path(root, "_includes")
+  dir.create(include_dir, showWarnings = FALSE)
 
   write_if_changed <- function(path, text) {
     if (file.exists(path)) {
@@ -51,7 +58,7 @@ local({
     }, character(1))
     lines <- c(lines, sprintf('<link rel="alternate" hreflang="x-default" href="%s/%s">', site, pages[[slug]]))
 
-    path <- file.path("_includes", sprintf("hreflang-%s.html", slug))
+    path <- file.path(include_dir, sprintf("hreflang-%s.html", slug))
     if (write_if_changed(path, paste(lines, collapse = "\n"))) written <- written + 1L
     else unchanged <- unchanged + 1L
   }
