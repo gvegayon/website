@@ -43,6 +43,19 @@ jobs:
         fc-cache -f
       shell: bash
 
+    # Network-only step: refreshes metrics.toml from OpenAlex/CRAN/GitHub.
+    # Not run on push, so ordinary commits render from the committed cache.
+    # continue-on-error + the `-` in the Makefile target mean an API outage
+    # can never fail the build.
+    - name: Refresh metrics
+      if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
+      run: make refresh
+      continue-on-error: true
+
+    # Offline: everything it needs is in the repo.
     - name: Render Quarto website
       run: |
         make
@@ -58,7 +71,7 @@ jobs:
       run: |
         # Check if there are any changes in public directory
         if [ -d "public" ]; then
-          git add public/
+          git add public/ metrics.toml
           if ! git diff --staged --quiet; then
             git commit -m "Update website - $(date)"
             git push

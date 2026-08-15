@@ -6,6 +6,12 @@ year = '2017'
 note = 'R package version 0.16.1'
 url = 'https://CRAN.R-project.org/package=googlePublicData'
 doi = '10.32614/CRAN.package.googlePublicData'
+repo = 'https://github.com/gvegayon/googlePublicData'
+cran = 'googlePublicData'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['data formats']
 
 [rgexf]
 entrytype = 'manual'
@@ -15,6 +21,16 @@ year = '2026'
 note = 'R package version 0.17.0'
 url = 'https://CRAN.R-project.org/package=rgexf'
 doi = '10.32614/CRAN.package.rgexf'
+repo = 'https://github.com/gvegayon/rgexf'
+docs = 'https://gvegayon.github.io/rgexf/'
+cran = 'rgexf'
+kind = 'package'
+status = 'active'
+languages = ['R', 'JavaScript']
+keywords = ['networks', 'visualization', 'data formats']
+hex = '/img/rgexf.webp'
+featured = true
+paper = 'VegaYon2021rgexf'
 
 [ABCoptim]
 entrytype = 'manual'
@@ -24,6 +40,12 @@ year = '2017'
 note = 'R package version 0.15.0'
 url = 'https://CRAN.R-project.org/package=ABCoptim'
 doi = '10.32614/CRAN.package.ABCoptim'
+repo = 'https://github.com/gvegayon/ABCoptim'
+cran = 'ABCoptim'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['optimization']
 
 [netdiffuseR]
 entrytype = 'manual'
@@ -33,6 +55,13 @@ year = '2026'
 note = 'R package version 1.25.0'
 url = 'https://cran.r-project.org/package=netdiffuseR'
 doi = '10.32614/CRAN.package.netdiffuseR'
+repo = 'https://github.com/USCCANA/netdiffuseR'
+docs = 'https://USCCANA.github.io/netdiffuseR/'
+cran = 'netdiffuseR'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['networks', 'diffusion']
 
 [ergmito]
 entrytype = 'manual'
@@ -43,6 +72,16 @@ month = 'dec'
 url = 'https://cran.r-project.org/package=ergmito'
 note = 'R package version 0.3-2'
 doi = '10.32614/CRAN.package.ergmito'
+repo = 'https://github.com/muriteams/ergmito'
+docs = 'https://muriteams.github.io/ergmito/'
+cran = 'ergmito'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['networks', 'statistical models']
+hex = '/img/ergmito.webp'
+featured = true
+paper = 'yon2019exponential'
 
 [slurmR]
 entrytype = 'manual'
@@ -52,6 +91,13 @@ year = '2023'
 note = 'R package version 0.5-4'
 url = 'https://CRAN.R-project.org/package=slurmR'
 doi = '10.32614/CRAN.package.slurmR'
+repo = 'https://github.com/USCbiostats/slurmR'
+cran = 'slurmR'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['hpc', 'parallel computing']
+paper = 'VegaYon2019b'
 
 [fmcmc]
 entrytype = 'manual'
@@ -61,6 +107,13 @@ year = '2023'
 note = 'R package version 0.5-2'
 url = 'https://CRAN.R-project.org/package=fmcmc'
 doi = '10.32614/CRAN.package.fmcmc'
+repo = 'https://github.com/USCbiostats/fmcmc'
+cran = 'fmcmc'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['bayesian', 'mcmc']
+paper = 'VegaYon2019a'
 
 [parallel]
 entrytype = 'manual'
@@ -69,6 +122,11 @@ author = ['George Vega Yon', 'Brian Quistorff']
 year = '2019'
 note = 'Stata Module version 1.20.0'
 url = 'https://github.com/gvegayon/parallel'
+repo = 'https://github.com/gvegayon/parallel'
+kind = 'package'
+status = 'active'
+languages = ['Stata']
+keywords = ['hpc', 'parallel computing']
 
 [aphylo]
 entrytype = 'manual'
@@ -78,6 +136,13 @@ year = '2026'
 note = 'R package version 0.3-6'
 url = 'https://cran.r-project.org/package=aphylo'
 doi = '10.32614/CRAN.package.aphylo'
+repo = 'https://github.com/USCbiostats/aphylo'
+cran = 'aphylo'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['phylogenetics', 'bayesian', 'genomics']
+paper = 'vegayon2020aphylo'
 
 [netplot]
 entrytype = 'manual'
@@ -87,6 +152,13 @@ year = '2026'
 note = 'R package version 0.4-0'
 url = 'https://cran.r-project.org/package=netplot'
 doi = '10.32614/CRAN.package.netplot'
+repo = 'https://github.com/USCCANA/netplot'
+docs = 'https://usccana.github.io/netplot/'
+cran = 'netplot'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['networks', 'visualization']
 
 [barry]
 entrytype = 'manual'
@@ -96,6 +168,13 @@ year = '2026'
 note = 'R package version 0.2.2'
 url = 'https://cran.r-project.org/package=barry'
 doi = '10.32614/CRAN.package.barry'
+repo = 'https://github.com/USCbiostats/barryr'
+docs = 'https://uscbiostats.github.io/barryr/'
+cran = 'barry'
+kind = 'package'
+status = 'active'
+languages = ['C++']
+keywords = ['networks', 'statistical models']
 
 [pruner]
 entrytype = 'manual'
@@ -104,6 +183,11 @@ author = ['Vega Yon, George G.']
 year = '2020'
 note = 'C++ library version 0.0-1'
 url = 'https://github.com/USCbiostats/pruner'
+repo = 'https://github.com/USCbiostats/pruner'
+kind = 'library'
+status = 'archived'
+languages = ['C++']
+keywords = ['phylogenetics', 'algorithms']
 
 [defm]
 entrytype = 'manual'
@@ -113,6 +197,14 @@ year = '2026'
 note = 'R package version 0.2.1.0'
 url = 'https://cran.r-project.org/package=defm'
 doi = '10.32614/CRAN.package.defm'
+repo = 'https://github.com/UofUEpiBio/defm'
+docs = 'https://uofuepibio.github.io/defm/'
+cran = 'defm'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['statistical models', 'networks']
+paper = 'vegayonDiscreteExponentialFamilyModels2022'
 
 [epiworldR]
 entrytype = 'manual'
@@ -122,6 +214,14 @@ year = '2026'
 note = 'R package version 0.14.0.0'
 url = 'https://cran.r-project.org/package=epiworldR'
 doi = '10.32614/CRAN.package.epiworldR'
+repo = 'https://github.com/UofUEpiBio/epiworldR'
+docs = 'https://uofuepibio.github.io/epiworldR/'
+cran = 'epiworldR'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['epidemiology', 'agent-based models']
+paper = 'meyerEpiworldRFastAgentBased2023'
 
 [epiworldRShiny]
 entrytype = 'manual'
@@ -131,6 +231,13 @@ year = '2025'
 note = 'R package version 0.2.3'
 url = 'https://cran.r-project.org/package=epiworldRShiny'
 doi = '10.32614/CRAN.package.epiworldRShiny'
+repo = 'https://github.com/UofUEpiBio/epiworldRShiny'
+docs = 'https://uofuepibio.github.io/epiworldRShiny/'
+cran = 'epiworldRShiny'
+kind = 'app'
+status = 'active'
+languages = ['R']
+keywords = ['epidemiology', 'agent-based models', 'visualization']
 
 [twitterreport]
 entrytype = 'manual'
@@ -143,6 +250,11 @@ version = 'v0.16'
 doi = '10.5281/zenodo.44528'
 url = 'https://doi.org/10.5281/zenodo.44528'
 note = 'R package version 0.16'
+repo = 'https://github.com/gvegayon/twitterreport'
+kind = 'package'
+status = 'archived'
+languages = ['R', 'C++']
+keywords = ['text analysis', 'networks']
 
 [epiworld]
 entrytype = 'manual'
@@ -151,6 +263,13 @@ author = ['Vega Yon, George G.']
 year = '2022'
 note = 'C++ library version 0.0-1'
 url = 'https://github.com/UofUEpiBio/epiworld'
+repo = 'https://github.com/UofUEpiBio/epiworld'
+kind = 'library'
+status = 'active'
+languages = ['C++']
+keywords = ['epidemiology', 'agent-based models', 'hpc']
+hex = '/img/epiworld.webp'
+featured = true
 
 [pyrenew]
 entrytype = 'manual'
@@ -159,6 +278,11 @@ author = ['Damon Bayer', 'Dylan H Morris', 'George Vega Yon', 'Trevor Martin', '
 year = '2024'
 note = 'Python package version 0.1.0'
 url = 'https://github.com/CDCgov/PyRenew'
+repo = 'https://github.com/CDCgov/PyRenew'
+kind = 'package'
+status = 'active'
+languages = ['Python']
+keywords = ['epidemiology', 'bayesian']
 
 [wwinference]
 entrytype = 'manual'
@@ -167,6 +291,11 @@ author = ['Kaitlyn Johnson', 'Dylan Morris', 'Sam Abbott', 'Christian Bernal Zel
 year = '2024'
 note = 'R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/'
 url = 'https://github.com/cdcgov/ww-inference-model/'
+repo = 'https://github.com/CDCgov/ww-inference-model'
+kind = 'package'
+status = 'active'
+languages = ['R', 'Stan']
+keywords = ['epidemiology', 'bayesian']
 
 ['multigroup.vaccine']
 entrytype = 'manual'
@@ -175,6 +304,12 @@ author = ['Damon Toth', 'Jake Wagoner', 'Willy Ray', 'George Vega Yon']
 year = '2026'
 note = 'R package version 0.1.1'
 url = 'https://epiforesite.github.io/multigroup-vaccine/'
+repo = 'https://github.com/EpiForeSITE/multigroup-vaccine'
+docs = 'https://epiforesite.github.io/multigroup-vaccine/'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['epidemiology']
 
 [measles]
 entrytype = 'manual'
@@ -184,6 +319,12 @@ year = '2026'
 note = 'R package version 0.2.0'
 url = 'https://cran.r-project.org/package=measles'
 doi = '10.32614/CRAN.package.measles'
+repo = 'https://github.com/UofUEpiBio/measles'
+cran = 'measles'
+kind = 'package'
+status = 'active'
+languages = ['R', 'C++']
+keywords = ['epidemiology', 'agent-based models']
 
 [epiworldRcalibrate]
 entrytype = 'manual'
@@ -193,6 +334,13 @@ year = '2026'
 note = 'R package version 0.1.4'
 url = 'https://cran.r-project.org/package=epiworldRcalibrate'
 doi = '10.32614/CRAN.package.epiworldRcalibrate'
+repo = 'https://github.com/sima-njf/epiworldRcalibrate'
+docs = 'https://sima-njf.github.io/epiworldRcalibrate/'
+cran = 'epiworldRcalibrate'
+kind = 'package'
+status = 'active'
+languages = ['R']
+keywords = ['epidemiology', 'agent-based models', 'machine learning']
 
 [imaginarycss]
 entrytype = 'manual'
@@ -202,4 +350,12 @@ year = '2026'
 note = 'R package version 0.1.0'
 url = 'https://cran.r-project.org/package=imaginarycss'
 doi = '10.32614/CRAN.package.imaginarycss'
+repo = 'https://github.com/gvegayon/imaginary-structures'
+docs = 'https://gvegayon.github.io/imaginary-structures/'
+cran = 'imaginarycss'
+kind = 'package'
+status = 'archived'
+languages = ['R']
+keywords = ['networks', 'cognition']
+paper = 'tanakaImaginaryNetworkMotifs2024'
 

@@ -13,19 +13,23 @@ description: |
 #| echo: false
 #| results: asis
 #| warning: false
+# Fetched at render time, so a network failure must not take the build down:
+# fall back to a link instead of stopping the render.
+src <- "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md"
 tmp <- tempfile(fileext = ".md")
-ans <- download.file(
-  url = "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md",
-  destfile = tmp
+
+ok <- tryCatch(
+  download.file(url = src, destfile = tmp, quiet = TRUE) == 0L,
+  error = function(e) FALSE,
+  warning = function(w) FALSE
 )
 
-# We should have no error
-stopifnot(ans == 0)
-
-# Removing the header
-ans <- readLines(tmp) |>
-  gsub(pattern = "^# List of talks.+", replacement = "")
-
-ans |>
-  cat(sep = "\n")
+if (ok) {
+  # Removing the header
+  readLines(tmp, warn = FALSE) |>
+    gsub(pattern = "^# List of talks.+", replacement = "") |>
+    cat(sep = "\n")
+} else {
+  cat("The talk list could not be fetched right now. See [gvegayon/talks](https://github.com/gvegayon/talks) for the current list.")
+}
 ```

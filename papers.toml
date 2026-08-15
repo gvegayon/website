@@ -20,6 +20,7 @@ number = '2'
 doi = '10.1371/journal.pcbi.1007948'
 abstract = 'Gene function annotation is important for a variety of downstream analyses of genetic data. But experimental characterization of function remains costly and slow, making computational prediction an important endeavor. Phylogenetic approaches to prediction have been developed, but implementation of a practical Bayesian framework for parameter estimation remains an outstanding challenge. We have developed a computationally efficient model of evolution of gene annotations using phylogenies based on a Bayesian framework using Markov Chain Monte Carlo for parameter estimation. Unlike previous approaches, our method is able to estimate parameters over many different phylogenetic trees and functions. The resulting parameters agree with biological intuition, such as the increased probability of function change following gene duplication. The method performs well on leave-one-out cross-validation, and we further validated some of the predictions in the experimental scientific literature.'
 keywords = ['published']
+software = ['aphylo']
 
 [vegayon-geese]
 entrytype = 'unpublished'
@@ -43,6 +44,7 @@ doi = '10.1016/j.socnet.2023.11.005'
 url = 'https://doi.org/10.1016/j.socnet.2023.11.005'
 abstract = 'We examine the structural patterns in the cognitive representation of social networks by systematically classifying false positives and negatives. Although existing literature on Cognitive Social Structures (CSS) has begun exploring false positives and negatives by comparing actual and perceived networks, it has not differentiated simultaneous occurrences of true and false positives and negatives on network motifs, such as reciprocity and triadic closure. Here, we propose a theoretical framework to categorize three classes of errors we call imaginary network motifs as combinations of accurately and erroneously perceived ties: (a) partially false, (b) completely false, and (c) mixed false. Using four published CSS data sets, we empirically test which imaginary network motifs are significantly more or less present in different types of perceived networks than the corresponding actual networks. Our results confirm that people not only fill in the blanks as suggested in the prior research but also conceive other imaginary structures. The findings advance our understanding of perception gaps between actual and perceived networks and have implications for designing more accurate network modeling and sampling.'
 keywords = ['published', 'Cognitive errors', 'Cognitive Social Structures', 'Network motifs', 'Network perceptions', 'Social networks']
+software = ['imaginarycss']
 
 [ouellet2022]
 entrytype = 'article'
@@ -123,6 +125,7 @@ doi = '10.1016/j.socnet.2020.07.005'
 eprint = '1904.10406'
 abstract = 'Statistical models for social networks have enabled researchers to study complex social phenomena that give rise to observed patterns of relationships among social actors and to gain a rich understanding of the interdependent nature of social ties and actors. Much of this research has focused on social networks within medium to large social groups. To date, these advances in statistical models for social networks, and in particular, of Exponential-Family Random Graph Models (ERGMS), have rarely been applied to the study of small networks, despite small network data in teams, families, and personal networks being common in many fields. In this paper, we revisit the estimation of ERGMs for small networks and propose using exhaustive enumeration when possible. We developed an R package that implements the estimation of pooled ERGMs for small networks using Maximum Likelihood Estimation (MLE), called ergmito. Based on the results of an extensive simulation study to assess the properties of the MLE estimator, we conclude that there are several benefits of direct MLE estimation compared to approximate methods and that this creates opportunities for valuable methodological innovations that can be applied to modeling social networks with ERGMs.'
 keywords = ['published']
+software = ['ergmito']
 
 [Bell2019]
 entrytype = 'article'
@@ -186,6 +189,7 @@ url = 'http://joss.theoj.org/papers/10.21105/joss.01427'
 volume = '4'
 abstract = 'Markov Chain Monte Carlo (MCMC) is used in a variety of statistical and computational venues such as: statistical inference, Markov quadrature (also known as Monte Carlo integration), stochastic optimization, among others. The fmcmc R package provides a flexible framework for implementing MCMC methods that use the Metropolis-Hastings algorithm. fmcmc provides the following out-of-the-box features that can be valuable for both practitioners of MCMC and educators: seamless efficient multiple-chain sampling using parallel computing, user-defined transition kernels, and automatic stop using convergence monitoring.'
 keywords = ['published']
+software = ['fmcmc']
 
 [VegaYon2019b]
 entrytype = 'article'
@@ -202,6 +206,7 @@ url = 'https://joss.theoj.org/papers/10.21105/joss.01493'
 volume = '4'
 abstract = 'Nowadays, high-performance-computing (HPC) clusters are commonly available tools for either in or out of cloud settings. The Slurm Workload Manager is a program written in C that is used to efficiently manage resources in HPC clusters. While the R programming language has not been developed for HPC settings, there are currently several ways in which R can be enhanced by means of HPC. The slurmR R package is one of those ways: it provides tools for using R in HPC settings that work with Slurm, offering wrappers and auxiliary functions that allow the user to seamlessly integrate their analysis pipeline with HPC, putting emphasis on providing the user with a family of functions similar to those that the parallel R package provides. In summary, slurmR provides a dependency-free and purpose-built alternative for R users working in a HPC environment with Slurm.'
 keywords = ['published']
+software = ['slurmR']
 
 [Valente2020]
 entrytype = 'article'
@@ -232,6 +237,7 @@ pages = '3456'
 number = '64'
 abstract = 'First introduced in 2012, the rgexf package for the R programming language was the first effort to make the Graph Exchange XML Format (GEXF) specification available to the R world. With more than 500,000 downloads, it is one of the most popular ways to incorporate GEXF files into the R programming language environment. Beyond reading and writing GEXF files from within R, the rgexf R package has various other features that can help to create beautiful network visualizations: users can create GEXF objects from scratch, adding and removing nodes and edges as needed; users of the igraph package can directly convert objects between gexf and igraph classes; and, thanks to the gexf-js javascript library, users can immediately visualize their network objects in the web browser.'
 keywords = ['published']
+software = ['rgexf']
 
 [Hancean2022]
 entrytype = 'article'
@@ -293,6 +299,7 @@ doi = '10.48550/arXiv.2211.00627'
 url = 'https://arxiv.org/abs/2211.00627'
 abstract = 'Studies that collect multi-outcome data such as tobacco and alcohol use are becoming increasingly common. In principle, multi-outcomes studies investigate the correlations between outcomes, including, causal links and/or joint distributions. Although there are many methods for studying multivariate outcomes, significant limitations regarding scale and interpretation persist. Here we introduce a model based on the exponential-family for discrete binary outcomes that provides a flexible framework for hypothesis testing of multiple binary outcomes in a computationally efficient fashion.'
 keywords = ['wip']
+software = ['defm']
 
 [vegayonPowerMulticollinearitySmall2023a]
 entrytype = 'article'
@@ -328,6 +335,7 @@ doi = '10.21105/joss.05781'
 url = 'https://doi.org/10.21105/joss.05781'
 abstract = "Agent-based modeling (ABM) has emerged as a powerful computational approach to studying complex systems across various fields, including social sciences and epidemiology. By simulating the interactions and behaviors of individual entities, known as agents, ABM provides a unique lens through which researchers can analyze and understand the emergent properties and dynamics of these systems. The epiworldR package provides a flexible framework for ABM implementation and methods for prototyping disease outbreaks and transmission models using a C++ backend. It supports multiple epidemiological models, including the Susceptible-Infected-Susceptible (SIS), Susceptible-Infected-Removed (SIR), Susceptible-Exposed-Infected-Removed (SEIR), and others, involving arbitrary mitigation policies and multiple-disease models. Users can specify transmission/susceptibility rates as a function of agents' features, providing great complexity for the model dynamics."
 keywords = ['published']
+software = ['epiworldR']
 
 [sargentAssessingDynamicsPrEP2024]
 entrytype = 'article'

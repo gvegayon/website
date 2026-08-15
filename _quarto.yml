@@ -1,12 +1,26 @@
 project:
   type: website
   output-dir: public
+  # Regenerates research/*.qmd and software/*.qmd before the render.
+  # `make` runs this too; declared here so `quarto preview` also works.
+  pre-render: R/build_pages.R
   render:
+    # This glob recurses, so it also claims es/*.qmd, zh/*.qmd and cv/cv.qmd.
+    #
+    # Do NOT add "!es/" / "!zh/" here to stop that. Quarto then treats
+    # public/es and public/zh as orphaned output and DELETES both directories
+    # on the next root render (verified again 2026-08-14: a bare
+    # `quarto render .` took public/es and public/zh from 6 pages to 0).
+    # The Makefile compensates by ordering instead -- root, then es, then zh --
+    # so a full `make` always ends with the correct translated navbars.
     - "*.qmd"
+    - "research/*.qmd"
+    - "software/*.qmd"
     - "!README.md"
 
   resources:
     - "img/"
+    - "assets/"
 
 website:
   title: "George G. Vega Yon, Ph.D."
@@ -63,11 +77,15 @@ format:
   html:
     theme:
       - default
-    css: styles.css
+    css:
+      - styles.css
+      - assets/css/cards.css
     toc: false
     page-layout: article
     include-in-header:
       - file: _includes/person-jsonld.html
+    include-after-body:
+      - file: _includes/after-body.html
 
 execute:
   freeze: false

@@ -88,7 +88,8 @@ knitr:
 
 ```{r}
 #| include: false
-source("R/bib.R")
+source("../R/entries.R")   # shared with the website: reader + author/venue/sort
+source("R/bib.R")          # CV-only markdown formatters
 source("R/downloads.R")
 
 src <- c("../papers.toml", "../software.toml",
