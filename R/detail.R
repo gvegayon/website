@@ -231,11 +231,20 @@ detail_qmd_text <- function(e, kind, index, people, i18n) {
 
   subtitle <- paste(c(venue, year)[nzchar(c(venue, year))], collapse = " · ")
 
+  # A software blurb is the noun phrase trailing the package title ("Beautiful
+  # graph drawing"), which reads thin as a meta description. The abstract holds
+  # the DESCRIPTION prose, so lead with its first sentence when there is one.
+  meta_desc <- if (identical(kind, "software") && nzchar(f$abstract %||% "")) {
+    lead_sentence(f$abstract)
+  } else {
+    blurb
+  }
+
   # --- front matter
   fm <- c("---",
           paste0("title: ", yaml_str(heading)),
           if (nzchar(subtitle)) paste0("subtitle: ", yaml_str(subtitle)),
-          paste0("description: ", yaml_str(truncate_words(blurb, 45))),
+          paste0("description: ", yaml_str(truncate_words(meta_desc, 45))),
           if (nzchar(f$image %||% "")) paste0("image: ", yaml_str(asset_url(f$image, DETAIL_ROOT))),
           if (nzchar(f$image_caption %||% "")) paste0("image-alt: ", yaml_str(f$image_caption)),
           "toc: false",
@@ -291,11 +300,16 @@ detail_qmd_text <- function(e, kind, index, people, i18n) {
     "</div>\n```\n"
   )
 
+  # Software keeps the blurb as a one-line lead and puts the longer prose under
+  # its own heading -- "About" rather than "Abstract", which belongs to papers.
   abstract <- f$abstract %||% ""
   abstract_md <- if (identical(kind, "research")) {
     if (nzchar(abstract)) paste0("\n## ", i18n$abstract_label, "\n\n", abstract, "\n") else ""
   } else {
-    if (nzchar(blurb)) paste0("\n", blurb, "\n") else ""
+    paste0(
+      if (nzchar(blurb)) paste0("\n", blurb, "\n") else "",
+      if (nzchar(abstract)) paste0("\n## ", i18n$about_label, "\n\n", abstract, "\n") else ""
+    )
   }
 
   cite_md <- paste0(

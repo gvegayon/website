@@ -226,6 +226,7 @@ software_card <- function(e, i18n) {
   # "pkgname: Description" -- split so the name can carry the visual weight
   name  <- esc(sub(":.*$", "", f$title %||% e$key))
   blurb <- esc(f$tagline %||% sub("^[^:]*:\\s*", "", f$title %||% ""))
+  abstract <- esc(f$abstract %||% "")
   year  <- esc(substr(f$year %||% "", 1, 4))
   note  <- esc(f$note %||% "")
   status <- tolower(f$status %||% "active")
@@ -298,6 +299,10 @@ software_card <- function(e, i18n) {
       if (length(links)) paste(links, collapse = '<span class="sep">&bull;</span>')
       else sprintf('<span class="muted">%s</span>', i18n$no_link)
     ),
+    if (nzchar(abstract)) sprintf(
+      '<details class="card__abstract"><summary>%s</summary><p>%s</p></details>',
+      i18n$about_label, abstract
+    ) else "",
     '</article>'
   )
 }
@@ -408,10 +413,14 @@ render_item_grid <- function(entries, kind = c("research", "software"), language
   for (e in entries) {
     f <- e$fields
     sort_title <- tolower(gsub("^[^a-z0-9]+", "", tolower(f$title %||% "")))
+    # The software box offers to search descriptions, and no entry carries a
+    # `tagline`, so the abstract is what makes that promise true. Research
+    # abstracts stay out: their placeholder never offers them, and folding 30
+    # of them in would duplicate ~38KB of card text into data attributes.
     blob <- tolower(paste(
       f$title %||% "", paste(parse_authors(f$author), collapse = " "), f$year %||% "",
       venue_of(f), paste(f$keywords %||% "", collapse = " "), f$note %||% "",
-      f$tagline %||% "", e$key
+      f$tagline %||% "", if (identical(kind, "software")) f$abstract %||% "" else "", e$key
     ))
 
     cat(sprintf('<li class="ig-card"%s>', card_data_attrs(e, kind, sort_title, blob)))

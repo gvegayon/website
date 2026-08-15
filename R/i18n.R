@@ -55,6 +55,7 @@ I18N <- list(
     no_date              = "n.d.",
 
     # --- detail pages
+    about_label   = "About",
     cite_this     = "Cite",
     copy          = "Copy BibTeX",
     copied        = "Copied",
@@ -111,6 +112,7 @@ I18N <- list(
     untitled             = "Sin título",
     no_date              = "s.f.",
 
+    about_label   = "Acerca de",
     cite_this     = "Citar",
     copy          = "Copiar BibTeX",
     copied        = "Copiado",
@@ -167,6 +169,7 @@ I18N <- list(
     untitled             = "无标题",
     no_date              = "无日期",
 
+    about_label   = "简介",
     cite_this     = "引用",
     copy          = "复制 BibTeX",
     copied        = "已复制",
