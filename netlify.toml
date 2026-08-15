@@ -268,3 +268,16 @@
   to     = "https://outlook.office.com/bookwithme/user/2b0ce7630ff348a88c23c82847beef52@umail.utah.edu/meetingtype/oAPRWNYkaU-VaGvNTTByjA2?anonymous&ismsaljsauthenabled&ep=mlink"
   status = 301
   force  = true
+
+# The portrait was renamed from george_darwin.* to a descriptive filename. Both
+# old URLs are live and indexed -- the .webp is the homepage portrait -- and the
+# next CI render drops them from public/, so without these they would 404. No
+# `force`: these only fire when nothing on disk matches that path.
+[[redirects]]
+  from   = "/img/george_darwin.webp"
+  to     = "/img/george-g-vega-yon-university-of-utah.webp"
+  status = 301
+[[redirects]]
+  from   = "/img/george_darwin.jpg"
+  to     = "/img/george-g-vega-yon-university-of-utah.jpg"
+  status = 301

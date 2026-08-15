@@ -12,7 +12,7 @@
 # the only image reader available here, and it cannot read JPEG.
 
 out_file <- "img/og-card.png"
-portrait <- "img/george_darwin.jpg"
+portrait <- "img/george-g-vega-yon-university-of-utah.jpg"
 
 W <- 1200L
 H <- 630L
