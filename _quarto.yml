@@ -49,7 +49,10 @@ website:
     title: false
     logo: img/logo.svg
     logo-alt: "George G. Vega Yon, Ph.D."
-    background: "#ff8000ff"
+    # Must match --main-color in styles.css -- that file is the source of
+    # truth and overrides this with !important, but Quarto needs a literal
+    # hex here too for its own navbar theming.
+    background: "#A85200"
     foreground: white
     collapse-below: lg
     left:

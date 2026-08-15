@@ -5,7 +5,7 @@
  */
 
 .item-grid {
-  --ig-accent: var(--main-color, rgb(193, 97, 0));
+  --ig-accent: var(--main-color, #A85200);
   --ig-ink: #2f2a26;
   --ig-muted: #7a6a5c;
   --ig-line: #e8dccd;
@@ -36,7 +36,7 @@
 }
 
 .ig-search:focus-visible {
-  outline: 2px solid rgba(193, 97, 0, 0.45);
+  outline: 2px solid color-mix(in srgb, var(--ig-accent) 45%, transparent);
   outline-offset: 1px;
   border-color: var(--ig-accent);
 }
@@ -143,7 +143,7 @@
 }
 
 .ig-chip:focus-visible {
-  outline: 2px solid rgba(193, 97, 0, 0.55);
+  outline: 2px solid color-mix(in srgb, var(--ig-accent) 55%, transparent);
   outline-offset: 2px;
 }
 
@@ -223,6 +223,7 @@
 
 .card__title {
   margin: 0;
+  font-family: var(--font-display, inherit);
   font-size: 1.04rem;
   line-height: 1.35;
   color: #173042;
@@ -448,7 +449,7 @@
 
 .cite-copy:hover { background: #fff1e0; }
 .cite-copy.is-copied { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
-.cite-copy:focus-visible { outline: 2px solid rgba(193, 97, 0, 0.55); outline-offset: 2px; }
+.cite-copy:focus-visible { outline: 2px solid color-mix(in srgb, var(--ig-accent) 55%, transparent); outline-offset: 2px; }
 
 .back-link { margin-top: 2rem; font-size: 0.9rem; }
 
