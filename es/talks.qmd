@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Charlas invitadas, presentaciones en congresos y talleres impartidos por el Doctor George G. Vega Yon sobre ciencia de redes, computación estadística y software científico."
+include-in-header:
+  - file: ../_includes/hreflang-talks.html
 ---
 
 ```{r}

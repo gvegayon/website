@@ -7,6 +7,9 @@ project:
   resources:
     - "../img/"
 
+# Sets <html lang="es">.
+lang: es
+
 website:
   title: "George G. Vega Yon, Ph.D."
   image: ../img/logo.svg

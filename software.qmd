@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Open-source packages and scientific software developed by George G. Vega Yon, including R, C++, and Python tools for network science and computational epidemiology."
+include-in-header:
+  - file: _includes/hreflang-software.html
 ---
 
 ::: {style="text-align: center;"}

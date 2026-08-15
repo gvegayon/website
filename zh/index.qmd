@@ -7,6 +7,8 @@ toc: false
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
     George G. Vega Yon 博士的主頁，猶他大學流行病學系研究副教授，研究統計計算、網絡科學與科學軟件。
+include-in-header:
+  - file: ../_includes/hreflang-index.html
 ---
 
 <!-- Background Header Section - 30vh -->

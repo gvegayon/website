@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Estudiantes y personal que el Doctor George G. Vega Yon dirige y asesora en la Universidad de Utah, y el grupo de investigación NetSNAU."
+include-in-header:
+  - file: ../_includes/hreflang-people.html
 ---
 
 La mayor parte de mi trabajo ocurre junto a estudiantes y personal de investigación. Dirijo el grupo de investigación [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"}, y superviso y asesoro a estudiantes de enseñanza media, pregrado, magíster y doctorado.

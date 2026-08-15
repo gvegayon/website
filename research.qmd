@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Peer-reviewed publications, preprints, and working papers by George G. Vega Yon on statistical computing, network science, and computational epidemiology."
+include-in-header:
+  - file: _includes/hreflang-research.html
 ---
 
 I am a methodologist working at the intersection of complex systems and statistical computing, with a focus on **high-performance computing** and **machine learning**. A central part of my work is the development of scientific software: as a **professional software engineer**, I dedicate significant effort to ensuring that the methods and tools I create are reliable, open, and widely accessible to the research community. My collaborations span diverse fields, including **epidemiology**, **public health**, **social network analysis**, and **genomics**, but they all share a common foundation in heavy computation and advanced statistical methods.

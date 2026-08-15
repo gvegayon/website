@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Cursos, libros y materiales docentes abiertos del Doctor George G. Vega Yon sobre ciencia de datos, estadística y ciencia de redes."
+include-in-header:
+  - file: ../_includes/hreflang-teaching.html
 ---
 
 Soy un educador dedicado que disfruta compartir conocimiento y fomentar un ambiente de aprendizaje abierto e inclusivo. La mayor parte de mi experiencia docente ha sido en las áreas de ciencia de datos, estadística y ciencia de redes. Comprometido con la ciencia abierta, me aseguro de que todos mis contenidos educativos estén disponibles gratuitamente en línea.

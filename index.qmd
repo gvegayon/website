@@ -7,6 +7,8 @@ toc: false
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
     Homepage of George G. Vega Yon, Ph.D., Associate Research Professor in the Division of Epidemiology at the University of Utah, working on statistical computing, network science, and scientific software.
+include-in-header:
+  - file: _includes/hreflang-index.html
 ---
 
 <!-- Background Header Section - 30vh -->

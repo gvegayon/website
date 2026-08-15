@@ -7,6 +7,8 @@ title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
 description-meta: "Students and staff mentored and advised by George G. Vega Yon at the University of Utah, and the NetSNAU research group."
+include-in-header:
+  - file: _includes/hreflang-people.html
 ---
 
 Most of my work happens alongside students and staff. I lead the [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} research group, and I mentor and advise students at the high-school, undergraduate, master's, and doctoral levels.

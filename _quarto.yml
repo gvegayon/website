@@ -26,6 +26,10 @@ project:
     # this one. Listing it here makes the render the single source of truth.
     - "_redirects"
 
+# Sets <html lang="en">. es/_quarto.yml and zh/_quarto.yml set their own
+# ("es" and "zh-Hant" -- the Chinese edition is Traditional, not Simplified).
+lang: en
+
 website:
   title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg

@@ -7,6 +7,11 @@ project:
   resources:
     - "../img/"
 
+# Sets <html lang="zh-Hant"> -- this edition is Traditional Chinese
+# (confirmed against the character forms used in zh/index.qmd), not
+# Simplified, so plain "zh" would be wrong.
+lang: zh-Hant
+
 website:
   title: "George G. Vega Yon, Ph.D."
   image: ../img/logo.svg
