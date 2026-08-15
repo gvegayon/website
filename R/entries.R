@@ -37,10 +37,11 @@ assert_no_accent_macros <- function(...) {
   invisible(TRUE)
 }
 
-# One TOML table per entry, keyed by citation key. `author`/`editor` and
-# `keywords` arrive as arrays; everything else is a string. A missing `toml`
-# package is an error rather than an empty list: silently rendering a
-# publications page with no publications is the worst outcome.
+# One TOML table per entry, keyed by citation key. `keywords` arrives as an
+# array, `author`/`editor` as one semicolon-separated string (see
+# parse_authors); everything else is a string. A missing `toml` package is an
+# error rather than an empty list: silently rendering a publications page with
+# no publications is the worst outcome.
 read_entries <- function(...) {
   if (!requireNamespace("toml", quietly = TRUE)) {
     stop("the 'toml' package is required to read the entry files", call. = FALSE)
@@ -58,6 +59,23 @@ read_entries <- function(...) {
 
 # ---------------------------------------------------------------- authors
 
+# `author` and `editor` hold one string, with the authors in order separated by
+# semicolons and each written "Last, First M.":
+#
+#   author = 'Vega Yon, George G.; de la Haye, Kayla'
+#
+# The semicolon is what makes the comma unambiguous, which is the whole point:
+# a surname of more than one word ("Vega Yon", "de la Haye") cannot be guessed
+# from "First Last" and has to be marked by the author. Legacy arrays are still
+# accepted so an old file, or a hand edit that reverts to `['A', 'B']`, keeps
+# rendering.
+parse_authors <- function(x) {
+  x <- trimws(as.character(x %||% character(0)))
+  if (!length(x)) return(character(0))
+  out <- trimws(unlist(strsplit(x, ";", fixed = TRUE)))
+  out[nzchar(out)]
+}
+
 initials <- function(given) {
   parts <- unlist(strsplit(trimws(given), "[ .]+"))
   parts <- parts[nzchar(parts)]
@@ -65,22 +83,52 @@ initials <- function(given) {
   paste(paste0(toupper(substr(parts, 1, 1)), "."), collapse = " ")
 }
 
-# "Last, First M." or "First M. Last" -> "Last, F. M."
+# One name into its two halves. "Last, First M." is the documented form; the
+# fallback for a comma-less name assumes a one-word surname, which is exactly
+# the guess the new format exists to avoid having to make.
+split_name <- function(a) {
+  a <- trimws(a %||% "")
+  if (grepl(",", a, fixed = TRUE)) {
+    bits <- strsplit(a, ",")[[1]]
+    return(list(last = trimws(bits[1]), given = trimws(paste(bits[-1], collapse = " "))))
+  }
+  toks <- unlist(strsplit(a, "[[:space:]]+"))
+  toks <- toks[nzchar(toks)]
+  if (!length(toks)) return(list(last = "", given = ""))
+  list(last = toks[length(toks)], given = paste(toks[-length(toks)], collapse = " "))
+}
+
+# "Last, First M." -> "Last, F. M."
 one_author <- function(a) {
   a <- trimws(a)
   if (!nzchar(a)) return("")
   if (identical(tolower(a), "others")) return("et al.")
-  if (grepl(",", a, fixed = TRUE)) {
-    bits  <- strsplit(a, ",")[[1]]
-    last  <- trimws(bits[1])
-    given <- trimws(paste(bits[-1], collapse = " "))
-  } else {
-    toks  <- unlist(strsplit(a, "\\s+"))
-    last  <- toks[length(toks)]
-    given <- paste(toks[-length(toks)], collapse = " ")
-  }
-  if (!nzchar(given)) return(last)
-  paste0(last, ", ", initials(given))
+  p <- split_name(a)
+  if (!nzchar(p$given)) return(p$last)
+  paste0(p$last, ", ", initials(p$given))
+}
+
+# "{Last}, {First}" for the .bib block on the detail pages.
+#
+# The braces make each half one unsplittable unit, which is what protects a
+# two-word surname: anything that re-tokenises the name on spaces -- a
+# reference manager's importer, a style that applies its own von/Last rule,
+# `\citeauthor` in a template someone wrote themselves -- cannot turn
+# "Vega Yon" into "Yon" or demote "de la Haye" to a particle. They also protect
+# the capitalisation, which some styles otherwise lowercase.
+#
+# The cost is that an abbreviating style (plain, abbrv) reads "{George G.}" as
+# a single token and prints "G." rather than "G. G.". Drop the braces around
+# p$given below if the middle initial matters more.
+#
+# `others` is BibTeX's own "et al." marker and must stay bare.
+bibtex_name <- function(a) {
+  a <- trimws(a)
+  if (!nzchar(a)) return("")
+  if (identical(tolower(a), "others")) return("others")
+  p <- split_name(a)
+  if (!nzchar(p$given)) return(sprintf("{%s}", p$last))
+  sprintf("{%s}, {%s}", p$last, p$given)
 }
 
 SELF <- "Vega Yon"
@@ -89,8 +137,7 @@ SELF <- "Vega Yon"
 # website wants a <span> it can style. Everything else is identical, so the
 # canonicalisation lives here once.
 fmt_authors <- function(people, self = SELF, emphasis = function(x) paste0("**", x, "**")) {
-  people <- trimws(as.character(people %||% character(0)))
-  people <- people[nzchar(people)]
+  people <- parse_authors(people)
   if (!length(people)) return("")
 
   out <- vapply(people, function(p) {

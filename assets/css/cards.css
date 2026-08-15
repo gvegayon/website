@@ -393,6 +393,28 @@
 .item-links { margin: 0; font-size: 0.95rem; }
 .item-links .sep { margin: 0 0.5rem; color: #c3a887; }
 
+/* Optional `image` / `image_caption` on an entry. Height-capped so a tall
+   figure cannot push the abstract off the first screen. */
+.item-figure { margin: 1.1rem 0 0; }
+
+.item-figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 26rem;
+  margin: 0 auto;
+  border: 1px solid var(--ig-line, #e8dccd);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.item-figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #7a6a5c;
+  text-align: center;
+}
+
 .related-list { margin: 0.25rem 0 0; padding-left: 1.1rem; }
 .related-list li { margin-bottom: 0.25rem; }
 

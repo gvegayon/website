@@ -1,7 +1,7 @@
 [googlePublicData]
 entrytype = 'manual'
 title = "googlePublicData: Working with Google's 'Public Data Explorer' DSPL Metadata Files"
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2017'
 note = 'R package version 0.16.1'
 url = 'https://CRAN.R-project.org/package=googlePublicData'
@@ -16,7 +16,7 @@ keywords = ['data formats']
 [rgexf]
 entrytype = 'manual'
 title = 'rgexf: Build, Import and Export GEXF Graph Files'
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.17.0'
 url = 'https://CRAN.R-project.org/package=rgexf'
@@ -35,7 +35,7 @@ paper = 'VegaYon2021rgexf'
 [ABCoptim]
 entrytype = 'manual'
 title = 'ABCoptim: Implementation of Artificial Bee Colony (ABC) Optimization'
-author = ['George Vega Yon', 'Muñoz, Enyelbert']
+author = 'Vega Yon, George G.; Muñoz, Enyelbert'
 year = '2017'
 note = 'R package version 0.15.0'
 url = 'https://CRAN.R-project.org/package=ABCoptim'
@@ -50,7 +50,7 @@ keywords = ['optimization']
 [netdiffuseR]
 entrytype = 'manual'
 title = 'netdiffuseR: Analysis of Diffusion and Contagion Processes on Networks'
-author = ['George Vega Yon', 'Thomas Valente']
+author = 'Vega Yon, George G.; Valente, Thomas'
 year = '2026'
 note = 'R package version 1.25.0'
 url = 'https://cran.r-project.org/package=netdiffuseR'
@@ -66,7 +66,7 @@ keywords = ['networks', 'diffusion']
 [ergmito]
 entrytype = 'manual'
 title = 'ergmito: Exponential Random Graph Models for Small Networks'
-author = ['Vega Yon, George G.', 'de la Haye, Kayla']
+author = 'Vega Yon, George G.; de la Haye, Kayla'
 year = '2025'
 month = 'dec'
 url = 'https://cran.r-project.org/package=ergmito'
@@ -86,7 +86,7 @@ paper = 'yon2019exponential'
 [slurmR]
 entrytype = 'manual'
 title = "slurmR: A Lightweight Wrapper for 'Slurm'"
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2023'
 note = 'R package version 0.5-4'
 url = 'https://CRAN.R-project.org/package=slurmR'
@@ -102,7 +102,7 @@ paper = 'VegaYon2019b'
 [fmcmc]
 entrytype = 'manual'
 title = 'fmcmc: A friendly MCMC framework'
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2023'
 note = 'R package version 0.5-2'
 url = 'https://CRAN.R-project.org/package=fmcmc'
@@ -118,7 +118,7 @@ paper = 'VegaYon2019a'
 [parallel]
 entrytype = 'manual'
 title = 'parallel: Stata Module for Parallel Computing'
-author = ['George Vega Yon', 'Brian Quistorff']
+author = 'Vega Yon, George G.; Quistorff, Brian'
 year = '2019'
 note = 'Stata Module version 1.20.0'
 url = 'https://github.com/gvegayon/parallel'
@@ -131,7 +131,7 @@ keywords = ['hpc', 'parallel computing']
 [aphylo]
 entrytype = 'manual'
 title = 'aphylo: Statistical Inference of Annotated Phylogenetic Trees'
-author = ['George Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.3-6'
 url = 'https://cran.r-project.org/package=aphylo'
@@ -147,7 +147,7 @@ paper = 'vegayon2020aphylo'
 [netplot]
 entrytype = 'manual'
 title = 'netplot: Beautiful graph drawing'
-author = ['George Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.4-0'
 url = 'https://cran.r-project.org/package=netplot'
@@ -163,7 +163,7 @@ keywords = ['networks', 'visualization']
 [barry]
 entrytype = 'manual'
 title = 'barry: your to-go motif accountant'
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.2.2'
 url = 'https://cran.r-project.org/package=barry'
@@ -179,7 +179,7 @@ keywords = ['networks', 'statistical models']
 [pruner]
 entrytype = 'manual'
 title = "pruner: Implementing the Felsenstein's Tree Pruning algorithm"
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2020'
 note = 'C++ library version 0.0-1'
 url = 'https://github.com/USCbiostats/pruner'
@@ -192,7 +192,7 @@ keywords = ['phylogenetics', 'algorithms']
 [defm]
 entrytype = 'manual'
 title = 'defm: Estimation and simulation of Multi-binary response models'
-author = ['George Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.2.1.0'
 url = 'https://cran.r-project.org/package=defm'
@@ -209,7 +209,7 @@ paper = 'vegayonDiscreteExponentialFamilyModels2022'
 [epiworldR]
 entrytype = 'manual'
 title = 'epiworldR: Fast Agent-Based Epi Models'
-author = ['Derek Meyer', 'George Vega Yon']
+author = 'Meyer, Derek; Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.14.0.0'
 url = 'https://cran.r-project.org/package=epiworldR'
@@ -226,7 +226,7 @@ paper = 'meyerEpiworldRFastAgentBased2023'
 [epiworldRShiny]
 entrytype = 'manual'
 title = 'epiworldRShiny: Shiny interface for epiworldR'
-author = ['Derek Meyer', 'George Vega Yon']
+author = 'Meyer, Derek; Vega Yon, George G.'
 year = '2025'
 note = 'R package version 0.2.3'
 url = 'https://cran.r-project.org/package=epiworldRShiny'
@@ -242,7 +242,7 @@ keywords = ['epidemiology', 'agent-based models', 'visualization']
 [twitterreport]
 entrytype = 'manual'
 title = 'twitterreport: Out-of-the-box analysis and reporting tools for twitter'
-author = ['George G. Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2016'
 month = 'jan'
 publisher = 'Zenodo'
@@ -259,7 +259,7 @@ keywords = ['text analysis', 'networks']
 [epiworld]
 entrytype = 'manual'
 title = 'epiworld: A Flexible and General Agent Based Model Engine'
-author = ['Vega Yon, George G.']
+author = 'Vega Yon, George G.'
 year = '2022'
 note = 'C++ library version 0.0-1'
 url = 'https://github.com/UofUEpiBio/epiworld'
@@ -274,7 +274,7 @@ featured = true
 [pyrenew]
 entrytype = 'manual'
 title = 'PyRenew: A Package for Bayesian Renewal Modeling with JAX and NumPyro'
-author = ['Damon Bayer', 'Dylan H Morris', 'George Vega Yon', 'Trevor Martin', 'Subekshya Bidari']
+author = 'Bayer, Damon; Morris, Dylan H; Vega Yon, George G.; Martin, Trevor; Bidari, Subekshya'
 year = '2024'
 note = 'Python package version 0.1.0'
 url = 'https://github.com/CDCgov/PyRenew'
@@ -287,7 +287,7 @@ keywords = ['epidemiology', 'bayesian']
 [wwinference]
 entrytype = 'manual'
 title = 'wwinference: Jointly infers infection dynamics from wastewater data and epidemiological indicators'
-author = ['Kaitlyn Johnson', 'Dylan Morris', 'Sam Abbott', 'Christian Bernal Zelaya', 'George Vega Yon', 'Damon Bayer', 'Andrew Magee', 'Scott Olesen']
+author = 'Johnson, Kaitlyn; Morris, Dylan; Abbott, Sam; Bernal Zelaya, Christian; Vega Yon, George G.; Bayer, Damon; Magee, Andrew; Olesen, Scott'
 year = '2024'
 note = 'R package version 0.1.1.99, https://cdcgov.github.io/ww-inference-model/'
 url = 'https://github.com/cdcgov/ww-inference-model/'
@@ -300,7 +300,7 @@ keywords = ['epidemiology', 'bayesian']
 ['multigroup.vaccine']
 entrytype = 'manual'
 title = 'multigroup.vaccine: Analyze Outbreak Models of Multi-Group Populations with Vaccination'
-author = ['Damon Toth', 'Jake Wagoner', 'Willy Ray', 'George Vega Yon']
+author = 'Toth, Damon; Wagoner, Jake; Ray, Willy; Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.1.1'
 url = 'https://epiforesite.github.io/multigroup-vaccine/'
@@ -314,7 +314,7 @@ keywords = ['epidemiology']
 [measles]
 entrytype = 'manual'
 title = 'measles: Measles Epidemiological Models'
-author = ['George Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2026'
 note = 'R package version 0.2.0'
 url = 'https://cran.r-project.org/package=measles'
@@ -329,7 +329,7 @@ keywords = ['epidemiology', 'agent-based models']
 [epiworldRcalibrate]
 entrytype = 'manual'
 title = 'epiworldRcalibrate: Fast and Effortless Calibration of Agent-Based Models using Machine Learning'
-author = ['Sima Najafzadehkhoei', 'George Vega Yon', 'Bernardo Modenesi']
+author = 'Najafzadehkhoei, Sima; Vega Yon, George G.; Modenesi, Bernardo'
 year = '2026'
 note = 'R package version 0.1.4'
 url = 'https://cran.r-project.org/package=epiworldRcalibrate'
@@ -345,7 +345,7 @@ keywords = ['epidemiology', 'agent-based models', 'machine learning']
 [imaginarycss]
 entrytype = 'manual'
 title = 'imaginarycss: Tools for Studying Imaginary Cognitive Social Structure'
-author = ['Sima Najafzadehkhoei', 'George Vega Yon', 'Kyosuke Tanaka']
+author = 'Najafzadehkhoei, Sima; Vega Yon, George G.; Tanaka, Kyosuke'
 year = '2026'
 note = 'R package version 0.1.0'
 url = 'https://cran.r-project.org/package=imaginarycss'
@@ -359,3 +359,23 @@ languages = ['R']
 keywords = ['networks', 'cognition']
 paper = 'tanakaImaginaryNetworkMotifs2024'
 
+[idcup]
+entrytype = 'manual'
+title = 'Agent-Based Modeling of Measles in US cities hosting the 2026 FIFA World Cup'
+author = 'Vega Yon, George G.'
+year = '2026'
+url = 'https://epiforesite.github.io/idcup'
+repo = 'https://github.com/EpiForeSITE/idcup'
+kind = 'dashboard'
+languages = ['R']
+keywords = ['epidemiology', 'agent-based models', 'visualization']
+
+[insightnetexplorer]
+title = 'AI-powered Dashboard to Explore the InsighNet community'
+url = 'https://epiforesite.github.io/insightnet-explorer/'
+repo = 'https://github.com/EpiForeSITE/insightnet-explorer/'
+author = 'Vega Yon, George G.'
+year = '2026'
+languages = ['Python']
+kind = 'dashboard'
+keyworkds = ['text analysis']
