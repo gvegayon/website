@@ -10,7 +10,7 @@ project:
 website:
   title: "George G. Vega Yon, Ph.D."
   image: ../img/logo.svg
-  search: false
+  search: true
   # Includes the /zh segment: this project renders into ../public/zh, so
   # without it every canonical and sitemap entry would claim the English URL.
   site-url: https://ggvy.cl/zh
@@ -23,9 +23,13 @@ website:
     card-style: summary_large_image
     image: https://ggvy.cl/img/og-card.png
   description: |
-    George G. Vega Yon 博士的個人網站，猶他大學數據科學助理教授。Vega Yon 博士從事統計計算、數據科學和科學軟件開發工作。
+    George G. Vega Yon 博士的個人網站，猶他大學流行病學系研究副教授。Vega Yon 博士從事統計計算、數據科學和科學軟件開發工作。
   navbar:
+    # Logo only. The name would otherwise appear twice on the
+    # homepage: once here and once in the page's own <h1>.
+    title: false
     logo: ../img/logo.svg
+    logo-alt: "George G. Vega Yon, Ph.D."
     background: "#ff8000ff"
     foreground: white
     collapse-below: lg

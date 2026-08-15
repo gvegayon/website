@@ -1,13 +1,13 @@
 ---
-description: |
-  Lista de manuscritos científicos del Doctor George G. Vega Yon
+title: "Investigación"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/collage_research.webp
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Publicaciones, preprints y manuscritos en revisión del Doctor George G. Vega Yon sobre computación estadística, ciencia de redes y epidemiología computacional."
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/collage_research.webp'); background-size: cover; background-repeat: repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-
-# Investigación
 
 Soy un metodólogo que trabaja en la intersección de sistemas complejos y computación estadística, con enfoque en **computación de alto rendimiento** y **aprendizaje automático**. Una parte central de mi trabajo es el desarrollo de software científico: como **ingeniero de software profesional**, dedico un esfuerzo significativo a asegurar que los métodos y herramientas que creo sean confiables, abiertos y ampliamente accesibles para la comunidad de investigación. Mis colaboraciones abarcan diversos campos, incluyendo **epidemiología**, **salud pública**, **análisis de redes sociales** y **genómica**, pero todas comparten una base común en computación intensiva y métodos estadísticos avanzados.
 

@@ -1,12 +1,13 @@
 ---
-description: |
-    Students and staff mentored and advised by Doctor George G. Vega Yon
+title: "People"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: img/usc_r_bootcamp.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Students and staff mentored and advised by George G. Vega Yon at the University of Utah, and the NetSNAU research group."
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('img/usc_r_bootcamp.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: 55%; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# People
 
 Most of my work happens alongside students and staff. I lead the [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} research group, and I mentor and advise students at the high-school, undergraduate, master's, and doctoral levels.
 
