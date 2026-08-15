@@ -11,6 +11,7 @@ cran = 'googlePublicData'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "Provides a collection of functions to set up 'Google Public Data Explorer' data visualization tool with your own data, building automatically the corresponding DataSet Publishing Language file, or DSPL (XML), metadata file jointly with the CSV files. All zip-up and ready to be published in 'Public Data Explorer'."
 keywords = ['data formats']
 
 [rgexf]
@@ -27,6 +28,7 @@ cran = 'rgexf'
 kind = 'package'
 status = 'active'
 languages = ['R', 'JavaScript']
+abstract = "Create, read, and write 'GEXF' (Graph Exchange 'XML' Format) graph files, used in 'Gephi' and others. Using the 'XML' package, rgexf allows reading and writing GEXF files, including attributes, 'GEXF' visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges' weights. Users can build and handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through 'gexf-js' (a 'javascript' library), and interact with the 'igraph' package."
 keywords = ['networks', 'visualization', 'data formats']
 hex = '/img/rgexf.webp'
 featured = true
@@ -45,6 +47,7 @@ cran = 'ABCoptim'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "An implementation of Karaboga's (2005) Artificial Bee Colony Optimization algorithm. This was developed upon the basic version programmed in C and available at the algorithm's official website."
 keywords = ['optimization']
 
 [netdiffuseR]
@@ -61,6 +64,7 @@ cran = 'netdiffuseR'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "Empirical statistical analysis, visualization, and simulation of diffusion and contagion processes on networks. The package implements algorithms for calculating network diffusion statistics such as transmission rate, hazard rates, exposure models, network threshold levels, infectiousness (contagion), and susceptibility. The package is inspired by work published in Valente et al. (2015), Valente (1995), Myers (2000), Iyengar and others (2011), Burt (1987), among others."
 keywords = ['networks', 'diffusion']
 
 [ergmito]
@@ -78,6 +82,7 @@ cran = 'ergmito'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics, as shown in Vega Yon et al. (2020). As a difference from the 'ergm' package, 'ergmito' circumvents using a Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses a Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions and other relevant functions directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms."
 keywords = ['networks', 'statistical models']
 hex = '/img/ergmito.webp'
 featured = true
@@ -96,6 +101,7 @@ cran = 'slurmR'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "'Slurm', Simple Linux Utility for Resource Management, is a popular 'Linux'-based software used to schedule jobs in 'HPC' (High Performance Computing) clusters. This R package provides a specialized lightweight wrapper of 'Slurm' with a syntax similar to that found in the 'parallel' R package. The package also includes a method for creating socket cluster objects spanning multiple nodes that can be used with the 'parallel' package."
 keywords = ['hpc', 'parallel computing']
 paper = 'VegaYon2019b'
 
@@ -112,6 +118,7 @@ cran = 'fmcmc'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "Provides a friendly (flexible) Markov Chain Monte Carlo (MCMC) framework for implementing the Metropolis-Hastings algorithm in a modular way, allowing users to specify an automatic convergence checker, personalized transition kernels, and out-of-the-box multiple MCMC chains using parallel computing. Among the methods included are Haario (2001) Adaptive Metropolis, Vihola (2012) Robust Adaptive Metropolis, and Thawornwattana et al. (2018) Mirror transition kernels."
 keywords = ['bayesian', 'mcmc']
 paper = 'VegaYon2019a'
 
@@ -126,6 +133,7 @@ repo = 'https://github.com/gvegayon/parallel'
 kind = 'package'
 status = 'active'
 languages = ['Stata']
+abstract = "A Stata module for parallel computing. By organizing a job into several Stata instances, parallel provides out-of-the-box parallel computing for faster simulations, bootstrapping, reshaping big data, and more, without requiring any knowledge of parallel computing or a Stata/MP license. Depending on the number of available processors, parallel has shown to dramatically speed up computations, sometimes outperforming Stata/MP itself."
 keywords = ['hpc', 'parallel computing']
 
 [aphylo]
@@ -141,6 +149,7 @@ cran = 'aphylo'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "Implements a parsimonious evolutionary model to analyze and predict gene-functional annotations in phylogenetic trees, as described in Vega Yon et al. (2021). Focusing on computational efficiency, 'aphylo' makes it possible to estimate pooled phylogenetic models, including thousands (hundreds) of annotations (trees) in the same run. The package also provides tools for visualization of annotated phylogenies, calculation of posterior probabilities (prediction), and goodness-of-fit assessment."
 keywords = ['phylogenetics', 'bayesian', 'genomics']
 paper = 'vegayon2020aphylo'
 
@@ -158,6 +167,7 @@ cran = 'netplot'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "A graph visualization engine that emphasizes aesthetics while providing default parameters that yield out-of-the-box, nice visualizations. The package is built on top of 'The Grid Graphics Package' and works seamlessly with 'igraph' and 'network' objects."
 keywords = ['networks', 'visualization']
 
 [barry]
@@ -174,6 +184,7 @@ cran = 'barry'
 kind = 'package'
 status = 'active'
 languages = ['C++']
+abstract = "Provides the 'C++' header-only library 'barry' for use in R packages. 'barry' is a 'C++' template library for counting sufficient statistics on binary arrays and building discrete exponential-family models. It provides tools for sparse arrays, user-defined count statistics, support set constraints, power set generation, and includes modules for Discrete Exponential Family Models (DEFMs) and network statistics. By placing these headers in this package, it offers an efficient distribution system for CRAN, avoiding replication of this code across the sources of other packages. This package follows the same approach as the 'BH' package, which provides 'Boost' headers for R packages."
 keywords = ['networks', 'statistical models']
 
 [pruner]
@@ -187,6 +198,7 @@ repo = 'https://github.com/USCbiostats/pruner'
 kind = 'library'
 status = 'archived'
 languages = ['C++']
+abstract = "A C++ template library implementing Felsenstein's tree-pruning algorithm for efficiently computing likelihood functions on phylogenies. The library reads a tree object as a list of source-target dyads (edges) and allows users to store arbitrary arguments via memory pointers and 'std::function' callbacks invoked with those arguments and the tree structure data. Trees are stored as offspring and parent lists, accessible through a 'TreeIterator' class implementing pre- and post-order traversals for pruning."
 keywords = ['phylogenetics', 'algorithms']
 
 [defm]
@@ -203,6 +215,7 @@ cran = 'defm'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "Multi-binary response models are a class of models that allow for the estimation of multiple binary outcomes simultaneously. This package provides functions to estimate and simulate these models using the Discrete Exponential-Family Models (DEFM) framework, implementing the models described in Vega Yon, Valente, and Pugh (2023). DEFMs include Exponential-Family Random Graph Models (ERGMs), which characterize graphs using sufficient statistics, also the core of DEFMs. Using sufficient statistics, the package describes data through meaningful motifs, such as transitions between different states and the joint distribution of the outcomes."
 keywords = ['statistical models', 'networks']
 paper = 'vegayonDiscreteExponentialFamilyModels2022'
 
@@ -220,6 +233,7 @@ cran = 'epiworldR'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "A flexible framework for Agent-Based Models (ABM), the 'epiworldR' package provides methods for prototyping disease outbreaks and transmission models using a 'C++' backend, making it very fast. It supports multiple epidemiological models, including the Susceptible-Infected-Susceptible (SIS), Susceptible-Infected-Removed (SIR), Susceptible-Exposed-Infected-Removed (SEIR), and others, involving arbitrary mitigation policies and multiple-disease models. Users can specify infectiousness/susceptibility rates as a function of agents' features, providing great complexity for the model dynamics. 'epiworldR' is ideal for simulation studies featuring large populations."
 keywords = ['epidemiology', 'agent-based models']
 paper = 'meyerEpiworldRFastAgentBased2023'
 
@@ -237,6 +251,7 @@ cran = 'epiworldRShiny'
 kind = 'app'
 status = 'active'
 languages = ['R']
+abstract = "R 'shiny' web apps for epidemiological Agent-Based Models. It provides a user-friendly interface to the Agent-Based Modeling (ABM) R package 'epiworldR', with support for the Susceptible-Infected-Susceptible (SIS), Susceptible-Infected-Recovered (SIR), and Susceptible-Exposed-Infected-Recovered (SEIR) models. 'epiworldRShiny' provides a web-based user interface for running various epidemiological ABMs, simulating interventions, and visualizing results interactively."
 keywords = ['epidemiology', 'agent-based models', 'visualization']
 
 [twitterreport]
@@ -254,6 +269,7 @@ repo = 'https://github.com/gvegayon/twitterreport'
 kind = 'package'
 status = 'archived'
 languages = ['R', 'C++']
+abstract = "A set of tools to download, process, and analyze tweets, including methods for exporting the outputs through 'D3js'."
 keywords = ['text analysis', 'networks']
 
 [epiworld]
@@ -267,6 +283,7 @@ repo = 'https://github.com/UofUEpiBio/epiworld'
 kind = 'library'
 status = 'active'
 languages = ['C++']
+abstract = "A general framework for epidemiologic simulation implemented as a header-only 'C++' template library. The core principle of 'epiworld' is fast epidemiological prototyping for building complex models quickly: models can have an arbitrary set of states, viruses and tools (e.g., vaccines, mask-wearing) can be designed with arbitrary features, and multiple tools and viruses can coexist in the same simulation. It depends only on the standard library and is capable of over 150 million person-day simulations per second."
 keywords = ['epidemiology', 'agent-based models', 'hpc']
 hex = '/img/epiworld.webp'
 featured = true
@@ -282,6 +299,7 @@ repo = 'https://github.com/CDCgov/PyRenew'
 kind = 'package'
 status = 'active'
 languages = ['Python']
+abstract = "A flexible tool for simulation and statistical inference of epidemiological models, emphasizing hierarchical multi-signal renewal models. Built on top of the 'numpyro' Python library, 'PyRenew' provides core components for model building. A renewal model estimates new infections from recent past infections using a generation interval, from which it infers the time-varying reproduction number R(t). PyRenew's strength lies in multi-signal integration for pooling information across diverse observed data streams, such as hospital admissions, wastewater concentrations, and emergency department visits, each with distinct observation delays, noise characteristics, and spatial resolutions."
 keywords = ['epidemiology', 'bayesian']
 
 [wwinference]
@@ -295,6 +313,7 @@ repo = 'https://github.com/CDCgov/ww-inference-model'
 kind = 'package'
 status = 'active'
 languages = ['R', 'Stan']
+abstract = "An implementation of a hierarchical semi-mechanistic renewal approach jointly calibrating to multiple wastewater concentration datasets from subsets of a specified population and epidemiological indicators, such as cases or hospital admissions, from the whole population. The framework extends the widely used semi-mechanistic renewal framework 'EpiNow2', using a Bayesian latent variable approach implemented in the probabilistic programming language 'Stan'. The package fits these two data sources and produces estimated and forecasted hospital admissions, estimated and forecasted wastewater concentrations, and global and local R(t) estimates for the subpopulations represented by each wastewater catchment area."
 keywords = ['epidemiology', 'bayesian']
 
 ['multigroup.vaccine']
@@ -309,6 +328,7 @@ docs = 'https://epiforesite.github.io/multigroup-vaccine/'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "Models infectious disease dynamics in populations with multiple subgroups having different vaccination rates, transmission characteristics, and contact patterns. Calculates final and intermediate outbreak sizes, forms age-structured contact models with automatic fetching of U.S. census data, and explores vaccination scenarios with an interactive 'shiny' dashboard for a model with two subgroups, as described in Nguyen et al. (2024) and Duong et al. (2026)."
 keywords = ['epidemiology']
 
 [measles]
@@ -324,6 +344,7 @@ cran = 'measles'
 kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
+abstract = "A specialized collection of measles epidemiological models built on the 'epiworldR' framework. This package is a spinoff from 'epiworldR' focusing specifically on measles transmission dynamics. It includes models for school settings with quarantine and isolation policies, mixing models with population groups, and risk-based quarantine strategies. The models use Agent-Based Models (ABM) with a fast 'C++' backend from the 'epiworld' library, making it ideal for studying measles outbreaks, vaccination strategies, and intervention policies."
 keywords = ['epidemiology', 'agent-based models']
 
 [epiworldRcalibrate]
@@ -340,6 +361,7 @@ cran = 'epiworldRcalibrate'
 kind = 'package'
 status = 'active'
 languages = ['R']
+abstract = "Provides tools and pre-trained Machine Learning (ML) models for calibration of Agent-Based Models (ABMs) built with the R package 'epiworldR', implementing methods described in Najafzadehkhoei, Vega Yon, Modenesi, and Meyer (2025). Users can automatically calibrate ABMs in seconds with pre-trained ML models, effectively focusing on simulation rather than calibration, bridging a gap that allows public health practitioners to run their own ABMs without the advanced technical expertise often required by calibration."
 keywords = ['epidemiology', 'agent-based models', 'machine learning']
 
 [imaginarycss]
@@ -356,6 +378,7 @@ cran = 'imaginarycss'
 kind = 'package'
 status = 'archived'
 languages = ['R']
+abstract = "Tools for measuring and testing imaginary cognitive social structure (CSS) motifs — patterns of false positives and negatives in cognitively perceived social networks relative to the actual network, categorized as partially false, completely false, and mixed false imaginary motifs, as described in Tanaka and Vega Yon (2024)."
 keywords = ['networks', 'cognition']
 paper = 'tanakaImaginaryNetworkMotifs2024'
 
@@ -368,6 +391,7 @@ url = 'https://epiforesite.github.io/idcup'
 repo = 'https://github.com/EpiForeSITE/idcup'
 kind = 'dashboard'
 languages = ['R']
+abstract = "Agent-based measles outbreak simulations across the 11 major U.S. cities hosting the 2026 FIFA World Cup. Built on the 'epiworldR' and 'measles' R packages, and using census-derived age structure and MMR vaccination coverage, the project provides baseline scenario dashboards summarizing simulated outbreak size over time and the probability that outbreaks exceed given case-count thresholds for each host city. With large international crowds expected, the dashboard supports public-health preparedness by helping to understand measles transmission risk around the tournament."
 keywords = ['epidemiology', 'agent-based models', 'visualization']
 
 [insightnetexplorer]
@@ -378,4 +402,5 @@ author = 'Vega Yon, George G.'
 year = '2026'
 languages = ['Python']
 kind = 'dashboard'
-keyworkds = ['text analysis']
+abstract = "An AI-powered dashboard exploring the InsightNet research community: academic profiles and publications for researchers affiliated with InsightNet's centers. A scheduled pipeline collects papers and preprints from ORCID, Europe PMC, PubMed, arXiv, medRxiv/bioRxiv, and Crossref, and daily activity from public web pages, RSS/Atom, Bluesky, and GitHub, normalizing it into a static snapshot. The standalone site includes an AI-assisted expert-finder that answers questions from the collected publications and profiles, citing the underlying record, a browser-side keyword search, and a browsable, filterable publication list, with no runtime server or frontend dependencies."
+keywords = ['text analysis']
