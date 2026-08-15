@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="List of classes and books by Doctor George G. Vega Yon">
+<meta name="description" content="Courses, books, and open teaching materials by George G. Vega Yon on data science, statistics, and network science.">
 
-<title>teaching – George G. Vega Yon, Ph.D.</title>
+<title>Teaching – George G. Vega Yon, Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -27,6 +27,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -39,6 +43,18 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-4cea1175a8941704169a0c32891ac838.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -62,6 +78,24 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
 </script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: white;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: white;
+background-image: url(img/usc_r_bootcamp_clip.jpg);
+background-size: cover;
+      }
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -83,8 +117,8 @@ gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
       "url": "https://ggvy.cl/",
       "mainEntityOfPage": { "@id": "https://ggvy.cl/#webpage" },
       "image": "https://ggvy.cl/img/george_darwin.webp",
-      "description": "Associate Professor of Research in the Division of Epidemiology at the University of Utah, studying complex systems using statistical computing, network science, and scientific software development.",
-      "jobTitle": "Associate Professor of Research",
+      "description": "Associate Research Professor in the Division of Epidemiology at the University of Utah, studying complex systems using statistical computing, network science, and scientific software development.",
+      "jobTitle": "Associate Research Professor",
       "knowsLanguage": ["en", "es", "zh"],
       "nationality": {
         "@type": "Country",
@@ -228,14 +262,14 @@ gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="assets/css/cards.css">
-<meta property="og:title" content="George G. Vega Yon, Ph.D.">
-<meta property="og:description" content="List of classes and books by Doctor George G. Vega Yon">
+<meta property="og:title" content="Teaching – George G. Vega Yon, Ph.D.">
+<meta property="og:description" content="Personal website of Doctor George G. Vega Yon, an Associate Research Professor in the Division of Epidemiology at the University of Utah. Dr.&nbsp;Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.">
 <meta property="og:image" content="https://ggvy.cl/img/og-card.png">
 <meta property="og:site_name" content="George G. Vega Yon, Ph.D.">
 <meta property="og:image:height" content="630">
 <meta property="og:image:width" content="1200">
-<meta name="twitter:title" content="George G. Vega Yon, Ph.D.">
-<meta name="twitter:description" content="List of classes and books by Doctor George G. Vega Yon">
+<meta name="twitter:title" content="Teaching – George G. Vega Yon, Ph.D.">
+<meta name="twitter:description" content="Personal website of Doctor George G. Vega Yon, an Associate Research Professor in the Division of Epidemiology at the University of Utah. Dr.&nbsp;Vega Yon works on Statistical Computing, Data Science, and Scientific Software Development.">
 <meta name="twitter:image" content="https://ggvy.cl/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image-height" content="630">
@@ -246,18 +280,16 @@ gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./img/logo.svg" alt="" class="navbar-logo light-content">
-    <img src="./img/logo.svg" alt="" class="navbar-logo dark-content">
-    </a>
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">George G. Vega Yon, Ph.D.</span>
+    <img src="./img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo light-content">
+    <img src="./img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo dark-content">
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -344,21 +376,33 @@ gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Teaching</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
-<div class="column-screen" style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('img/usc_r_bootcamp_clip.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: center; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;">
 
-</div>
-<section id="teaching" class="level1">
-<h1>Teaching</h1>
 <p>I am a dedicated educator who enjoys sharing knowledge and fostering an open and inclusive learning environment. Most of my teaching experience has been in the areas of data science, statistics, and network science. Committed to open science, I ensure all my educational contents are freely available online.</p>
 <section id="books" class="level2">
 <h2 class="anchored" data-anchor-id="books">Books</h2>
@@ -392,7 +436,6 @@ gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
 <p>You can find a complete list of my workshops and tutorials in the <a href="./talks.html">talks</a> section of my website.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
