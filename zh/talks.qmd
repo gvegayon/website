@@ -1,12 +1,13 @@
 ---
-description: |
-  George G. Vega Yon 博士的演講和研討會列表
+title: "演講"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/george_sonic_talk.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "George G. Vega Yon 博士在網絡科學、統計計算與科學軟件方面的受邀演講、會議報告與研討會。"
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/george_sonic_talk.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# 演講
 
 ```{r}
 #| label: fetch-talks

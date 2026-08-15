@@ -1,12 +1,13 @@
 ---
-description: |
-  Lista de charlas y talleres impartidos por el Doctor George G. Vega Yon
+title: "Charlas"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/george_sonic_talk.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "Charlas invitadas, presentaciones en congresos y talleres impartidos por el Doctor George G. Vega Yon sobre ciencia de redes, computación estadística y software científico."
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/george_sonic_talk.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: left; background-position-y: center; height: 40vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# Charlas
 
 ```{r}
 #| label: fetch-talks

@@ -1,12 +1,13 @@
 ---
-description: |
-    George G. Vega Yon 博士的課程和書籍列表
+title: "教學"
+# Renders the heading over a full-width banner, which is why the page
+# body no longer opens with a hand-rolled .column-screen image div.
+title-block-banner: ../img/usc_r_bootcamp_clip.jpg
+title-block-banner-color: white
+# description-meta, not description: `description` would also print
+# verbatim on the banner, under the heading.
+description-meta: "George G. Vega Yon 博士在數據科學、統計學與網絡科學方面的課程、書籍與公開教學資料。"
 ---
-
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 90%, white 100%), url('../img/usc_r_bootcamp_clip.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: center; height: 30vh; margin-top: -100px; display: flex; align-items: center; justify-content: center;"}
-:::
-
-# 教學
 
 我是一位敬業的教育工作者，喜歡分享知識並營造開放和包容的學習環境。我的大部分教學經驗都在數據科學、統計學和網絡科學領域。致力於開放科學，我確保所有教育內容都可以在線免費獲取。
 

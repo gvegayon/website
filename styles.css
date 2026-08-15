@@ -65,6 +65,87 @@ h1, h2, h3, h4 {
 	color: darkslategray;
 }
 
+/* Page hero (Quarto title-block banner) --------------------------------- */
+/* Every content page sets `title:` plus `title-block-banner:`, so the <h1>
+   lands on a full-width band under the navbar instead of a bare line of text.
+   Quarto writes its own `.quarto-title-block .quarto-title-banner` rule into a
+   <style> at the end of <head> -- after this file -- so these selectors carry
+   one extra level of specificity to win. Never set the `background` shorthand
+   here: it would erase the per-page image Quarto injects there. */
+body .quarto-title-block .quarto-title-banner {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	min-height: clamp(190px, 30vh, 320px);
+	padding: 3rem 0 1.75rem;
+	margin-bottom: 2.25rem;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* The banner photographs are light and vary by crop, so the white text needs a
+   scrim it can rely on rather than a lucky background. */
+body .quarto-title-block .quarto-title-banner::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		to bottom,
+		rgba(24, 34, 34, 0.28) 0%,
+		rgba(24, 34, 34, 0.5) 35%,
+		rgba(24, 34, 34, 0.72) 65%,
+		rgba(24, 34, 34, 0.85) 100%
+	);
+}
+
+body .quarto-title-block .quarto-title-banner .quarto-title {
+	position: relative;
+	z-index: 1;
+}
+
+body .quarto-title-block .quarto-title-banner h1.title {
+	color: #fff;
+	margin: 0;
+	font-size: clamp(2.1rem, 5vw, 3.15rem);
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
+}
+
+/* Homepage hero --------------------------------------------------------- */
+/* The homepage keeps `title: ""` -- it opens with the portrait banner -- so
+   its single <h1> is written in the body instead. */
+.home-hero {
+	text-align: center;
+	margin: 0.5rem 0 1.75rem;
+}
+
+.home-hero h1 {
+	font-size: clamp(2rem, 5vw, 2.9rem);
+	font-weight: 700;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	margin: 0;
+}
+
+.home-hero .home-hero-role {
+	display: inline-block;
+	margin-top: 0.55rem;
+	color: #5c5c5c;
+	font-size: clamp(0.98rem, 2vw, 1.15rem);
+}
+
+.home-hero::after {
+	content: "";
+	display: block;
+	width: 72px;
+	height: 3px;
+	margin: 1.15rem auto 0;
+	border-radius: 2px;
+	background: var(--main-color);
+}
+
 /* Bold text styling for better visibility */
 b, strong, .bold {
 	font-weight: 1000;
