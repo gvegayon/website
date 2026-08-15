@@ -49,7 +49,7 @@ as_bibtex <- function(e) {
   f <- e$fields
   type <- BIBTEX_TYPE[[tolower(e$type)]] %||% "misc"
 
-  order <- c("title", "author", "year", "month", "journal", "journaltitle",
+  order <- c("title", "author", "editor", "year", "month", "journal", "journaltitle",
              "booktitle", "publisher", "institution", "volume", "number",
              "pages", "doi", "url", "issn", "note", "version")
 
@@ -57,8 +57,12 @@ as_bibtex <- function(e) {
   for (k in order) {
     v <- f[[k]]
     if (is.null(v) || !length(v)) next
-    v <- if (identical(k, "author")) paste(trimws(as.character(v)), collapse = " and ")
-         else paste(as.character(v), collapse = ", ")
+    v <- if (k %in% c("author", "editor")) {
+           # "{Last}, {First}" -- see bibtex_name() for why both halves are braced
+           paste(vapply(parse_authors(v), bibtex_name, character(1)), collapse = " and ")
+         } else {
+           paste(as.character(v), collapse = ", ")
+         }
     if (!nzchar(trimws(v))) next
     lines <- c(lines, sprintf("  %s = {%s},", k, v))
   }
@@ -69,8 +73,7 @@ as_bibtex <- function(e) {
 # The author block on a detail page has room for the affiliation inline,
 # unlike the compact card.
 author_list_html <- function(f, people) {
-  nm <- trimws(as.character(f$author %||% character(0)))
-  nm <- nm[nzchar(nm)]
+  nm <- parse_authors(f$author)
   if (!length(nm)) return("")
 
   items <- vapply(nm, function(p) {
@@ -103,6 +106,25 @@ author_list_html <- function(f, people) {
   }, character(1), USE.NAMES = FALSE)
 
   paste0('<ol class="author-list">', paste(items, collapse = ""), "</ol>")
+}
+
+# Optional `image` / `image_caption`: one figure for the entry -- a key result,
+# a hex sticker, a screenshot. Paths are site-root relative in the .toml
+# ('img/papers/x.webp'); detail pages render one directory deeper, hence the
+# fixed '../'. The caption doubles as the alt text when there is one, because a
+# figure with a caption and an empty alt is worse than no image at all.
+DETAIL_ROOT <- "../"
+
+figure_html <- function(f) {
+  src <- asset_url(f$image %||% "", DETAIL_ROOT)
+  if (!nzchar(src)) return("")
+  cap <- trimws(f$image_caption %||% "")
+  alt <- if (nzchar(cap)) cap else f$title %||% ""
+  sprintf(
+    '<figure class="item-figure"><img src="%s" alt="%s" loading="lazy">%s</figure>',
+    esc(src), esc(alt),
+    if (nzchar(cap)) sprintf("<figcaption>%s</figcaption>", esc(cap)) else ""
+  )
 }
 
 links_row_html <- function(e, kind, i18n) {
@@ -166,8 +188,8 @@ jsonld_html <- function(e, kind, f, venue, year) {
     x <- gsub("[\r\n\t]+", " ", x)
     paste0('"', trimws(x), '"')
   }
-  authors <- trimws(as.character(f$author %||% character(0)))
-  authors <- authors[nzchar(authors) & tolower(authors) != "others"]
+  authors <- parse_authors(f$author)
+  authors <- authors[tolower(authors) != "others"]
   auth_json <- paste(sprintf('{"@type":"Person","name":%s}', vapply(authors, jstr, character(1))),
                      collapse = ",")
 
@@ -214,7 +236,8 @@ detail_qmd_text <- function(e, kind, index, people, i18n) {
           paste0("title: ", yaml_str(heading)),
           if (nzchar(subtitle)) paste0("subtitle: ", yaml_str(subtitle)),
           paste0("description: ", yaml_str(truncate_words(blurb, 45))),
-          if (nzchar(f$image %||% "")) paste0("image: ", yaml_str(f$image)),
+          if (nzchar(f$image %||% "")) paste0("image: ", yaml_str(asset_url(f$image, DETAIL_ROOT))),
+          if (nzchar(f$image_caption %||% "")) paste0("image-alt: ", yaml_str(f$image_caption)),
           "toc: false",
           "page-layout: article")
 
@@ -264,6 +287,7 @@ detail_qmd_text <- function(e, kind, index, people, i18n) {
     badges,
     author_list_html(f, people),
     links_row_html(e, kind, i18n),
+    figure_html(f),
     "</div>\n```\n"
   )
 

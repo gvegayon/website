@@ -1,9 +1,9 @@
 # Resolving author names to the collaborator roster in people.toml.
 #
-# The .toml entries store authors as plain strings, spelled inconsistently
-# across sources ("George Vega Yon", "Vega Yon, George G."). Rather than
-# normalising the source data, names are matched on a key built from the
-# surname plus first initial, which is stable across both spellings.
+# The .toml entries write authors as "Last, First M." but the roster is a
+# separate file, so the two can still disagree on middle initials or on a
+# lingering "First Last" spelling. Names are matched on a key built from the
+# surname plus first initial, which is stable across all of those.
 #
 # Requires R/entries.R (one_author, SELF, %||%) and R/html.R (esc).
 
@@ -31,19 +31,10 @@ read_people <- function(path = NULL) {
 person_key <- function(name) {
   name <- trimws(name %||% "")
   if (!nzchar(name)) return("")
-  if (grepl(",", name, fixed = TRUE)) {
-    bits  <- strsplit(name, ",")[[1]]
-    last  <- trimws(bits[1])
-    given <- trimws(paste(bits[-1], collapse = " "))
-  } else {
-    toks  <- unlist(strsplit(name, "[[:space:]]+"))
-    toks  <- toks[nzchar(toks)]
-    if (!length(toks)) return("")
-    last  <- toks[length(toks)]
-    given <- paste(toks[-length(toks)], collapse = " ")
-  }
-  first <- substr(trimws(given), 1, 1)
-  paste0(tolower(gsub("[^[:alnum:] ]", "", last)), "|", tolower(first))
+  p <- split_name(name)
+  if (!nzchar(p$last)) return("")
+  first <- substr(p$given, 1, 1)
+  paste0(tolower(gsub("[^[:alnum:] ]", "", p$last)), "|", tolower(first))
 }
 
 match_person <- function(name, people) {
@@ -69,8 +60,7 @@ join_authors <- function(parts) {
 #' Falls back to the plain formatted name whenever a person is not in the
 #' roster, so a half-filled people.toml renders exactly like today.
 authors_html <- function(f, people = list()) {
-  nm <- trimws(as.character(f$author %||% character(0)))
-  nm <- nm[nzchar(nm)]
+  nm <- parse_authors(f$author)
   if (!length(nm)) return("")
 
   parts <- vapply(nm, function(p) {

@@ -241,7 +241,7 @@ software_card <- function(e, i18n) {
   )
   links <- links[nzchar(links)]
 
-  hex <- f$hex %||% ""
+  hex <- asset_url(f$hex %||% "", site_root())
   media <- if (nzchar(hex)) {
     sprintf('<img class="card__hex" src="%s" alt="" loading="lazy">', esc(hex))
   } else {
@@ -409,7 +409,7 @@ render_item_grid <- function(entries, kind = c("research", "software"), language
     f <- e$fields
     sort_title <- tolower(gsub("^[^a-z0-9]+", "", tolower(f$title %||% "")))
     blob <- tolower(paste(
-      f$title %||% "", paste(f$author %||% "", collapse = " "), f$year %||% "",
+      f$title %||% "", paste(parse_authors(f$author), collapse = " "), f$year %||% "",
       venue_of(f), paste(f$keywords %||% "", collapse = " "), f$note %||% "",
       f$tagline %||% "", e$key
     ))

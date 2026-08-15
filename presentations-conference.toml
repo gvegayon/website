@@ -1,7 +1,7 @@
 [talk-1-conference]
 entrytype = 'inproceedings'
 title = 'Just tired of endless loops! or parallel: Stata module for parallel computing'
-author = ['Vega Yon, George']
+author = 'Vega Yon, George G.'
 year = '2013'
 month = '7'
 eventtitle = 'Stata Conference, 2013'
@@ -11,7 +11,7 @@ keywords = ['conferencetalk']
 [talk-2-conference]
 entrytype = 'inproceedings'
 title = 'Understanding Diffusion with netdiffuseR'
-author = ['George G. Vega Yon', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Valente, Thomas W.'
 year = '2016'
 month = '3'
 eventtitle = 'Sunbelt Conference, 2016'
@@ -21,7 +21,7 @@ keywords = ['conferencetalk']
 [talk-3-conference]
 entrytype = 'inproceedings'
 title = 'Network Diffusion of Innovations in R: Introducing netdiffuseR'
-author = ['George G. Vega Yon', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Valente, Thomas W.'
 year = '2016'
 month = '6'
 eventtitle = 'IC2S2, 2016'
@@ -31,7 +31,7 @@ keywords = ['conferencetalk']
 [talk-4-conference]
 entrytype = 'inproceedings'
 title = 'Network Diffusion of Innovations in R: Introducing netdiffuseR'
-author = ['George G. Vega Yon', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Valente, Thomas W.'
 year = '2016'
 month = '6'
 eventtitle = 'useR! 2016'
@@ -41,7 +41,7 @@ keywords = ['conferencetalk']
 [talk-5-conference]
 entrytype = 'inproceedings'
 title = 'Uncomplicated Parallel Computing with Stata'
-author = ['George G. Vega Yon', 'Brian Quistorff']
+author = 'Vega Yon, George G.; Quistorff, Brian'
 year = '2017'
 month = '7'
 eventtitle = 'Stata Conference 2017'
@@ -51,7 +51,7 @@ keywords = ['conferencetalk']
 [talk-6-conference]
 entrytype = 'inproceedings'
 title = 'Understanding Diffusion with netdiffuseR'
-author = ['George G. Vega Yon', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Valente, Thomas W.'
 year = '2017'
 month = '7'
 eventtitle = 'NASN 2017'
@@ -61,7 +61,7 @@ keywords = ['conferencetalk']
 [talk-7-conference]
 entrytype = 'inproceedings'
 title = 'Diffusion of Smoking Initiation Among Diverse, Urban American Adolescents Over The High School Period'
-author = ['George G. Vega Yon', 'Kayla de la Haye', 'Hee-sung Shin', 'Thomas Valente']
+author = 'Vega Yon, George G.; de la Haye, Kayla; Shin, Hee-sung; Valente, Thomas'
 year = '2017'
 month = '7'
 eventtitle = 'NASN 2017'
@@ -71,7 +71,7 @@ keywords = ['conferencetalk']
 [talk-8-conference]
 entrytype = 'inproceedings'
 title = 'Big Problems for Small Networks: Small Network Statistics'
-author = ['George G. Vega Yon', 'Kayla de la Haye']
+author = 'Vega Yon, George G.; de la Haye, Kayla'
 year = '2018'
 month = '11'
 eventtitle = 'NASN 2018, DC'
@@ -81,7 +81,7 @@ keywords = ['conferencetalk']
 [talk-9-conference]
 entrytype = 'inproceedings'
 title = 'Small network statistics for the network science of teams'
-author = ['George G. Vega Yon', 'Kayla de la Haye']
+author = 'Vega Yon, George G.; de la Haye, Kayla'
 year = '2019'
 month = '1'
 eventtitle = 'NetSciX 2019, SCL'
@@ -91,7 +91,7 @@ keywords = ['conferencetalk']
 [talk-10-conference]
 entrytype = 'inproceedings'
 title = 'Computacion de Alto Rendimiento con R'
-author = ['Vega Yon, George']
+author = 'Vega Yon, George G.'
 year = '2018'
 month = '12'
 eventtitle = 'satRday Santiago 2018'
@@ -101,7 +101,7 @@ keywords = ['conferencetalk']
 [talk-11-conference]
 entrytype = 'inproceedings'
 title = 'Exact Statistics and Semi-Parametric Tests for Small Network Data'
-author = ['George G. Vega Yon', 'Andrew Slaughter', 'Kayla de la Haye']
+author = 'Vega Yon, George G.; Slaughter, Andrew; de la Haye, Kayla'
 year = '2019'
 month = '6'
 eventtitle = 'Sunbelt 2019'
@@ -111,7 +111,7 @@ keywords = ['conferencetalk']
 [talk-12-conference]
 entrytype = 'inproceedings'
 title = 'Exact Statistics and Semi-Parametric Tests for Small Network Data'
-author = ['George G. Vega Yon', 'Andrew Slaughter', 'Kayla de la Haye']
+author = 'Vega Yon, George G.; Slaughter, Andrew; de la Haye, Kayla'
 year = '2019'
 month = '7'
 eventtitle = 'IC2S2, 2019'
@@ -121,7 +121,7 @@ keywords = ['conferencetalk']
 [talk-13-conference]
 entrytype = 'inproceedings'
 title = 'ERGMito Statistical Models for Small Team Social Networks'
-author = ['George G. Vega Yon', 'Aileen Dinkjian', 'Sarah Hamm-Alvarez', 'Kayla de la Haye']
+author = 'Vega Yon, George G.; Dinkjian, Aileen; Hamm-Alvarez, Sarah; de la Haye, Kayla'
 year = '2020'
 month = '6'
 eventtitle = 'SciTS 2020'
@@ -131,7 +131,7 @@ keywords = ['conferencetalk']
 [talk-14-conference]
 entrytype = 'inproceedings'
 title = 'Network Influence in Officer Firearm Use'
-author = ['Marie Ouellet', 'Sadaf Hashimi', 'George G. Vega Yon']
+author = 'Ouellet, Marie; Hashimi, Sadaf; Vega Yon, George G.'
 year = '2021'
 month = '7'
 eventtitle = 'NETWORKS 2021 - A Joint Sunbelt and NetSci Conference'
@@ -141,7 +141,7 @@ keywords = ['conferencetalk']
 [talk-15-conference]
 entrytype = 'inproceedings'
 title = 'Triads, Dyads, and Gene Functions - When Social Network Analysis Meets Phylogenetics'
-author = ['Vega Yon, George']
+author = 'Vega Yon, George G.'
 year = '2021'
 month = '7'
 eventtitle = 'NETWORKS 2021 - A Joint Sunbelt and NetSci Conference'
@@ -151,7 +151,7 @@ keywords = ['conferencetalk']
 [talk-16-conference]
 entrytype = 'inproceedings'
 title = 'Una Mirada General a los Modelos Cuantitativos de Redes Sociales'
-author = ['George G. Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2021'
 month = '11'
 eventtitle = 'VII Reunión Latinoamericana de Análisis de Redes Sociales'
@@ -161,7 +161,7 @@ keywords = ['conferencetalk']
 [talk-17-conference]
 entrytype = 'inproceedings'
 title = 'Imaginary Network Motifs: Structural Patterns of False Positives and Negatives in Social Networks'
-author = ['Kyosuke Tanaka', 'George G. Vega Yon']
+author = 'Tanaka, Kyosuke; Vega Yon, George G.'
 year = '2022'
 month = '5'
 eventtitle = '72th Annual Conference of the International Communication Association'
@@ -171,7 +171,7 @@ keywords = ['conferencetalk']
 [talk-18-conference]
 entrytype = 'inproceedings'
 title = 'The importance of interaction networks in long-term care facilities to reduce the equilibrium prevalence of infectious pathogens'
-author = ['Matthew Samore', 'George G. Vega Yon', 'Karim Khader', 'Kyle Kazemini', 'Nelson Chang', 'Lindsay Visnovsky', 'Alun Thomas', 'Candace Haroldsen', 'Kristina Stratford', 'Chong Zhang']
+author = 'Samore, Matthew; Vega Yon, George G.; Khader, Karim; Kazemini, Kyle; Chang, Nelson; Visnovsky, Lindsay; Thomas, Alun; Haroldsen, Candace; Stratford, Kristina; Zhang, Chong'
 year = '2022'
 month = '7'
 eventtitle = 'Sunbelt 2022'
@@ -181,7 +181,7 @@ keywords = ['conferencetalk']
 [talk-19-conference]
 entrytype = 'inproceedings'
 title = 'Simulating Complex Agent-Based Model with epiworldR: A fast and flexible ABM framework'
-author = ['George G. Vega Yon', 'Derek Meyer']
+author = 'Vega Yon, George G.; Meyer, Derek'
 year = '2023'
 month = '6'
 eventtitle = 'INSNA Sunbelt 2023'
@@ -191,7 +191,7 @@ keywords = ['conferencetalk']
 [talk-20-conference]
 entrytype = 'inproceedings'
 title = 'Visualization tools for network science: Building beautiful graphs with netplot'
-author = ['Porter Bischoff', 'George G. Vega Yon']
+author = 'Bischoff, Porter; Vega Yon, George G.'
 year = '2023'
 month = '6'
 eventtitle = 'INSNA Sunbelt 2023'
@@ -201,7 +201,7 @@ keywords = ['conferencetalk']
 [talk-21-conference]
 entrytype = 'inproceedings'
 title = 'How Network Structure Affects Epidemiological Indicators in ABMs - A Large Simulation Study Featuring Artificial and Real-world Networks'
-author = ['George G. Vega Yon', 'Matthew Samore', 'Karim Khader', 'Chong Zhang', 'Alun Thomas']
+author = 'Vega Yon, George G.; Samore, Matthew; Khader, Karim; Zhang, Chong; Thomas, Alun'
 year = '2023'
 month = '7'
 eventtitle = 'INSNA Sunbelt 2023'
@@ -211,7 +211,7 @@ keywords = ['conferencetalk']
 [talk-22-conference]
 entrytype = 'inproceedings'
 title = 'epiworld: A fast multi-language library for epi ABMs'
-author = ['George G. Vega Yon', 'Derek Meyer', 'Milo Banks', 'Matthew Samore']
+author = 'Vega Yon, George G.; Meyer, Derek; Banks, Milo; Samore, Matthew'
 year = '2024'
 month = '9'
 eventtitle = 'Conference on Complex Systems, 2024'
@@ -221,7 +221,7 @@ keywords = ['conferencetalk']
 [talk-23-conference]
 entrytype = 'inproceedings'
 title = 'How does network structure in Agent-Based Models affect epidemiological parameters? A large'
-author = ['Aníbal Olivera', 'George G. Vega Yon', 'Chong Zhang', 'Alun Thomas', 'Matthew Samore', 'Karim Khader']
+author = 'Olivera, Aníbal; Vega Yon, George G.; Zhang, Chong; Thomas, Alun; Samore, Matthew; Khader, Karim'
 year = '2024'
 month = '10'
 eventtitle = 'CSS 2024 Santa Fe'
@@ -231,7 +231,7 @@ keywords = ['conferencetalk']
 [talk-24-conference]
 entrytype = 'inproceedings'
 title = 'Automatic Calibration of Agent-Based Models using Deep Neural Networks'
-author = ['Sima Najafzadehkhoei', 'George G. Vega Yon']
+author = 'Najafzadehkhoei, Sima; Vega Yon, George G.'
 year = '2024'
 month = '11'
 eventtitle = 'DELPHI Symposium 2024'
@@ -241,7 +241,7 @@ keywords = ['conferencetalk']
 [talk-25-conference]
 entrytype = 'inproceedings'
 title = 'Expanding the ERGM Framework: Modeling Interrelated Health Outcomes with Jointly-Distributed Binary Data'
-author = ['George G. Vega Yon', 'Thomas W. Valente', 'Jacob Kean', 'Mary Jo Pugh']
+author = 'Vega Yon, George G.; Valente, Thomas W.; Kean, Jacob; Pugh, Mary Jo'
 year = '2025'
 month = '6'
 eventtitle = 'Sunbelt Conference, 2025'
@@ -251,7 +251,7 @@ keywords = ['conferencetalk']
 [talk-26-conference]
 entrytype = 'inproceedings'
 title = 'Understanding Diffusion with netdiffuseR'
-author = ['George G. Vega Yon', 'Anival Olivera', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Olivera, Anival; Valente, Thomas W.'
 year = '2025'
 month = '6'
 eventtitle = 'Sunbelt Conference, 2025'
@@ -261,7 +261,7 @@ keywords = ['conferencetalk']
 [talk-27-conference]
 entrytype = 'inproceedings'
 title = 'Artificial Intelligence for the Scientist in a Hurry'
-author = ['George G. Vega Yon']
+author = 'Vega Yon, George G.'
 year = '2026'
 month = '6'
 eventtitle = 'Sunbelt Conference, 2026'
@@ -271,7 +271,7 @@ keywords = ['conferencetalk']
 [talk-28-conference]
 entrytype = 'inproceedings'
 title = 'Understanding Diffusion with netdiffuseR'
-author = ['George G. Vega Yon', 'Anival Olivera', 'Thomas W. Valente']
+author = 'Vega Yon, George G.; Olivera, Anival; Valente, Thomas W.'
 year = '2026'
 month = '6'
 eventtitle = 'Sunbelt Conference, 2026'

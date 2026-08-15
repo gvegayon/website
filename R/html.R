@@ -24,6 +24,20 @@ esc_pre <- function(x) {
   gsub(">", "&gt;", x, fixed = TRUE)
 }
 
+# Image paths in the .toml files (`hex`, `image`) are written relative to the
+# site root, without a leading slash: 'img/rgexf.webp'. A bare '/...' cannot be
+# used because Quarto resolves it per *project*, and es/ and zh/ are separate
+# projects one level deeper -- '/img/x.webp' there becomes './img/x.webp',
+# i.e. public/es/img, which does not exist. So the prefix is explicit, and
+# comes from the caller (see site_root() in cards.R). External URLs and data:
+# URIs pass through untouched.
+asset_url <- function(path, root = "") {
+  p <- trimws(path %||% "")
+  if (!nzchar(p)) return("")
+  if (grepl("^([a-z][a-z0-9+.-]*:|//)", p, ignore.case = TRUE)) return(p)
+  paste0(root, sub("^\\./", "", sub("^/", "", p)))
+}
+
 safe_link <- function(url, label, cls = NULL) {
   if (!nzchar(url %||% "")) return("")
   sprintf(
