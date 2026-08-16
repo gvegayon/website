@@ -56,6 +56,13 @@
     "text": "過往成員\n\nAndrew Pulsipher（2025）— 猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。\nJake Wagoner（2025）— 猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。ForeSITE 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。\nHyrum Thomas Diesen（2024–2025）— 猶他大學生物科學學院分子細胞演化生物學博士生。導師。\nDerek Meyer（2022–2024）— 猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。\nJacqueline M. Kent-Marvick（2022–2024）— 猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。\nKatherine (Kayleigh) Lawson-Michod（2022–2024）— 猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。\nPorter Bischoff（2023）— Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。\nLuis Lopez（2022）— 美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。"
   },
   {
+    "objectID": "people.html#我的導師",
+    "href": "people.html#我的導師",
+    "title": "團隊",
+    "section": "我的導師",
+    "text": "我的導師\n我在南加州大學（USC）攻讀生物統計學博士學位，師從 Paul Marjoram 教授與 Kayla de la Haye 教授。我今日指導學生的方式，很大程度上得益於他們當年對我的指導。那段研究成為我的博士論文：Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems。"
+  },
+  {
     "objectID": "people.html#與我合作",
     "href": "people.html#與我合作",
     "title": "團隊",
@@ -67,7 +74,7 @@
     "href": "index.html",
     "title": "George G. Vega Yon, Ph.D.",
     "section": "",
-    "text": "George G. Vega Yon, Ph.D.\n研究副教授 · 猶他大學流行病學系\n\n\n我是猶他大學流行病學系的研究副教授，同時兼任人口健康科學系及 Kahlert 計算學院的兼職教師。我使用統計計算研究複雜系統。我擁有超過十年的科學軟件開發經驗，專注於高性能計算、數據可視化和社交網絡分析。近年來，我將現代 AI 與代理式 AI工具融入工作流程，使用 LLM 加速模型開發並推進分析。\n我的學術背景包括公共政策（碩士，UAI，2011）、經濟學（理學碩士，Caltech，2015）和生物統計學（博士，USC，2020）。\n我在Paul Marjoram 教授和Kayla de la Haye 教授的指導下獲得生物統計學博士學位，論文題為”Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems“。\n我提供編程、數據科學、網絡科學、科學軟件開發、數據可視化，以及將 AI/LLM 方法整合進研究與分析流程的諮詢服務。\n\n\n\n本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。"
+    "text": "George G. Vega Yon, Ph.D.\n研究副教授 · 猶他大學流行病學系\n\n\n人與人之間的連結如何塑造行為、健康與疾病的傳播？我的研究開發統計與計算方法來探討這些問題。\n我是一名方法學研究者，工作於網絡科學、統計計算與複雜系統的交會之處。我研究社會網絡、社會影響與疾病傳播，尤其專精於指數族隨機圖模型（ERGM）、模擬，以及機理式——即理論驅動——的機器學習。這些應用刻意保持跨學科，涵蓋流行病學與疫情建模、犯罪學、行為的社會傳播，以及基因功能的演化。\n工具開發是我工作的核心。我為統計推論、高性能計算與模擬建構科學軟件，將複雜的方法轉化為其他研究者可以信賴的工具。近年來，我致力於讓複雜模型能為專業人士以外的受眾所用，例如在近期美國麻疹疫情期間建構的互動式公眾麻疹模擬器。\n我是猶他大學流行病學系的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。我的跨學科訓練涵蓋公共政策（碩士，UAI）、經濟學（理學碩士，Caltech）與生物統計學（博士，USC）。\n\n\n      \n\n\n\n本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。"
   },
   {
     "objectID": "research.html",

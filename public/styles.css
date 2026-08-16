@@ -196,6 +196,94 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	background: var(--main-color);
 }
 
+/* Homepage lead --------------------------------------------------------- */
+/* The lead used to be centered. Centered multi-line prose gives every line a
+   ragged left edge, so the eye has no fixed return point on the sweep back --
+   worst at 375px, where the measure collapses to a few words per line. Only
+   the text inside the block is left-aligned; the block itself stays centered
+   on the page, so the portrait banner and hero above are untouched. The
+   max-width holds the measure near 65 characters. */
+/* `width: 100%` is load-bearing on both blocks below. Quarto puts page content
+   in a CSS grid, and an auto inline margin on a grid item switches it from
+   stretch to shrink-to-fit -- which would size the rule under .home-links to
+   its four links instead of the measure, leaving it visibly out of alignment
+   with the paragraphs above. */
+.home-lead {
+	width: 100%;
+	max-width: 34rem;
+	margin-inline: auto;
+	text-align: left;
+	line-height: 1.6;
+}
+
+/* The opening question is the hook the whole page hangs on, so it is set a
+   step above the body rather than reading as the first of four equal
+   paragraphs. Size only -- no bold, which at this measure would fight the
+   display face in the hero directly above it. */
+.home-lead > p:first-of-type {
+	font-size: 1.12rem;
+	line-height: 1.55;
+}
+
+/* Homepage next steps --------------------------------------------------- */
+/* Without this row the homepage offers no route onward except the navbar.
+   The glyphs come from Bootstrap Icons, which Quarto already ships and the
+   navbar already uses -- no second icon font is loaded for this. Each link
+   carries its own title/aria-label, so the row needs no tooltip JS. */
+.home-links {
+	width: 100%;
+	max-width: 34rem;
+	margin: 2rem auto 0;
+	padding-top: 1.4rem;
+	border-top: 1px solid #e5dcd1;
+}
+
+/* Pandoc wraps the run of anchors in a single <p>. The newlines between them
+   survive as whitespace-only text nodes, which flex does not promote to
+   items, so `gap` alone controls the spacing. */
+.home-links p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.4rem;
+	margin: 0;
+}
+
+.home-links a {
+	display: inline-flex;
+	font-size: 1.55rem;
+	line-height: 1;
+	color: var(--muted);
+	text-decoration: none;
+	transition: color 120ms ease-in-out, transform 120ms ease-in-out;
+}
+
+.home-links a:hover,
+.home-links a:focus-visible {
+	color: var(--main-color);
+	transform: translateY(-2px);
+}
+
+/* ORCID has no Bootstrap Icons glyph and is inlined as SVG; size it off the
+   font-size above so it sits on the same optical line as the icon font. */
+.home-links svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.home-links a {
+		transition: none;
+	}
+
+	.home-links a:hover,
+	.home-links a:focus-visible {
+		transform: none;
+	}
+}
+
 /* Bold text styling */
 b, strong, .bold {
 	font-weight: 600;
