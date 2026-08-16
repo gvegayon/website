@@ -43,7 +43,7 @@ include-in-header:
 
 ## 與我合作
 
-如果您對網絡科學、統計計算或計算流行病學感興趣，歡迎[預約會面](/meetme){target="_blank"}。
+如果您對網絡科學、統計計算或計算流行病學感興趣，歡迎[預約會面](https://ggvy.cl/meetme){target="_blank"}。
 
 ---
 

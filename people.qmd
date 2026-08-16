@@ -43,4 +43,4 @@ Most of my work happens alongside students and staff. I lead the [Network Scienc
 
 ## Working with me
 
-If you are interested in network science, statistical computing, or computational epidemiology, feel free to [set up a meeting](/meetme){target="_blank"}.
+If you are interested in network science, statistical computing, or computational epidemiology, feel free to [set up a meeting](https://ggvy.cl/meetme){target="_blank"}.
