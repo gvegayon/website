@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en computación estadística, ciencia de redes y software científico.
+    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en modelos exponenciales de grafos aleatorios, simulación epidémica basada en agentes, ciencia de redes y software científico de código abierto.
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -22,16 +22,20 @@ include-in-header:
 [Profesor Asociado de Investigación · División de Epidemiología, Universidad de Utah]{.home-hero-role}
 :::
 
-::: {style="text-align: center; line-height: 1.6;"}
+::: {.home-lead}
 
 Soy Profesor Asociado de Investigación en la
-<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, además de ser profesor adjunto en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Trabajo estudiando <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Sistemas Complejos</a> utilizando <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Computación Estadística</a>. Tengo más de diez años de experiencia desarrollando software científico enfocado en computación de alto rendimiento, visualización de datos y análisis de redes sociales. En los últimos años he incorporado herramientas modernas de IA y **IA agente** a mis flujos de trabajo, usando LLMs para acelerar el desarrollo de modelos y avanzar la analítica.
+<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, con nombramientos adjuntos en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación.
+
+Mi investigación desarrolla métodos estadísticos y software de código abierto para redes y otros <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">sistemas complejos</a>: modelos exponenciales de grafos aleatorios (ERGM) para las redes pequeñas que los estudios de campo efectivamente recogen, modelos basados en agentes de propagación epidémica y difusión de comportamientos, y la <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">computación estadística</a> de alto rendimiento que hace viables ambas cosas. El trabajo va del método al software y a la aplicación — [`ergmito`, `epiworld` y `rgexf`](software.qmd) por un lado; [modelación de brotes de sarampión, transmisión del uso de armas en redes de policías y adopción de PrEP en redes de médicos](research.qmd) por el otro. En los últimos años he incorporado herramientas de LLM e IA agente a ese flujo de trabajo.
 
 Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
 Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof. Paul Marjoram</a> y <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, con la tesis titulada "<a href="../thesis.pdf" target="_blank" rel="noopener noreferrer">Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos</a>".
+:::
 
-Estoy disponible para consultorías en programación, ciencia de datos, ciencia de redes, desarrollo de software científico, visualización de datos y la integración de métodos basados en IA/LLM en investigaciones y flujos analíticos.
+::: {.home-links}
+[CV](../cv/cv.pdf)[·]{.sep}<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank">Google Scholar</a>[·]{.sep}<a href="https://github.com/gvegayon" target="_blank">GitHub</a>[·]{.sep}<a href="https://orcid.org/0000-0002-3171-0844" target="_blank">ORCID</a>
 :::
 
 ---

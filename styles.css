@@ -196,6 +196,51 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	background: var(--main-color);
 }
 
+/* Homepage lead --------------------------------------------------------- */
+/* The lead used to be centered. Centered multi-line prose gives every line a
+   ragged left edge, so the eye has no fixed return point on the sweep back --
+   worst at 375px, where the measure collapses to a few words per line. Only
+   the text inside the block is left-aligned; the block itself stays centered
+   on the page, so the portrait banner and hero above are untouched. The
+   max-width holds the measure near 65 characters. */
+/* `width: 100%` is load-bearing on both blocks below. Quarto puts page content
+   in a CSS grid, and an auto inline margin on a grid item switches it from
+   stretch to shrink-to-fit -- which would size the rule under .home-links to
+   its four links instead of the measure, leaving it visibly out of alignment
+   with the paragraphs above. */
+.home-lead {
+	width: 100%;
+	max-width: 34rem;
+	margin-inline: auto;
+	text-align: left;
+	line-height: 1.6;
+}
+
+/* Homepage next steps --------------------------------------------------- */
+/* Without this row the homepage offers no route onward except the navbar.
+   Inline rather than flex: the separators are bare text nodes, which flex
+   would promote to items and space like links. */
+.home-links {
+	width: 100%;
+	max-width: 34rem;
+	margin: 2rem auto 0;
+	padding-top: 1.15rem;
+	border-top: 1px solid #e5dcd1;
+	text-align: center;
+	font-family: var(--font-display);
+	font-size: 0.95rem;
+	line-height: 2;
+}
+
+.home-links p {
+	margin: 0;
+}
+
+.home-links .sep {
+	margin: 0 0.5rem;
+	color: #af8b66;
+}
+
 /* Bold text styling */
 b, strong, .bold {
 	font-weight: 600;
