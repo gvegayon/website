@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Homepage of George G. Vega Yon, Ph.D., Associate Research Professor in the Division of Epidemiology at the University of Utah, working on statistical inference for complex systems, exponential-family random graph models (ERGMs), mechanistic machine learning, and open-source scientific software for the public good.
+    Homepage of George G. Vega Yon, Ph.D., Associate Research Professor in the Division of Epidemiology at the University of Utah, working on statistical inference for complex systems, transmission processes on networks, exponential-family random graph models (ERGMs), mechanistic machine learning, scientific software development, and tools built for the public good.
 include-in-header:
   - file: _includes/hreflang-index.html
 ---
@@ -27,9 +27,7 @@ include-in-header:
 I am an Associate Research Professor at the
 <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>, with adjunct appointments in the departments of Population Health Sciences and the Kahlert School of Computing.
 
-My research centers on statistical inference for <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>, including transmission networks. Much of it concerns network models — in particular exponential-family random graph models (ERGMs), and the small, partially observed networks that field studies actually collect — and, more recently, mechanistic machine learning, which pairs theory-driven models with ML instead of <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">treating the two as rivals</a>.
-
-A large share of the work is scientific software and high-performance <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a>: [open-source tools](software.qmd) built for the public good, including agent-based simulation now used in public health practice. The applications are deliberately multidisciplinary, spanning [epidemiology and outbreak modeling, criminology, the social transmission of behavior, and the evolution of gene functions](research.qmd).
+My research spans statistical inference for <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>, transmission processes on networks, network models with a focus on exponential-family random graph models (ERGMs), mechanistic machine learning that pairs theory-driven modeling with prediction rather than <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">treating the two as rivals</a>, [scientific software development](software.qmd) and high-performance <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a>, and translational tooling for the public good — including agent-based simulation now used in public health practice. The applications are deliberately multidisciplinary: [epidemiology and outbreak modeling, criminology, the social transmission of behavior, and the evolution of gene functions](research.qmd).
 
 My training is in Public Policy (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and Biostatistics (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 

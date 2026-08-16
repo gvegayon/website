@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en inferencia estadística para sistemas complejos, modelos exponenciales de grafos aleatorios (ERGM), aprendizaje automático mecanicista y software científico de código abierto para el bien público.
+    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en inferencia estadística para sistemas complejos, procesos de transmisión en redes, modelos exponenciales de grafos aleatorios (ERGM), aprendizaje automático mecanicista, desarrollo de software científico y herramientas para el bien público.
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -27,9 +27,7 @@ include-in-header:
 Soy Profesor Asociado de Investigación en la
 <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, con nombramientos adjuntos en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación.
 
-Mi investigación se centra en la inferencia estadística para <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>, incluidas las redes de transmisión. Buena parte trata de modelos de redes —en particular los modelos exponenciales de grafos aleatorios (ERGM) y las redes pequeñas y parcialmente observadas que los estudios de campo efectivamente recogen— y, más recientemente, del aprendizaje automático mecanicista, que combina modelos basados en teoría con ML en lugar de <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">tratarlos como rivales</a>.
-
-Una parte importante del trabajo es el software científico y la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> de alto rendimiento: [herramientas de código abierto](software.qmd) construidas para el bien público, incluida la simulación basada en agentes que hoy se usa en la práctica de salud pública. Las aplicaciones son deliberadamente multidisciplinarias y abarcan [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
+Mi investigación abarca la inferencia estadística para <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>, los procesos de transmisión en redes, los modelos de redes con énfasis en los modelos exponenciales de grafos aleatorios (ERGM), el aprendizaje automático mecanicista —que combina el modelado basado en teoría con la predicción en lugar de <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">tratarlos como rivales</a>—, el [desarrollo de software científico](software.qmd) y la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> de alto rendimiento, y las herramientas traslacionales para el bien público, incluida la simulación basada en agentes que hoy se usa en la práctica de salud pública. Las aplicaciones son deliberadamente multidisciplinarias: [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
 
 Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
