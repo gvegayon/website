@@ -1,41 +1,140 @@
 ---
 title: ""
-# page-layout: full
 toc: false
 # `title` is empty (the page opens with the portrait banner), so name the
 # page explicitly -- otherwise <title> and og:title both render as "– ".
-pagetitle: "George G. Vega Yon, Ph.D."
+pagetitle: "Computación Estadística y Ciencia de Redes"
 description: |
-    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en computación estadística, ciencia de redes y software científico.
+    George G. Vega Yon es profesor de investigación en la Universidad de Utah y desarrolla métodos estadísticos y software científico de código abierto para ciencia de redes, epidemiología computacional y sistemas complejos.
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
 
-<!-- Background Header Section - 30vh -->
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('../img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center; flex-direction: column;"}
-![](../img/george-g-vega-yon-university-of-utah.webp){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;" alt="Doctor George G. Vega Yon con la escultura de Charles Darwin en el British Museum"}
+::: {.home-masthead .column-screen}
+::: {.home-masthead__inner}
+![](../img/george-g-vega-yon-university-of-utah.webp){.home-portrait alt="George G. Vega Yon con la escultura de Charles Darwin en el British Museum"}
+:::
 :::
 
 ::: {.home-hero}
+[Científico computacional · Desarrollador de código abierto · Colaborador de investigación]{.home-kicker}
+
 # George G. Vega Yon, Ph.D.
 
 [Profesor Asociado de Investigación · División de Epidemiología, Universidad de Utah]{.home-hero-role}
+
+[Desarrollo métodos rápidos y reproducibles, además de software científico, para comprender sistemas complejos en salud pública y otras áreas.]{.home-lede}
+
+::: {.home-actions}
+[Explorar mi investigación](research.qmd){.home-button .home-button--primary}
+[Ver software científico](software.qmd){.home-button .home-button--secondary}
+[Descargar CV académico](../cv/cv.pdf){.home-button .home-button--text}
+:::
 :::
 
-::: {style="text-align: center; line-height: 1.6;"}
+::: {.home-proof aria-label="Aspectos destacados de la trayectoria"}
+::: {.home-proof__item}
+[10+]{.home-proof__value}
 
-Soy Profesor Asociado de Investigación en la
-<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, además de ser profesor adjunto en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Trabajo estudiando <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Sistemas Complejos</a> utilizando <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Computación Estadística</a>. Tengo más de diez años de experiencia desarrollando software científico enfocado en computación de alto rendimiento, visualización de datos y análisis de redes sociales. En los últimos años he incorporado herramientas modernas de IA y **IA agente** a mis flujos de trabajo, usando LLMs para acelerar el desarrollo de modelos y avanzar la analítica.
+[años desarrollando software científico]{.home-proof__label}
+:::
+::: {.home-proof__item}
+[Ph.D.]{.home-proof__value}
 
-Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
+[Bioestadística · University of Southern California]{.home-proof__label}
+:::
+::: {.home-proof__item}
+[R · C++ · Python]{.home-proof__value}
 
-Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof. Paul Marjoram</a> y <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, con la tesis titulada "<a href="../thesis.pdf" target="_blank" rel="noopener noreferrer">Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos</a>".
-
-Estoy disponible para consultorías en programación, ciencia de datos, ciencia de redes, desarrollo de software científico, visualización de datos y la integración de métodos basados en IA/LLM en investigaciones y flujos analíticos.
+[herramientas reproducibles y de alto rendimiento]{.home-proof__label}
+:::
 :::
 
----
+::: {.home-section .home-about}
+::: {.home-section__heading}
+[Perfil]{.home-section__kicker}
 
-::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
+## Métodos, software y salud pública aplicada
+:::
+
+::: {.home-about__grid}
+::: {.home-about__copy}
+Soy Profesor Asociado de Investigación en la [División de Epidemiología de la Universidad de Utah](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank" rel="noopener noreferrer"}, con cargos adjuntos en Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Mi trabajo utiliza computación estadística para estudiar sistemas complejos, en particular problemas de ciencia de redes y epidemiología computacional.
+
+Durante más de una década he convertido preguntas de investigación exigentes en software confiable para computación de alto rendimiento, visualización de datos, análisis de redes sociales y modelación basada en agentes. También integro IA moderna y flujos de trabajo agénticos cuando ayudan a que la investigación y el desarrollo de software sean más rigurosos, eficientes y útiles.
+:::
+
+::: {.home-credentials}
+### Formación interdisciplinaria
+
+- **Ph.D., Bioestadística** — University of Southern California, 2020
+- **M.Sc., Economía** — California Institute of Technology, 2015
+- **M.A., Políticas Públicas** — Universidad Adolfo Ibáñez, 2011
+
+[Leer el CV académico completo →](../cv/cv.pdf){.home-inline-link}
+:::
+:::
+:::
+
+::: {.home-section .home-expertise}
+::: {.home-section__heading}
+[Experiencia]{.home-section__kicker}
+
+## Donde la computación se une a preguntas relevantes
+
+Mi trabajo conecta profundidad metodológica con software que la comunidad científica puede usar en la práctica.
+:::
+
+::: {.home-card-grid}
+::: {.home-card}
+[01]{.home-card__index}
+
+### Epidemiología computacional
+
+Modelos basados en agentes, simulación y análisis escalables para enfermedades infecciosas y salud poblacional.
+
+[Explorar investigación →](research.qmd){.home-card__link}
+:::
+
+::: {.home-card}
+[02]{.home-card__index}
+
+### Ciencia de redes
+
+Modelos estadísticos y herramientas visuales para comprender relaciones, difusión y sistemas sociales complejos.
+
+[Ver publicaciones →](research.qmd){.home-card__link}
+:::
+
+::: {.home-card}
+[03]{.home-card__index}
+
+### Software científico
+
+Herramientas abiertas en R, C++ y Python diseñadas para rendimiento, reproducibilidad y facilidad de uso.
+
+[Ver portafolio de software →](software.qmd){.home-card__link}
+:::
+:::
+:::
+
+::: {.home-collaboration .column-screen}
+::: {.home-collaboration__inner}
+::: {.home-collaboration__copy}
+[Colaboración]{.home-section__kicker}
+
+## Convirtamos preguntas complejas en herramientas computacionales robustas.
+
+Estoy disponible para colaboraciones y consultorías seleccionadas en ciencia de datos, ciencia de redes, software científico, visualización y flujos de investigación apoyados por IA/LLM.
+:::
+
+::: {.home-actions}
+[Conversar sobre una colaboración](https://www.linkedin.com/in/georgevegayon/){.home-button .home-button--light target="_blank" rel="noopener noreferrer"}
+[Ver proyectos de software](software.qmd){.home-button .home-button--outline-light}
+:::
+:::
+:::
+
+::: {.translation-note}
 *Esta versión del sitio web fue traducida automáticamente de la versión original en inglés usando GitHub Copilot y aún no ha sido verificada por un humano.*
 :::

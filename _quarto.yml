@@ -33,6 +33,7 @@ lang: en
 website:
   title: "George G. Vega Yon, Ph.D."
   image: img/logo.svg
+  favicon: img/logo.svg
   search: true
   # The apex is canonical -- www.ggvy.cl 301s here, so never use the www form.
   # site-url is what unlocks sitemap.xml, <link rel="canonical">, and the
@@ -97,7 +98,7 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. All rights reserved.
+      © 2026 George G. Vega Yon. All rights reserved.
 
 format:
   html:

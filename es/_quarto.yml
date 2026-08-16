@@ -13,6 +13,7 @@ lang: es
 website:
   title: "George G. Vega Yon, Ph.D."
   image: ../img/logo.svg
+  favicon: ../img/logo.svg
   search: true
   # Includes the /es segment: this project renders into ../public/es, so
   # without it every canonical and sitemap entry would claim the English URL.
@@ -77,7 +78,7 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. Todos los derechos reservados.
+      © 2026 George G. Vega Yon. Todos los derechos reservados.
 
 format:
   html:
