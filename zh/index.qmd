@@ -26,7 +26,7 @@ include-in-header:
 
 我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。
 
-我的研究為網絡及其他[複雜系統](https://cssociety.org/about-us/what-are-cs){target="_blank"}開發統計方法與開源軟件：針對實地研究實際能收集到的小型網絡的指數隨機圖模型（ERGM）、流行病傳播與行為擴散的基於代理模型，以及使兩者得以實現的高性能[統計計算](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}。這項工作貫穿方法、軟件與應用——一方面是 [`ergmito`、`epiworld` 與 `rgexf`](software.qmd)；另一方面是[麻疹疫情建模、警務人員網絡中武器使用的傳播，以及醫師網絡中 PrEP 的採用](research.qmd)。近年來，我也將 LLM 與代理式 AI 工具納入這一流程。
+我的研究為網絡及其他[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}開發統計方法與開源軟件：針對實地研究實際能收集到的小型網絡的指數隨機圖模型（ERGM）、流行病傳播與行為擴散的基於代理模型，以及使兩者得以實現的高性能[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}。這項工作貫穿方法、軟件與應用——一方面是 [`ergmito`、`epiworld` 與 `rgexf`](software.qmd)；另一方面是[麻疹疫情建模、警務人員網絡中武器使用的傳播，以及醫師網絡中 PrEP 的採用](research.qmd)。近年來，我也將 LLM 與代理式 AI 工具納入這一流程。
 
 我的學術背景包括公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}，2011）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}，2015）和生物統計學（博士，[USC](https://usc.edu){target="_blank"}，2020）。
 
