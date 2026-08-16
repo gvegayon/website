@@ -1,19 +1,63 @@
 /* CSS styles matching the lab website */
-/* @import url('https://fonts.googleapis.com/css?family=Jost'); */
+
+/* Self-hosted fonts (assets/fonts/) -- see OFL-Archivo.txt / OFL-SourceSerif4.txt
+   for licensing. Only latin + latin-ext subsets are shipped; zh/ pages fall
+   through to the system fallback stack below for CJK glyphs, which is fine
+   since browsers substitute per-glyph. */
+@font-face {
+	font-family: "Source Serif 4";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("assets/fonts/source-serif-4-400.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Source Serif 4";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("assets/fonts/source-serif-4-600.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Archivo";
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url("assets/fonts/archivo-600.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Archivo";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("assets/fonts/archivo-700.woff2") format("woff2");
+}
 
 /* CSS Variables matching lab website */
 :root {
 	--link-on: white;
 	--link-off: brown;
-	--main-color: rgb(193, 97, 0);
-}
+	/* Single source of truth for the accent color. Must match the navbar
+	   `background:` in _quarto.yml, es/_quarto.yml, and zh/_quarto.yml
+	   (those need a literal hex; this is the one that actually renders). */
+	--main-color: #A85200;
+	--ink: #4a4a4a;
+	--muted: #6b5c4d;
 
-*,p {
-    font-family: sans-serif;
+	--font-body: "Source Serif 4", Georgia, serif;
+	--font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+	--font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--font-body);
+}
+
+code, pre, kbd {
+  font-family: var(--font-mono);
 }
 
 /* Header Section */
@@ -41,6 +85,7 @@ body {
 .navbar-nav .nav-link {
 	color: white !important;
 	text-decoration: none;
+	font-weight: 600;
 }
 
 .navbar-nav .nav-link:hover {
@@ -63,6 +108,11 @@ body {
 /* Typography */
 h1, h2, h3, h4 {
 	color: darkslategray;
+	font-family: var(--font-display);
+}
+
+.navbar {
+	font-family: var(--font-display);
 }
 
 /* Page hero (Quarto title-block banner) --------------------------------- */
@@ -146,42 +196,34 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	background: var(--main-color);
 }
 
-/* Bold text styling for better visibility */
+/* Bold text styling */
 b, strong, .bold {
-	font-weight: 1000;
-    /* color: #ff8000ff; */
-	font-size: larger;
-    /* text-shadow: -1px 1px 2px rgb(139 139 139 / 77%); */
+	font-weight: 600;
 }
-
-
-/*
-h1 a, h2 a, h3 a {
-	text-decoration: none;
-	font-weight: bolder;
-	color: var(--main-color) !important;
-} */
 
 p {
-	color: gray;
-}
-
-/* p a {
-	text-decoration: none;
-	font-weight: bolder;
-	color: var(--main-color) !important;
+	color: var(--ink);
 }
 
 /* General link styling */
 
 a {
-  text-decoration: none;
-  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  font-weight: inherit;
   color: var(--main-color);
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Quarto renders bare URLs (for example, DOI links) with the `uri` class.
+   Allow them to wrap so the wider body face cannot force a horizontal scroll
+   on narrow screens. */
+.content a.uri {
+	overflow-wrap: anywhere;
 }
 
 /* Research page redesign */
@@ -206,7 +248,7 @@ a:hover {
 }
 
 .pub-search:focus {
-	outline: 2px solid rgba(193, 97, 0, 0.35);
+	outline: 2px solid var(--main-color);
 	border-color: var(--main-color);
 }
 
@@ -283,7 +325,7 @@ a:hover {
 }
 
 .muted {
-	color: #8b7b6a;
+	color: var(--muted);
 	font-size: 0.92rem;
 }
 
@@ -297,4 +339,3 @@ a:hover {
 		padding: 0.9rem;
 	}
 }
-
