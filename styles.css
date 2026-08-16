@@ -216,6 +216,15 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	line-height: 1.6;
 }
 
+/* The opening question is the hook the whole page hangs on, so it is set a
+   step above the body rather than reading as the first of four equal
+   paragraphs. Size only -- no bold, which at this measure would fight the
+   display face in the hero directly above it. */
+.home-lead > p:first-of-type {
+	font-size: 1.12rem;
+	line-height: 1.55;
+}
+
 /* Homepage next steps --------------------------------------------------- */
 /* Without this row the homepage offers no route onward except the navbar.
    The glyphs come from Bootstrap Icons, which Quarto already ships and the

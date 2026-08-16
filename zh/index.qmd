@@ -24,13 +24,13 @@ include-in-header:
 
 ::: {.home-lead}
 
-我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。
+人與人之間的連結如何塑造行為、健康與疾病的傳播？我的研究開發統計與計算方法來探討這些問題。
 
-我的研究涵蓋[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}的統計推論、網絡上的傳播過程、以指數族隨機圖模型（ERGM）為重點的網絡模型、將理論驅動的建模與預測結合而非[將兩者視為對立](https://doi.org/10.1098/rsbl.2017.0660){target="_blank"}的機理式機器學習、[科學軟件開發](software.qmd)與高性能[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}，以及服務公共利益的轉化型工具，包括目前已用於公共衛生實務的基於代理模擬。這些應用刻意保持跨學科：[流行病學與疫情建模、犯罪學、行為的社會傳播，以及基因功能的演化](research.qmd)。
+我是一名方法學研究者，工作於網絡科學、[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}與[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}的交會之處。我研究社會網絡、社會影響與疾病傳播，尤其專精於指數族隨機圖模型（ERGM）、模擬，以及機理式——即[理論驅動](https://doi.org/10.1098/rsbl.2017.0660){target="_blank"}——的機器學習。這些應用刻意保持跨學科，涵蓋[流行病學與疫情建模、犯罪學、行為的社會傳播，以及基因功能的演化](research.qmd)。
 
-我的學術背景包括公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}，2011）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}，2015）和生物統計學（博士，[USC](https://usc.edu){target="_blank"}，2020）。
+工具開發是我工作的核心。我為統計推論、高性能計算與模擬建構[科學軟件](software.qmd)，將複雜的方法轉化為其他研究者可以信賴的工具。近年來，我致力於讓複雜模型能為專業人士以外的受眾所用，例如在近期美國麻疹疫情期間建構的互動式公眾[麻疹模擬器](https://ggvy.cl/shiny/measles){target="_blank"}。
 
-我在[Paul Marjoram 教授](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}和[Kayla de la Haye 教授](https://kayladelahaye.net){target="_blank"}的指導下獲得生物統計學博士學位，論文題為"[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](../thesis.pdf){target="_blank"}"。
+我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。我的跨學科訓練涵蓋公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}）與生物統計學（博士，[USC](https://usc.edu){target="_blank"}）。
 :::
 
 ::: {.home-links}

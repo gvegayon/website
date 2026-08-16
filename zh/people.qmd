@@ -41,6 +41,10 @@ include-in-header:
 
 - **Luis Lopez**（2022）--- 美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。
 
+## 我的導師
+
+我在南加州大學（USC）攻讀生物統計學博士學位，師從 [**Paul Marjoram 教授**](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}與 [**Kayla de la Haye 教授**](https://kayladelahaye.net){target="_blank"}。我今日指導學生的方式，很大程度上得益於他們當年對我的指導。那段研究成為我的博士論文：[*Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems*](../thesis.pdf){target="_blank"}。
+
 ## 與我合作
 
 如果您對網絡科學、統計計算或計算流行病學感興趣，歡迎[預約會面](/meetme){target="_blank"}。

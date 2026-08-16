@@ -41,6 +41,10 @@ La mayor parte de mi trabajo ocurre junto a estudiantes y personal de investigac
 
 - **Luis Lopez** (2022) --- Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM).
 
+## Mis propios mentores
+
+Completé mi doctorado en Bioestadística en la University of Southern California bajo la supervisión del [**Prof. Paul Marjoram**](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"} y de la [**Prof. Kayla de la Haye**](https://kayladelahaye.net){target="_blank"}. La forma en que hoy asesoro a mis estudiantes le debe mucho a cómo ellos me asesoraron a mí. De ese trabajo surgió mi tesis, [*Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos*](../thesis.pdf){target="_blank"}.
+
 ## Trabajar conmigo
 
 Si te interesa la ciencia de redes, la computación estadística o la epidemiología computacional, no dudes en [agendar una reunión](/meetme){target="_blank"}.
