@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en modelos exponenciales de grafos aleatorios, simulación epidémica basada en agentes, ciencia de redes y software científico de código abierto.
+    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en inferencia estadística para sistemas complejos, modelos exponenciales de grafos aleatorios (ERGM), aprendizaje automático mecanicista y software científico de código abierto para el bien público.
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -27,7 +27,9 @@ include-in-header:
 Soy Profesor Asociado de Investigación en la
 <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, con nombramientos adjuntos en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación.
 
-Mi investigación desarrolla métodos estadísticos y software de código abierto para redes y otros <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>: modelos exponenciales de grafos aleatorios (ERGM) para las redes pequeñas que los estudios de campo efectivamente recogen, modelos basados en agentes de propagación epidémica y difusión de comportamientos, y la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> de alto rendimiento que hace viables ambas cosas. El trabajo va del método al software y a la aplicación — [`ergmito`, `epiworld` y `rgexf`](software.qmd) por un lado; [modelación de brotes de sarampión, transmisión del uso de armas en redes de policías y adopción de PrEP en redes de médicos](research.qmd) por el otro. En los últimos años he incorporado herramientas de LLM e IA agente a ese flujo de trabajo.
+Mi investigación se centra en la inferencia estadística para <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>, incluidas las redes de transmisión. Buena parte trata de modelos de redes —en particular los modelos exponenciales de grafos aleatorios (ERGM) y las redes pequeñas y parcialmente observadas que los estudios de campo efectivamente recogen— y, más recientemente, del aprendizaje automático mecanicista, que combina modelos basados en teoría con ML en lugar de <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">tratarlos como rivales</a>.
+
+Una parte importante del trabajo es el software científico y la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> de alto rendimiento: [herramientas de código abierto](software.qmd) construidas para el bien público, incluida la simulación basada en agentes que hoy se usa en la práctica de salud pública. Las aplicaciones son deliberadamente multidisciplinarias y abarcan [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
 
 Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
@@ -35,7 +37,13 @@ Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://
 :::
 
 ::: {.home-links}
-[CV](../cv/cv.pdf)[·]{.sep}<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank">Google Scholar</a>[·]{.sep}<a href="https://github.com/gvegayon" target="_blank">GitHub</a>[·]{.sep}<a href="https://orcid.org/0000-0002-3171-0844" target="_blank">ORCID</a>
+<a href="../cv/cv.pdf" title="CV académico (PDF)" aria-label="CV académico (PDF)"><i class="bi bi-file-earmark-person" aria-hidden="true"></i></a>
+<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank" title="Perfil de Google Scholar" aria-label="Perfil de Google Scholar"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></a>
+<!-- ORCID es la única marca sin glifo en Bootstrap Icons, por eso va como SVG. -->
+<a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="Perfil de ORCID" aria-label="Perfil de ORCID"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+<a href="https://github.com/gvegayon" target="_blank" title="Código en GitHub" aria-label="Código en GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a href="https://linkedin.com/in/georgevegayon" target="_blank" title="Perfil de LinkedIn" aria-label="Perfil de LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
 :::
 
 ---

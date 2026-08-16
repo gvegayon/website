@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    George G. Vega Yon 博士的主頁，猶他大學流行病學系研究副教授，研究指數隨機圖模型、基於代理的流行病模擬、網絡科學與開源科學軟件。
+    George G. Vega Yon 博士的主頁，猶他大學流行病學系研究副教授，研究複雜系統的統計推論、指數族隨機圖模型（ERGM）、機理式機器學習，以及服務公共利益的開源科學軟件。
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -26,7 +26,9 @@ include-in-header:
 
 我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。
 
-我的研究為網絡及其他[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}開發統計方法與開源軟件：針對實地研究實際能收集到的小型網絡的指數隨機圖模型（ERGM）、流行病傳播與行為擴散的基於代理模型，以及使兩者得以實現的高性能[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}。這項工作貫穿方法、軟件與應用——一方面是 [`ergmito`、`epiworld` 與 `rgexf`](software.qmd)；另一方面是[麻疹疫情建模、警務人員網絡中武器使用的傳播，以及醫師網絡中 PrEP 的採用](research.qmd)。近年來，我也將 LLM 與代理式 AI 工具納入這一流程。
+我的研究聚焦於[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}的統計推論，包括傳播網絡。其中很大一部分關於網絡模型——特別是指數族隨機圖模型（ERGM），以及實地研究實際能收集到的小型、僅部分觀測到的網絡——近年來還包括機理式機器學習，它將理論驅動的模型與機器學習結合，而非[將兩者視為對立](https://doi.org/10.1098/rsbl.2017.0660){target="_blank"}。
+
+另一大部分工作是科學軟件與高性能[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}：為公共利益而建的[開源工具](software.qmd)，包括目前已用於公共衛生實務的基於代理模擬。這些應用刻意保持跨學科，涵蓋[流行病學與疫情建模、犯罪學、行為的社會傳播，以及基因功能的演化](research.qmd)。
 
 我的學術背景包括公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}，2011）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}，2015）和生物統計學（博士，[USC](https://usc.edu){target="_blank"}，2020）。
 
@@ -34,7 +36,13 @@ include-in-header:
 :::
 
 ::: {.home-links}
-[履歷](../cv/cv.pdf)[·]{.sep}<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank">Google Scholar</a>[·]{.sep}<a href="https://github.com/gvegayon" target="_blank">GitHub</a>[·]{.sep}<a href="https://orcid.org/0000-0002-3171-0844" target="_blank">ORCID</a>
+<a href="../cv/cv.pdf" title="學術履歷（PDF）" aria-label="學術履歷（PDF）"><i class="bi bi-file-earmark-person" aria-hidden="true"></i></a>
+<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank" title="Google Scholar 個人檔案" aria-label="Google Scholar 個人檔案"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></a>
+<!-- ORCID 是唯一沒有 Bootstrap Icons 字符的標誌，因此以 SVG 內嵌。 -->
+<a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="ORCID 個人檔案" aria-label="ORCID 個人檔案"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+<a href="https://github.com/gvegayon" target="_blank" title="GitHub 上的代碼" aria-label="GitHub 上的代碼"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a href="https://linkedin.com/in/georgevegayon" target="_blank" title="LinkedIn 個人檔案" aria-label="LinkedIn 個人檔案"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
 :::
 
 ---

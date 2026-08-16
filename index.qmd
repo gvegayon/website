@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Homepage of George G. Vega Yon, Ph.D., Associate Research Professor in the Division of Epidemiology at the University of Utah, working on exponential random graph models, agent-based epidemic simulation, network science, and open-source scientific software.
+    Homepage of George G. Vega Yon, Ph.D., Associate Research Professor in the Division of Epidemiology at the University of Utah, working on statistical inference for complex systems, exponential-family random graph models (ERGMs), mechanistic machine learning, and open-source scientific software for the public good.
 include-in-header:
   - file: _includes/hreflang-index.html
 ---
@@ -27,7 +27,9 @@ include-in-header:
 I am an Associate Research Professor at the
 <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>, with adjunct appointments in the departments of Population Health Sciences and the Kahlert School of Computing.
 
-My research builds statistical methods and open-source software for networks and other <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>: exponential random graph models (ERGMs) for the small networks that field studies actually collect, agent-based models of epidemic spread and behavioral diffusion, and the high-performance <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a> that makes both tractable. The work runs from method to software to application — [`ergmito`, `epiworld`, and `rgexf`](software.qmd) on one side; [measles outbreak modeling, weapon-use transmission in officer networks, and PrEP adoption across physician networks](research.qmd) on the other. Over the last few years I have folded LLM and agentic AI tooling into that pipeline.
+My research centers on statistical inference for <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>, including transmission networks. Much of it concerns network models — in particular exponential-family random graph models (ERGMs), and the small, partially observed networks that field studies actually collect — and, more recently, mechanistic machine learning, which pairs theory-driven models with ML instead of <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">treating the two as rivals</a>.
+
+A large share of the work is scientific software and high-performance <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a>: [open-source tools](software.qmd) built for the public good, including agent-based simulation now used in public health practice. The applications are deliberately multidisciplinary, spanning [epidemiology and outbreak modeling, criminology, the social transmission of behavior, and the evolution of gene functions](research.qmd).
 
 My training is in Public Policy (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economics (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015), and Biostatistics (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
 
@@ -35,5 +37,11 @@ I obtained my Ph.D. in Biostatistics under the supervision of <a href="https://s
 :::
 
 ::: {.home-links}
-[CV](cv/cv.pdf)[·]{.sep}<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank">Google Scholar</a>[·]{.sep}<a href="https://github.com/gvegayon" target="_blank">GitHub</a>[·]{.sep}<a href="https://orcid.org/0000-0002-3171-0844" target="_blank">ORCID</a>
+<a href="cv/cv.pdf" title="Academic CV (PDF)" aria-label="Academic CV (PDF)"><i class="bi bi-file-earmark-person" aria-hidden="true"></i></a>
+<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank" title="Google Scholar profile" aria-label="Google Scholar profile"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></a>
+<!-- ORCID is the one mark with no Bootstrap Icons glyph, so it is inlined as SVG rather than pulling in a second icon font for a single logo. -->
+<a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="ORCID profile" aria-label="ORCID profile"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+<a href="https://github.com/gvegayon" target="_blank" title="Code on GitHub" aria-label="Code on GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a href="https://linkedin.com/in/georgevegayon" target="_blank" title="LinkedIn profile" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
 :::

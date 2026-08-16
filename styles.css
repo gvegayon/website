@@ -218,27 +218,61 @@ body .quarto-title-block .quarto-title-banner h1.title {
 
 /* Homepage next steps --------------------------------------------------- */
 /* Without this row the homepage offers no route onward except the navbar.
-   Inline rather than flex: the separators are bare text nodes, which flex
-   would promote to items and space like links. */
+   The glyphs come from Bootstrap Icons, which Quarto already ships and the
+   navbar already uses -- no second icon font is loaded for this. Each link
+   carries its own title/aria-label, so the row needs no tooltip JS. */
 .home-links {
 	width: 100%;
 	max-width: 34rem;
 	margin: 2rem auto 0;
-	padding-top: 1.15rem;
+	padding-top: 1.4rem;
 	border-top: 1px solid #e5dcd1;
-	text-align: center;
-	font-family: var(--font-display);
-	font-size: 0.95rem;
-	line-height: 2;
 }
 
+/* Pandoc wraps the run of anchors in a single <p>. The newlines between them
+   survive as whitespace-only text nodes, which flex does not promote to
+   items, so `gap` alone controls the spacing. */
 .home-links p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.4rem;
 	margin: 0;
 }
 
-.home-links .sep {
-	margin: 0 0.5rem;
-	color: #af8b66;
+.home-links a {
+	display: inline-flex;
+	font-size: 1.55rem;
+	line-height: 1;
+	color: var(--muted);
+	text-decoration: none;
+	transition: color 120ms ease-in-out, transform 120ms ease-in-out;
+}
+
+.home-links a:hover,
+.home-links a:focus-visible {
+	color: var(--main-color);
+	transform: translateY(-2px);
+}
+
+/* ORCID has no Bootstrap Icons glyph and is inlined as SVG; size it off the
+   font-size above so it sits on the same optical line as the icon font. */
+.home-links svg {
+	width: 1em;
+	height: 1em;
+	fill: currentColor;
+	display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.home-links a {
+		transition: none;
+	}
+
+	.home-links a:hover,
+	.home-links a:focus-visible {
+		transform: none;
+	}
 }
 
 /* Bold text styling */
