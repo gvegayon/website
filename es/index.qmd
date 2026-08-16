@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en computación estadística, ciencia de redes y software científico.
+    Página de inicio de George G. Vega Yon, Ph.D., Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah, especializado en inferencia estadística para sistemas complejos, procesos de transmisión en redes, modelos exponenciales de grafos aleatorios (ERGM), aprendizaje automático mecanicista, desarrollo de software científico y herramientas para el bien público.
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -22,16 +22,25 @@ include-in-header:
 [Profesor Asociado de Investigación · División de Epidemiología, Universidad de Utah]{.home-hero-role}
 :::
 
-::: {style="text-align: center; line-height: 1.6;"}
+::: {.home-lead}
 
-Soy Profesor Asociado de Investigación en la
-<a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, además de ser profesor adjunto en los departamentos de Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Trabajo estudiando <a href="https://cssociety.org/about-us/what-are-cs" target="_blank">Sistemas Complejos</a> utilizando <a href="https://en.wikipedia.org/wiki/Computational_statistics" target="_blank">Computación Estadística</a>. Tengo más de diez años de experiencia desarrollando software científico enfocado en computación de alto rendimiento, visualización de datos y análisis de redes sociales. En los últimos años he incorporado herramientas modernas de IA y **IA agente** a mis flujos de trabajo, usando LLMs para acelerar el desarrollo de modelos y avanzar la analítica.
+¿Cómo moldean las conexiones entre las personas el comportamiento, la salud y la propagación de enfermedades? Mi investigación desarrolla métodos estadísticos y computacionales para estudiar estas preguntas.
 
-Mi formación es en Políticas Públicas (M.A. <a href="https://www.uai.cl/" target="_blank">UAI</a>, 2011), Economía (M.Sc. <a href="https://caltech.edu" target="_blank">Caltech</a>, 2015) y Bioestadística (Ph.D. <a href="https://usc.edu" target="_blank">USC</a>, 2020).
+Soy un metodólogo que trabaja en la intersección de la ciencia de redes, la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> y los <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>. Estudio redes sociales, influencia social y transmisión de enfermedades, con particular experiencia en modelos exponenciales de grafos aleatorios (ERGM), simulación y aprendizaje automático mecanicista, es decir, <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">basado en teoría</a>. Las aplicaciones son deliberadamente multidisciplinarias y abarcan [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
 
-Obtuve mi doctorado en Bioestadística bajo la supervisión de <a href="https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en" target="_blank">Prof. Paul Marjoram</a> y <a href="https://kayladelahaye.net" target="_blank">Prof. Kayla de la Haye</a>, con la tesis titulada "<a href="../thesis.pdf" target="_blank" rel="noopener noreferrer">Ensayos sobre Bioinformática y Análisis de Redes Sociales: Métodos Estadísticos y Computacionales para Sistemas Complejos</a>".
+El desarrollo de herramientas es central en mi trabajo. Construyo [software científico](software.qmd) para inferencia estadística, computación de alto rendimiento y simulación, convirtiendo métodos sofisticados en herramientas confiables que otros investigadores pueden usar. Más recientemente me he enfocado en hacer que los modelos complejos sean accesibles más allá de públicos especializados, mediante herramientas interactivas y de cara al público como el <a href="https://ggvy.cl/shiny/measles" target="_blank">simulador de sarampión</a> construido durante los brotes recientes en Estados Unidos.
 
-Estoy disponible para consultorías en programación, ciencia de datos, ciencia de redes, desarrollo de software científico, visualización de datos y la integración de métodos basados en IA/LLM en investigaciones y flujos analíticos.
+Soy Profesor Asociado de Investigación en la <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, con nombramientos adjuntos en Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Mi formación interdisciplinaria abarca Políticas Públicas (M.A., <a href="https://www.uai.cl/" target="_blank">UAI</a>), Economía (M.Sc., <a href="https://caltech.edu" target="_blank">Caltech</a>) y Bioestadística (Ph.D., <a href="https://usc.edu" target="_blank">USC</a>).
+:::
+
+::: {.home-links}
+<a href="../cv/cv.pdf" title="CV académico (PDF)" aria-label="CV académico (PDF)"><i class="bi bi-file-earmark-person" aria-hidden="true"></i></a>
+<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank" title="Perfil de Google Scholar" aria-label="Perfil de Google Scholar"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></a>
+<!-- ORCID es la única marca sin glifo en Bootstrap Icons, por eso va como SVG. -->
+<a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="Perfil de ORCID" aria-label="Perfil de ORCID"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+<a href="https://github.com/gvegayon" target="_blank" title="Código en GitHub" aria-label="Código en GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a href="https://linkedin.com/in/georgevegayon" target="_blank" title="Perfil de LinkedIn" aria-label="Perfil de LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
 :::
 
 ---

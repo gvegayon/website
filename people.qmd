@@ -41,6 +41,10 @@ Most of my work happens alongside students and staff. I lead the [Network Scienc
 
 - **Luis Lopez** (2022) --- Postbaccalaureate fellow, National Institutes of Health. Mentor. Exponential-family random graph models.
 
+## My own mentors
+
+I completed my Ph.D. in Biostatistics at the University of Southern California under the supervision of [**Prof. Paul Marjoram**](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"} and [**Prof. Kayla de la Haye**](https://kayladelahaye.net){target="_blank"}. How I advise students today owes a great deal to how they advised me. That work became my dissertation, [*Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems*](thesis.pdf){target="_blank"}.
+
 ## Working with me
 
 If you are interested in network science, statistical computing, or computational epidemiology, feel free to [set up a meeting](https://ggvy.cl/meetme){target="_blank"}.

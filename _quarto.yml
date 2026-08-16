@@ -78,6 +78,11 @@ website:
             href: cv/resume.docx
           - text: CV (academic)
             href: cv/cv.pdf
+      # External: consulting lives on its own site, not on this one. Keeping
+      # it out of the homepage prose stops the landing page from reading as
+      # an off-ramp while still leaving the route discoverable.
+      - href: https://vyanalytics.io/
+        text: Consulting
     right:
       - href: es/index.html
         text: 🇨🇱

@@ -58,6 +58,9 @@ website:
             href: ../cv/resume.docx
           - text: CV (académico)
             href: ../cv/cv.pdf
+      # Externo: la consultoría vive en su propio sitio, no en este.
+      - href: https://vyanalytics.io/
+        text: Consultoría
     right:
       - href: ../index.html
         text: 🇺🇸

@@ -6,7 +6,7 @@ toc: false
 # page explicitly -- otherwise <title> and og:title both render as "– ".
 pagetitle: "George G. Vega Yon, Ph.D."
 description: |
-    George G. Vega Yon 博士的主頁，猶他大學流行病學系研究副教授，研究統計計算、網絡科學與科學軟件。
+    George G. Vega Yon 博士的主頁，猶他大學流行病學系研究副教授，研究複雜系統的統計推論、網絡上的傳播過程、指數族隨機圖模型（ERGM）、機理式機器學習、科學軟件開發，以及服務公共利益的工具。
 include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
@@ -22,15 +22,25 @@ include-in-header:
 [研究副教授 · 猶他大學流行病學系]{.home-hero-role}
 :::
 
-::: {style="text-align: center; line-height: 1.6;"}
+::: {.home-lead}
 
-我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時兼任人口健康科學系及 Kahlert 計算學院的兼職教師。我使用[統計計算](https://en.wikipedia.org/wiki/Computational_statistics){target="_blank"}研究[複雜系統](https://cssociety.org/about-us/what-are-cs){target="_blank"}。我擁有超過十年的科學軟件開發經驗，專注於高性能計算、數據可視化和社交網絡分析。近年來，我將現代 AI 與**代理式 AI**工具融入工作流程，使用 LLM 加速模型開發並推進分析。
+人與人之間的連結如何塑造行為、健康與疾病的傳播？我的研究開發統計與計算方法來探討這些問題。
 
-我的學術背景包括公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}，2011）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}，2015）和生物統計學（博士，[USC](https://usc.edu){target="_blank"}，2020）。
+我是一名方法學研究者，工作於網絡科學、[統計計算](https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080){target="_blank"}與[複雜系統](https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950){target="_blank"}的交會之處。我研究社會網絡、社會影響與疾病傳播，尤其專精於指數族隨機圖模型（ERGM）、模擬，以及機理式——即[理論驅動](https://doi.org/10.1098/rsbl.2017.0660){target="_blank"}——的機器學習。這些應用刻意保持跨學科，涵蓋[流行病學與疫情建模、犯罪學、行為的社會傳播，以及基因功能的演化](research.qmd)。
 
-我在[Paul Marjoram 教授](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}和[Kayla de la Haye 教授](https://kayladelahaye.net){target="_blank"}的指導下獲得生物統計學博士學位，論文題為"[Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems](../thesis.pdf){target="_blank"}"。
+工具開發是我工作的核心。我為統計推論、高性能計算與模擬建構[科學軟件](software.qmd)，將複雜的方法轉化為其他研究者可以信賴的工具。近年來，我致力於讓複雜模型能為專業人士以外的受眾所用，例如在近期美國麻疹疫情期間建構的互動式公眾[麻疹模擬器](https://ggvy.cl/shiny/measles){target="_blank"}。
 
-我提供編程、數據科學、網絡科學、科學軟件開發、數據可視化，以及將 AI/LLM 方法整合進研究與分析流程的諮詢服務。
+我是[猶他大學流行病學系](https://medicine.utah.edu/internalmedicine/epidemiology/){target="_blank"}的研究副教授，同時在人口健康科學系及 Kahlert 計算學院擔任兼職教職。我的跨學科訓練涵蓋公共政策（碩士，[UAI](https://www.uai.cl/){target="_blank"}）、經濟學（理學碩士，[Caltech](https://caltech.edu){target="_blank"}）與生物統計學（博士，[USC](https://usc.edu){target="_blank"}）。
+:::
+
+::: {.home-links}
+<a href="../cv/cv.pdf" title="學術履歷（PDF）" aria-label="學術履歷（PDF）"><i class="bi bi-file-earmark-person" aria-hidden="true"></i></a>
+<a href="https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en" target="_blank" title="Google Scholar 個人檔案" aria-label="Google Scholar 個人檔案"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></a>
+<!-- ORCID 是唯一沒有 Bootstrap Icons 字符的標誌，因此以 SVG 內嵌。 -->
+<a href="https://orcid.org/0000-0002-3171-0844" target="_blank" title="ORCID 個人檔案" aria-label="ORCID 個人檔案"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+<a href="https://github.com/gvegayon" target="_blank" title="GitHub 上的代碼" aria-label="GitHub 上的代碼"><i class="bi bi-github" aria-hidden="true"></i></a>
+<a href="https://linkedin.com/in/georgevegayon" target="_blank" title="LinkedIn 個人檔案" aria-label="LinkedIn 個人檔案"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+<a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
 :::
 
 ---
