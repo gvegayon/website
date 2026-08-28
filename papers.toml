@@ -29,6 +29,14 @@ author = 'Vega Yon, George G.; Thomas, Duncan C.; Morrison, John; Mi, Huaiyu; Th
 year = '2021'
 keywords = ['wip']
 
+[vegayon-ltcf]
+entrytype = 'unpublished'
+title = 'Exponential-Family Random Graph Models in Resident-Healthcare Provider Networks: An Application using data from Long-term Healthcare Facilities in the United States'
+author = 'Vega Yon, George G.; Zhang, Chong; Khader, Karim; Chang, Nai-Chung Nelson; Visnovsky, Lindsay D.; Thomas, Alun; Haroldsen, Candace; Stratford, Kristina; Samore, Matthew H.'
+year = '2026'
+keywords = ['wip']
+
+
 [tanakaImaginaryNetworkMotifs2024]
 entrytype = 'article'
 title = 'Imaginary Network Motifs: Structural Patterns of False Positives and Negatives in Social Networks'
