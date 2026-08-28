@@ -163,6 +163,7 @@ entrytype = 'inproceedings'
 title = 'How can models help public health?: Reflections from a Modeler'
 author = ''
 year = '2026'
+month = '4'
 eventtitle = 'Epi Corner'
 note = '(invited talk, [slides](https://docs.google.com/presentation/d/1tRYpRmqojL2exDZ4q494TobGHJgBJ4igmiWvZbkRKbk/edit?usp=sharing))'
 keywords = ['invitedtalk']
