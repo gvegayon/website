@@ -19,6 +19,13 @@ read_people <- function(path = NULL) {
   for (slug in names(data)) {
     p <- data[[slug]]
     p$slug <- slug
+    # A typo'd `photo` path should fail loudly at build time rather than ship
+    # a broken <img>. Resolved against the roster file's own directory, which
+    # is the repo root regardless of which project (root/es/zh) called us.
+    photo <- p$photo %||% ""
+    if (nzchar(photo) && !file.exists(file.path(dirname(path), photo))) {
+      warning(sprintf("people.toml: [%s] photo '%s' not found", slug, photo), call. = FALSE)
+    }
     for (nm in c(p$name, as.character(p$aka %||% character(0)))) {
       k <- person_key(nm)
       if (nzchar(k)) idx[[k]] <- p
@@ -42,6 +49,19 @@ match_person <- function(name, people) {
   people[[person_key(name)]]
 }
 
+# A roster entry's `photo` is site-root-relative, same convention as `hex` /
+# `image` in the .toml files (see asset_url() in R/html.R). Absent `photo` ->
+# "", so every caller below degrades to today's photo-less markup for free.
+# alt="" + aria-hidden is deliberate: the adjacent name is already the link
+# text, so a real alt would double-announce it to a screen reader.
+avatar_html <- function(per, root = "", cls = "avatar") {
+  photo <- if (is.null(per)) "" else (per$photo %||% "")
+  src <- asset_url(photo, root)
+  if (!nzchar(src)) return("")
+  sprintf('<img class="%s" src="%s" alt="" aria-hidden="true" loading="lazy" width="24" height="24">',
+          esc(cls), esc(src))
+}
+
 # Rebuilds the "A, B, & C" / "et al." join that fmt_authors() produces, but on
 # pre-rendered HTML fragments so each name can carry its own link.
 join_authors <- function(parts) {
@@ -55,17 +75,21 @@ join_authors <- function(parts) {
   paste0(paste(parts[-n], collapse = ", "), ", &amp; ", parts[n])
 }
 
-#' Author list as HTML, with roster links and affiliation tooltips.
+#' Author list as HTML, with roster links, affiliation tooltips, and photos.
 #'
 #' Falls back to the plain formatted name whenever a person is not in the
-#' roster, so a half-filled people.toml renders exactly like today.
-authors_html <- function(f, people = list()) {
+#' roster, so a half-filled people.toml renders exactly like today. `root` is
+#' the site_root()/DETAIL_ROOT prefix an avatar's `src` needs -- see
+#' avatar_html() and the comment on asset_url() in R/html.R.
+authors_html <- function(f, people = list(), root = "") {
   nm <- parse_authors(f$author)
   if (!length(nm)) return("")
 
   parts <- vapply(nm, function(p) {
     if (grepl(SELF, p, fixed = TRUE)) {
-      return(sprintf('<span class="is-self">%s</span>', esc(paste0(SELF, ", G. G."))))
+      per <- people[[person_key(paste0(SELF, ", George"))]]
+      return(sprintf('<span class="is-self">%s%s</span>',
+                      avatar_html(per, root), esc(paste0(SELF, ", G. G."))))
     }
     label <- one_author(sub("\\.$", "", p))
     if (identical(label, "et al.")) return(label)
@@ -75,11 +99,14 @@ authors_html <- function(f, people = list()) {
 
     aff <- per$affiliation %||% ""
     url <- per$url %||% ""
+    img <- avatar_html(per, root)
     if (nzchar(url)) {
-      sprintf('<a class="author-link" href="%s" target="_blank" rel="noopener"%s>%s</a>',
-              esc(url), if (nzchar(aff)) sprintf(' title="%s"', esc(aff)) else "", esc(label))
+      sprintf('<a class="author-link" href="%s" target="_blank" rel="noopener"%s>%s%s</a>',
+              esc(url), if (nzchar(aff)) sprintf(' title="%s"', esc(aff)) else "", img, esc(label))
     } else if (nzchar(aff)) {
-      sprintf('<span class="author-aff" title="%s">%s</span>', esc(aff), esc(label))
+      sprintf('<span class="author-aff" title="%s">%s%s</span>', esc(aff), img, esc(label))
+    } else if (nzchar(img)) {
+      sprintf('<span class="author-photo">%s%s</span>', img, esc(label))
     } else {
       esc(label)
     }

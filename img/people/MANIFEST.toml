@@ -1,0 +1,14 @@
+# Provenance for every photo in this directory, one table per slug (matching
+# people.toml). A photo may not be added or replaced here without a filled-in
+# `approved` date -- see tools/people-photos/README.md for the review
+# workflow: source, score against the identity rubric, generate review.html,
+# get sign-off, only then copy the file in and record it here.
+
+[gvy]
+file       = 'gvy.jpg'
+source_url = 'n/a -- site owner'
+retrieved  = 2026-08-28
+evidence   = "George's own selfie, already used elsewhere on this site (img/george-g-vega-yon-university-of-utah.jpg); no third-party identity verification needed. Cropped to the face/shoulders region (the original frame also contains a statue) and resized to 240x240."
+confidence = 'high'
+license    = "George's own photo of himself."
+approved   = 2026-08-28

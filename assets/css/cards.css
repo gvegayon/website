@@ -257,6 +257,18 @@
 .card__authors .author-link:hover { color: var(--ig-accent); }
 .card__authors .author-aff { border-bottom: 1px dotted var(--ig-line); cursor: help; }
 
+/* Roster avatars -- rendered only when a matched people.toml entry carries a
+   `photo`. Every other author keeps today's text-only markup. */
+.card__authors .avatar {
+  width: 1.35em;
+  height: 1.35em;
+  border-radius: 50%;
+  object-fit: cover;
+  vertical-align: -0.35em;
+  margin-right: 0.28em;
+  border: 1px solid var(--ig-line);
+}
+
 .card__links {
   margin: auto 0 0;
   padding-top: 0.35rem;
@@ -385,9 +397,25 @@
 
 .author-list .author {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
   line-height: 1.3;
   font-size: 0.92rem;
+}
+
+.author-list .author__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-list .avatar--detail {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: 0 0 auto;
+  border: 1px solid var(--ig-line);
 }
 
 .author-list .author__name { color: #2f2a26; }
@@ -474,4 +502,51 @@
   font-size: 0.74rem;
   color: var(--ig-muted, #7a6a5c);
   margin: -0.5rem 0 0.9rem;
+}
+
+/* ------------------------------------------------------------- people.qmd */
+/* Generated from people.toml by R/people_page.R (render_people_page()). */
+
+.people-list {
+  list-style: none;
+  margin: 0 0 1.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.people-list .person {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.avatar--lg,
+.avatar--lg-mono {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+  border: 1px solid var(--ig-line);
+}
+
+.avatar--lg { object-fit: cover; }
+
+.avatar--lg-mono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.person__name { font-weight: 700; }
+.person__years { font-weight: 400; color: var(--ig-muted); font-size: 0.85em; }
+.person__bio { margin: 0.15rem 0 0; font-size: 0.92rem; line-height: 1.45; }
+
+@media (max-width: 480px) {
+  .people-list .person { gap: 0.7rem; }
+  .avatar--lg, .avatar--lg-mono { width: 44px; height: 44px; }
 }
