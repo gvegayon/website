@@ -11,30 +11,25 @@ include-in-header:
   - file: ../_includes/hreflang-talks.html
 ---
 
+按時間順序整理的受邀演講、會議報告、工作坊與海報紀錄，內容取自我的[履歷](../cv/cv.pdf)。
+
 ```{r}
-#| label: fetch-talks
+#| label: render-talks-timeline
 #| echo: false
-#| results: asis
 #| warning: false
-# Fetched at render time, so a network failure must not take the build down:
-# fall back to a link instead of stopping the render.
-src <- "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md"
-tmp <- tempfile(fileext = ".md")
-
-ok <- tryCatch(
-  download.file(url = src, destfile = tmp, quiet = TRUE) == 0L,
-  error = function(e) FALSE,
-  warning = function(w) FALSE
+#| results: asis
+source("../R/entries.R")
+source("../R/html.R")
+source("../R/i18n.R")
+source("../R/talks.R")
+render_talk_timeline(
+  read_entries(
+    "../presentations-invited.toml",
+    "../presentations-conference.toml",
+    "../presentations-other.toml"
+  ),
+  language = "zh"
 )
-
-if (ok) {
-  # Removing the header
-  readLines(tmp, warn = FALSE) |>
-    gsub(pattern = "^# List of talks.+", replacement = "") |>
-    cat(sep = "\n")
-} else {
-  cat("现在无法获取演讲列表。请访问 [gvegayon/talks](https://github.com/gvegayon/talks) 查看最新列表。")
-}
 ```
 
 ---

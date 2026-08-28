@@ -158,3 +158,12 @@ eventtitle = 'Summer Institute in Computational Social Science (SICSS-UF)'
 note = '(invited talk, [slides](https://docs.google.com/presentation/d/11VwH8437yyqLY4mcrYKPMXY7makPwE8uX4QXCvJUBII/edit?usp=sharing))'
 keywords = ['invitedtalk']
 
+[talk-17-invited]
+entrytype = 'inproceedings'
+title = 'How can models help public health?: Reflections from a Modeler'
+author = ''
+year = '2026'
+eventtitle = 'Epi Corner'
+note = '(invited talk, [slides](https://docs.google.com/presentation/d/1tRYpRmqojL2exDZ4q494TobGHJgBJ4igmiWvZbkRKbk/edit?usp=sharing))'
+keywords = ['invitedtalk']
+

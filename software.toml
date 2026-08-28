@@ -83,7 +83,7 @@ kind = 'package'
 status = 'active'
 languages = ['R', 'C++']
 abstract = "Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics, as shown in Vega Yon et al. (2020). As a difference from the 'ergm' package, 'ergmito' circumvents using a Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses a Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions and other relevant functions directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms."
-keywords = ['networks', 'statistical models']
+keywords = ['networks', 'statistical models', 'ergm']
 hex = '/img/ergmito.webp'
 featured = true
 paper = 'yon2019exponential'
@@ -376,11 +376,28 @@ repo = 'https://github.com/gvegayon/imaginary-structures'
 docs = 'https://gvegayon.github.io/imaginary-structures/'
 cran = 'imaginarycss'
 kind = 'package'
-status = 'archived'
+status = 'active'
 languages = ['R']
 abstract = "Tools for measuring and testing imaginary cognitive social structure (CSS) motifs — patterns of false positives and negatives in cognitively perceived social networks relative to the actual network, categorized as partially false, completely false, and mixed false imaginary motifs, as described in Tanaka and Vega Yon (2024)."
 keywords = ['networks', 'cognition']
 paper = 'tanakaImaginaryNetworkMotifs2024'
+
+[tabulergm]
+entrytype = 'manual'
+title = 'tabulergm: Publication-Ready Tables and Summaries for Exponential-Family Random Graph Models'
+author = 'Vega Yon, George G.'
+year = '2026'
+note = 'R package version 0.1.0'
+url = 'https://cran.r-project.org/package=tabulergm'
+doi = '10.32614/CRAN.package.tabulergm'
+repo = 'https://github.com/gvegayon/tabulergm'
+docs = 'https://gvegayon.github.io/tabulergm/'
+cran = 'tabulergm'
+kind = 'package'
+status = 'active'
+languages = ['R']
+abstract = "Creates publication-ready tables documenting exponential-family random graph models (ERGMs), a class of statistical models for social networks (Robins et al., 2007, <doi:10.1016/j.socnet.2006.08.002>). Tables describe model terms through their definitions, mathematical representations, and graphical representations, and can be generated from ERGM formulas or from models fitted with the 'ergm' package (Hunter et al., 2008, <doi:10.18637/jss.v024.i03>). Resulting tables can be integrated into 'quarto' and 'rmarkdown' documents."
+keywords = ['networks', 'ergm']
 
 [idcup]
 entrytype = 'manual'

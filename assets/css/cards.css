@@ -304,6 +304,15 @@
 .tag--status.is-archived { background: #f2f1ef; border-color: #ddd9d3; color: #6d6862; }
 .tag--topic { text-transform: none; font-weight: 500; background: #fbf5ec; }
 
+/* Talk-type badges (talks.qmd, via R/talks.R) -- same five-state palette as
+   .tag--status above, reused rather than invented so a poster/workshop/talk
+   reads as consistently "typed" as a status pill does. */
+.tag--talktype.is-invited    { background: #eef2fb; border-color: #c7d4ef; color: #2f4f8a; }
+.tag--talktype.is-conference { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
+.tag--talktype.is-workshop   { background: #fdf3e3; border-color: #edd6ac; color: #8a5b12; }
+.tag--talktype.is-poster     { background: #f7ecf5; border-color: #e3c7dd; color: #7a3b6e; }
+.tag--talktype.is-talk       { background: #f2f1ef; border-color: #ddd9d3; color: #6d6862; }
+
 .badge {
   display: inline-flex;
   align-items: stretch;

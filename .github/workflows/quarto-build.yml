@@ -1,12 +1,6 @@
 name: Build and Deploy Quarto Website
 
 on:
-  schedule:
-    # Sundays at 03:00 UTC, an hour after update-metrics. That job rebuilds on
-    # its own when a number moves; this run is the safety net for talks.qmd,
-    # whose content is fetched from the gvegayon/talks repo at render time and
-    # so can change in a week with no metric change.
-    - cron: '0 3 * * 0'
   push:
     branches: [ main, master ]
   pull_request:

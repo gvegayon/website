@@ -5,7 +5,7 @@ This is the source code for my personal website built with Quarto.
 ## Structure
 
 - `index.qmd` - Homepage with bio and social links
-- `talks.qmd` - Automatically fetches talks from [gvegayon/talks](https://github.com/gvegayon/talks) repository
+- `talks.qmd` - Talk timeline, rendered from the three `presentations-*.toml` files
 - `publications.qmd` - Links to Google Scholar profile and research overview
 - `software.qmd` - Software list, rendered from `software.toml`
 - `research.qmd` - Publication list, rendered from `papers.toml`
@@ -22,9 +22,9 @@ of truth -- nothing regenerates them:
 | --- | --- |
 | `papers.toml` | `research.qmd`, CV publications |
 | `software.toml` | `software.qmd`, CV software |
-| `presentations-conference.toml` | CV conference talks |
-| `presentations-invited.toml` | CV invited talks |
-| `presentations-other.toml` | CV other talks |
+| `presentations-conference.toml` | `talks.qmd`, CV conference talks |
+| `presentations-invited.toml` | `talks.qmd`, CV invited talks |
+| `presentations-other.toml` | `talks.qmd`, CV other talks |
 
 One table per entry, keyed by citation key. `keywords` is an array; everything
 else, `author` and `editor` included, is a string. Values are plain text (or
@@ -97,10 +97,6 @@ talk sections.
 Accented characters must be literal UTF-8 -- `assert_no_accent_macros()` fails
 the CV render if a LaTeX accent macro (`\'e`) creeps in from a publisher's
 BibTeX export.
-
-Talks on `talks.qmd` are still fetched weekly from the
-[gvegayon/talks](https://github.com/gvegayon/talks) repository via GitHub
-Actions.
 
 ## Building Locally
 

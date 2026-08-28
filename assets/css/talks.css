@@ -1,0 +1,160 @@
+/* The year-rail timeline behind talks.qmd (see R/talks.R).
+ *
+ * Deliberately not a card grid: no .item-grid, no JS, no filter chips --
+ * just a chronology. Reuses .tag / .muted / .sep / --main-color from
+ * cards.css and styles.css (both already loaded on every page), and the
+ * talk-type colour rules (.tag--talktype.is-*) that live in cards.css next
+ * to .tag--status.is-*.
+ */
+
+.talks {
+  --tl-line: var(--ig-line, #e8dccd);
+  --tl-accent: var(--main-color, #A85200);
+  max-width: 860px;
+}
+
+.talks__summary {
+  font-family: var(--font-display, inherit);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+}
+
+.talks__years {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.7rem;
+  margin: 0 0 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--tl-line);
+}
+
+.talks__years a {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85rem;
+  color: var(--tl-accent);
+  text-decoration: none;
+}
+
+.talks__years a:hover { text-decoration: underline; }
+
+.talks__timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.talks__year {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.25rem;
+  padding-top: 0.25rem;
+}
+
+.talks__year + .talks__year {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--tl-line);
+}
+
+.talks__rail {
+  position: sticky;
+  top: 1rem;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+}
+
+.talks__yearnum {
+  font-family: var(--font-display, inherit);
+  font-weight: 700;
+  font-size: 1.7rem;
+  color: var(--tl-accent);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.talks__yearcount {
+  font-size: 0.78rem;
+  color: var(--ig-muted, #7a6a5c);
+}
+
+.talks__items {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 2px solid var(--tl-line);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.talk {
+  position: relative;
+}
+
+.talk::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0.4rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: var(--tl-accent);
+}
+
+.talk .tag--talktype {
+  float: right;
+  margin-left: 0.6rem;
+}
+
+.talk__title {
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.talk__title a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(var(--tl-accent), var(--tl-accent));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+}
+
+.talk__title a:hover { color: var(--tl-accent); }
+
+.talk__meta {
+  margin: 0 0 0.15rem;
+  font-size: 0.9rem;
+  color: var(--ig-muted, #7a6a5c);
+}
+
+.talk__meta .sep,
+.talk__links .sep { margin: 0 0.4rem; color: #c3a887; }
+
+.talk__links {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.talk__links a { color: var(--tl-accent); }
+
+@media (max-width: 720px) {
+  .talks__year { grid-template-columns: 1fr; gap: 0.4rem; }
+  .talks__rail {
+    position: static;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .talk .tag--talktype { float: none; display: inline-flex; margin: 0 0 0.3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .talk__title a { transition: none; }
+}

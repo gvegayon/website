@@ -11,28 +11,23 @@ include-in-header:
   - file: _includes/hreflang-talks.html
 ---
 
+A chronological record of invited talks, conference presentations, workshops, and posters, drawn from my [CV](cv/cv.pdf).
+
 ```{r}
-#| label: fetch-talks
+#| label: render-talks-timeline
 #| echo: false
-#| results: asis
 #| warning: false
-# Fetched at render time, so a network failure must not take the build down:
-# fall back to a link instead of stopping the render.
-src <- "https://raw.githubusercontent.com/gvegayon/talks/refs/heads/master/README.md"
-tmp <- tempfile(fileext = ".md")
-
-ok <- tryCatch(
-  download.file(url = src, destfile = tmp, quiet = TRUE) == 0L,
-  error = function(e) FALSE,
-  warning = function(w) FALSE
+#| results: asis
+source("R/entries.R")
+source("R/html.R")
+source("R/i18n.R")
+source("R/talks.R")
+render_talk_timeline(
+  read_entries(
+    "presentations-invited.toml",
+    "presentations-conference.toml",
+    "presentations-other.toml"
+  ),
+  language = "en"
 )
-
-if (ok) {
-  # Removing the header
-  readLines(tmp, warn = FALSE) |>
-    gsub(pattern = "^# List of talks.+", replacement = "") |>
-    cat(sep = "\n")
-} else {
-  cat("The talk list could not be fetched right now. See [gvegayon/talks](https://github.com/gvegayon/talks) for the current list.")
-}
 ```

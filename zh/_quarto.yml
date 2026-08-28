@@ -91,6 +91,7 @@ format:
     css:
       - ../styles.css
       - ../assets/css/cards.css
+      - ../assets/css/talks.css
     toc: false
     page-layout: article
     # Needs site-url; emits <link rel="canonical"> on every page.
