@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ggvy.cl/sitemap.xml
+Sitemap: https://ggvy.cl/es/sitemap.xml
+Sitemap: https://ggvy.cl/zh/sitemap.xml
