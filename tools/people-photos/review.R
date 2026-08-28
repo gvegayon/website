@@ -59,7 +59,7 @@ card_html <- function(c) {
       <p class="notes"><strong>Notes:</strong> %s</p>
       <p class="approve">Approved? &nbsp; [ ] yes &nbsp; [ ] no &nbsp; (tell George which slugs to commit)</p>
     </section>',
-    esc(c$slug %||% "?"), esc(conf),
+    esc(conf), esc(c$slug %||% "?"), esc(conf),
     esc(c$file %||% ""), esc(c$crop %||% c$file %||% ""),
     esc(c$source_url %||% "#"), esc(c$page_title %||% c$source_url %||% ""),
     signal_row(c), esc(c$notes %||% "")
