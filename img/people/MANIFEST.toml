@@ -121,3 +121,56 @@ evidence   = "GitHub display name 'Olivia Banks'; README bio text is word-for-wo
 confidence = 'medium'
 license    = "GitHub avatar, self-published by Olivia Banks."
 approved   = 2026-08-28
+
+# The five entries below were, like marjoram/delahaye/valente/quistorff/
+# fabrega above, not sourced through the identity-verification workflow --
+# George supplied each URL directly in chat, naming the person. Anto's is
+# an official University of Utah directory photo; the other four are
+# LinkedIn media.licdn.com CDN URLs, which (unlike the LinkedIn profile
+# pages themselves) are public static assets and did not require going
+# through any login wall to fetch.
+
+[anto]
+file       = 'anto.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx476/files/styles/portrait_tablet/public/media/images/2022/eric-anto2%20%281%29.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN -- matches this entry's affiliation (Population Health Sciences, University of Utah)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[diesen]
+file       = 'diesen.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/C5603AQFvSTZLKpDikA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653432818901'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication). Photo shows University of Utah College of Science branding, consistent with this entry's affiliation."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Hyrum Thomas Diesen."
+approved   = 2026-08-28
+
+[kentmarvick]
+file       = 'kentmarvick.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQFjg54jKj2tzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712357194016'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Jacqueline M. Kent-Marvick."
+approved   = 2026-08-28
+
+[lawsonmichod]
+file       = 'lawsonmichod.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/C5603AQHnRM8ukHFIUA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1652185928092'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Katherine Lawson-Michod."
+approved   = 2026-08-28
+
+[bischoff]
+file       = 'bischoff.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQHsfrB9e8HU8g/profile-displayphoto-shrink_800_800/B56ZcKDSFpHoAc-/0/1748220323166'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Porter Bischoff."
+approved   = 2026-08-28
