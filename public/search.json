@@ -46,14 +46,14 @@
     "href": "zh/people.html#現任成員",
     "title": "團隊",
     "section": "現任成員",
-    "text": "現任成員\n\nSima Najafzadehkhoei（2024–至今）— 猶他大學人口健康科學系生物統計學博士生。導師及研究助理指導老師。計算流行病學、基於主體的模型和機器學習。\nAnibal Olivera（2024–至今）— 智利 Universidad del Desarrollo 社會複雜性博士生。導師及研究助理指導老師。網絡科學和 R 套件開發。\nOlivia Banks（2024–至今）— 猶他大學榮譽課程本科生，計算機科學與細胞分子生物學雙主修。導師及研究助理指導老師。軟件開發和計算流行病學。\nEric Anto（2023–至今）— 猶他大學人口健康科學系生物統計學博士生。博士論文委員會成員。"
+    "text": "現任成員\nSima Najafzadehkhoei (2024–至今)猶他大學人口健康科學系生物統計學博士生。導師及研究助理指導老師。計算流行病學、基於主體的模型和機器學習。Anibal Olivera (2024–至今)智利 Universidad del Desarrollo 社會複雜性博士生。導師及研究助理指導老師。網絡科學和 R 套件開發。Olivia Banks (2024–至今)猶他大學榮譽課程本科生，計算機科學與細胞分子生物學雙主修。導師及研究助理指導老師。軟件開發和計算流行病學。Eric Anto (2023–至今)猶他大學人口健康科學系生物統計學博士生。博士論文委員會成員。"
   },
   {
     "objectID": "zh/people.html#過往成員",
     "href": "zh/people.html#過往成員",
     "title": "團隊",
     "section": "過往成員",
-    "text": "過往成員\n\nAndrew Pulsipher（2025）— 猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。\nJake Wagoner（2025）— 猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。ForeSITE 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。\nHyrum Thomas Diesen（2024–2025）— 猶他大學生物科學學院分子細胞演化生物學博士生。導師。\nDerek Meyer（2022–2024）— 猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。\nJacqueline M. Kent-Marvick（2022–2024）— 猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。\nKatherine (Kayleigh) Lawson-Michod（2022–2024）— 猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。\nPorter Bischoff（2023）— Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。\nLuis Lopez（2022）— 美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。"
+    "text": "過往成員\nDerek Meyer (2022–2024)猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。Jake Wagoner (2025)猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。ForeSITE 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。Andrew Pulsipher (2025)猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。Hyrum Thomas Diesen (2024–2025)猶他大學生物科學學院分子細胞演化生物學博士生。導師。Jacqueline M. Kent-Marvick (2022–2024)猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。Katherine (Kayleigh) Lawson-Michod (2022–2024)猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。Porter Bischoff (2023)Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。LLuis Lopez (2022)美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。"
   },
   {
     "objectID": "zh/people.html#我的導師",
@@ -102,7 +102,7 @@
     "href": "software/wwinference.html",
     "title": "wwinference",
     "section": "",
-    "text": "ActivePackage2024version0.1.1.99stars31Johnson, K.Morris, D.Abbott, S.Bernal Zelaya, C.Vega Yon, G. G.University of UtahiDBayer, D.Magee, A.Olesen, S.Link•Repository\nJointly infers infection dynamics from wastewater data and epidemiological indicators"
+    "text": "ActivePackage2024version0.1.1.99stars31Johnson, K.London School of Hygiene & Tropical MedicineMorris, D.Center for Forecasting and Outbreak Analytics, CDCAbbott, S.London School of Hygiene & Tropical MedicineBernal Zelaya, C.Vega Yon, G. G.University of UtahiDBayer, D.Center for Forecasting and Outbreak Analytics, CDCMagee, A.Umeå UniversityOlesen, S.Center for Forecasting and Outbreak Analytics, CDCLink•Repository\nJointly infers infection dynamics from wastewater data and epidemiological indicators"
   },
   {
     "objectID": "software/wwinference.html#about",
@@ -214,7 +214,7 @@
     "href": "software/multigroup-vaccine.html",
     "title": "multigroup.vaccine",
     "section": "",
-    "text": "ActivePackage2026version0.1.1stars2Toth, D.Wagoner, J.Scientific Computing and Imaging Institute, University of UtahRay, W.Vega Yon, G. G.University of UtahiDLink•Docs•Repository\nAnalyze Outbreak Models of Multi-Group Populations with Vaccination"
+    "text": "ActivePackage2026version0.1.1stars2Toth, D.Division of Epidemiology, University of UtahWagoner, J.Scientific Computing and Imaging Institute, University of UtahRay, W.Vega Yon, G. G.University of UtahiDLink•Docs•Repository\nAnalyze Outbreak Models of Multi-Group Populations with Vaccination"
   },
   {
     "objectID": "software/multigroup-vaccine.html#about",
@@ -417,7 +417,7 @@
     "href": "research/visnovskymultidrugresistantorganism2026.html",
     "title": "P-1104. Multidrug-Resistant Organism (MDRO)-Contaminated Mobile Equipment Networks in Skilled Nursing Facilities",
     "section": "",
-    "text": "Published2026Visnovsky, L. D.Leecaster, M.Vega Yon, G. G.University of UtahiDLoc-Carrillo, C. M.Dorsan, E.Huber, T.Jamu, S. M.Stratford, K.Samore, M. H.Drews, F. A.DOI•Publisher / Preprint"
+    "text": "Published2026Visnovsky, L. D.Division of Epidemiology, University of UtahLeecaster, M.Vega Yon, G. G.University of UtahiDLoc-Carrillo, C. M.Dorsan, E.Huber, T.Jamu, S. M.Stratford, K.Division of Epidemiology, University of UtahSamore, M. H.Division of Epidemiology, University of UtahDrews, F. A.DOI•Publisher / Preprint"
   },
   {
     "objectID": "research/visnovskymultidrugresistantorganism2026.html#abstract",
@@ -487,7 +487,7 @@
     "href": "research/vegayon2019c.html",
     "title": "parallel: A command for parallel computing",
     "section": "",
-    "text": "Published2019Cited by18Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDQuistorff, B.DOI•Publisher / Preprint"
+    "text": "Published2019Cited by18Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDQuistorff, B.U.S. Bureau of Economic AnalysisDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/vegayon2019c.html#abstract",
@@ -508,7 +508,7 @@
     "href": "research/vegayon2019a.html",
     "title": "fmcmc: A friendly MCMC framework",
     "section": "",
-    "text": "Published2019Cited by8Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDMarjoram, P.DOI•Publisher / Preprint"
+    "text": "Published2019Cited by8Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDMarjoram, P.University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/vegayon2019a.html#abstract",
@@ -536,7 +536,7 @@
     "href": "research/vegayon-geese.html",
     "title": "Modeling Gene Functional Evolution using Sufficient Statistics",
     "section": "",
-    "text": "Work in progress2021Vega Yon, G. G.University of UtahiDThomas, D. C.Morrison, J.Mi, H.Thomas, P. D.Marjoram, P."
+    "text": "Work in progress2021Vega Yon, G. G.University of UtahiDThomas, D. C.Department of Preventive Medicine, University of Southern CaliforniaMorrison, J.Mi, H.Division of Bioinformatics, Keck School of Medicine, University of Southern CaliforniaThomas, P. D.Division of Bioinformatics, Keck School of Medicine, University of Southern CaliforniaMarjoram, P.University of Southern California"
   },
   {
     "objectID": "research/vegayon-geese.html#cite",
@@ -550,7 +550,7 @@
     "href": "research/valente2019.html",
     "title": "Network influences on policy implementation: Evidence from a global health treaty",
     "section": "",
-    "text": "Published2019Cited by14Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Valente, T. W.Wipfli, H.Vega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
+    "text": "Published2019Cited by14Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Valente, T. W.Keck School of Medicine, University of Southern CaliforniaWipfli, H.Vega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/valente2019.html#abstract",
@@ -606,7 +606,7 @@
     "href": "research/piombo2025.html",
     "title": "The impact of social norms on diffusion dynamics: A simulation of e-cigarette use behavior",
     "section": "",
-    "text": "Published2025Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Piombo, S.Vega Yon, G. G.University of UtahiDValente, T. W.DOI•Publisher / Preprint"
+    "text": "Published2025Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Piombo, S.Vega Yon, G. G.University of UtahiDValente, T. W.Keck School of Medicine, University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/piombo2025.html#abstract",
@@ -697,7 +697,7 @@
     "href": "research/lovecharacterizingspatiotemporalvariation2023.html",
     "title": "Characterizing Spatiotemporal Variation in Transmission Heterogeneity during the 2022 Mpox Outbreak in the USA",
     "section": "",
-    "text": "Work in progress2023Cited by2Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Love, J.LaPrete, C. R.Sheets, T. R.Vega Yon, G. G.University of UtahiDThomas, A.Samore, M. H.Keegan, L. T.Adler, F. R.Slayton, R. B.Spicknall, I. H.Toth, D. J. A.DOI"
+    "text": "Work in progress2023Cited by2Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Love, J.LaPrete, C. R.Sheets, T. R.Vega Yon, G. G.University of UtahiDThomas, A.Division of Genetic Epidemiology, University of UtahSamore, M. H.Division of Epidemiology, University of UtahKeegan, L. T.Division of Epidemiology, University of UtahAdler, F. R.Slayton, R. B.Spicknall, I. H.Toth, D. J. A.Division of Epidemiology, University of UtahDOI"
   },
   {
     "objectID": "research/lovecharacterizingspatiotemporalvariation2023.html#abstract",
@@ -718,7 +718,7 @@
     "href": "research/johnsonbayesiangenerativemodeling2026.html",
     "title": "Bayesian Generative Modeling for Heterogeneous Wastewater Data Applied to COVID-19 Forecasting",
     "section": "",
-    "text": "Work in progress2026Johnson, K. E.Vega Yon, G. G.University of UtahiDBrand, S. P. C.Bernal Zelaya, C. O.Bayer, D.Volkov, I.Susswein, Z.Magee, A.Gostic, K. M.English, K. M.Ghinai, I.Hamlet, A.Olesen, S. W.Pulliam, J. R. C.Abbott, S.Morris, D. H.DOI•Publisher / Preprint"
+    "text": "Work in progress2026Johnson, K. E.London School of Hygiene & Tropical MedicineVega Yon, G. G.University of UtahiDBrand, S. P. C.Bernal Zelaya, C. O.Bayer, D.Center for Forecasting and Outbreak Analytics, CDCVolkov, I.Susswein, Z.Magee, A.Umeå UniversityGostic, K. M.English, K. M.Ghinai, I.Hamlet, A.Olesen, S. W.Center for Forecasting and Outbreak Analytics, CDCPulliam, J. R. C.Abbott, S.London School of Hygiene & Tropical MedicineMorris, D. H.Center for Forecasting and Outbreak Analytics, CDCDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/johnsonbayesiangenerativemodeling2026.html#abstract",
@@ -739,7 +739,7 @@
     "href": "research/fabregalacoa2013.html",
     "title": "El impacto del rating televisivo sobre la actividad en Twitter: evidencia para Chile sobre la base del evento TELETÓN 2012",
     "section": "",
-    "text": "Published2013Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Fábrega Lacoa, J.Vega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
+    "text": "Published2013Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Fábrega Lacoa, J.Centro de Investigación de la Complejidad Social, Universidad del DesarrolloVega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/fabregalacoa2013.html#abstract",
@@ -760,7 +760,7 @@
     "href": "research/delahaye2019.html",
     "title": "Smoking Diffusion through Networks of Diverse, Urban American Adolescents over the High School Period",
     "section": "",
-    "text": "Published2019Cited by16Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.de la Haye, K.Shin, H.Vega Yon, G. G.University of UtahiDValente, T. W.DOI•Publisher / Preprint"
+    "text": "Published2019Cited by16Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.de la Haye, K.University of Southern CaliforniaShin, H.Vega Yon, G. G.University of UtahiDValente, T. W.Keck School of Medicine, University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/delahaye2019.html#abstract",
@@ -823,14 +823,14 @@
     "href": "es/people.html#actuales",
     "title": "Personas",
     "section": "Actuales",
-    "text": "Actuales\n\nSima Najafzadehkhoei (2024–presente) — Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Epidemiología computacional, modelos basados en agentes y aprendizaje de máquinas.\nAnibal Olivera (2024–presente) — Estudiante de doctorado en Complejidad Social, Universidad del Desarrollo, Chile. Mentor y supervisor como ayudante de investigación. Ciencia de redes y desarrollo de paquetes de R.\nOlivia Banks (2024–presente) — Estudiante de pregrado del programa de honores, doble titulación en Ciencia de la Computación y Biología Celular y Molecular, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Desarrollo de software y epidemiología computacional.\nEric Anto (2023–presente) — Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Miembro del comité de tesis doctoral."
+    "text": "Actuales\nSima Najafzadehkhoei (2024–presente)Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Epidemiología computacional, modelos basados en agentes y aprendizaje de máquinas.Anibal Olivera (2024–presente)Estudiante de doctorado en Complejidad Social, Universidad del Desarrollo, Chile. Mentor y supervisor como ayudante de investigación. Ciencia de redes y desarrollo de paquetes de R.Olivia Banks (2024–presente)Estudiante de pregrado del programa de honores, doble titulación en Ciencia de la Computación y Biología Celular y Molecular, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Desarrollo de software y epidemiología computacional.Eric Anto (2023–presente)Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Miembro del comité de tesis doctoral."
   },
   {
     "objectID": "es/people.html#anteriores",
     "href": "es/people.html#anteriores",
     "title": "Personas",
     "section": "Anteriores",
-    "text": "Anteriores\n\nAndrew Pulsipher (2025) — Científico de datos del equipo ForeSITE, el centro Insight Net de los CDC liderado por la Universidad de Utah. Supervisor como ayudante de investigación. Paquetes de R y herramientas para el análisis de brotes. Actualmente Ingeniero de Software en PointClickCare.\nJake Wagoner (2025) — Personal del Instituto de Computación Científica e Imágenes (SCI), Universidad de Utah. Co-supervisor y mentor. Desarrollo de herramientas para ForeSITE. Actualmente estudiante de postgrado en ciencia de la computación e Ingeniero de Software en PassiveLogic.\nHyrum Thomas Diesen (2024–2025) — Estudiante de doctorado en Biología Molecular, Celular y Evolutiva, Escuela de Ciencias Biológicas, Universidad de Utah. Mentor.\nDerek Meyer (2022–2024) — Estudiante de magíster en Ciencias de Salud Poblacional, Universidad de Utah. Supervisor, supervisor como ayudante de investigación y miembro del comité de tesis. Modelos basados en agentes para epidemias. Actualmente Bioestadístico en el Data Coordinating Center de la Universidad de Utah.\nJacqueline M. Kent-Marvick (2022–2024) — Doctorado en Ciencias de la Salud, Facultad de Enfermería, Universidad de Utah. Mentor. Ciencia de redes y análisis de redes sociales. Actualmente Profesora Asistente de Investigación en la Facultad de Enfermería de la Universidad de Utah.\nKatherine (Kayleigh) Lawson-Michod (2022–2024) — Estudiante de doctorado en Epidemiología Clínica y Traslacional, Ciencias de Salud Poblacional, Universidad de Utah. Presidente del examen de calificación y miembro del comité de tesis doctoral. Actualmente investigadora postdoctoral en el Fred Hutchinson Cancer Center.\nPorter Bischoff (2023) — Estudiante de pregrado, Utah Valley University, Programa de Verano de Investigación para Pregrado (SPUR) de la Universidad de Utah. Mentor. Visualización de redes con R. Actualmente estudiante de medicina en la Washington University School of Medicine en San Luis.\nLuis Lopez (2022) — Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM)."
+    "text": "Anteriores\nDerek Meyer (2022–2024)Estudiante de magíster en Ciencias de Salud Poblacional, Universidad de Utah. Supervisor, supervisor como ayudante de investigación y miembro del comité de tesis. Modelos basados en agentes para epidemias. Actualmente Bioestadístico en el Data Coordinating Center de la Universidad de Utah.Jake Wagoner (2025)Personal del Instituto de Computación Científica e Imágenes (SCI), Universidad de Utah. Co-supervisor y mentor. Desarrollo de herramientas para ForeSITE. Actualmente estudiante de postgrado en ciencia de la computación e Ingeniero de Software en PassiveLogic.Andrew Pulsipher (2025)Científico de datos del equipo ForeSITE, el centro Insight Net de los CDC liderado por la Universidad de Utah. Supervisor como ayudante de investigación. Paquetes de R y herramientas para el análisis de brotes. Actualmente Ingeniero de Software en PointClickCare.Hyrum Thomas Diesen (2024–2025)Estudiante de doctorado en Biología Molecular, Celular y Evolutiva, Escuela de Ciencias Biológicas, Universidad de Utah. Mentor.Jacqueline M. Kent-Marvick (2022–2024)Doctorado en Ciencias de la Salud, Facultad de Enfermería, Universidad de Utah. Mentor. Ciencia de redes y análisis de redes sociales. Actualmente Profesora Asistente de Investigación en la Facultad de Enfermería de la Universidad de Utah.Katherine (Kayleigh) Lawson-Michod (2022–2024)Estudiante de doctorado en Epidemiología Clínica y Traslacional, Ciencias de Salud Poblacional, Universidad de Utah. Presidente del examen de calificación y miembro del comité de tesis doctoral. Actualmente investigadora postdoctoral en el Fred Hutchinson Cancer Center.Porter Bischoff (2023)Estudiante de pregrado, Utah Valley University, Programa de Verano de Investigación para Pregrado (SPUR) de la Universidad de Utah. Mentor. Visualización de redes con R. Actualmente estudiante de medicina en la Washington University School of Medicine en San Luis.LLuis Lopez (2022)Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM)."
   },
   {
     "objectID": "es/people.html#mis-propios-mentores",
@@ -893,14 +893,14 @@
     "href": "people.html#current",
     "title": "People",
     "section": "Current",
-    "text": "Current\n\nSima Najafzadehkhoei (2024–present) — Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Mentor and research assistant supervisor. Computational epidemiology, agent-based models, and machine learning.\nAnibal Olivera (2024–present) — Ph.D. student in Social Complexity, Universidad del Desarrollo, Chile. Mentor and research assistant supervisor. Network science and R package development.\nOlivia Banks (2024–present) — Undergraduate honors student, double major in Computer Science and Cellular and Molecular Biology, University of Utah. Mentor and research assistant supervisor. Software development and computational epidemiology.\nEric Anto (2023–present) — Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Dissertation committee member."
+    "text": "Current\nSima Najafzadehkhoei (2024–present)Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Mentor and research assistant supervisor. Computational epidemiology, agent-based models, and machine learning.Anibal Olivera (2024–present)Ph.D. student in Social Complexity, Universidad del Desarrollo, Chile. Mentor and research assistant supervisor. Network science and R package development.Olivia Banks (2024–present)Undergraduate honors student, double major in Computer Science and Cellular and Molecular Biology, University of Utah. Mentor and research assistant supervisor. Software development and computational epidemiology.Eric Anto (2023–present)Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Dissertation committee member."
   },
   {
     "objectID": "people.html#past",
     "href": "people.html#past",
     "title": "People",
     "section": "Past",
-    "text": "Past\n\nAndrew Pulsipher (2025) — Data scientist on the ForeSITE team, the CDC Insight Net center led by the University of Utah. Research assistant supervisor. R packages and tooling for outbreak analytics. Now Software Engineer at PointClickCare.\nJake Wagoner (2025) — Staff, Scientific Computing and Imaging (SCI) Institute, University of Utah. Co-supervisor and mentor. Tool development for ForeSITE. Now a graduate student in computer science and Software Engineer at PassiveLogic.\nHyrum Thomas Diesen (2024–2025) — Ph.D. student in Molecular, Cellular, and Evolutionary Biology, School of Biological Sciences, University of Utah. Mentor.\nDerek Meyer (2022–2024) — M.Sc. student in Population Health Sciences, University of Utah. Supervisor, research assistant supervisor, and thesis committee member. Agent-based models for epidemics. Now Biostatistician at the University of Utah Data Coordinating Center.\nJacqueline M. Kent-Marvick (2022–2024) — Ph.D. in Health Sciences, College of Nursing, University of Utah. Mentor. Network science and social network analysis. Now Research Assistant Professor at the University of Utah College of Nursing.\nKatherine (Kayleigh) Lawson-Michod (2022–2024) — Ph.D. student in Clinical and Translational Epidemiology, Population Health Sciences, University of Utah. Qualifying exam chair and dissertation committee member. Now a postdoctoral fellow at Fred Hutchinson Cancer Center.\nPorter Bischoff (2023) — Undergraduate student, Utah Valley University, Summer Program for Undergraduate Research (SPUR) at the University of Utah. Mentor. Network visualization with R. Now a medical student at Washington University School of Medicine in St. Louis.\nLuis Lopez (2022) — Postbaccalaureate fellow, National Institutes of Health. Mentor. Exponential-family random graph models."
+    "text": "Past\nDerek Meyer (2022–2024)M.Sc. student in Population Health Sciences, University of Utah. Supervisor, research assistant supervisor, and thesis committee member. Agent-based models for epidemics. Now Biostatistician at the University of Utah Data Coordinating Center.Jake Wagoner (2025)Staff, Scientific Computing and Imaging (SCI) Institute, University of Utah. Co-supervisor and mentor. Tool development for ForeSITE. Now a graduate student in computer science and Software Engineer at PassiveLogic.Andrew Pulsipher (2025)Data scientist on the ForeSITE team, the CDC Insight Net center led by the University of Utah. Research assistant supervisor. R packages and tooling for outbreak analytics. Now Software Engineer at PointClickCare.Hyrum Thomas Diesen (2024–2025)Ph.D. student in Molecular, Cellular, and Evolutionary Biology, School of Biological Sciences, University of Utah. Mentor.Jacqueline M. Kent-Marvick (2022–2024)Ph.D. in Health Sciences, College of Nursing, University of Utah. Mentor. Network science and social network analysis. Now Research Assistant Professor at the University of Utah College of Nursing.Katherine (Kayleigh) Lawson-Michod (2022–2024)Ph.D. student in Clinical and Translational Epidemiology, Population Health Sciences, University of Utah. Qualifying exam chair and dissertation committee member. Now a postdoctoral fellow at Fred Hutchinson Cancer Center.Porter Bischoff (2023)Undergraduate student, Utah Valley University, Summer Program for Undergraduate Research (SPUR) at the University of Utah. Mentor. Network visualization with R. Now a medical student at Washington University School of Medicine in St. Louis.LLuis Lopez (2022)Postbaccalaureate fellow, National Institutes of Health. Mentor. Exponential-family random graph models."
   },
   {
     "objectID": "people.html#my-own-mentors",
@@ -921,7 +921,7 @@
     "href": "research/bell2019.html",
     "title": "Sensing eating mimicry among family members",
     "section": "",
-    "text": "Published2019Cited by11Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Bell, B. M.Spruijt-Metz, D.Vega Yon, G. G.University of UtahiDMondol, A. S.Alam, R.Ma, M.Emi, I.Lach, J.Stankovic, J. A.de la Haye, K.DOI•Publisher / Preprint"
+    "text": "Published2019Cited by11Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Bell, B. M.Spruijt-Metz, D.Vega Yon, G. G.University of UtahiDMondol, A. S.Alam, R.Ma, M.Emi, I.Lach, J.Stankovic, J. A.de la Haye, K.University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/bell2019.html#abstract",
@@ -942,7 +942,7 @@
     "href": "research/duongincorporatingsocialdeterminants2024.html",
     "title": "Incorporating Social Determinants of Health into Transmission Modeling of COVID-19 Vaccine in the US: A Scoping Review",
     "section": "",
-    "text": "Published2024Duong, K. N. C.Nguyen, D. T.Kategeaw, W.Liang, X.Khaing, W.Visnovsky, L. D.Veettil, S. K.McFarland, M. M.Nelson, R. E.Jones, B. E.Pavia, A. T.Coates, E.Khader, K.Love, J.Vega Yon, G. G.University of UtahiDZhang, Y.Willson, T.Dorsan, E.Toth, D. J. A.Jones, M. M.Samore, M. H.Chaiyakunapruk, N.DOI•Publisher / Preprint"
+    "text": "Published2024Duong, K. N. C.Nguyen, D. T.Kategeaw, W.Liang, X.Khaing, W.Visnovsky, L. D.Division of Epidemiology, University of UtahVeettil, S. K.McFarland, M. M.Nelson, R. E.Jones, B. E.Pavia, A. T.Division of Pediatric Infectious Diseases, University of UtahCoates, E.Khader, K.Division of Epidemiology, University of UtahLove, J.Vega Yon, G. G.University of UtahiDZhang, Y.Willson, T.Dorsan, E.Toth, D. J. A.Division of Epidemiology, University of UtahJones, M. M.Samore, M. H.Division of Epidemiology, University of UtahChaiyakunapruk, N.DOI•Publisher / Preprint"
   },
   {
     "objectID": "research/duongincorporatingsocialdeterminants2024.html#abstract",
@@ -984,7 +984,7 @@
     "href": "research/lesslerwhyepidemicrisk2026.html",
     "title": "Why Epidemic Risk at the 2026 World Cup May Not Be What You Think",
     "section": "",
-    "text": "Work in progress2026Lessler, J.Smith, C. P.Das, P.Sykes, A. L.Urbinati, A.Geith, K.Powers, K. A.Davis, J. T.Kern-Allely, S. C.Vega Yon, G. G.University of UtahiDLofgren, E. T.Pearson, C. A. B.Vespignani, A.DOI•Publisher / Preprint"
+    "text": "Work in progress2026Lessler, J.Smith, C. P.Das, P.Sykes, A. L.Urbinati, A.Network Science Institute, Northeastern UniversityGeith, K.Powers, K. A.Davis, J. T.Kern-Allely, S. C.Vega Yon, G. G.University of UtahiDLofgren, E. T.Paul G. Allen School for Global Health, Washington State UniversityPearson, C. A. B.Vespignani, A.DOI•Publisher / Preprint"
   },
   {
     "objectID": "research/lesslerwhyepidemicrisk2026.html#abstract",
@@ -1005,7 +1005,7 @@
     "href": "research/maryehiddenburdenmeasles2026.html",
     "title": "Hidden Burden of a Measles Outbreak Revealed by Genomic and Transmission Models",
     "section": "",
-    "text": "Work in progress2026Marye, A.Toth, D. J. A.Vega Yon, G. G.University of UtahiDWagoner, J.Scientific Computing and Imaging Institute, University of UtahLofgren, E. T.Samore, M. H.Pavia, A. T.Nolen, L. D.Komatsu, K.Oakeson, K.Keegan, L. T.DOI•Publisher / Preprint"
+    "text": "Work in progress2026Marye, A.Toth, D. J. A.Division of Epidemiology, University of UtahVega Yon, G. G.University of UtahiDWagoner, J.Scientific Computing and Imaging Institute, University of UtahLofgren, E. T.Paul G. Allen School for Global Health, Washington State UniversitySamore, M. H.Division of Epidemiology, University of UtahPavia, A. T.Division of Pediatric Infectious Diseases, University of UtahNolen, L. D.Utah Department of Health and Human ServicesKomatsu, K.Oakeson, K.Keegan, L. T.Division of Epidemiology, University of UtahDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/maryehiddenburdenmeasles2026.html#abstract",
@@ -1026,7 +1026,7 @@
     "href": "research/milandovisionestimationinstantaneous2026.html",
     "title": "A Vision for Estimation of the Instantaneous Reproductive Number",
     "section": "",
-    "text": "Published2026Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Milando, C. W.Vega Yon, G. G.University of UtahiDJohnson, K.Urbinati, A.St-Onge, G.Klein, B.Cori, A.White, L. F.DOI•Publisher / Preprint"
+    "text": "Published2026Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Milando, C. W.Vega Yon, G. G.University of UtahiDJohnson, K.London School of Hygiene & Tropical MedicineUrbinati, A.Network Science Institute, Northeastern UniversitySt-Onge, G.Klein, B.Cori, A.White, L. F.Department of Biostatistics, Boston University School of Public HealthDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/milandovisionestimationinstantaneous2026.html#abstract",
@@ -1047,7 +1047,7 @@
     "href": "research/najafzadehkhoeimachinegeneralizelearning2025a.html",
     "title": "Generalized Machine Learning for Fast Calibration of Agent-Based Epidemic Models",
     "section": "",
-    "text": "Work in progressNajafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDModenesi, B.Meyer, D. S.University of Utah Data Coordinating CenterDOI•Publisher / Preprint•arXiv"
+    "text": "Work in progressNajafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDModenesi, B.Biostatistics, University of UtahMeyer, D. S.University of Utah Data Coordinating CenterDOI•Publisher / Preprint•arXiv"
   },
   {
     "objectID": "research/najafzadehkhoeimachinegeneralizelearning2025a.html#abstract",
@@ -1068,7 +1068,7 @@
     "href": "research/panahiveteranperspectivesepilepsy2023.html",
     "title": "Veteran Perspectives of Epilepsy Care: Impact of Veteran Satisfaction, Knowledge, and Proactivity",
     "section": "",
-    "text": "Published2023Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Panahi, S.Kennedy, E.Roghani, A.Vega Yon, G. G.University of UtahiDVanCott, A.Gugger, J. J.Raquel Lopez, M.Pugh, M. J.DOI•Publisher / Preprint"
+    "text": "Published2023Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Panahi, S.Kennedy, E.Roghani, A.Vega Yon, G. G.University of UtahiDVanCott, A.Gugger, J. J.Raquel Lopez, M.Pugh, M. J.Division of Epidemiology, University of UtahDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/panahiveteranperspectivesepilepsy2023.html#abstract",
@@ -1117,7 +1117,7 @@
     "href": "research/tanakaimaginarynetworkmotifs2024.html",
     "title": "Imaginary Network Motifs: Structural Patterns of False Positives and Negatives in Social Networks",
     "section": "",
-    "text": "Published2024Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Tanaka, K.Vega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
+    "text": "Published2024Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Tanaka, K.Department of Management, Aarhus UniversityVega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/tanakaimaginarynetworkmotifs2024.html#abstract",
@@ -1145,7 +1145,7 @@
     "href": "research/valente2020.html",
     "title": "Diffusion/Contagion Processes on Social Networks",
     "section": "",
-    "text": "Published2020Cited by70Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Valente, T. W.Vega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
+    "text": "Published2020Cited by70Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Valente, T. W.Keck School of Medicine, University of Southern CaliforniaVega Yon, G. G.University of UtahiDDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/valente2020.html#abstract",
@@ -1166,7 +1166,7 @@
     "href": "research/vegayon-ltcf.html",
     "title": "Exponential-Family Random Graph Models in Resident-Healthcare Provider Networks: An Application using data from Long-term Healthcare Facilities in the United States",
     "section": "",
-    "text": "Work in progress2026Vega Yon, G. G.University of UtahiDZhang, C.Khader, K.Chang, N. N.Visnovsky, L. D.Thomas, A.Haroldsen, C.Stratford, K.Samore, M. H."
+    "text": "Work in progress2026Vega Yon, G. G.University of UtahiDZhang, C.Study Design and Biostatistics Center, CTSI, University of UtahKhader, K.Division of Epidemiology, University of UtahChang, N. N.Visnovsky, L. D.Division of Epidemiology, University of UtahThomas, A.Division of Genetic Epidemiology, University of UtahHaroldsen, C.Stratford, K.Division of Epidemiology, University of UtahSamore, M. H.Division of Epidemiology, University of Utah"
   },
   {
     "objectID": "research/vegayon-ltcf.html#abstract",
@@ -1187,7 +1187,7 @@
     "href": "research/vegayon2019b.html",
     "title": "slurmR: A lightweight wrapper for HPC with Slurm",
     "section": "",
-    "text": "Published2019Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDMarjoram, P.DOI•Publisher / Preprint"
+    "text": "Published2019Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDMarjoram, P.University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/vegayon2019b.html#abstract",
@@ -1215,7 +1215,7 @@
     "href": "research/vegayon2020aphylo.html",
     "title": "Bayesian parameter estimation for automatic annotation of gene functions using observational data and phylogenetic trees",
     "section": "",
-    "text": "Published2021Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDThomas, D. C.Morrison, J.Mi, H.Thomas, P. D.Marjoram, P.DOI•Publisher / Preprint"
+    "text": "Published2021Cited by1Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDThomas, D. C.Department of Preventive Medicine, University of Southern CaliforniaMorrison, J.Mi, H.Division of Bioinformatics, Keck School of Medicine, University of Southern CaliforniaThomas, P. D.Division of Bioinformatics, Keck School of Medicine, University of Southern CaliforniaMarjoram, P.University of Southern CaliforniaDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/vegayon2020aphylo.html#abstract",
@@ -1243,7 +1243,7 @@
     "href": "research/vegayondiscreteexponentialfamilymodels2022.html",
     "title": "Discrete Exponential-Family Models for Multivariate Binary Outcomes",
     "section": "",
-    "text": "Work in progress2022Vega Yon, G. G.University of UtahiDPugh, M. J.Valente, T. W.DOI•Publisher / Preprint•arXiv"
+    "text": "Work in progress2022Vega Yon, G. G.University of UtahiDPugh, M. J.Division of Epidemiology, University of UtahValente, T. W.Keck School of Medicine, University of Southern CaliforniaDOI•Publisher / Preprint•arXiv"
   },
   {
     "objectID": "research/vegayondiscreteexponentialfamilymodels2022.html#abstract",
@@ -1271,7 +1271,7 @@
     "href": "research/vegayonpracticalguidelinesreflections2026.html",
     "title": "Practical Guidelines and Reflections on Building Public Health Software: A Measles Case Study (Preprint)",
     "section": "",
-    "text": "Work in progress2026Vega Yon, G. G.University of UtahiDThornton, D.Redd, A.Pulsipher, A.Toth, D.Dorsan, E.Rennert, L.Johnson, K.White, L. F.Gruninger, R.Nolen, L. D.Samore, M. H.DOI•Publisher / Preprint"
+    "text": "Work in progress2026Vega Yon, G. G.University of UtahiDThornton, D.Division of Epidemiology, University of UtahRedd, A.Pulsipher, A.Toth, D.Division of Epidemiology, University of UtahDorsan, E.Rennert, L.Johnson, K.London School of Hygiene & Tropical MedicineWhite, L. F.Department of Biostatistics, Boston University School of Public HealthGruninger, R.Nolen, L. D.Utah Department of Health and Human ServicesSamore, M. H.Division of Epidemiology, University of UtahDOI•Publisher / Preprint"
   },
   {
     "objectID": "research/vegayonpracticalguidelinesreflections2026.html#abstract",
@@ -1292,7 +1292,7 @@
     "href": "research/yon2019exponential.html",
     "title": "Exponential random graph models for little networks",
     "section": "",
-    "text": "Published2021Cited by47Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDSlaughter, A.de la Haye, K.DOI•Publisher / Preprint•arXiv"
+    "text": "Published2021Cited by47Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDSlaughter, A.de la Haye, K.University of Southern CaliforniaDOI•Publisher / Preprint•arXiv"
   },
   {
     "objectID": "research/yon2019exponential.html#abstract",
@@ -1383,7 +1383,7 @@
     "href": "software/epiworldrcalibrate.html",
     "title": "epiworldRcalibrate",
     "section": "",
-    "text": "ActivePackage2026CRAN0.1.4downloads1.3kstars1Najafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDModenesi, B.CRAN•Docs•Repository•DOI\nFast and Effortless Calibration of Agent-Based Models using Machine Learning"
+    "text": "ActivePackage2026CRAN0.1.4downloads1.3kstars1Najafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDModenesi, B.Biostatistics, University of UtahCRAN•Docs•Repository•DOI\nFast and Effortless Calibration of Agent-Based Models using Machine Learning"
   },
   {
     "objectID": "software/epiworldrcalibrate.html#about",
@@ -1404,7 +1404,7 @@
     "href": "software/ergmito.html",
     "title": "ergmito",
     "section": "",
-    "text": "ActivePackage2025CRAN0.3-2downloads28kstars9Cited by47Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDde la Haye, K.CRAN•Docs•Repository•DOI\nExponential Random Graph Models for Small Networks"
+    "text": "ActivePackage2025CRAN0.3-2downloads28kstars9Cited by47Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Vega Yon, G. G.University of UtahiDde la Haye, K.University of Southern CaliforniaCRAN•Docs•Repository•DOI\nExponential Random Graph Models for Small Networks"
   },
   {
     "objectID": "software/ergmito.html#about",
@@ -1453,7 +1453,7 @@
     "href": "software/imaginarycss.html",
     "title": "imaginarycss",
     "section": "",
-    "text": "ActivePackage2026CRAN0.1.0downloads2.3kstars1Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Najafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDTanaka, K.CRAN•Docs•Repository•DOI\nTools for Studying Imaginary Cognitive Social Structure"
+    "text": "ActivePackage2026CRAN0.1.0downloads2.3kstars1Cited by3Citation counts from OpenAlex; downloads from CRAN. Updated 2026-08-15.Najafzadehkhoei, S.Population Health Sciences, University of UtahVega Yon, G. G.University of UtahiDTanaka, K.Department of Management, Aarhus UniversityCRAN•Docs•Repository•DOI\nTools for Studying Imaginary Cognitive Social Structure"
   },
   {
     "objectID": "software/imaginarycss.html#about",
@@ -1502,7 +1502,7 @@
     "href": "software/netdiffuser.html",
     "title": "netdiffuseR",
     "section": "",
-    "text": "ActivePackage2026CRAN1.25.0downloads58kstars92Vega Yon, G. G.University of UtahiDValente, T.CRAN•Docs•Repository•DOI\nAnalysis of Diffusion and Contagion Processes on Networks"
+    "text": "ActivePackage2026CRAN1.25.0downloads58kstars92Vega Yon, G. G.University of UtahiDValente, T.Keck School of Medicine, University of Southern CaliforniaCRAN•Docs•Repository•DOI\nAnalysis of Diffusion and Contagion Processes on Networks"
   },
   {
     "objectID": "software/netdiffuser.html#about",
@@ -1523,7 +1523,7 @@
     "href": "software/parallel.html",
     "title": "parallel",
     "section": "",
-    "text": "ActivePackage2019version1.20.0stars134Vega Yon, G. G.University of UtahiDQuistorff, B.Link•Repository\nStata Module for Parallel Computing"
+    "text": "ActivePackage2019version1.20.0stars134Vega Yon, G. G.University of UtahiDQuistorff, B.U.S. Bureau of Economic AnalysisLink•Repository\nStata Module for Parallel Computing"
   },
   {
     "objectID": "software/parallel.html#about",
@@ -1544,7 +1544,7 @@
     "href": "software/pyrenew.html",
     "title": "PyRenew",
     "section": "",
-    "text": "ActivePackage2024version0.1.0stars29Bayer, D.Morris, D. H.Vega Yon, G. G.University of UtahiDMartin, T.Bidari, S.Link•Repository\nA Package for Bayesian Renewal Modeling with JAX and NumPyro"
+    "text": "ActivePackage2024version0.1.0stars29Bayer, D.Center for Forecasting and Outbreak Analytics, CDCMorris, D. H.Center for Forecasting and Outbreak Analytics, CDCVega Yon, G. G.University of UtahiDMartin, T.Bidari, S.Link•Repository\nA Package for Bayesian Renewal Modeling with JAX and NumPyro"
   },
   {
     "objectID": "software/pyrenew.html#about",
