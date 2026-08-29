@@ -270,3 +270,165 @@ evidence   = "URL supplied directly by George in chat, hosted on a University of
 confidence = 'high'
 license    = "Official institutional headshot, University of Utah School of Medicine."
 approved   = 2026-08-28
+
+# The seventeen entries below (the "frequent coauthor long tail") WERE
+# sourced by the agent, through the full workflow in this directory's
+# README.md: source ladder, S1-S6 scoring, published as the "Headshot
+# Dossier II" review artifact, and approved by George in full ("All looks
+# great!"). Two Google Scholar profiles in this batch (mi, pthomas) turned
+# out to have generic silhouette placeholder images rather than real
+# photos at the same citpid=1 URL pattern that worked for marjoram above --
+# caught by visually inspecting the download, not by the HTTP status code.
+
+[johnson]
+file       = 'johnson.jpg'
+source_url = 'https://www.lshtm.ac.uk/sites/default/files/styles/profile_full_image_elements/public/profile_image/6448.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official LSHTM faculty page; image alt text reads 'Kaitlyn Johnson'."
+confidence = 'high'
+license    = "Official institutional headshot, London School of Hygiene & Tropical Medicine."
+approved   = 2026-08-29
+
+[bayer]
+file       = 'bayer.jpg'
+source_url = 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=ewul4B0AAAAJ&citpid=1'
+retrieved  = 2026-08-29
+evidence   = "Google Scholar profile photo (graduation portrait) -- self-controlled, single source (his GitHub avatar is a pixel-art icon, not a real photo, so not usable as a second source)."
+confidence = 'medium'
+license    = "Self-published Google Scholar profile photo, Damon Bayer."
+approved   = 2026-08-29
+
+[morris]
+file       = 'morris.jpg'
+source_url = 'https://dylanhmorris.com/images/profile-image.jpg'
+retrieved  = 2026-08-29
+evidence   = "Personal site (dylanhmorris.com) -- self-controlled, single source."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Dylan H. Morris."
+approved   = 2026-08-29
+
+[abbott]
+file       = 'abbott.jpg'
+source_url = 'https://www.lshtm.ac.uk/sites/default/files/styles/profile_full_image_elements/public/profile_image/4299.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official LSHTM faculty page; image alt text reads 'Sam Abbott'."
+confidence = 'high'
+license    = "Official institutional headshot, London School of Hygiene & Tropical Medicine."
+approved   = 2026-08-29
+
+[lofgren]
+file       = 'lofgren.jpg'
+source_url = 'https://s3.wp.wsu.edu/uploads/sites/908/2022/06/Lofgren-Eric-07-22.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Washington State University College of Veterinary Medicine faculty page, photo hosted on WSU's own CDN."
+confidence = 'high'
+license    = "Official institutional headshot, Washington State University."
+approved   = 2026-08-29
+
+[magee]
+file       = 'magee.jpg'
+source_url = 'https://afmagee.github.io/assets/images/afm.jpg'
+retrieved  = 2026-08-29
+evidence   = "Personal site (afmagee.github.io) -- self-controlled, single source. Image alt text reads 'Andrew Magee'."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Andrew Magee."
+approved   = 2026-08-29
+
+[mi]
+file       = 'mi.jpg'
+source_url = 'https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=178461&cachekey=22008c23-4712-421c-8b02-1f81780c2cfb'
+retrieved  = 2026-08-29
+evidence   = "USC's official researcher-profile system (profiles.sc-ctsi.org, mirrored on researcherprofiles.org); image alt text reads 'Photo of Huaiyu Mi, PhD'. keck.usc.edu itself sits behind a Cloudflare bot-check that was not attempted. His Google Scholar profile has no real photo (generic silhouette placeholder)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[olesen]
+file       = 'olesen.jpg'
+source_url = 'https://scottolesen.com/images/face.png'
+retrieved  = 2026-08-29
+evidence   = "Personal site (scottolesen.com) -- self-controlled, single source. Image alt text reads 'Scott Olesen'."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Scott W. Olesen."
+approved   = 2026-08-29
+
+[pavia]
+file       = 'pavia.jpg'
+source_url = 'https://securembm.uuhsc.utah.edu/zeus/public/mbm-media/faculty-profile?facultyPK=u0028338'
+retrieved  = 2026-08-29
+evidence   = "Official University of Utah Health provider page; image alt text reads 'Andrew T. Pavia'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Health."
+approved   = 2026-08-29
+
+[pugh]
+file       = 'pugh.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00055413.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official U of U School of Medicine faculty page; image alt text reads 'Mary Jo Pugh'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-29
+
+[stratford]
+file       = 'stratford.jpg'
+source_url = 'https://staffcouncil.utah.edu/wp-content/uploads/sites/85/2023/03/KristinaStratfordWEB.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official University of Utah Staff Council article about her professional development award; image alt text reads 'Kristina Stratford'. No dedicated faculty-style profile page exists since she is research-administration staff, not faculty."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Staff Council."
+approved   = 2026-08-29
+
+[pthomas]
+file       = 'pthomas.jpg'
+source_url = 'https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=190433&cachekey=c245dcdc-3b09-4816-9982-d0776bec1d42'
+retrieved  = 2026-08-29
+evidence   = "USC's official researcher-profile system (profiles.sc-ctsi.org, mirrored on researcherprofiles.org); image alt text reads 'Photo of Paul D Thomas, PhD'. Same keck.usc.edu bot-check note as Huaiyu Mi. His Google Scholar profile also has no real photo (generic silhouette placeholder)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[tanaka]
+file       = 'tanaka.jpg'
+source_url = 'https://pure.au.dk/portal/files-asset/224961434/Kyosuke_Tanaka_PURE.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Aarhus University research-portal (Pure) page; image alt text reads 'Kyosuke Tanaka'. He has moved institutions since coauthoring with George; affiliation reflects his current one."
+confidence = 'high'
+license    = "Official institutional headshot, Aarhus University."
+approved   = 2026-08-29
+
+[athomas]
+file       = 'athomas.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00005212.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official U of U School of Medicine faculty page; image alt text reads 'Alun Thomas'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-29
+
+[dthomas]
+file       = 'dthomas.jpg'
+source_url = 'https://today.usc.edu/wp-content/uploads/2012/09/1075.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official USC news/profile page (USC Today); image alt text reads 'Duncan Thomas'. Photo is small/dated (134px source) -- he no longer appears on USC Biostatistics' current faculty listing, likely emeritus."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[urbinati]
+file       = 'urbinati.jpg'
+source_url = 'https://cdn.prod.website-files.com/65f340004a14e15b92bd3e06/65f340004a14e15b92bd51c0_Alessandra_web.jpeg'
+retrieved  = 2026-08-29
+evidence   = "Official Northeastern University Network Science Institute people page -- the exact lab (Alessandro Vespignani's MOBS Lab) tied to her coauthored papers."
+confidence = 'high'
+license    = "Official institutional headshot, Northeastern University Network Science Institute."
+approved   = 2026-08-29
+
+[white]
+file       = 'white.jpg'
+source_url = 'https://www.bu.edu/sph/files/2013/10/Laura-White-1.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Boston University School of Public Health faculty page; image alt text reads 'Laura White'."
+confidence = 'high'
+license    = "Official institutional headshot, Boston University."
+approved   = 2026-08-29

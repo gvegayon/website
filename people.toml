@@ -293,3 +293,105 @@ photo = 'img/people/nolen.jpg'
 [marye]
 name = 'Marye, Abbey'
 photo = 'img/people/marye.jpg'
+
+[johnson]
+name = 'Johnson, Kaitlyn'
+url = 'https://www.lshtm.ac.uk/aboutus/people/johnson.kaitlyn'
+affiliation = 'London School of Hygiene & Tropical Medicine'
+photo = 'img/people/johnson.jpg'
+
+[bayer]
+name = 'Bayer, Damon'
+url = 'https://github.com/damonbayer'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/bayer.jpg'
+
+[morris]
+name = 'Morris, Dylan H.'
+url = 'https://dylanhmorris.com/'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/morris.jpg'
+
+[abbott]
+name = 'Abbott, Sam'
+url = 'https://www.lshtm.ac.uk/aboutus/people/abbott.sam'
+affiliation = 'London School of Hygiene & Tropical Medicine'
+photo = 'img/people/abbott.jpg'
+
+[lofgren]
+name = 'Lofgren, Eric T.'
+url = 'https://vetmed.wsu.edu/our-team/wsu-profile/eric.lofgren/'
+affiliation = 'Paul G. Allen School for Global Health, Washington State University'
+photo = 'img/people/lofgren.jpg'
+
+[magee]
+name = 'Magee, Andrew'
+url = 'https://afmagee.github.io/'
+affiliation = 'Umeå University'
+photo = 'img/people/magee.jpg'
+
+[mi]
+name = 'Mi, Huaiyu'
+url = 'http://keck.usc.edu/faculty/huaiyu-mi/'
+affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+photo = 'img/people/mi.jpg'
+
+[olesen]
+name = 'Olesen, Scott W.'
+url = 'https://scottolesen.com/'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/olesen.jpg'
+
+[pavia]
+name = 'Pavia, Andrew T.'
+url = 'https://healthcare.utah.edu/find-a-doctor/andrew-t-pavia'
+affiliation = 'Division of Pediatric Infectious Diseases, University of Utah'
+photo = 'img/people/pavia.jpg'
+
+[pugh]
+name = 'Pugh, Mary Jo'
+url = 'https://medicine.utah.edu/faculty/mary-jo-pugh'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/pugh.jpg'
+
+[stratford]
+name = 'Stratford, Kristina'
+url = 'https://staffcouncil.utah.edu/staff-council-news/professional-development-award-recipient-kristina-stratford/'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/stratford.jpg'
+
+[pthomas]
+name = 'Thomas, Paul D.'
+url = 'https://keck.usc.edu/faculty-search/paul-d-thomas/'
+affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+photo = 'img/people/pthomas.jpg'
+
+[tanaka]
+name = 'Tanaka, Kyosuke'
+url = 'https://pure.au.dk/portal/en/persons/kyosuke@mgmt.au.dk'
+affiliation = 'Department of Management, Aarhus University'
+photo = 'img/people/tanaka.jpg'
+
+[athomas]
+name = 'Thomas, Alun'
+url = 'https://medicine.utah.edu/faculty/alun-thomas'
+affiliation = 'Division of Genetic Epidemiology, University of Utah'
+photo = 'img/people/athomas.jpg'
+
+[dthomas]
+name = 'Thomas, Duncan C.'
+url = 'https://today.usc.edu/profile/duncan-thomas/'
+affiliation = 'Department of Preventive Medicine, University of Southern California'
+photo = 'img/people/dthomas.jpg'
+
+[urbinati]
+name = 'Urbinati, Alessandra'
+url = 'https://www.networkscienceinstitute.org/people/alessandra-urbinati'
+affiliation = 'Network Science Institute, Northeastern University'
+photo = 'img/people/urbinati.jpg'
+
+[white]
+name = 'White, Laura F.'
+url = 'https://www.bu.edu/sph/profile/laura-white/'
+affiliation = 'Department of Biostatistics, Boston University School of Public Health'
+photo = 'img/people/white.jpg'
