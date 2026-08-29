@@ -13,33 +13,17 @@ include-in-header:
 
 我的大部分工作都是與學生和研究人員共同完成的。我領導 [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} 研究小組，並指導高中、本科、碩士和博士各階段的學生。
 
-## 現任成員
-
-- [**Sima Najafzadehkhoei**](https://www.linkedin.com/in/sima-najafzadehkhoei-23961b345/){target="_blank"}（2024--至今）--- 猶他大學人口健康科學系生物統計學博士生。導師及研究助理指導老師。計算流行病學、基於主體的模型和機器學習。
-
-- [**Anibal Olivera**](https://aoliveram.cl/){target="_blank"}（2024--至今）--- 智利 Universidad del Desarrollo 社會複雜性博士生。導師及研究助理指導老師。網絡科學和 R 套件開發。
-
-- [**Olivia Banks**](https://oliviactl.net/){target="_blank"}（2024--至今）--- 猶他大學榮譽課程本科生，計算機科學與細胞分子生物學雙主修。導師及研究助理指導老師。軟件開發和計算流行病學。
-
-- [**Eric Anto**](https://www.linkedin.com/in/eric-anto-a82774125/){target="_blank"}（2023--至今）--- 猶他大學人口健康科學系生物統計學博士生。博士論文委員會成員。
-
-## 過往成員
-
-- [**Andrew Pulsipher**](https://www.linkedin.com/in/a-pulsipher/){target="_blank"}（2025）--- 猶他大學主導的 CDC Insight Net 中心 [ForeSITE](https://epiforesite.github.io/ForeSITE_Website/){target="_blank"} 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。
-
-- [**Jake Wagoner**](https://www.linkedin.com/in/jake-wagoner-92123522b/){target="_blank"}（2025）--- 猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。[ForeSITE](https://epiforesite.github.io/ForeSITE_Website/){target="_blank"} 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。
-
-- [**Hyrum Thomas Diesen**](https://www.linkedin.com/in/hyrum-diesen-26a612148/){target="_blank"}（2024--2025）--- 猶他大學生物科學學院分子細胞演化生物學博士生。導師。
-
-- [**Derek Meyer**](https://www.linkedin.com/in/derek-meyer-289126227/){target="_blank"}（2022--2024）--- 猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。
-
-- [**Jacqueline M. Kent-Marvick**](https://www.linkedin.com/in/jacqueline-kent-marvick-phd-rn-534378204/){target="_blank"}（2022--2024）--- 猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。
-
-- [**Katherine (Kayleigh) Lawson-Michod**](https://www.linkedin.com/in/katherine-lawson-michod-6a6314ab/){target="_blank"}（2022--2024）--- 猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。
-
-- [**Porter Bischoff**](https://pbischoff3.github.io/){target="_blank"}（2023）--- Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。
-
-- **Luis Lopez**（2022）--- 美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。
+```{r}
+#| label: render-people-page
+#| echo: false
+#| warning: false
+#| results: asis
+source("../R/entries.R")
+source("../R/html.R")
+source("../R/i18n.R")
+source("../R/people_page.R")
+render_people_page("zh")
+```
 
 ## 我的導師
 

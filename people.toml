@@ -12,6 +12,28 @@
 # they come from a source in this repo (people.qmd, cv/cv.qmd); the rest are
 # filled in automatically from OpenAlex, which reports the institution on each
 # authorship. Do not guess -- a wrong affiliation is worse than none.
+#
+# --- fields used for author-link resolution (papers.toml / software.toml) ---
+#   name, url, orcid, affiliation, aka, self, photo
+#
+# `photo` is a site-root-relative path, same convention as `hex`/`image` in
+# the .toml files -- no leading slash (see asset_url() in R/html.R). It is the
+# switch: an entry with no `photo` renders exactly as it did before this field
+# existed. A photo may only be added via the review workflow in
+# tools/people-photos/ (identity verification + George's sign-off before
+# commit); provenance for every approved photo lives in img/people/MANIFEST.toml.
+#
+# --- fields used only by the generated People page (R/people_page.R) -------
+#   group ("current" | "past"), start, end, bio, bio_es, bio_zh, display
+#
+# `group` is what puts someone on the People page at all -- an entry present
+# only for author-link resolution (a frequent coauthor, a distant mentor
+# covered by the page's own hand-written "My own mentors" section) should NOT
+# have one. `start`/`end` are years; an omitted `end` renders as "<start>-
+# present" (i18n'd). `bio_es`/`bio_zh` are optional per-language overrides of
+# `bio`, falling back to the English `bio` when absent, same rule get_i18n()
+# uses. `display` overrides the name shown on the People page (default:
+# derived from `name`, "Last, First" -> "First Last").
 
 [gvy]
 name = 'Vega Yon, George G.'
@@ -19,6 +41,7 @@ url = 'https://ggvy.cl'
 orcid = '0000-0002-3171-0844'
 affiliation = 'University of Utah'
 self = true
+photo = 'img/people/gvy.jpg'
 
 # --- mentees and group members who are also coauthors (see people.qmd) ---
 
@@ -26,27 +49,349 @@ self = true
 name = 'Najafzadehkhoei, Sima'
 url = 'https://www.linkedin.com/in/sima-najafzadehkhoei-23961b345/'
 affiliation = 'Population Health Sciences, University of Utah'
+photo = 'img/people/najafzadehkhoei.jpg'
+display = 'Sima Najafzadehkhoei'
+group = 'current'
+start = 2024
+bio = "Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Mentor and research assistant supervisor. Computational epidemiology, agent-based models, and machine learning."
+bio_es = "Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Epidemiología computacional, modelos basados en agentes y aprendizaje de máquinas."
+bio_zh = "猶他大學人口健康科學系生物統計學博士生。導師及研究助理指導老師。計算流行病學、基於主體的模型和機器學習。"
 
 [meyer]
 name = 'Meyer, Derek'
 url = 'https://www.linkedin.com/in/derek-meyer-289126227/'
 affiliation = 'University of Utah Data Coordinating Center'
+photo = 'img/people/meyer.jpg'
+display = 'Derek Meyer'
+group = 'past'
+start = 2022
+end = 2024
+bio = "M.Sc. student in Population Health Sciences, University of Utah. Supervisor, research assistant supervisor, and thesis committee member. Agent-based models for epidemics. Now Biostatistician at the University of Utah Data Coordinating Center."
+bio_es = "Estudiante de magíster en Ciencias de Salud Poblacional, Universidad de Utah. Supervisor, supervisor como ayudante de investigación y miembro del comité de tesis. Modelos basados en agentes para epidemias. Actualmente Bioestadístico en el Data Coordinating Center de la Universidad de Utah."
+bio_zh = "猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。"
 
 [wagoner]
 name = 'Wagoner, Jake'
 url = 'https://www.linkedin.com/in/jake-wagoner-92123522b/'
 affiliation = 'Scientific Computing and Imaging Institute, University of Utah'
+photo = 'img/people/wagoner.jpg'
+display = 'Jake Wagoner'
+group = 'past'
+start = 2025
+end = 2025
+bio = "Staff, Scientific Computing and Imaging (SCI) Institute, University of Utah. Co-supervisor and mentor. Tool development for ForeSITE. Now a graduate student in computer science and Software Engineer at PassiveLogic."
+bio_es = "Personal del Instituto de Computación Científica e Imágenes (SCI), Universidad de Utah. Co-supervisor y mentor. Desarrollo de herramientas para ForeSITE. Actualmente estudiante de postgrado en ciencia de la computación e Ingeniero de Software en PassiveLogic."
+bio_zh = "猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。ForeSITE 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。"
 
 [pulsipher]
 name = 'Pulsipher, Andrew'
 url = 'https://www.linkedin.com/in/a-pulsipher/'
+photo = 'img/people/pulsipher.jpg'
+display = 'Andrew Pulsipher'
+group = 'past'
+start = 2025
+end = 2025
+bio = "Data scientist on the ForeSITE team, the CDC Insight Net center led by the University of Utah. Research assistant supervisor. R packages and tooling for outbreak analytics. Now Software Engineer at PointClickCare."
+bio_es = "Científico de datos del equipo ForeSITE, el centro Insight Net de los CDC liderado por la Universidad de Utah. Supervisor como ayudante de investigación. Paquetes de R y herramientas para el análisis de brotes. Actualmente Ingeniero de Software en PointClickCare."
+bio_zh = "猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。"
 
 [olivera]
 name = 'Olivera, Anibal'
 url = 'https://aoliveram.cl/'
 affiliation = 'Universidad del Desarrollo'
+photo = 'img/people/olivera.jpg'
+display = 'Anibal Olivera'
+group = 'current'
+start = 2024
+bio = "Ph.D. student in Social Complexity, Universidad del Desarrollo, Chile. Mentor and research assistant supervisor. Network science and R package development."
+bio_es = "Estudiante de doctorado en Complejidad Social, Universidad del Desarrollo, Chile. Mentor y supervisor como ayudante de investigación. Ciencia de redes y desarrollo de paquetes de R."
+bio_zh = "智利 Universidad del Desarrollo 社會複雜性博士生。導師及研究助理指導老師。網絡科學和 R 套件開發。"
 
 [banks]
 name = 'Banks, Olivia'
 url = 'https://oliviactl.net/'
 affiliation = 'University of Utah'
+photo = 'img/people/banks.jpg'
+display = 'Olivia Banks'
+group = 'current'
+start = 2024
+bio = "Undergraduate honors student, double major in Computer Science and Cellular and Molecular Biology, University of Utah. Mentor and research assistant supervisor. Software development and computational epidemiology."
+bio_es = "Estudiante de pregrado del programa de honores, doble titulación en Ciencia de la Computación y Biología Celular y Molecular, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Desarrollo de software y epidemiología computacional."
+bio_zh = "猶他大學榮譽課程本科生，計算機科學與細胞分子生物學雙主修。導師及研究助理指導老師。軟件開發和計算流行病學。"
+
+[anto]
+name = 'Anto, Eric'
+url = 'https://www.linkedin.com/in/eric-anto-a82774125/'
+affiliation = 'Population Health Sciences, University of Utah'
+photo = 'img/people/anto.jpg'
+display = 'Eric Anto'
+group = 'current'
+start = 2023
+bio = "Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Dissertation committee member."
+bio_es = "Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Miembro del comité de tesis doctoral."
+bio_zh = "猶他大學人口健康科學系生物統計學博士生。博士論文委員會成員。"
+
+[diesen]
+name = 'Diesen, Hyrum Thomas'
+url = 'https://www.linkedin.com/in/hyrum-diesen-26a612148/'
+affiliation = 'School of Biological Sciences, University of Utah'
+photo = 'img/people/diesen.jpg'
+display = 'Hyrum Thomas Diesen'
+group = 'past'
+start = 2024
+end = 2025
+bio = "Ph.D. student in Molecular, Cellular, and Evolutionary Biology, School of Biological Sciences, University of Utah. Mentor."
+bio_es = "Estudiante de doctorado en Biología Molecular, Celular y Evolutiva, Escuela de Ciencias Biológicas, Universidad de Utah. Mentor."
+bio_zh = "猶他大學生物科學學院分子細胞演化生物學博士生。導師。"
+
+[kentmarvick]
+name = 'Kent-Marvick, Jacqueline M.'
+aka = ['Kent-Marvick, Jacqueline']
+url = 'https://www.linkedin.com/in/jacqueline-kent-marvick-phd-rn-534378204/'
+affiliation = 'College of Nursing, University of Utah'
+photo = 'img/people/kentmarvick.jpg'
+display = 'Jacqueline M. Kent-Marvick'
+group = 'past'
+start = 2022
+end = 2024
+bio = "Ph.D. in Health Sciences, College of Nursing, University of Utah. Mentor. Network science and social network analysis. Now Research Assistant Professor at the University of Utah College of Nursing."
+bio_es = "Doctorado en Ciencias de la Salud, Facultad de Enfermería, Universidad de Utah. Mentor. Ciencia de redes y análisis de redes sociales. Actualmente Profesora Asistente de Investigación en la Facultad de Enfermería de la Universidad de Utah."
+bio_zh = "猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。"
+
+[lawsonmichod]
+name = 'Lawson-Michod, Katherine'
+aka = ['Lawson-Michod, Kayleigh']
+url = 'https://www.linkedin.com/in/katherine-lawson-michod-6a6314ab/'
+affiliation = 'Population Health Sciences, University of Utah'
+photo = 'img/people/lawsonmichod.jpg'
+display = 'Katherine (Kayleigh) Lawson-Michod'
+group = 'past'
+start = 2022
+end = 2024
+bio = "Ph.D. student in Clinical and Translational Epidemiology, Population Health Sciences, University of Utah. Qualifying exam chair and dissertation committee member. Now a postdoctoral fellow at Fred Hutchinson Cancer Center."
+bio_es = "Estudiante de doctorado en Epidemiología Clínica y Traslacional, Ciencias de Salud Poblacional, Universidad de Utah. Presidente del examen de calificación y miembro del comité de tesis doctoral. Actualmente investigadora postdoctoral en el Fred Hutchinson Cancer Center."
+bio_zh = "猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。"
+
+[bischoff]
+name = 'Bischoff, Porter'
+url = 'https://pbischoff3.github.io/'
+affiliation = 'Utah Valley University'
+photo = 'img/people/bischoff.jpg'
+display = 'Porter Bischoff'
+group = 'past'
+start = 2023
+end = 2023
+bio = "Undergraduate student, Utah Valley University, Summer Program for Undergraduate Research (SPUR) at the University of Utah. Mentor. Network visualization with R. Now a medical student at Washington University School of Medicine in St. Louis."
+bio_es = "Estudiante de pregrado, Utah Valley University, Programa de Verano de Investigación para Pregrado (SPUR) de la Universidad de Utah. Mentor. Visualización de redes con R. Actualmente estudiante de medicina en la Washington University School of Medicine en San Luis."
+bio_zh = "Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。"
+
+[lopez]
+name = 'Lopez, Luis'
+affiliation = 'National Institutes of Health'
+display = 'Luis Lopez'
+group = 'past'
+start = 2022
+end = 2022
+bio = "Postbaccalaureate fellow, National Institutes of Health. Mentor. Exponential-family random graph models."
+bio_es = "Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM)."
+bio_zh = "美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。"
+
+# --- my own mentors (see the "My own mentors" section of people.qmd) ---
+# No `group`: they stay off the generated People-page grid, in that
+# hand-written section, but this entry still gets them an author link
+# wherever they are a coauthor on papers.toml / software.toml.
+
+[marjoram]
+name = 'Marjoram, Paul'
+url = 'https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en'
+affiliation = 'University of Southern California'
+photo = 'img/people/marjoram.jpg'
+
+[delahaye]
+name = 'de la Haye, Kayla'
+url = 'https://kayladelahaye.net'
+affiliation = 'University of Southern California'
+photo = 'img/people/delahaye.jpg'
+
+# --- frequent coauthors (no `group`: not mentees, not on the People page) ---
+
+[valente]
+name = 'Valente, Thomas W.'
+url = 'https://keck.usc.edu/faculty-search/thomas-william-valente/'
+affiliation = 'Keck School of Medicine, University of Southern California'
+photo = 'img/people/valente.jpg'
+
+[quistorff]
+name = 'Quistorff, Brian'
+url = 'https://sites.google.com/site/bquistorff/'
+affiliation = 'U.S. Bureau of Economic Analysis'
+photo = 'img/people/quistorff.jpg'
+
+[fabrega]
+name = 'Fábrega Lacoa, Jorge'
+url = 'https://gobierno.udd.cl/doctorate/persona/jorge-fabrega-2/'
+affiliation = 'Centro de Investigación de la Complejidad Social, Universidad del Desarrollo'
+photo = 'img/people/fabrega.jpg'
+
+[modenesi]
+name = 'Modenesi, Bernardo'
+url = 'https://medicine.utah.edu/faculty/bernardo-modenesi'
+affiliation = 'Biostatistics, University of Utah'
+photo = 'img/people/modenesi.jpg'
+
+[samore]
+name = 'Samore, Matthew H.'
+url = 'https://medicine.utah.edu/faculty/matthew-h-samore'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/samore.jpg'
+
+[visnovsky]
+name = 'Visnovsky, Lindsay D.'
+url = 'https://medicine.utah.edu/faculty/lindsay-visnovsky'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/visnovsky.jpg'
+
+[zhang]
+name = 'Zhang, Chong'
+url = 'https://ctsi.utah.edu/cores-and-services/triad/faculty-staff'
+affiliation = 'Study Design and Biostatistics Center, CTSI, University of Utah'
+photo = 'img/people/zhang.jpg'
+
+[thornton]
+name = 'Thornton, Delaney'
+url = 'https://epiforesite.github.io/ForeSITE_Website/team/'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/thornton.jpg'
+
+[keegan]
+name = 'Keegan, Lindsay T.'
+url = 'https://medicine.utah.edu/faculty/lindsay-t-keegan'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/keegan.jpg'
+
+[toth]
+name = 'Toth, Damon'
+url = 'https://medicine.utah.edu/faculty/damon-toth'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/toth.jpg'
+
+[khader]
+name = 'Khader, Karim'
+url = 'https://medicine.utah.edu/faculty/karim-khader'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/khader.jpg'
+
+[nolen]
+name = 'Nolen, Leisha D'
+url = 'https://medicine.utah.edu/faculty/leisha-d-nolen'
+affiliation = 'Utah Department of Health and Human Services'
+photo = 'img/people/nolen.jpg'
+
+# No `url`/`affiliation`: neither was confirmed from a source in this repo
+# (see the file header -- a wrong affiliation is worse than none). Photo
+# still renders; the name just isn't a link.
+[marye]
+name = 'Marye, Abbey'
+photo = 'img/people/marye.jpg'
+
+[johnson]
+name = 'Johnson, Kaitlyn'
+url = 'https://www.lshtm.ac.uk/aboutus/people/johnson.kaitlyn'
+affiliation = 'London School of Hygiene & Tropical Medicine'
+photo = 'img/people/johnson.jpg'
+
+[bayer]
+name = 'Bayer, Damon'
+url = 'https://github.com/damonbayer'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/bayer.jpg'
+
+[morris]
+name = 'Morris, Dylan H.'
+url = 'https://dylanhmorris.com/'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/morris.jpg'
+
+[abbott]
+name = 'Abbott, Sam'
+url = 'https://www.lshtm.ac.uk/aboutus/people/abbott.sam'
+affiliation = 'London School of Hygiene & Tropical Medicine'
+photo = 'img/people/abbott.jpg'
+
+[lofgren]
+name = 'Lofgren, Eric T.'
+url = 'https://vetmed.wsu.edu/our-team/wsu-profile/eric.lofgren/'
+affiliation = 'Paul G. Allen School for Global Health, Washington State University'
+photo = 'img/people/lofgren.jpg'
+
+[magee]
+name = 'Magee, Andrew'
+url = 'https://afmagee.github.io/'
+affiliation = 'Umeå University'
+photo = 'img/people/magee.jpg'
+
+[mi]
+name = 'Mi, Huaiyu'
+url = 'http://keck.usc.edu/faculty/huaiyu-mi/'
+affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+photo = 'img/people/mi.jpg'
+
+[olesen]
+name = 'Olesen, Scott W.'
+url = 'https://scottolesen.com/'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+photo = 'img/people/olesen.jpg'
+
+[pavia]
+name = 'Pavia, Andrew T.'
+url = 'https://healthcare.utah.edu/find-a-doctor/andrew-t-pavia'
+affiliation = 'Division of Pediatric Infectious Diseases, University of Utah'
+photo = 'img/people/pavia.jpg'
+
+[pugh]
+name = 'Pugh, Mary Jo'
+url = 'https://medicine.utah.edu/faculty/mary-jo-pugh'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/pugh.jpg'
+
+[stratford]
+name = 'Stratford, Kristina'
+url = 'https://staffcouncil.utah.edu/staff-council-news/professional-development-award-recipient-kristina-stratford/'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/stratford.jpg'
+
+[pthomas]
+name = 'Thomas, Paul D.'
+url = 'https://keck.usc.edu/faculty-search/paul-d-thomas/'
+affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+photo = 'img/people/pthomas.jpg'
+
+[tanaka]
+name = 'Tanaka, Kyosuke'
+url = 'https://pure.au.dk/portal/en/persons/kyosuke@mgmt.au.dk'
+affiliation = 'Department of Management, Aarhus University'
+photo = 'img/people/tanaka.jpg'
+
+[athomas]
+name = 'Thomas, Alun'
+url = 'https://medicine.utah.edu/faculty/alun-thomas'
+affiliation = 'Division of Genetic Epidemiology, University of Utah'
+photo = 'img/people/athomas.jpg'
+
+[dthomas]
+name = 'Thomas, Duncan C.'
+url = 'https://today.usc.edu/profile/duncan-thomas/'
+affiliation = 'Department of Preventive Medicine, University of Southern California'
+photo = 'img/people/dthomas.jpg'
+
+[urbinati]
+name = 'Urbinati, Alessandra'
+url = 'https://www.networkscienceinstitute.org/people/alessandra-urbinati'
+affiliation = 'Network Science Institute, Northeastern University'
+photo = 'img/people/urbinati.jpg'
+
+[white]
+name = 'White, Laura F.'
+url = 'https://www.bu.edu/sph/profile/laura-white/'
+affiliation = 'Department of Biostatistics, Boston University School of Public Health'
+photo = 'img/people/white.jpg'

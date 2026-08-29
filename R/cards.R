@@ -192,7 +192,7 @@ research_card <- function(e, i18n) {
     '<h3 class="card__title">',
       sprintf('<a href="%s"%s>%s</a>', esc(href), detail_hint(i18n), title),
     '</h3>',
-    sprintf('<p class="card__authors">%s</p>', authors_html(f, GRID_PEOPLE)),
+    sprintf('<p class="card__authors">%s</p>', authors_html(f, GRID_PEOPLE, root = site_root())),
     if (nzchar(venue)) sprintf('<p class="card__venue"><em>%s</em></p>', venue) else "",
     if (length(topics)) sprintf(
       '<p class="card__tags">%s</p>',
@@ -269,7 +269,7 @@ software_card <- function(e, i18n) {
     sprintf('<h3 class="card__title"><a href="%ssoftware/%s.html"%s>%s</a></h3>',
             esc(site_root()), esc(entry_slug(e)), detail_hint(i18n), name),
     if (nzchar(blurb)) sprintf('<p class="card__blurb">%s</p>', blurb) else "",
-    sprintf('<p class="card__authors">%s</p>', authors_html(f, GRID_PEOPLE)),
+    sprintf('<p class="card__authors">%s</p>', authors_html(f, GRID_PEOPLE, root = site_root())),
     local({
       ver <- software_version(f)
       bits <- c(

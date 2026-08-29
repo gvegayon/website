@@ -82,7 +82,13 @@ I18N <- list(
     cited_by         = "Cited by",
     as_of            = "as of",
     cited_via_paper  = "Citations of the companion software paper",
-    metrics_note     = "Citation counts from OpenAlex; downloads from CRAN. Updated %s."
+    metrics_note     = "Citation counts from OpenAlex; downloads from CRAN. Updated %s.",
+
+    # --- people page (R/people_page.R)
+    people_current     = "Current",
+    people_past        = "Past",
+    people_present     = "present",
+    people_unavailable = "Roster temporarily unavailable."
   ),
 
   es = list(
@@ -154,7 +160,12 @@ I18N <- list(
     cited_by         = "Citado por",
     as_of            = "al",
     cited_via_paper  = "Citas del artículo de software asociado",
-    metrics_note     = "Citas de OpenAlex; descargas de CRAN. Actualizado el %s."
+    metrics_note     = "Citas de OpenAlex; descargas de CRAN. Actualizado el %s.",
+
+    people_current     = "Actuales",
+    people_past        = "Anteriores",
+    people_present     = "presente",
+    people_unavailable = "Lista de personas temporalmente no disponible."
   ),
 
   zh = list(
@@ -226,7 +237,12 @@ I18N <- list(
     cited_by         = "被引用",
     as_of            = "截至",
     cited_via_paper  = "配套软件论文的引用数",
-    metrics_note     = "引用数据来自 OpenAlex，下载量来自 CRAN。更新于 %s。"
+    metrics_note     = "引用数据来自 OpenAlex，下载量来自 CRAN。更新于 %s。",
+
+    people_current     = "現任成員",
+    people_past        = "過往成員",
+    people_present     = "至今",
+    people_unavailable = "名單暫時無法取得。"
   )
 )
 

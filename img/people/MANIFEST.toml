@@ -1,0 +1,434 @@
+# Provenance for every photo in this directory, one table per slug (matching
+# people.toml). A photo may not be added or replaced here without a filled-in
+# `approved` date -- see tools/people-photos/README.md for the review
+# workflow: source, score against the identity rubric, generate review.html,
+# get sign-off, only then copy the file in and record it here.
+
+[gvy]
+file       = 'gvy.jpg'
+source_url = 'n/a -- site owner'
+retrieved  = 2026-08-28
+evidence   = "George's own selfie, already used elsewhere on this site (img/george-g-vega-yon-university-of-utah.jpg); no third-party identity verification needed. Cropped to the face/shoulders region (the original frame also contains a statue) and resized to 240x240."
+confidence = 'high'
+license    = "George's own photo of himself."
+approved   = 2026-08-28
+
+# The five entries below were not sourced through the identity-verification
+# workflow -- George supplied each URL directly in chat, naming the person,
+# which stands in for that process (he personally vouches for the identity).
+# Each was still sanity-checked (real photo, plausible headshot) and cropped
+# through the normal pipeline before being committed.
+
+[marjoram]
+file       = 'marjoram.jpg'
+source_url = 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Zj5ky5gAAAAJ&citpid=1'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat. Matches the Google Scholar profile already on file as this entry's `url` (same citation user id, Zj5ky5gAAAAJ). Small (96x128) but a clear, single-person headshot."
+confidence = 'high'
+license    = "Google Scholar profile photo, self-published by Paul Marjoram."
+approved   = 2026-08-28
+
+[delahaye]
+file       = 'delahaye.jpg'
+source_url = 'https://images.squarespace-cdn.com/content/v1/5900230dbe65942e8ef67c24/fa1eaa30-7c9a-4fc5-be85-a1c588f7a497/R6__6124.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat. Hosted on the same Squarespace CDN as her personal site (kayladelahaye.net, already this entry's `url`). Professional studio portrait."
+confidence = 'high'
+license    = "Personal/professional headshot, self-published by Kayla de la Haye."
+approved   = 2026-08-28
+
+[valente]
+file       = 'valente.jpg'
+source_url = 'https://pbs.twimg.com/profile_images/2698963710/cc1a8cb12fa7899df822c1379104a38c_400x400.jpeg'
+retrieved  = 2026-08-28
+evidence   = "George gave his X/Twitter profile-photo page (x.com/twvalente/photo); the actual image was retrieved from its public pbs.twimg.com CDN URL, not from any authenticated page. Academic office headshot (bookshelf background)."
+confidence = 'high'
+license    = "Profile photo, self-published by Thomas W. Valente on X."
+approved   = 2026-08-28
+
+[quistorff]
+file       = 'quistorff.jpg'
+source_url = 'https://sites.google.com/site/bquistorff/'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on Brian Quistorff's own Google Sites page (sites.google.com/site/bquistorff/, now also this entry's `url`). Clear professional headshot."
+confidence = 'high'
+license    = "Personal/professional headshot, self-published by Brian Quistorff."
+approved   = 2026-08-28
+
+[fabrega]
+file       = 'fabrega.jpg'
+source_url = 'https://gobierno.udd.cl/dpp/files/2026/01/jfabrega-500x500.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on Universidad del Desarrollo's Escuela de Gobierno site -- the same institution as this entry's `url` (his UDD doctoral-program faculty page). Professional studio headshot."
+confidence = 'high'
+license    = "Official institutional headshot, Universidad del Desarrollo."
+approved   = 2026-08-28
+
+# Batch 1 (current mentees): sourced through the full identity-verification
+# workflow in tools/people-photos/README.md, scored against S1-S6, and
+# approved by George via the "Headshot Dossier" review artifact.
+
+[najafzadehkhoei]
+file       = 'najafzadehkhoei.jpg'
+source_url = 'https://medicine.utah.edu/population-health-sciences/current-students'
+retrieved  = 2026-08-28
+evidence   = "Official U of U School of Medicine Population Health Sciences 'Current Students' directory. The photo's alt text and the adjacent listing both read 'Sima Najafzadehkhoei', Emphasis: Biostatistics -- matches people.toml's affiliation exactly. Clear professional studio headshot."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[wagoner]
+file       = 'wagoner.jpg'
+source_url = 'https://vdl.sci.utah.edu/team/wagoner/'
+retrieved  = 2026-08-28
+evidence   = "Official SCI Institute / Visualization Design Lab team page: 'Jake Wagoner, Software Developer ... SCI Institute, School of Computing, University of Utah' -- matches people.toml exactly. Face also matches his separate GitHub avatar (github.com/JakeWags)."
+confidence = 'high'
+license    = "Official institutional headshot, SCI Institute, University of Utah."
+approved   = 2026-08-28
+
+[olivera]
+file       = 'olivera.jpg'
+source_url = 'https://aoliveram.cl/'
+retrieved  = 2026-08-28
+evidence   = "Personal site's own image alt text gives the full name 'Aníbal Olivera Morales'; page states Ph.D. candidate in Social Complexity Science at CICS, visiting researcher at USC 'working with Thomas W. Valente' -- matches people.toml exactly. Same face confirmed on his GitHub avatar (github.com/aoliveram, linked from this same page)."
+confidence = 'high'
+license    = "Personal headshot, self-published by Anibal Olivera."
+approved   = 2026-08-28
+
+[meyer]
+file       = 'meyer.jpg'
+source_url = 'https://github.com/derekmeyer37'
+retrieved  = 2026-08-28
+evidence   = "GitHub bio: 'Biostatistician II - The University of Utah'. Pinned repo 'ABM -- My Master's Project -- University of Utah MSTAT Biostatistics Program' and an epiworldR-workshop repo both match his roster bio. Same photo also on his personal site, but it looks like the same source image -- not counted as a second source, hence medium not high confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Derek Meyer."
+approved   = 2026-08-28
+
+[pulsipher]
+file       = 'pulsipher.jpg'
+source_url = 'https://github.com/apulsipher'
+retrieved  = 2026-08-28
+evidence   = "GitHub profile pinned repos: UofUEpiBio/epiworldR, UofUEpiBio/epiworld, EpiForeSITE/epitraxr, EpiForeSITE/rbranding -- exactly the ForeSITE/UofUEpiBio ecosystem in his roster bio. No independent second photo source found; medium confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Andrew Pulsipher."
+approved   = 2026-08-28
+
+[banks]
+file       = 'banks.jpg'
+source_url = 'https://github.com/olivia-banks'
+retrieved  = 2026-08-28
+evidence   = "GitHub display name 'Olivia Banks'; README bio text is word-for-word identical to her personal site oliviactl.net (which links to this GitHub but carries no photo of its own). Org badges for UofUEpiBio and EpiForeSITE; pinned repos epiworld and epicc match her stated work. No independent second photo source; medium confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Olivia Banks."
+approved   = 2026-08-28
+
+# The five entries below were, like marjoram/delahaye/valente/quistorff/
+# fabrega above, not sourced through the identity-verification workflow --
+# George supplied each URL directly in chat, naming the person. Anto's is
+# an official University of Utah directory photo; the other four are
+# LinkedIn media.licdn.com CDN URLs, which (unlike the LinkedIn profile
+# pages themselves) are public static assets and did not require going
+# through any login wall to fetch.
+
+[anto]
+file       = 'anto.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx476/files/styles/portrait_tablet/public/media/images/2022/eric-anto2%20%281%29.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN -- matches this entry's affiliation (Population Health Sciences, University of Utah)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[diesen]
+file       = 'diesen.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/C5603AQFvSTZLKpDikA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653432818901'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication). Photo shows University of Utah College of Science branding, consistent with this entry's affiliation."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Hyrum Thomas Diesen."
+approved   = 2026-08-28
+
+[kentmarvick]
+file       = 'kentmarvick.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQFjg54jKj2tzw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712357194016'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Jacqueline M. Kent-Marvick."
+approved   = 2026-08-28
+
+[lawsonmichod]
+file       = 'lawsonmichod.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/C5603AQHnRM8ukHFIUA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1652185928092'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Katherine Lawson-Michod."
+approved   = 2026-08-28
+
+[bischoff]
+file       = 'bischoff.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQHsfrB9e8HU8g/profile-displayphoto-shrink_800_800/B56ZcKDSFpHoAc-/0/1748220323166'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Porter Bischoff."
+approved   = 2026-08-28
+
+# The ten entries below: URLs supplied directly by George in chat, same
+# pattern as the two batches above. All ten are official institutional
+# directory/team photos (medicine.utah.edu, healthcare.utah.edu, ctsi.utah.edu,
+# or the EpiForeSITE team site), so no login wall or CDN workaround was
+# involved -- plain public URLs.
+
+[modenesi]
+file       = 'modenesi.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00104127.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN -- matches this entry's affiliation and `url` (his medicine.utah.edu faculty page)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[samore]
+file       = 'samore.jpg'
+source_url = 'https://healthcare.utah.edu/sites/g/files/zrelqx136/files/migrate_images/10-samore.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on University of Utah Health's own site."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Health."
+approved   = 2026-08-28
+
+[visnovsky]
+file       = 'visnovsky.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00046762.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[zhang]
+file       = 'zhang.jpg'
+source_url = 'https://ctsi.utah.edu/sites/g/files/zrelqx236/files/styles/portrait_tablet/public/media/images/2020/chong-zhang.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on U of U CTSI's own site."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah CTSI."
+approved   = 2026-08-28
+
+[thornton]
+file       = 'thornton.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Thornton_headshot.jpeg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site, which also lists her under the Project Management team."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[keegan]
+file       = 'keegan.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/KeeganHeadshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site, which also lists her as a Leadership Team Principal Investigator; matches her medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[toth]
+file       = 'toth.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Damon_headshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Analytical Modeling Team); matches his medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[khader]
+file       = 'khader.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Karim_headshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Analytical Modeling Team); matches his medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[nolen]
+file       = 'nolen.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/leisha.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Subject Matter Experts); matches her medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[marye]
+file       = 'marye.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx406/files/styles/portrait_tablet/public/media/images/2025/abbey-marye_001_hp_biomed_august-13-2025-min.JPG'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on a University of Utah School of Medicine image CDN. No specific faculty/staff profile page was found to confirm her affiliation, so `people.toml` records no `url`/`affiliation` for her -- the photo still renders, just without a link or tooltip."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+# The seventeen entries below (the "frequent coauthor long tail") WERE
+# sourced by the agent, through the full workflow in this directory's
+# README.md: source ladder, S1-S6 scoring, published as the "Headshot
+# Dossier II" review artifact, and approved by George in full ("All looks
+# great!"). Two Google Scholar profiles in this batch (mi, pthomas) turned
+# out to have generic silhouette placeholder images rather than real
+# photos at the same citpid=1 URL pattern that worked for marjoram above --
+# caught by visually inspecting the download, not by the HTTP status code.
+
+[johnson]
+file       = 'johnson.jpg'
+source_url = 'https://www.lshtm.ac.uk/sites/default/files/styles/profile_full_image_elements/public/profile_image/6448.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official LSHTM faculty page; image alt text reads 'Kaitlyn Johnson'."
+confidence = 'high'
+license    = "Official institutional headshot, London School of Hygiene & Tropical Medicine."
+approved   = 2026-08-29
+
+[bayer]
+file       = 'bayer.jpg'
+source_url = 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=ewul4B0AAAAJ&citpid=1'
+retrieved  = 2026-08-29
+evidence   = "Google Scholar profile photo (graduation portrait) -- self-controlled, single source (his GitHub avatar is a pixel-art icon, not a real photo, so not usable as a second source)."
+confidence = 'medium'
+license    = "Self-published Google Scholar profile photo, Damon Bayer."
+approved   = 2026-08-29
+
+[morris]
+file       = 'morris.jpg'
+source_url = 'https://dylanhmorris.com/images/profile-image.jpg'
+retrieved  = 2026-08-29
+evidence   = "Personal site (dylanhmorris.com) -- self-controlled, single source."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Dylan H. Morris."
+approved   = 2026-08-29
+
+[abbott]
+file       = 'abbott.jpg'
+source_url = 'https://www.lshtm.ac.uk/sites/default/files/styles/profile_full_image_elements/public/profile_image/4299.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official LSHTM faculty page; image alt text reads 'Sam Abbott'."
+confidence = 'high'
+license    = "Official institutional headshot, London School of Hygiene & Tropical Medicine."
+approved   = 2026-08-29
+
+[lofgren]
+file       = 'lofgren.jpg'
+source_url = 'https://s3.wp.wsu.edu/uploads/sites/908/2022/06/Lofgren-Eric-07-22.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Washington State University College of Veterinary Medicine faculty page, photo hosted on WSU's own CDN."
+confidence = 'high'
+license    = "Official institutional headshot, Washington State University."
+approved   = 2026-08-29
+
+[magee]
+file       = 'magee.jpg'
+source_url = 'https://afmagee.github.io/assets/images/afm.jpg'
+retrieved  = 2026-08-29
+evidence   = "Personal site (afmagee.github.io) -- self-controlled, single source. Image alt text reads 'Andrew Magee'."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Andrew Magee."
+approved   = 2026-08-29
+
+[mi]
+file       = 'mi.jpg'
+source_url = 'https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=178461&cachekey=22008c23-4712-421c-8b02-1f81780c2cfb'
+retrieved  = 2026-08-29
+evidence   = "USC's official researcher-profile system (profiles.sc-ctsi.org, mirrored on researcherprofiles.org); image alt text reads 'Photo of Huaiyu Mi, PhD'. keck.usc.edu itself sits behind a Cloudflare bot-check that was not attempted. His Google Scholar profile has no real photo (generic silhouette placeholder)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[olesen]
+file       = 'olesen.jpg'
+source_url = 'https://scottolesen.com/images/face.png'
+retrieved  = 2026-08-29
+evidence   = "Personal site (scottolesen.com) -- self-controlled, single source. Image alt text reads 'Scott Olesen'."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Scott W. Olesen."
+approved   = 2026-08-29
+
+[pavia]
+file       = 'pavia.jpg'
+source_url = 'https://securembm.uuhsc.utah.edu/zeus/public/mbm-media/faculty-profile?facultyPK=u0028338'
+retrieved  = 2026-08-29
+evidence   = "Official University of Utah Health provider page; image alt text reads 'Andrew T. Pavia'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Health."
+approved   = 2026-08-29
+
+[pugh]
+file       = 'pugh.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00055413.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official U of U School of Medicine faculty page; image alt text reads 'Mary Jo Pugh'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-29
+
+[stratford]
+file       = 'stratford.jpg'
+source_url = 'https://staffcouncil.utah.edu/wp-content/uploads/sites/85/2023/03/KristinaStratfordWEB.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official University of Utah Staff Council article about her professional development award; image alt text reads 'Kristina Stratford'. No dedicated faculty-style profile page exists since she is research-administration staff, not faculty."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Staff Council."
+approved   = 2026-08-29
+
+[pthomas]
+file       = 'pthomas.jpg'
+source_url = 'https://researcherprofiles.org/profile/Modules/CustomViewPersonGeneralInfo/PhotoHandler.ashx?NodeID=190433&cachekey=c245dcdc-3b09-4816-9982-d0776bec1d42'
+retrieved  = 2026-08-29
+evidence   = "USC's official researcher-profile system (profiles.sc-ctsi.org, mirrored on researcherprofiles.org); image alt text reads 'Photo of Paul D Thomas, PhD'. Same keck.usc.edu bot-check note as Huaiyu Mi. His Google Scholar profile also has no real photo (generic silhouette placeholder)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[tanaka]
+file       = 'tanaka.jpg'
+source_url = 'https://pure.au.dk/portal/files-asset/224961434/Kyosuke_Tanaka_PURE.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Aarhus University research-portal (Pure) page; image alt text reads 'Kyosuke Tanaka'. He has moved institutions since coauthoring with George; affiliation reflects his current one."
+confidence = 'high'
+license    = "Official institutional headshot, Aarhus University."
+approved   = 2026-08-29
+
+[athomas]
+file       = 'athomas.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00005212.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official U of U School of Medicine faculty page; image alt text reads 'Alun Thomas'."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-29
+
+[dthomas]
+file       = 'dthomas.jpg'
+source_url = 'https://today.usc.edu/wp-content/uploads/2012/09/1075.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official USC news/profile page (USC Today); image alt text reads 'Duncan Thomas'. Photo is small/dated (134px source) -- he no longer appears on USC Biostatistics' current faculty listing, likely emeritus."
+confidence = 'high'
+license    = "Official institutional headshot, University of Southern California."
+approved   = 2026-08-29
+
+[urbinati]
+file       = 'urbinati.jpg'
+source_url = 'https://cdn.prod.website-files.com/65f340004a14e15b92bd3e06/65f340004a14e15b92bd51c0_Alessandra_web.jpeg'
+retrieved  = 2026-08-29
+evidence   = "Official Northeastern University Network Science Institute people page -- the exact lab (Alessandro Vespignani's MOBS Lab) tied to her coauthored papers."
+confidence = 'high'
+license    = "Official institutional headshot, Northeastern University Network Science Institute."
+approved   = 2026-08-29
+
+[white]
+file       = 'white.jpg'
+source_url = 'https://www.bu.edu/sph/files/2013/10/Laura-White-1.jpg'
+retrieved  = 2026-08-29
+evidence   = "Official Boston University School of Public Health faculty page; image alt text reads 'Laura White'."
+confidence = 'high'
+license    = "Official institutional headshot, Boston University."
+approved   = 2026-08-29

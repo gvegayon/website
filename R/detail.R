@@ -95,8 +95,9 @@ author_list_html <- function(f, people) {
     }
 
     sprintf(
-      '<li class="author%s"><span class="author__name">%s</span>%s%s</li>',
+      '<li class="author%s">%s<span class="author__info"><span class="author__name">%s</span>%s%s</span></li>',
       if (is_self) " is-self" else "",
+      avatar_html(per, DETAIL_ROOT, cls = "avatar avatar--detail"),
       name_html,
       if (nzchar(aff)) sprintf('<span class="author__aff">%s</span>', esc(aff)) else "",
       if (nzchar(orc)) sprintf(

@@ -13,33 +13,17 @@ include-in-header:
 
 La mayor parte de mi trabajo ocurre junto a estudiantes y personal de investigación. Dirijo el grupo de investigación [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"}, y superviso y asesoro a estudiantes de enseñanza media, pregrado, magíster y doctorado.
 
-## Actuales
-
-- [**Sima Najafzadehkhoei**](https://www.linkedin.com/in/sima-najafzadehkhoei-23961b345/){target="_blank"} (2024--presente) --- Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Epidemiología computacional, modelos basados en agentes y aprendizaje de máquinas.
-
-- [**Anibal Olivera**](https://aoliveram.cl/){target="_blank"} (2024--presente) --- Estudiante de doctorado en Complejidad Social, Universidad del Desarrollo, Chile. Mentor y supervisor como ayudante de investigación. Ciencia de redes y desarrollo de paquetes de R.
-
-- [**Olivia Banks**](https://oliviactl.net/){target="_blank"} (2024--presente) --- Estudiante de pregrado del programa de honores, doble titulación en Ciencia de la Computación y Biología Celular y Molecular, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Desarrollo de software y epidemiología computacional.
-
-- [**Eric Anto**](https://www.linkedin.com/in/eric-anto-a82774125/){target="_blank"} (2023--presente) --- Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Miembro del comité de tesis doctoral.
-
-## Anteriores
-
-- [**Andrew Pulsipher**](https://www.linkedin.com/in/a-pulsipher/){target="_blank"} (2025) --- Científico de datos del equipo [ForeSITE](https://epiforesite.github.io/ForeSITE_Website/){target="_blank"}, el centro Insight Net de los CDC liderado por la Universidad de Utah. Supervisor como ayudante de investigación. Paquetes de R y herramientas para el análisis de brotes. Actualmente Ingeniero de Software en PointClickCare.
-
-- [**Jake Wagoner**](https://www.linkedin.com/in/jake-wagoner-92123522b/){target="_blank"} (2025) --- Personal del Instituto de Computación Científica e Imágenes (SCI), Universidad de Utah. Co-supervisor y mentor. Desarrollo de herramientas para [ForeSITE](https://epiforesite.github.io/ForeSITE_Website/){target="_blank"}. Actualmente estudiante de postgrado en ciencia de la computación e Ingeniero de Software en PassiveLogic.
-
-- [**Hyrum Thomas Diesen**](https://www.linkedin.com/in/hyrum-diesen-26a612148/){target="_blank"} (2024--2025) --- Estudiante de doctorado en Biología Molecular, Celular y Evolutiva, Escuela de Ciencias Biológicas, Universidad de Utah. Mentor.
-
-- [**Derek Meyer**](https://www.linkedin.com/in/derek-meyer-289126227/){target="_blank"} (2022--2024) --- Estudiante de magíster en Ciencias de Salud Poblacional, Universidad de Utah. Supervisor, supervisor como ayudante de investigación y miembro del comité de tesis. Modelos basados en agentes para epidemias. Actualmente Bioestadístico en el Data Coordinating Center de la Universidad de Utah.
-
-- [**Jacqueline M. Kent-Marvick**](https://www.linkedin.com/in/jacqueline-kent-marvick-phd-rn-534378204/){target="_blank"} (2022--2024) --- Doctorado en Ciencias de la Salud, Facultad de Enfermería, Universidad de Utah. Mentor. Ciencia de redes y análisis de redes sociales. Actualmente Profesora Asistente de Investigación en la Facultad de Enfermería de la Universidad de Utah.
-
-- [**Katherine (Kayleigh) Lawson-Michod**](https://www.linkedin.com/in/katherine-lawson-michod-6a6314ab/){target="_blank"} (2022--2024) --- Estudiante de doctorado en Epidemiología Clínica y Traslacional, Ciencias de Salud Poblacional, Universidad de Utah. Presidente del examen de calificación y miembro del comité de tesis doctoral. Actualmente investigadora postdoctoral en el Fred Hutchinson Cancer Center.
-
-- [**Porter Bischoff**](https://pbischoff3.github.io/){target="_blank"} (2023) --- Estudiante de pregrado, Utah Valley University, Programa de Verano de Investigación para Pregrado (SPUR) de la Universidad de Utah. Mentor. Visualización de redes con R. Actualmente estudiante de medicina en la Washington University School of Medicine en San Luis.
-
-- **Luis Lopez** (2022) --- Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM).
+```{r}
+#| label: render-people-page
+#| echo: false
+#| warning: false
+#| results: asis
+source("../R/entries.R")
+source("../R/html.R")
+source("../R/i18n.R")
+source("../R/people_page.R")
+render_people_page("es")
+```
 
 ## Mis propios mentores
 
