@@ -174,3 +174,99 @@ evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fe
 confidence = 'high'
 license    = "LinkedIn profile photo, self-published by Porter Bischoff."
 approved   = 2026-08-28
+
+# The ten entries below: URLs supplied directly by George in chat, same
+# pattern as the two batches above. All ten are official institutional
+# directory/team photos (medicine.utah.edu, healthcare.utah.edu, ctsi.utah.edu,
+# or the EpiForeSITE team site), so no login wall or CDN workaround was
+# involved -- plain public URLs.
+
+[modenesi]
+file       = 'modenesi.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00104127.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN -- matches this entry's affiliation and `url` (his medicine.utah.edu faculty page)."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[samore]
+file       = 'samore.jpg'
+source_url = 'https://healthcare.utah.edu/sites/g/files/zrelqx136/files/migrate_images/10-samore.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on University of Utah Health's own site."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah Health."
+approved   = 2026-08-28
+
+[visnovsky]
+file       = 'visnovsky.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx296/files/styles/portrait_tablet/public/media/images/person/import/FM00046762.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the U of U School of Medicine's own image CDN."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[zhang]
+file       = 'zhang.jpg'
+source_url = 'https://ctsi.utah.edu/sites/g/files/zrelqx236/files/styles/portrait_tablet/public/media/images/2020/chong-zhang.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on U of U CTSI's own site."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah CTSI."
+approved   = 2026-08-28
+
+[thornton]
+file       = 'thornton.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Thornton_headshot.jpeg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site, which also lists her under the Project Management team."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[keegan]
+file       = 'keegan.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/KeeganHeadshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site, which also lists her as a Leadership Team Principal Investigator; matches her medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[toth]
+file       = 'toth.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Damon_headshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Analytical Modeling Team); matches his medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[khader]
+file       = 'khader.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/Karim_headshot.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Analytical Modeling Team); matches his medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[nolen]
+file       = 'nolen.jpg'
+source_url = 'https://epiforesite.github.io/ForeSITE_Website/images/leisha.png'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on the EpiForeSITE team site (Subject Matter Experts); matches her medicine.utah.edu faculty page."
+confidence = 'high'
+license    = "Team headshot, EpiForeSITE."
+approved   = 2026-08-28
+
+[marye]
+file       = 'marye.jpg'
+source_url = 'https://medicine.utah.edu/sites/g/files/zrelqx406/files/styles/portrait_tablet/public/media/images/2025/abbey-marye_001_hp_biomed_august-13-2025-min.JPG'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on a University of Utah School of Medicine image CDN. No specific faculty/staff profile page was found to confirm her affiliation, so `people.toml` records no `url`/`affiliation` for her -- the photo still renders, just without a link or tooltip."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28

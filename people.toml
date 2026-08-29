@@ -232,3 +232,64 @@ name = 'Fábrega Lacoa, Jorge'
 url = 'https://gobierno.udd.cl/doctorate/persona/jorge-fabrega-2/'
 affiliation = 'Centro de Investigación de la Complejidad Social, Universidad del Desarrollo'
 photo = 'img/people/fabrega.jpg'
+
+[modenesi]
+name = 'Modenesi, Bernardo'
+url = 'https://medicine.utah.edu/faculty/bernardo-modenesi'
+affiliation = 'Biostatistics, University of Utah'
+photo = 'img/people/modenesi.jpg'
+
+[samore]
+name = 'Samore, Matthew H.'
+url = 'https://medicine.utah.edu/faculty/matthew-h-samore'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/samore.jpg'
+
+[visnovsky]
+name = 'Visnovsky, Lindsay D.'
+url = 'https://medicine.utah.edu/faculty/lindsay-visnovsky'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/visnovsky.jpg'
+
+[zhang]
+name = 'Zhang, Chong'
+url = 'https://ctsi.utah.edu/cores-and-services/triad/faculty-staff'
+affiliation = 'Study Design and Biostatistics Center, CTSI, University of Utah'
+photo = 'img/people/zhang.jpg'
+
+[thornton]
+name = 'Thornton, Delaney'
+url = 'https://epiforesite.github.io/ForeSITE_Website/team/'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/thornton.jpg'
+
+[keegan]
+name = 'Keegan, Lindsay T.'
+url = 'https://medicine.utah.edu/faculty/lindsay-t-keegan'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/keegan.jpg'
+
+[toth]
+name = 'Toth, Damon'
+url = 'https://medicine.utah.edu/faculty/damon-toth'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/toth.jpg'
+
+[khader]
+name = 'Khader, Karim'
+url = 'https://medicine.utah.edu/faculty/karim-khader'
+affiliation = 'Division of Epidemiology, University of Utah'
+photo = 'img/people/khader.jpg'
+
+[nolen]
+name = 'Nolen, Leisha D'
+url = 'https://medicine.utah.edu/faculty/leisha-d-nolen'
+affiliation = 'Utah Department of Health and Human Services'
+photo = 'img/people/nolen.jpg'
+
+# No `url`/`affiliation`: neither was confirmed from a source in this repo
+# (see the file header -- a wrong affiliation is worse than none). Photo
+# still renders; the name just isn't a link.
+[marye]
+name = 'Marye, Abbey'
+photo = 'img/people/marye.jpg'
