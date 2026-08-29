@@ -63,3 +63,61 @@ evidence   = "URL supplied directly by George in chat, hosted on Universidad del
 confidence = 'high'
 license    = "Official institutional headshot, Universidad del Desarrollo."
 approved   = 2026-08-28
+
+# Batch 1 (current mentees): sourced through the full identity-verification
+# workflow in tools/people-photos/README.md, scored against S1-S6, and
+# approved by George via the "Headshot Dossier" review artifact.
+
+[najafzadehkhoei]
+file       = 'najafzadehkhoei.jpg'
+source_url = 'https://medicine.utah.edu/population-health-sciences/current-students'
+retrieved  = 2026-08-28
+evidence   = "Official U of U School of Medicine Population Health Sciences 'Current Students' directory. The photo's alt text and the adjacent listing both read 'Sima Najafzadehkhoei', Emphasis: Biostatistics -- matches people.toml's affiliation exactly. Clear professional studio headshot."
+confidence = 'high'
+license    = "Official institutional headshot, University of Utah School of Medicine."
+approved   = 2026-08-28
+
+[wagoner]
+file       = 'wagoner.jpg'
+source_url = 'https://vdl.sci.utah.edu/team/wagoner/'
+retrieved  = 2026-08-28
+evidence   = "Official SCI Institute / Visualization Design Lab team page: 'Jake Wagoner, Software Developer ... SCI Institute, School of Computing, University of Utah' -- matches people.toml exactly. Face also matches his separate GitHub avatar (github.com/JakeWags)."
+confidence = 'high'
+license    = "Official institutional headshot, SCI Institute, University of Utah."
+approved   = 2026-08-28
+
+[olivera]
+file       = 'olivera.jpg'
+source_url = 'https://aoliveram.cl/'
+retrieved  = 2026-08-28
+evidence   = "Personal site's own image alt text gives the full name 'Aníbal Olivera Morales'; page states Ph.D. candidate in Social Complexity Science at CICS, visiting researcher at USC 'working with Thomas W. Valente' -- matches people.toml exactly. Same face confirmed on his GitHub avatar (github.com/aoliveram, linked from this same page)."
+confidence = 'high'
+license    = "Personal headshot, self-published by Anibal Olivera."
+approved   = 2026-08-28
+
+[meyer]
+file       = 'meyer.jpg'
+source_url = 'https://github.com/derekmeyer37'
+retrieved  = 2026-08-28
+evidence   = "GitHub bio: 'Biostatistician II - The University of Utah'. Pinned repo 'ABM -- My Master's Project -- University of Utah MSTAT Biostatistics Program' and an epiworldR-workshop repo both match his roster bio. Same photo also on his personal site, but it looks like the same source image -- not counted as a second source, hence medium not high confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Derek Meyer."
+approved   = 2026-08-28
+
+[pulsipher]
+file       = 'pulsipher.jpg'
+source_url = 'https://github.com/apulsipher'
+retrieved  = 2026-08-28
+evidence   = "GitHub profile pinned repos: UofUEpiBio/epiworldR, UofUEpiBio/epiworld, EpiForeSITE/epitraxr, EpiForeSITE/rbranding -- exactly the ForeSITE/UofUEpiBio ecosystem in his roster bio. No independent second photo source found; medium confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Andrew Pulsipher."
+approved   = 2026-08-28
+
+[banks]
+file       = 'banks.jpg'
+source_url = 'https://github.com/olivia-banks'
+retrieved  = 2026-08-28
+evidence   = "GitHub display name 'Olivia Banks'; README bio text is word-for-word identical to her personal site oliviactl.net (which links to this GitHub but carries no photo of its own). Org badges for UofUEpiBio and EpiForeSITE; pinned repos epiworld and epicc match her stated work. No independent second photo source; medium confidence at sourcing time."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Olivia Banks."
+approved   = 2026-08-28
