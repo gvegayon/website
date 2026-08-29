@@ -194,8 +194,30 @@ bio_zh = "美國國立衛生研究院（NIH）學士後研究員。導師。指�
 name = 'Marjoram, Paul'
 url = 'https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en'
 affiliation = 'University of Southern California'
+photo = 'img/people/marjoram.jpg'
 
 [delahaye]
 name = 'de la Haye, Kayla'
 url = 'https://kayladelahaye.net'
 affiliation = 'University of Southern California'
+photo = 'img/people/delahaye.jpg'
+
+# --- frequent coauthors (no `group`: not mentees, not on the People page) ---
+
+[valente]
+name = 'Valente, Thomas W.'
+url = 'https://keck.usc.edu/faculty-search/thomas-william-valente/'
+affiliation = 'Keck School of Medicine, University of Southern California'
+photo = 'img/people/valente.jpg'
+
+[quistorff]
+name = 'Quistorff, Brian'
+url = 'https://sites.google.com/site/bquistorff/'
+affiliation = 'U.S. Bureau of Economic Analysis'
+photo = 'img/people/quistorff.jpg'
+
+[fabrega]
+name = 'Fábrega Lacoa, Jorge'
+url = 'https://gobierno.udd.cl/doctorate/persona/jorge-fabrega-2/'
+affiliation = 'Centro de Investigación de la Complejidad Social, Universidad del Desarrollo'
+photo = 'img/people/fabrega.jpg'

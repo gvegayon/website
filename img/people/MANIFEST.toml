@@ -12,3 +12,54 @@ evidence   = "George's own selfie, already used elsewhere on this site (img/geor
 confidence = 'high'
 license    = "George's own photo of himself."
 approved   = 2026-08-28
+
+# The five entries below were not sourced through the identity-verification
+# workflow -- George supplied each URL directly in chat, naming the person,
+# which stands in for that process (he personally vouches for the identity).
+# Each was still sanity-checked (real photo, plausible headshot) and cropped
+# through the normal pipeline before being committed.
+
+[marjoram]
+file       = 'marjoram.jpg'
+source_url = 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=Zj5ky5gAAAAJ&citpid=1'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat. Matches the Google Scholar profile already on file as this entry's `url` (same citation user id, Zj5ky5gAAAAJ). Small (96x128) but a clear, single-person headshot."
+confidence = 'high'
+license    = "Google Scholar profile photo, self-published by Paul Marjoram."
+approved   = 2026-08-28
+
+[delahaye]
+file       = 'delahaye.jpg'
+source_url = 'https://images.squarespace-cdn.com/content/v1/5900230dbe65942e8ef67c24/fa1eaa30-7c9a-4fc5-be85-a1c588f7a497/R6__6124.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat. Hosted on the same Squarespace CDN as her personal site (kayladelahaye.net, already this entry's `url`). Professional studio portrait."
+confidence = 'high'
+license    = "Personal/professional headshot, self-published by Kayla de la Haye."
+approved   = 2026-08-28
+
+[valente]
+file       = 'valente.jpg'
+source_url = 'https://pbs.twimg.com/profile_images/2698963710/cc1a8cb12fa7899df822c1379104a38c_400x400.jpeg'
+retrieved  = 2026-08-28
+evidence   = "George gave his X/Twitter profile-photo page (x.com/twvalente/photo); the actual image was retrieved from its public pbs.twimg.com CDN URL, not from any authenticated page. Academic office headshot (bookshelf background)."
+confidence = 'high'
+license    = "Profile photo, self-published by Thomas W. Valente on X."
+approved   = 2026-08-28
+
+[quistorff]
+file       = 'quistorff.jpg'
+source_url = 'https://sites.google.com/site/bquistorff/'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on Brian Quistorff's own Google Sites page (sites.google.com/site/bquistorff/, now also this entry's `url`). Clear professional headshot."
+confidence = 'high'
+license    = "Personal/professional headshot, self-published by Brian Quistorff."
+approved   = 2026-08-28
+
+[fabrega]
+file       = 'fabrega.jpg'
+source_url = 'https://gobierno.udd.cl/dpp/files/2026/01/jfabrega-500x500.jpg'
+retrieved  = 2026-08-28
+evidence   = "URL supplied directly by George in chat, hosted on Universidad del Desarrollo's Escuela de Gobierno site -- the same institution as this entry's `url` (his UDD doctoral-program faculty page). Professional studio headshot."
+confidence = 'high'
+license    = "Official institutional headshot, Universidad del Desarrollo."
+approved   = 2026-08-28
