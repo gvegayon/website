@@ -421,6 +421,10 @@
 .author-list .author__name { color: #2f2a26; }
 .author-list .author.is-self .author__name { font-weight: 700; }
 .author-list .author__aff { font-size: 0.76rem; color: #7a6a5c; }
+/* Shortened affiliation (people.toml `affiliation_short`): the full name is in
+   the title attr, so mark it hoverable the same way .card__authors .author-aff
+   is above. */
+.author-list .author__aff[title] { border-bottom: 1px dotted var(--ig-line, #e8dccd); cursor: help; }
 
 .author-list .author__orcid {
   font-size: 0.7rem;

@@ -432,3 +432,56 @@ evidence   = "Official Boston University School of Public Health faculty page; i
 confidence = 'high'
 license    = "Official institutional headshot, Boston University."
 approved   = 2026-08-29
+
+# The five entries below are the CDC / Center for Forecasting and Outbreak
+# Analytics batch (people.toml `[manuelpillai]`..`[pollock]`). pollock and
+# manuelpillai: LinkedIn media.licdn.com CDN URLs supplied directly by George
+# in chat, naming the person (same pattern as the diesen/kentmarvick batch
+# above). mistry, miller, clay: sourced by the agent -- mistry and miller from
+# self-published avatars, clay from the 2024 STI Prevention Conference
+# presenter page. Ian Spicknall has no photo: no non-login source carries one.
+
+[mistry]
+file       = 'mistry.jpg'
+source_url = 'https://dinacmistry.github.io/assets/profile-pics/dina72-crop.jpg'
+retrieved  = 2026-09-01
+evidence   = "Same headshot on four of her own properties -- personal site dinacmistry.github.io, GitHub @dinacmistry, Bluesky @dinacmistry.bsky.social (bio: 'Formerly at Twitter, Gates Foundation, and Northeastern University. Now at CDC.'), and Google Scholar (user D9bxgM4AAAAJ, this entry's would-be alt link). One source image, self-published; identity unambiguous."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Dina Mistry."
+approved   = 2026-09-01
+
+[miller]
+file       = 'miller.jpg'
+source_url = 'https://github.com/paigemiller.png'
+retrieved  = 2026-09-01
+evidence   = "GitHub avatar for @paigemiller, the handle linked from her personal site paigemiller.github.io; the same shoot appears on her Google Scholar profile (user LyznTaoAAAAJ). CDC PE Fellow, Ph.D. in disease ecology from the University of Georgia -- matches people.toml. Self-published, single source image."
+confidence = 'medium'
+license    = "GitHub avatar, self-published by Paige Miller."
+approved   = 2026-09-01
+
+[clay]
+file       = 'clay.jpg'
+source_url = 'https://www.conferenceharvester.com/uploads/harvester/photos/cropVYBXIAKC-Presenter-ClayP.jpg'
+retrieved  = 2026-09-01
+evidence   = "2024 STI Prevention Conference presenter profile for 'Patrick A. Clay, PhD'; bio states 'Health Scientist, Centers for Disease Control and Prevention, Bloomington, Indiana' and a Ph.D. in Ecology and Evolutionary Biology from Rice University -- the CDC + Rice EEB + mpox/STI-modeling combination is unambiguous against the unrelated same-named pharmacy researcher."
+confidence = 'high'
+license    = "Conference presenter headshot, 2024 STI Prevention Conference."
+approved   = 2026-09-01
+
+[pollock]
+file       = 'pollock.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/C5603AQHzD3wFuOpZKQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1628791871314'
+retrieved  = 2026-09-01
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication). Replaces a weak casual photo from her UW Anthropology 'recent PhD' page; identity corroborated by the CDC PE Fellows listing (Ph.D. Biological Anthropology, University of Washington)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Emily Pollock."
+approved   = 2026-09-01
+
+[manuelpillai]
+file       = 'manuelpillai.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D4E03AQHTdfJ78gPK4A/profile-displayphoto-shrink_800_800/B4EZR6UsJIGgAg-/0/1737219032110'
+retrieved  = 2026-09-01
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication), naming the person. No public profile page ties the name to CFA independently, so people.toml records no `url` for this entry (see the note there)."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Bevin Manuelpillai."
+approved   = 2026-09-01
