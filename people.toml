@@ -396,3 +396,27 @@ name = 'White, Laura F.'
 url = 'https://www.bu.edu/sph/profile/laura-white/'
 affiliation = 'Department of Biostatistics, Boston University School of Public Health'
 photo = 'img/people/white.jpg'
+
+[manuelpillai]
+name = 'Manuelpillai, Bevin'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+
+[spicknall]
+name = 'Spicknall, Ian'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+
+[miller]
+name = 'Miller, Paige'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+
+[clay]
+name = 'Clay, Patrick'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+
+[mistry]
+name = 'Mistry, Dina'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+
+[pollock]
+name = 'Pollock, Emily'
+affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
