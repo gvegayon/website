@@ -97,6 +97,10 @@ authors_html <- function(f, people = list(), root = "") {
     per <- match_person(p, people)
     if (is.null(per)) return(esc(label))
 
+    # The card shows the name as the visible text and hangs the affiliation off
+    # it as a `title` tooltip, so the full string is the right thing here --
+    # `affiliation_short` is only for where the affiliation is itself visible
+    # text (the detail-page author list; see author_aff_html() in R/detail.R).
     aff <- per$affiliation %||% ""
     url <- per$url %||% ""
     img <- avatar_html(per, root)

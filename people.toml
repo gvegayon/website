@@ -14,7 +14,7 @@
 # authorship. Do not guess -- a wrong affiliation is worse than none.
 #
 # --- fields used for author-link resolution (papers.toml / software.toml) ---
-#   name, url, orcid, affiliation, aka, self, photo
+#   name, url, orcid, affiliation, affiliation_short, aka, self, photo
 #
 # `photo` is a site-root-relative path, same convention as `hex`/`image` in
 # the .toml files -- no leading slash (see asset_url() in R/html.R). It is the
@@ -22,6 +22,14 @@
 # existed. A photo may only be added via the review workflow in
 # tools/people-photos/ (identity verification + George's sign-off before
 # commit); provenance for every approved photo lives in img/people/MANIFEST.toml.
+#
+# `affiliation_short` is an optional compact label ("CFA, CDC") for an
+# `affiliation` too long to sit under a name in the detail-page author list
+# ("Center for Forecasting and Outbreak Analytics, CDC"). When set, it is the
+# visible text and the full `affiliation` becomes a hover tooltip; when absent,
+# the full `affiliation` shows as before. Only the detail-page author list uses
+# it -- cards already keep the affiliation to a tooltip. See author_aff_html()
+# in R/detail.R.
 #
 # --- fields used only by the generated People page (R/people_page.R) -------
 #   group ("current" | "past"), start, end, bio, bio_es, bio_zh, display
@@ -40,6 +48,7 @@ name = 'Vega Yon, George G.'
 url = 'https://ggvy.cl'
 orcid = '0000-0002-3171-0844'
 affiliation = 'University of Utah'
+affiliation_short = 'UofU'
 self = true
 photo = 'img/people/gvy.jpg'
 
@@ -49,6 +58,7 @@ photo = 'img/people/gvy.jpg'
 name = 'Najafzadehkhoei, Sima'
 url = 'https://www.linkedin.com/in/sima-najafzadehkhoei-23961b345/'
 affiliation = 'Population Health Sciences, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/najafzadehkhoei.jpg'
 display = 'Sima Najafzadehkhoei'
 group = 'current'
@@ -61,6 +71,7 @@ bio_zh = "猶他大學人口健康科學系生物統計學博士生。導師及�
 name = 'Meyer, Derek'
 url = 'https://www.linkedin.com/in/derek-meyer-289126227/'
 affiliation = 'University of Utah Data Coordinating Center'
+affiliation_short = 'UofU'
 photo = 'img/people/meyer.jpg'
 display = 'Derek Meyer'
 group = 'past'
@@ -74,6 +85,7 @@ bio_zh = "猶他大學人口健康科學碩士生。指導教師、研究助理�
 name = 'Wagoner, Jake'
 url = 'https://www.linkedin.com/in/jake-wagoner-92123522b/'
 affiliation = 'Scientific Computing and Imaging Institute, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/wagoner.jpg'
 display = 'Jake Wagoner'
 group = 'past'
@@ -99,6 +111,7 @@ bio_zh = "猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據�
 name = 'Olivera, Anibal'
 url = 'https://aoliveram.cl/'
 affiliation = 'Universidad del Desarrollo'
+affiliation_short = 'UDD'
 photo = 'img/people/olivera.jpg'
 display = 'Anibal Olivera'
 group = 'current'
@@ -111,6 +124,7 @@ bio_zh = "智利 Universidad del Desarrollo 社會複雜性博士生。導師及
 name = 'Banks, Olivia'
 url = 'https://oliviactl.net/'
 affiliation = 'University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/banks.jpg'
 display = 'Olivia Banks'
 group = 'current'
@@ -123,6 +137,7 @@ bio_zh = "猶他大學榮譽課程本科生，計算機科學與細胞分子生�
 name = 'Anto, Eric'
 url = 'https://www.linkedin.com/in/eric-anto-a82774125/'
 affiliation = 'Population Health Sciences, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/anto.jpg'
 display = 'Eric Anto'
 group = 'past'
@@ -136,6 +151,7 @@ bio_zh = "猶他大學人口健康科學系生物統計學博士生。博士論�
 name = 'Diesen, Hyrum Thomas'
 url = 'https://www.linkedin.com/in/hyrum-diesen-26a612148/'
 affiliation = 'School of Biological Sciences, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/diesen.jpg'
 display = 'Hyrum Thomas Diesen'
 group = 'past'
@@ -150,6 +166,7 @@ name = 'Kent-Marvick, Jacqueline M.'
 aka = ['Kent-Marvick, Jacqueline']
 url = 'https://www.linkedin.com/in/jacqueline-kent-marvick-phd-rn-534378204/'
 affiliation = 'College of Nursing, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/kentmarvick.jpg'
 display = 'Jacqueline M. Kent-Marvick'
 group = 'past'
@@ -164,6 +181,7 @@ name = 'Lawson-Michod, Katherine'
 aka = ['Lawson-Michod, Kayleigh']
 url = 'https://www.linkedin.com/in/katherine-lawson-michod-6a6314ab/'
 affiliation = 'Population Health Sciences, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/lawsonmichod.jpg'
 display = 'Katherine (Kayleigh) Lawson-Michod'
 group = 'past'
@@ -177,6 +195,7 @@ bio_zh = "猶他大學人口健康科學系臨床與轉化流行病學博士生�
 name = 'Bischoff, Porter'
 url = 'https://pbischoff3.github.io/'
 affiliation = 'Utah Valley University'
+affiliation_short = 'UVU'
 photo = 'img/people/bischoff.jpg'
 display = 'Porter Bischoff'
 group = 'past'
@@ -189,6 +208,7 @@ bio_zh = "Utah Valley University 本科生，猶他大學本科生暑期研究�
 [lopez]
 name = 'Lopez, Luis'
 affiliation = 'National Institutes of Health'
+affiliation_short = 'NIH'
 display = 'Luis Lopez'
 group = 'past'
 start = 2022
@@ -206,12 +226,14 @@ bio_zh = "美國國立衛生研究院（NIH）學士後研究員。導師。指�
 name = 'Marjoram, Paul'
 url = 'https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en'
 affiliation = 'University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/marjoram.jpg'
 
 [delahaye]
 name = 'de la Haye, Kayla'
 url = 'https://kayladelahaye.net'
 affiliation = 'University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/delahaye.jpg'
 
 # --- frequent coauthors (no `group`: not mentees, not on the People page) ---
@@ -220,72 +242,84 @@ photo = 'img/people/delahaye.jpg'
 name = 'Valente, Thomas W.'
 url = 'https://keck.usc.edu/faculty-search/thomas-william-valente/'
 affiliation = 'Keck School of Medicine, University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/valente.jpg'
 
 [quistorff]
 name = 'Quistorff, Brian'
 url = 'https://sites.google.com/site/bquistorff/'
 affiliation = 'U.S. Bureau of Economic Analysis'
+affiliation_short = 'BEA'
 photo = 'img/people/quistorff.jpg'
 
 [fabrega]
 name = 'Fábrega Lacoa, Jorge'
 url = 'https://gobierno.udd.cl/doctorate/persona/jorge-fabrega-2/'
 affiliation = 'Centro de Investigación de la Complejidad Social, Universidad del Desarrollo'
+affiliation_short = 'UDD'
 photo = 'img/people/fabrega.jpg'
 
 [modenesi]
 name = 'Modenesi, Bernardo'
 url = 'https://medicine.utah.edu/faculty/bernardo-modenesi'
 affiliation = 'Biostatistics, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/modenesi.jpg'
 
 [samore]
 name = 'Samore, Matthew H.'
 url = 'https://medicine.utah.edu/faculty/matthew-h-samore'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/samore.jpg'
 
 [visnovsky]
 name = 'Visnovsky, Lindsay D.'
 url = 'https://medicine.utah.edu/faculty/lindsay-visnovsky'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/visnovsky.jpg'
 
 [zhang]
 name = 'Zhang, Chong'
 url = 'https://ctsi.utah.edu/cores-and-services/triad/faculty-staff'
 affiliation = 'Study Design and Biostatistics Center, CTSI, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/zhang.jpg'
 
 [thornton]
 name = 'Thornton, Delaney'
 url = 'https://epiforesite.github.io/ForeSITE_Website/team/'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/thornton.jpg'
 
 [keegan]
 name = 'Keegan, Lindsay T.'
 url = 'https://medicine.utah.edu/faculty/lindsay-t-keegan'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/keegan.jpg'
 
 [toth]
 name = 'Toth, Damon'
 url = 'https://medicine.utah.edu/faculty/damon-toth'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/toth.jpg'
 
 [khader]
 name = 'Khader, Karim'
 url = 'https://medicine.utah.edu/faculty/karim-khader'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/khader.jpg'
 
 [nolen]
 name = 'Nolen, Leisha D'
 url = 'https://medicine.utah.edu/faculty/leisha-d-nolen'
 affiliation = 'Utah Department of Health and Human Services'
+affiliation_short = 'DHHS'
 photo = 'img/people/nolen.jpg'
 
 # No `url`/`affiliation`: neither was confirmed from a source in this repo
@@ -299,30 +333,35 @@ photo = 'img/people/marye.jpg'
 name = 'Johnson, Kaitlyn'
 url = 'https://www.lshtm.ac.uk/aboutus/people/johnson.kaitlyn'
 affiliation = 'London School of Hygiene & Tropical Medicine'
+affiliation_short = 'LSHTM'
 photo = 'img/people/johnson.jpg'
 
 [bayer]
 name = 'Bayer, Damon'
 url = 'https://github.com/damonbayer'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
 photo = 'img/people/bayer.jpg'
 
 [morris]
 name = 'Morris, Dylan H.'
 url = 'https://dylanhmorris.com/'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
 photo = 'img/people/morris.jpg'
 
 [abbott]
 name = 'Abbott, Sam'
 url = 'https://www.lshtm.ac.uk/aboutus/people/abbott.sam'
 affiliation = 'London School of Hygiene & Tropical Medicine'
+affiliation_short = 'LSHTM'
 photo = 'img/people/abbott.jpg'
 
 [lofgren]
 name = 'Lofgren, Eric T.'
 url = 'https://vetmed.wsu.edu/our-team/wsu-profile/eric.lofgren/'
 affiliation = 'Paul G. Allen School for Global Health, Washington State University'
+affiliation_short = 'WSU'
 photo = 'img/people/lofgren.jpg'
 
 [magee]
@@ -335,36 +374,42 @@ photo = 'img/people/magee.jpg'
 name = 'Mi, Huaiyu'
 url = 'http://keck.usc.edu/faculty/huaiyu-mi/'
 affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/mi.jpg'
 
 [olesen]
 name = 'Olesen, Scott W.'
 url = 'https://scottolesen.com/'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
 photo = 'img/people/olesen.jpg'
 
 [pavia]
 name = 'Pavia, Andrew T.'
 url = 'https://healthcare.utah.edu/find-a-doctor/andrew-t-pavia'
 affiliation = 'Division of Pediatric Infectious Diseases, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/pavia.jpg'
 
 [pugh]
 name = 'Pugh, Mary Jo'
 url = 'https://medicine.utah.edu/faculty/mary-jo-pugh'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/pugh.jpg'
 
 [stratford]
 name = 'Stratford, Kristina'
 url = 'https://staffcouncil.utah.edu/staff-council-news/professional-development-award-recipient-kristina-stratford/'
 affiliation = 'Division of Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/stratford.jpg'
 
 [pthomas]
 name = 'Thomas, Paul D.'
 url = 'https://keck.usc.edu/faculty-search/paul-d-thomas/'
 affiliation = 'Division of Bioinformatics, Keck School of Medicine, University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/pthomas.jpg'
 
 [tanaka]
@@ -377,46 +422,68 @@ photo = 'img/people/tanaka.jpg'
 name = 'Thomas, Alun'
 url = 'https://medicine.utah.edu/faculty/alun-thomas'
 affiliation = 'Division of Genetic Epidemiology, University of Utah'
+affiliation_short = 'UofU'
 photo = 'img/people/athomas.jpg'
 
 [dthomas]
 name = 'Thomas, Duncan C.'
 url = 'https://today.usc.edu/profile/duncan-thomas/'
 affiliation = 'Department of Preventive Medicine, University of Southern California'
+affiliation_short = 'USC'
 photo = 'img/people/dthomas.jpg'
 
 [urbinati]
 name = 'Urbinati, Alessandra'
 url = 'https://www.networkscienceinstitute.org/people/alessandra-urbinati'
 affiliation = 'Network Science Institute, Northeastern University'
+affiliation_short = 'NEU'
 photo = 'img/people/urbinati.jpg'
 
 [white]
 name = 'White, Laura F.'
 url = 'https://www.bu.edu/sph/profile/laura-white/'
 affiliation = 'Department of Biostatistics, Boston University School of Public Health'
+affiliation_short = 'BU'
 photo = 'img/people/white.jpg'
 
 [manuelpillai]
+# No `url`: no public profile page found. Identity vouched by George, who
+# supplied the headshot in chat (see img/people/MANIFEST.toml).
 name = 'Manuelpillai, Bevin'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
+photo = 'img/people/manuelpillai.jpg'
 
 [spicknall]
 name = 'Spicknall, Ian'
+url = 'https://scholar.google.com/citations?user=DbDcT1cAAAAJ&hl=en'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
 
 [miller]
 name = 'Miller, Paige'
+url = 'https://paigemiller.github.io/'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
+photo = 'img/people/miller.jpg'
 
 [clay]
 name = 'Clay, Patrick'
+url = 'https://scholar.google.com/citations?user=8SYqomIAAAAJ&hl=en'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
+photo = 'img/people/clay.jpg'
 
 [mistry]
 name = 'Mistry, Dina'
+url = 'https://dinacmistry.github.io/'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
+photo = 'img/people/mistry.jpg'
 
 [pollock]
 name = 'Pollock, Emily'
+url = 'https://scholar.google.com/citations?user=2azPkJwAAAAJ&hl=en'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
+affiliation_short = 'CFA, CDC'
+photo = 'img/people/pollock.jpg'

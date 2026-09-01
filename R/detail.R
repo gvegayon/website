@@ -70,6 +70,23 @@ as_bibtex <- function(e) {
   paste0("@", type, "{", e$key, ",\n", paste(lines, collapse = "\n"), "\n}")
 }
 
+# The affiliation line under an author's name. When people.toml carries an
+# `affiliation_short` (e.g. "CFA, CDC" for the mouthful that is the CDC's
+# Center for Forecasting and Outbreak Analytics) that short label is shown and
+# the full string moves to a hover tooltip; without it the full affiliation
+# renders as before, untitled. cards.css gives the `[title]` variant a dotted
+# underline and a help cursor.
+author_aff_html <- function(aff, aff_short = "") {
+  if (nzchar(aff_short)) {
+    return(sprintf(
+      '<span class="author__aff"%s>%s</span>',
+      if (nzchar(aff)) sprintf(' title="%s"', esc(aff)) else "",
+      esc(aff_short)
+    ))
+  }
+  if (nzchar(aff)) sprintf('<span class="author__aff">%s</span>', esc(aff)) else ""
+}
+
 # The author block on a detail page has room for the affiliation inline,
 # unlike the compact card.
 author_list_html <- function(f, people) {
@@ -86,6 +103,7 @@ author_list_html <- function(f, people) {
 
     url <- per$url %||% ""
     aff <- per$affiliation %||% ""
+    aff_short <- per$affiliation_short %||% ""
     orc <- per$orcid %||% ""
 
     name_html <- if (nzchar(url)) {
@@ -99,7 +117,7 @@ author_list_html <- function(f, people) {
       if (is_self) " is-self" else "",
       avatar_html(per, DETAIL_ROOT, cls = "avatar avatar--detail"),
       name_html,
-      if (nzchar(aff)) sprintf('<span class="author__aff">%s</span>', esc(aff)) else "",
+      author_aff_html(aff, aff_short),
       if (nzchar(orc)) sprintf(
         '<a class="author__orcid" href="https://orcid.org/%s" target="_blank" rel="noopener" aria-label="ORCID">iD</a>',
         esc(orc)) else ""
