@@ -30,11 +30,12 @@ year = '2021'
 keywords = ['wip']
 
 [vegayon-ltcf]
-entrytype = 'unpublished'
+entrytype = 'article'
 title = 'Exponential-Family Random Graph Models in Resident-Healthcare Provider Networks: An Application using data from Long-term Healthcare Facilities in the United States'
 author = 'Vega Yon, George G.; Zhang, Chong; Khader, Karim; Chang, Nai-Chung Nelson; Visnovsky, Lindsay D.; Thomas, Alun; Haroldsen, Candace; Stratford, Kristina; Samore, Matthew H.'
 year = '2026'
-keywords = ['wip']
+journal = 'Social Networks'
+keywords = ['published', 'in press']
 abstract = 'Infectious pathogens have a high burden in long-term care facilities [LTCFs]. Contact is a primary route of pathogen transmission in these settings, so describing resident-healthcare provider [HCP] contact networks can clarify how routine care assignments may shape opportunities for transmission. In this study, we analyze a large sample of resident-HCP networks in LTCFs across the US. Using multilevel exponential-family random graph models [ERGMs] applied to bipartite graphs, in one of the first applications of these models to healthcare contact data, we investigate network structures associated with resident cohorting based on resident-level characteristics. Methodologically, the fitted pooled bipartite ERGM uses mode-specific, mean-centered log-size interactions and combines Monte Carlo maximum likelihood estimation [MC-MLE] point estimates with stochastic approximation [SA] bootstrap inference, a combination that makes these models practical when the pooled networks differ widely in size. Our analysis suggests that residents with wound care, bedridden status, and ventilator use were associated with more HCP contacts. In contrast, no evidence of cohorting-like HCP sharing was found for measured resident clinical characteristics, including Multi-Drug Resistant Organism [MDRO] status. These results do not estimate intervention effects; rather, they identify contact patterns that infection-control teams and transmission modelers can use to audit resident-HCP assignment practices and to parameterize network-based simulation studies.'
 
 
