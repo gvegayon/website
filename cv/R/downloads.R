@@ -1,48 +1,38 @@
 # CRAN download counts for the software section.
 #
-# Deliberately cached to disk rather than fetched at render time: a render that
-# silently depends on the network fails in ways that are hard to see. Run
-# `make downloads` to refresh; the render only ever reads the cache, and simply
-# omits the badges if it is missing.
+# Reads the committed metrics.toml -- the same cache the website badges use,
+# refreshed by R/fetch_metrics.R from the weekly cron (update-metrics.yml).
+#
+# The CV used to keep a second cache of its own, data/downloads.csv, filled by
+# a `make downloads` target that only ever ran by hand. Nothing in CI called
+# it, so the PDF served numbers frozen at whenever it was last run while the
+# website moved on. One cache, one refresh, one "as of" date.
+#
+# Still no network at render time: metrics.toml is committed, so the render
+# stays a pure function of the repo.
 
-CRAN_EPOCH <- "2012-10-01"   # start of cranlogs coverage
-
-# Package name = the token before the first ":" in the title
-# ("rgexf: Build, Import and Export GEXF Graph Files" -> "rgexf").
-pkg_name <- function(e) trimws(sub(":.*$", "", e$fields$title %||% ""))
-
-fetch_downloads <- function(src = "../software.toml", out = "data/downloads.csv") {
-  stopifnot(requireNamespace("jsonlite", quietly = TRUE))
-  pkgs <- unique(Filter(nzchar, vapply(read_entries(src), pkg_name, character(1))))
-
-  url <- sprintf("https://cranlogs.r-pkg.org/downloads/total/%s:%s/%s",
-                 CRAN_EPOCH, Sys.Date(), paste(pkgs, collapse = ","))
-
-  res <- tryCatch(jsonlite::fromJSON(url), error = function(e) {
-    message("cranlogs unreachable: ", conditionMessage(e)); NULL
-  })
-  if (is.null(res) || !nrow(res)) return(invisible(NULL))
-
-  df <- data.frame(package = res$package,
-                   downloads = as.integer(res$downloads),
-                   stringsAsFactors = FALSE)
-  # Packages that are not on CRAN come back as 0; drop them so the renderer
-  # can distinguish "no badge" from "zero downloads".
-  df <- df[!is.na(df$downloads) & df$downloads > 0, ]
-  df <- df[order(-df$downloads), ]
-
-  dir.create(dirname(out), showWarnings = FALSE, recursive = TRUE)
-  utils::write.csv(df, out, row.names = FALSE)
-  message(sprintf("wrote %s (%d of %d packages on CRAN, %s total downloads)",
-                  out, nrow(df), length(pkgs),
-                  format(sum(df$downloads), big.mark = ",")))
-  invisible(df)
+# Named integer vector: software.toml key -> total CRAN downloads.
+#
+# Keyed by the software.toml section name, which is both what metrics.toml is
+# keyed by and what read_entries() hands back as `key` -- so the lookup is an
+# exact key match rather than the old guess at the package name from the title.
+# Entries with no cran_downloads (C++ libraries, Python packages, anything not
+# on CRAN) simply drop out and get no badge.
+read_downloads <- function(metrics = read_metrics()) {
+  m <- metrics$software
+  if (is.null(m) || !length(m)) return(stats::setNames(integer(0), character(0)))
+  n <- vapply(m, function(x) suppressWarnings(as.integer(x$cran_downloads %||% NA)),
+              integer(1))
+  n[!is.na(n) & n > 0]
 }
 
-read_downloads <- function(path = "data/downloads.csv") {
-  if (!file.exists(path)) return(stats::setNames(integer(0), character(0)))
-  d <- utils::read.csv(path, stringsAsFactors = FALSE)
-  stats::setNames(as.integer(d$downloads), d$package)
+# The date the counts were fetched, as "YYYY-MM-DD", for the "as of" line.
+#
+# Taken from metrics.toml's own fetched_at rather than the cache file's mtime:
+# a git checkout rewrites mtime to the build time, so the old CV stamped
+# whatever month it was built in onto however old the numbers happened to be.
+downloads_stamp <- function(metrics = read_metrics()) {
+  substr(metrics$fetched_at %||% "", 1, 10)
 }
 
 # Inline raw-Typst badge; `#dlbadge` is defined in the cv.qmd header.

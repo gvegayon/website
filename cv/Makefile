@@ -7,7 +7,7 @@
 # macOS host Typst will warn and fall back to its default.
 
 SRC = ../papers.toml ../software.toml ../presentations-conference.toml \
-      ../presentations-invited.toml ../presentations-other.toml
+      ../presentations-invited.toml ../presentations-other.toml ../metrics.toml
 
 # cv.qmd sits inside the website project, so Quarto writes the PDF to the
 # project's output-dir rather than next to the source.
@@ -16,10 +16,9 @@ OUT = ../public/cv/cv.pdf
 $(OUT): cv.qmd R/bib.R R/downloads.R $(SRC)
 	quarto render cv.qmd --to typst
 
-# Refresh the CRAN download cache. Deliberately NOT a dependency of the PDF:
-# the render must never depend on the network.
-downloads:
-	Rscript -e 'source("R/bib.R"); source("R/downloads.R"); fetch_downloads()'
+# There is no CRAN-download target here any more. The badges read ../metrics.toml,
+# which `make refresh` in the parent Makefile rewrites from the weekly cron --
+# the render itself still never touches the network.
 
 # Page images, handy for eyeballing changes.
 preview: cv.qmd
@@ -29,4 +28,4 @@ preview: cv.qmd
 clean:
 	rm -f cv.typ page*.png
 
-.PHONY: downloads preview clean
+.PHONY: preview clean

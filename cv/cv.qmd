@@ -89,6 +89,7 @@ knitr:
 ```{r}
 #| include: false
 source("../R/entries.R")   # shared with the website: reader + author/venue/sort
+source("../R/metrics.R")   # shared with the website: the metrics.toml cache
 source("R/bib.R")          # CV-only markdown formatters
 source("R/downloads.R")
 
@@ -100,7 +101,8 @@ assert_no_accent_macros(src)           # accents must be literal UTF-8
 pubs   <- read_entries(src[1])
 soft   <- read_entries(src[2])
 talks  <- read_entries(src[3], src[4], src[5])
-counts <- read_downloads()             # cached; `make downloads` to refresh
+metrics <- read_metrics()              # ../metrics.toml; refreshed weekly by CI
+counts  <- read_downloads(metrics)     # CRAN downloads, keyed by software.toml key
 ```
 
 ```{=typst}
@@ -191,10 +193,12 @@ emit_section(pubs, "wip", fmt_pub)
 
 ```{r}
 #| results: asis
-if (length(counts)) cat(sprintf(
-  "\n_Badges show total CRAN downloads (%s across %d packages), as of %s._\n",
-  format(sum(counts), big.mark = ","), length(counts),
-  format(file.mtime("data/downloads.csv"), "%B %Y")))
+if (length(counts)) {
+  stamp <- downloads_stamp(metrics)
+  asof  <- if (nzchar(stamp)) sprintf(", as of %s", format(as.Date(stamp), "%B %Y")) else ""
+  cat(sprintf("\n_Badges show total CRAN downloads (%s across %d packages)%s._\n",
+              format(sum(counts), big.mark = ","), length(counts), asof))
+}
 ```
 
 ```{r}
@@ -202,7 +206,7 @@ if (length(counts)) cat(sprintf(
 es <- sort_entries(soft)
 for (i in seq_along(es)) {
   cat(sprintf("%d. %s%s\n\n", i, fmt_software(es[[i]]),
-              dl_badge(pkg_name(es[[i]]), counts)))
+              dl_badge(es[[i]]$key, counts)))
 }
 ```
 
