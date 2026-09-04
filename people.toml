@@ -487,3 +487,41 @@ url = 'https://scholar.google.com/citations?user=2azPkJwAAAAJ&hl=en'
 affiliation = 'Center for Forecasting and Outbreak Analytics, CDC'
 affiliation_short = 'CFA, CDC'
 photo = 'img/people/pollock.jpg'
+
+# --- Utah DHHS / CDC collaborators and a coauthor long-tail: photo-only
+# entries (no `group`, so they do not appear on the People page). Photos
+# supplied by George in chat; provenance in img/people/MANIFEST.toml.
+
+[gruninger]
+# No `url`: no public profile page verified. Coauthor on the Utah measles
+# work (papers.toml); identity vouched by George, who supplied the headshot.
+name = 'Gruninger, Randon'
+photo = 'img/people/gruninger.jpg'
+
+[mietchen]
+# No `url`: identity vouched by George, who supplied the headshot in chat.
+name = 'Mietchen, Matthew'
+photo = 'img/people/mietchen.jpg'
+
+[kelley]
+# No `url`: identity vouched by George, who supplied the headshot in chat.
+name = 'Kelley, Joshua'
+photo = 'img/people/kelley.jpg'
+
+[nelson]
+# No `url`: identity vouched by George, who supplied the headshot in chat.
+# Coauthor via the CDI cost-effectiveness review (papers.toml); face matches
+# Google Scholar user GDEIDcgAAAAJ.
+name = 'Nelson, Richard E.'
+aka = ['Nelson, Rich']
+photo = 'img/people/nelson.jpg'
+
+[rosenblatt]
+# No `url`: identity vouched by George, who supplied the headshot in chat.
+name = 'Rosenblatt, Samuel'
+photo = 'img/people/rosenblatt.jpg'
+
+[piombo]
+name = 'Piombo, Sarah'
+url = 'https://sarahpiombo.com/'
+photo = 'img/people/piombo.jpg'
