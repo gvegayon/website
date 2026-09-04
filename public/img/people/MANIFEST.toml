@@ -485,3 +485,64 @@ evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fe
 confidence = 'high'
 license    = "LinkedIn profile photo, self-published by Bevin Manuelpillai."
 approved   = 2026-09-01
+
+# The six entries below are the Utah DHHS / CDC collaborator batch from the
+# nsi-sep2026 talk's Collaborators slide. Five are media.licdn.com CDN URLs
+# supplied directly by George in chat, naming each person (same pattern as the
+# diesen / kentmarvick / pollock batches above -- public static assets, no
+# login wall). piombo is a self-published personal-site photo. Each crop was
+# visually checked (real single-person headshot, centered) before commit.
+
+[gruninger]
+file       = 'gruninger.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQFepuGqSMt98w/profile-displayphoto-shrink_800_800/B56ZZkoY.mHUAc-/0/1745445032580'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication), naming the person. Randon Gruninger is a coauthor on the Utah measles work in papers.toml (Utah DHHS). Clear single-person outdoor headshot."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Randon Gruninger."
+approved   = 2026-09-03
+
+[mietchen]
+file       = 'mietchen.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQFuhis7AYJZrQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1691691945338'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication), naming the person. Clear single-person office headshot. No public profile page independently ties the name to Utah DHHS, so people.toml records no `url`."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Matthew Mietchen."
+approved   = 2026-09-03
+
+[kelley]
+file       = 'kelley.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D4D03AQHoImKpbGy-sQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1673565878722'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication), naming the person. Clear single-person outdoor headshot. No public profile page independently ties the name to Utah DHHS, so people.toml records no `url`."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Joshua Kelley."
+approved   = 2026-09-03
+
+[nelson]
+file       = 'nelson.jpg'
+source_url = 'https://scholar.googleusercontent.com/citations?view_op=view_photo&user=GDEIDcgAAAAJ&citpid=5'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat, naming the person. Google Scholar profile photo for user GDEIDcgAAAAJ (Richard E. Nelson), who is a coauthor on the CDI cost-effectiveness review in papers.toml. Small source (128x128) but a clear single-person headshot."
+confidence = 'high'
+license    = "Self-published Google Scholar profile photo, Richard E. Nelson."
+approved   = 2026-09-03
+
+[rosenblatt]
+file       = 'rosenblatt.jpg'
+source_url = 'https://media.licdn.com/dms/image/v2/D5603AQFGEBZEIHsLFA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703191894498'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat (LinkedIn CDN, publicly fetchable without authentication), naming the person. Clear single-person indoor headshot."
+confidence = 'high'
+license    = "LinkedIn profile photo, self-published by Samuel Rosenblatt."
+approved   = 2026-09-03
+
+[piombo]
+file       = 'piombo.jpg'
+source_url = 'https://sarahpiombo.com/images/sarah_piombo.jpg'
+retrieved  = 2026-09-03
+evidence   = "URL supplied directly by George in chat, naming the person. Hosted on her own site (sarahpiombo.com, also this entry's `url`); Sarah Piombo is a coauthor with George and Thomas Valente on piombo2025. Self-controlled single source. Studio portrait, face centered."
+confidence = 'medium'
+license    = "Self-published personal-site photo, Sarah Piombo."
+approved   = 2026-09-03
