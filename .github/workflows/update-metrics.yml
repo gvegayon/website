@@ -94,9 +94,13 @@ jobs:
             echo "### Metrics changed"
             echo ""
             echo '```diff'
+            # awk, not `head -60`: head closes the pipe after 60 lines, which
+            # SIGPIPEs grep and, under `set -o pipefail`, fails the whole step
+            # whenever a lot of numbers moved at once. awk drains stdin and
+            # exits 0. The trailing `|| true` is just belt and braces.
             git diff -U0 -- metrics.toml \
               | grep -E '^[+-](citations|cran_downloads|cran_version|stars|pushed_at|archived|openalex|matched_by|miss) |^\+\+\+|^---|^@@' \
-              | head -60
+              | awk 'NR <= 60' || true
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
         fi
