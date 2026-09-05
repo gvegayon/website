@@ -228,11 +228,15 @@ verbatim into `public/`. So:
    two years later.
 3. **Add the field** to each entry in `papers.toml`:
    `pdf = '/assets/papers/<file>.pdf'`.
-4. **Surface PDF links on the cards, not only the detail pages.** `R/cards.R`
-   (around line 172) and `R/research_publications.R` (around line 134) build
-   their link rows from `doi`, `url` and `eprint` only. Adding the `pdf` field
-   there — mirroring `R/detail.R:149-160` — is a small, contained change and is
-   what makes the download actually discoverable.
+4. **Surface PDF links on the cards, not only the detail pages.** *(done)*
+   `R/cards.R` built its link row from `doi`, `url` and `eprint` only, so a
+   hosted PDF was reachable only from the detail page. `research_card()` now
+   renders a **PDF** link too, resolved through `asset_url()` so the path also
+   works from the `es/` and `zh/` grids. `R/detail.R` now resolves `pdf` the
+   same way — it was passing the raw field to `safe_link()`, which happens to
+   work for a `/`-prefixed path at the domain root but breaks the file's
+   site-root-relative convention. (`R/research_publications.R` contains a
+   second, older copy of this link row, but nothing sources it — leave it be.)
 5. **Stamp every AAM** with a cover line before uploading. For Elsevier titles
    this is a requirement, not a nicety:
 
@@ -242,10 +246,25 @@ verbatim into `public/`. So:
 
    For Springer AAMs, replace the CC line with a pointer to Springer Nature's
    AAM Terms of Use — a CC licence on a Springer AAM would itself be a breach.
-6. **Add a `rights`/`license` field** to `papers.toml` recording the
-   determination for each paper (e.g. `sharing = 'vor-ccby'`, `'aam-only'`,
-   `'link-only'`). This is what keeps the plan from decaying: the decision lives
-   next to the paper instead of in this document.
+6. **Record the determination in `papers.toml`.** *(done)* Every entry now
+   carries a `sharing` field, and the file header documents the vocabulary.
+   This is what keeps the plan from decaying: the decision lives next to the
+   paper instead of only in this document, and a new paper is classified as it
+   is added. Current distribution across the 35 entries:
+
+   | Value | Meaning | Count |
+   |---|---|---|
+   | `vor-open` | VoR is CC-licensed — publisher PDF anywhere, ResearchGate included | 6 |
+   | `vor-open-unverified` | Believed OA, licence not yet confirmed on the article page | 5 |
+   | `aam-clear` | Embargo lapsed — AAM on ggvy.cl and in repositories, ResearchGate link-only | 10 |
+   | `aam-clear-scn` | As `aam-clear`, and the AAM may also go on ResearchGate | 1 |
+   | `aam-site-only` | Still embargoed — AAM on ggvy.cl only | 1 |
+   | `link-only` | No hosted copy without written permission | 1 |
+   | `author-held` | Preprint or unpublished — mine to post anywhere | 8 |
+   | `rights-unclear` | Commissioned work; confirm rights before hosting | 3 |
+
+   The `sharing` value is also the reason a paper does or does not carry a
+   `pdf` field, so the two should always be changed together.
 7. **Optional:** a short "Sharing and reuse" note on `research.qmd` explaining
    that AAMs are posted where the publisher permits and that the DOI link is
    the version of record. It costs one paragraph and answers the question
