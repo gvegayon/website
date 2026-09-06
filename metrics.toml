@@ -4,7 +4,7 @@
 # stars from GitHub. Everything here is a number the site displays with an
 # "as of" date; nothing here overrides papers.toml or software.toml.
 
-fetched_at = '2026-09-04T03:36:06Z'
+fetched_at = '2026-09-06T06:51:07Z'
 
 [papers.Bell2019]
 openalex = 'W2944985829'
@@ -211,209 +211,210 @@ matched_by = 'doi'
 checked_at = '2026-09-04T03:36:06Z'
 
 [software.ABCoptim]
-cran_downloads = 94076
+cran_downloads = 94102
 cran_version = '0.15.0'
 license = 'MIT + file LICENSE'
 stars = 32
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.aphylo]
-cran_downloads = 19793
+cran_downloads = 19832
 cran_version = '0.3-6'
 license = 'MIT + file LICENSE'
 stars = 6
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.barry]
-cran_downloads = 2723
+cran_downloads = 2734
 cran_version = '0.2.2'
 license = 'MIT + file LICENSE'
 stars = 0
 pushed_at = '2026-08-06'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.defm]
-cran_downloads = 2877
+cran_downloads = 2898
 cran_version = '0.2.1.0'
 license = 'MIT + file LICENSE'
 stars = 1
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.epiworld]
 stars = 10
 pushed_at = '2026-08-26'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.epiworldR]
-cran_downloads = 15749
+cran_downloads = 15789
 cran_version = '0.14.0.0'
 license = 'MIT + file LICENSE'
 stars = 14
 pushed_at = '2026-08-26'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.epiworldRcalibrate]
-cran_downloads = 1471
+cran_downloads = 1485
 cran_version = '0.1.4'
 license = 'MIT + file LICENSE'
 stars = 1
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.epiworldRShiny]
-cran_downloads = 14424
+cran_downloads = 14441
 cran_version = '0.2.3'
 license = 'MIT + file LICENSE'
 stars = 3
 pushed_at = '2026-08-06'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.ergmito]
-cran_downloads = 28312
+cran_downloads = 28342
 cran_version = '0.3-2'
 license = 'MIT + file LICENSE'
 stars = 9
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.fmcmc]
-cran_downloads = 35148
+cran_downloads = 35189
 cran_version = '0.5-2'
 license = 'MIT + file LICENSE'
 stars = 16
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.googlePublicData]
-cran_downloads = 61958
+cran_downloads = 61973
 cran_version = '0.16.1'
 license = 'MIT + file LICENSE'
 stars = 8
 pushed_at = '2026-08-06'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.idcup]
 stars = 0
 pushed_at = '2026-08-01'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.imaginarycss]
-cran_downloads = 2540
+cran_downloads = 2550
 cran_version = '0.1.0'
 license = 'MIT + file LICENSE'
 stars = 1
 pushed_at = '2026-07-23'
 archived = true
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.insightnetexplorer]
 stars = 1
 pushed_at = '2026-08-09'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.measles]
-cran_downloads = 2424
+cran_downloads = 2442
 cran_version = '0.2.0'
 license = 'MIT + file LICENSE'
 stars = 5
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.'multigroup.vaccine']
 stars = 2
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
+cran_downloads = 1472
 
 [software.netdiffuseR]
-cran_downloads = 58026
+cran_downloads = 58058
 cran_version = '1.25.0'
 license = 'MIT + file LICENSE'
 stars = 92
 pushed_at = '2026-08-24'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.netplot]
-cran_downloads = 22532
+cran_downloads = 22576
 cran_version = '0.4-0'
 license = 'MIT + file LICENSE'
 stars = 53
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.parallel]
 stars = 134
 pushed_at = '2025-12-28'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.pruner]
 stars = 1
 pushed_at = '2020-07-08'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.pyrenew]
 stars = 29
 pushed_at = '2026-09-04'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.rgexf]
-cran_downloads = 653675
+cran_downloads = 653747
 cran_version = '0.17.0'
 license = 'MIT + file LICENSE'
 stars = 32
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.slurmR]
-cran_downloads = 37416
+cran_downloads = 37428
 cran_version = '0.5-4'
 license = 'MIT + file LICENSE'
 stars = 61
 pushed_at = '2026-08-16'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.tabulergm]
-cran_downloads = 187
+cran_downloads = 197
 cran_version = '0.1.0'
 license = 'MIT + file LICENSE'
 stars = 2
 pushed_at = '2026-08-20'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.twitterreport]
 stars = 38
 pushed_at = '2017-11-29'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
 [software.wwinference]
 stars = 32
 pushed_at = '2026-08-31'
 archived = false
-checked_at = '2026-09-04T03:36:06Z'
+checked_at = '2026-09-06T06:51:07Z'
 
