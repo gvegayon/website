@@ -12,3 +12,17 @@ http://www.ggv.cl/* https://ggvy.cl/:splat 301!
 /index.html / 301!
 /es/index.html /es/ 301!
 /zh/index.html /zh/ 301!
+
+# The GSC coverage report (Alternate page with proper canonical tag) also
+# showed Google crawling individual research/software/teaching pages without
+# their .html extension -- external sites link to them that way, but Quarto
+# only ever emits the .html file, so the bare path served the same content
+# with a canonical tag pointing elsewhere instead of just redirecting there.
+# These don't need force: nothing on disk exists at the extensionless path.
+/research/:slug /research/:slug.html 301
+/software/:slug /software/:slug.html 301
+/research /research.html 301
+/software /software.html 301
+/talks /talks.html 301
+/teaching /teaching.html 301
+/people /people.html 301
