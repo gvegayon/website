@@ -165,6 +165,11 @@ research_card <- function(e, i18n) {
   doi   <- f$doi %||% ""
   url   <- f$url %||% ""
   arxiv <- f$eprint %||% ""
+  # `pdf` is a hosted copy of the manuscript -- see docs/paper-sharing-plan.md
+  # for which version of which paper may be hosted at all. Site-root relative
+  # in the .toml ('/assets/papers/x.pdf'), so it goes through asset_url() to
+  # pick up the '../' the es/ and zh/ grids need.
+  pdf   <- asset_url(f$pdf %||% "", site_root())
   # Detail pages are generated in English only; es/ and zh/ cards link to the
   # same page (root-relative, so it resolves from any subdirectory).
   href  <- paste0(site_root(), "research/", entry_slug(e), ".html")
@@ -172,7 +177,8 @@ research_card <- function(e, i18n) {
   links <- c(
     if (nzchar(doi)) safe_link(paste0("https://doi.org/", doi), "DOI") else "",
     safe_link(url, i18n$link_publisher),
-    if (nzchar(arxiv)) safe_link(paste0("https://arxiv.org/abs/", arxiv), "arXiv") else ""
+    if (nzchar(arxiv)) safe_link(paste0("https://arxiv.org/abs/", arxiv), "arXiv") else "",
+    safe_link(pdf, "PDF")
   )
   links <- links[nzchar(links)]
 

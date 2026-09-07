@@ -1,5 +1,23 @@
+# Peer-reviewed papers, preprints and reports. Hand-maintained -- nothing
+# regenerates this file; see README.
+#
+# `sharing` records what the publisher lets me post, and is the reason a paper
+# does or does not carry a `pdf` field. docs/paper-sharing-plan.md has the
+# per-paper reasoning and the publisher rules behind each value:
+#
+#   vor-open             VoR is CC-licensed -- publisher PDF anywhere, ResearchGate included
+#   vor-open-unverified  believed open access, licence not yet confirmed on the article page
+#   aam-clear            embargo lapsed -- accepted manuscript on ggvy.cl and in repositories,
+#                        ResearchGate link-only (commercial platform)
+#   aam-clear-scn        as aam-clear, and the AAM may also go on ResearchGate
+#   aam-site-only        still embargoed -- accepted manuscript on ggvy.cl only
+#   link-only            no hosted copy without written permission from the publisher
+#   author-held          preprint or unpublished -- mine to post anywhere
+#   rights-unclear       commissioned work; confirm rights before hosting a copy
+#
 [quintanilla2013estudio]
 entrytype = 'techreport'
+sharing = 'rights-unclear'
 title = 'Estudio Actuarial de los Fondos del Seguro de Cesantía'
 author = 'Quintanilla, Ximena; Poblete, Isabel; Vega Yon, George G.; others'
 year = '2013'
@@ -7,6 +25,7 @@ keywords = ['wip']
 
 [vegayon2020aphylo]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'Bayesian parameter estimation for automatic annotation of gene functions using observational data and phylogenetic trees'
 author = 'Vega Yon, George G.; Thomas, Duncan C.; Morrison, John; Mi, Huaiyu; Thomas, Paul D.; Marjoram, Paul'
 year = '2021'
@@ -24,6 +43,7 @@ software = ['aphylo']
 
 [vegayon-geese]
 entrytype = 'unpublished'
+sharing = 'author-held'
 title = 'Modeling Gene Functional Evolution using Sufficient Statistics'
 author = 'Vega Yon, George G.; Thomas, Duncan C.; Morrison, John; Mi, Huaiyu; Thomas, Paul D.; Marjoram, Paul'
 year = '2021'
@@ -31,6 +51,7 @@ keywords = ['wip']
 
 [vegayon-ltcf]
 entrytype = 'article'
+sharing = 'aam-site-only'
 title = 'Exponential-Family Random Graph Models in Resident-Healthcare Provider Networks: An Application using data from Long-term Healthcare Facilities in the United States'
 author = 'Vega Yon, George G.; Zhang, Chong; Khader, Karim; Chang, Nai-Chung Nelson; Visnovsky, Lindsay D.; Thomas, Alun; Haroldsen, Candace; Stratford, Kristina; Samore, Matthew H.'
 year = '2026'
@@ -41,6 +62,7 @@ abstract = 'Infectious pathogens have a high burden in long-term care facilities
 
 [tanakaImaginaryNetworkMotifs2024]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Imaginary Network Motifs: Structural Patterns of False Positives and Negatives in Social Networks'
 shorttitle = 'Imaginary Network Motifs'
 author = 'Tanaka, Kyosuke; Vega Yon, George G.'
@@ -58,6 +80,7 @@ software = ['imaginarycss']
 
 [ouellet2022]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Officer Networks and Firearm Behaviors: Assessing the Social Transmission of Weapon-Use'
 author = 'Ouellet, Marie; Hashimi, Sadaf; Vega Yon, George G.'
 year = '2022'
@@ -74,6 +97,7 @@ keywords = ['published']
 
 [repetto2013impacto]
 entrytype = 'techreport'
+sharing = 'rights-unclear'
 title = 'El Impacto de un Alza en la Cotización Previsional: Pensiones, Salarios y Empleo'
 author = 'Repetto, Andrea; Vega Yon, George G.'
 year = '2013'
@@ -82,6 +106,7 @@ keywords = ['wip']
 
 [FabregaLacoa2013]
 entrytype = 'article'
+sharing = 'vor-open-unverified'
 title = 'El impacto del rating televisivo sobre la actividad en Twitter: evidencia para Chile sobre la base del evento TELETÓN 2012'
 author = 'Fábrega Lacoa, Jorge; Vega Yon, George G.'
 year = '2013'
@@ -97,6 +122,7 @@ keywords = ['published']
 
 ['RePEc:sdp:sdpwps:57']
 entrytype = 'techreport'
+sharing = 'rights-unclear'
 title = 'Capital Necesario Unitario (CNU): Cálculo e Introducción Del Módulo de Stata CNU'
 author = 'Vega Yon, George G.'
 year = '2014'
@@ -109,6 +135,7 @@ keywords = ['wip']
 
 [Valente2019]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Network influences on policy implementation: Evidence from a global health treaty'
 author = 'Valente, Thomas W.; Wipfli, Heather; Vega Yon, George G.'
 year = '2019'
@@ -123,6 +150,7 @@ keywords = ['published', 'Diffusion of innovations', 'Policy implementation', 'S
 
 [yon2019exponential]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Exponential random graph models for little networks'
 author = 'Vega Yon, George G.; Slaughter, Andrew; de la Haye, Kayla'
 year = '2021'
@@ -139,6 +167,7 @@ software = ['ergmito']
 
 [Bell2019]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Sensing eating mimicry among family members'
 author = 'Bell, Brooke M.; Spruijt-Metz, Donna; Vega Yon, George G.; Mondol, Abu S.; Alam, Ridwan; Ma, Meiyi; Emi, Ifat; Lach, John; Stankovic, John A.; de la Haye, Kayla'
 year = '2019'
@@ -155,6 +184,7 @@ keywords = ['published', 'Eating', 'Family', 'Mimicry', 'Obesity', 'Permutation 
 
 [DelaHaye2019]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Smoking Diffusion through Networks of Diverse, Urban American Adolescents over the High School Period'
 author = 'de la Haye, Kayla; Shin, Heesung; Vega Yon, George G.; Valente, Thomas W.'
 year = '2019'
@@ -170,6 +200,7 @@ keywords = ['published', 'adolescent', 'diffusion', 'high school', 'smoking init
 
 [VegaYon2019c]
 entrytype = 'article'
+sharing = 'link-only'
 title = 'parallel: A command for parallel computing'
 author = 'Vega Yon, George G.; Quistorff, Brian'
 year = '2019'
@@ -186,6 +217,7 @@ keywords = ['published']
 
 [VegaYon2019a]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'fmcmc: A friendly MCMC framework'
 author = 'Vega Yon, George G.; Marjoram, Paul'
 year = '2019'
@@ -203,6 +235,7 @@ software = ['fmcmc']
 
 [VegaYon2019b]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'slurmR: A lightweight wrapper for HPC with Slurm'
 author = 'Vega Yon, George G.; Marjoram, Paul'
 year = '2019'
@@ -220,6 +253,7 @@ software = ['slurmR']
 
 [Valente2020]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Diffusion/Contagion Processes on Social Networks'
 author = 'Valente, Thomas W.; Vega Yon, George G.'
 year = '2020'
@@ -235,6 +269,7 @@ keywords = ['published']
 
 [VegaYon2021rgexf]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'Building, Importing, and Exporting GEXF Graph Files with rgexf'
 author = 'Vega Yon, George G.'
 year = '2021'
@@ -251,6 +286,7 @@ software = ['rgexf']
 
 [Hancean2022]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'The formation of political discussion networks'
 author = 'Hâncean, Marian-Gabriel; Perc, Matjaž; Vega Yon, George G.; Gheorghiță, Adrian; Mihăilă, Bianca-Elena'
 year = '2022'
@@ -266,6 +302,7 @@ keywords = ['published']
 
 [panahiVeteranPerspectivesEpilepsy2023]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Veteran Perspectives of Epilepsy Care: Impact of Veteran Satisfaction, Knowledge, and Proactivity'
 shorttitle = 'Veteran Perspectives of Epilepsy Care'
 author = 'Panahi, Samin; Kennedy, Eamonn; Roghani, Ali; Vega Yon, George G.; VanCott, Anne; Gugger, James J.; Raquel Lopez, Maria; Pugh, Mary Jo'
@@ -283,6 +320,7 @@ keywords = ['published']
 
 [loveCharacterizingSpatiotemporalVariation2023]
 entrytype = 'techreport'
+sharing = 'author-held'
 title = 'Characterizing Spatiotemporal Variation in Transmission Heterogeneity during the 2022 Mpox Outbreak in the USA'
 author = 'Love, Jay; LaPrete, Cormac R.; Sheets, Theresa R.; Vega Yon, George G.; Thomas, Alun; Samore, Matthew H.; Keegan, Lindsay T.; Adler, Frederick R.; Slayton, Rachel B.; Spicknall, Ian H.; Toth, Damon J.A.'
 year = '2023'
@@ -296,6 +334,7 @@ keywords = ['wip']
 
 [vegayonDiscreteExponentialFamilyModels2022]
 entrytype = 'misc'
+sharing = 'author-held'
 title = 'Discrete Exponential-Family Models for Multivariate Binary Outcomes'
 author = 'Vega Yon, George G.; Pugh, Mary Jo; Valente, Thomas W.'
 year = '2022'
@@ -313,6 +352,7 @@ software = ['defm']
 
 [vegayonPowerMulticollinearitySmall2023a]
 entrytype = 'article'
+sharing = 'aam-clear-scn'
 title = 'Power and Multicollinearity in Small Networks: A Discussion of “Tale of Two Datasets: Representativeness and Generalisability of Inference for Samples of Networks” by Krivitsky, Coletti, and Hens'
 shorttitle = 'Power and Multicollinearity in Small Networks'
 author = 'Vega Yon, George G.'
@@ -331,6 +371,7 @@ keywords = ['published']
 
 [meyerEpiworldRFastAgentBased2023]
 entrytype = 'article'
+sharing = 'vor-open'
 title = 'epiworldR: Fast Agent-Based Epi Models'
 shorttitle = 'epiworldR'
 author = 'Meyer, Derek; Vega Yon, George G.'
@@ -349,6 +390,7 @@ software = ['epiworldR']
 
 [sargentAssessingDynamicsPrEP2024]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'Assessing the Dynamics of PrEP Adoption in a National-Scale Physician Network'
 author = 'Sargent, Matthew; Matthews, Luke J.; Vega Yon, George G.; Storholm, Erik D.; Ober, Allison J.; Green, Harold D.'
 year = '2024'
@@ -365,6 +407,7 @@ keywords = ['published']
 
 [piombo2025]
 entrytype = 'article'
+sharing = 'aam-clear'
 title = 'The impact of social norms on diffusion dynamics: A simulation of e-cigarette use behavior'
 author = 'Piombo, Sarah; Vega Yon, George G.; Valente, Thomas W.'
 year = '2025'
@@ -380,6 +423,7 @@ keywords = ['published']
 
 [najafzadehkhoeiMachineGeneralizeLearning2025a]
 entrytype = 'online'
+sharing = 'author-held'
 title = 'Generalized Machine Learning for Fast Calibration of Agent-Based Epidemic Models'
 shorttitle = 'Generalized Machine Learning for Fast Calibration'
 author = 'Najafzadehkhoei, Sima; Vega Yon, George G.; Modenesi, Bernardo; Meyer, Derek S.'
@@ -396,6 +440,7 @@ keywords = ['wip']
 
 [mohammadiNovelApproachClassifying2025c]
 entrytype = 'article'
+sharing = 'vor-open-unverified'
 title = 'A Novel Approach for Classifying Monoamine Neurotransmitters by Applying Machine Learning on UV Plasmonic-Engineered Auto Fluorescence Time Decay Series (AFTDS)'
 author = 'Mohammadi, Mohammad; Najafzadehkhoei, Sima; Vega Yon, George G.; Wang, Yunshan'
 date = '2025'
@@ -414,6 +459,7 @@ keywords = ['published']
 
 [milandoVisionEstimationInstantaneous2026]
 entrytype = 'article'
+sharing = 'vor-open-unverified'
 title = 'A Vision for Estimation of the Instantaneous Reproductive Number'
 author = 'Milando, Chad W.; Vega Yon, George G.; Johnson, Kaitlyn; Urbinati, Alessandra; St-Onge, Guillaume; Klein, Brennan; Cori, Anne; White, Laura F.'
 year = '2026'
@@ -429,6 +475,7 @@ keywords = ['published']
 
 [vegayonPracticalGuidelinesReflections2026]
 entrytype = 'misc'
+sharing = 'author-held'
 title = 'Practical Guidelines and Reflections on Building Public Health Software: A Measles Case Study (Preprint)'
 shorttitle = 'Practical Guidelines and Reflections on Building Public Health Software'
 author = 'Vega Yon, George G.; Thornton, Delaney; Redd, Andrew; Pulsipher, Andrew; Toth, Damon; Dorsan, Egenia; Rennert, Lior; Johnson, Kaitlyn; White, Laura F; Gruninger, Randon; Nolen, Leisha D; Samore, Matthew H'
@@ -443,6 +490,7 @@ keywords = ['wip']
 
 [duongIncorporatingSocialDeterminants2024]
 entrytype = 'article'
+sharing = 'vor-open-unverified'
 title = 'Incorporating Social Determinants of Health into Transmission Modeling of COVID-19 Vaccine in the US: A Scoping Review'
 shorttitle = 'Incorporating Social Determinants of Health into Transmission Modeling of COVID-19 Vaccine in the US'
 author = 'Duong, Khanh N. C.; Nguyen, Danielle T.; Kategeaw, Warittakorn; Liang, Xi; Khaing, Win; Visnovsky, Lindsay D.; Veettil, Sajesh K.; McFarland, Mary M.; Nelson, Richard E.; Jones, Barbara E.; Pavia, Andrew T.; Coates, Emma; Khader, Karim; Love, Jay; Vega Yon, George G.; Zhang, Yue; Willson, Tina; Dorsan, Egenia; Toth, Damon J. A.; Jones, Makoto M.; Samore, Matthew H.; Chaiyakunapruk, Nathorn'
@@ -459,6 +507,7 @@ keywords = ['published']
 
 [visnovskyMultidrugResistantOrganism2026]
 entrytype = 'article'
+sharing = 'vor-open-unverified'
 title = 'P-1104. Multidrug-Resistant Organism (MDRO)-Contaminated Mobile Equipment Networks in Skilled Nursing Facilities'
 author = 'Visnovsky, Lindsay D.; Leecaster, Molly; Vega Yon, George G.; Loc-Carrillo, Catherine M.; Dorsan, Egenia; Huber, Tavis; Jamu, Styn M.; Stratford, Kristina; Samore, Matthew H.; Drews, Frank A.'
 year = '2026'
@@ -473,6 +522,7 @@ keywords = ['published']
 
 [maryeHiddenBurdenMeasles2026]
 entrytype = 'misc'
+sharing = 'author-held'
 title = 'Hidden Burden of a Measles Outbreak Revealed by Genomic and Transmission Models'
 author = 'Marye, Abbey; Toth, Damon J. A.; Vega Yon, George G.; Wagoner, Jake; Lofgren, Eric T.; Samore, Matthew H.; Pavia, Andrew T.; Nolen, Leisha D.; Komatsu, Kenneth; Oakeson, Kelly; Keegan, Lindsay T.'
 year = '2026'
@@ -487,6 +537,7 @@ keywords = ['wip']
 
 [johnsonBayesianGenerativeModeling2026]
 entrytype = 'misc'
+sharing = 'author-held'
 title = 'Bayesian Generative Modeling for Heterogeneous Wastewater Data Applied to COVID-19 Forecasting'
 author = 'Johnson, Kaitlyn E.; Vega Yon, George G.; Brand, Samuel P. C.; Bernal Zelaya, Christian O.; Bayer, Damon; Volkov, Igor; Susswein, Zachary; Magee, Andrew; Gostic, Katelyn M.; English, Kayla M.; Ghinai, Isaac; Hamlet, Arran; Olesen, Scott W.; Pulliam, Juliet R. C.; Abbott, Sam; Morris, Dylan H.'
 year = '2026'
@@ -501,6 +552,7 @@ keywords = ['wip']
 
 [lesslerWhyEpidemicRisk2026]
 entrytype = 'misc'
+sharing = 'author-held'
 title = 'Why Epidemic Risk at the 2026 World Cup May Not Be What You Think'
 author = 'Lessler, Justin; Smith, Claire P.; Das, Praachi; Sykes, Abagael L.; Urbinati, Alessandra; Geith, Kelly; Powers, Kimberly A.; Davis, Jessica T.; Kern-Allely, Stephanie C.; Vega Yon, George G.; Lofgren, Eric T.; Pearson, Carl A. B.; Vespignani, Alessandro'
 year = '2026'
