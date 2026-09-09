@@ -437,3 +437,16 @@ status = 'active'
 languages = ['JavaScript']
 abstract = "A small, dependency-light JavaScript simulator for Exponential Random Graph Models (ERGMs), built for teaching and presentations. It simulates from user-specified model parameters and provides an interactive widget for exploring how density, homophily, and reciprocity change network structure in real time."
 keywords = ['networks', 'ergm', 'simulation']
+
+[epicc]
+entrytype = 'manual'
+title = 'EPICC: Epidemiological Cost Calculator'
+author = 'Banks, Olivia; Wang, Edward; Nelson, Richard; Vega Yon, George G.'
+year = '2026'
+url = 'https://epiforesite.github.io/epicc/'
+repo = 'https://github.com/epiforesite/epicc/'
+kind = 'app'
+status = 'active'
+languages = ['JavaScript']
+abstract = "Evaluating the cost implications of public health interventions requires accessible, transparent, and highly adaptable modeling platforms. This EPidemiological Cost Calculator (EPICC) is a novel, browser-based utility designed to execute arbitrary epidemiological models directly within a web environment. EPICC allows researchers and policymakers to select specific disease models, calibrate parameters to reflect localized settings, and dynamically simulate the economic outcomes of various policy scenarios and intervention points. To ensure methodological rigor, the tool prioritizes transparency by fully documenting all underlying equations and default values, enabling users to appropriately contextualize outputs and limitations. Furthermore, EPICC facilitates seamless reproducibility and stakeholder collaboration; model states are continuously encoded as plain text within the URL for instant sharing, parameter configurations can be exported for longitudinal analysis, and simulation results can be compiled into standardized PDF reports. By integrating robust computational capabilities with user-centric data management, EPICC provides an efficient, accessible framework for translating complex epidemiological data into evidence-based policy decisions."
+keywords = ['epidemiology', 'health economics', 'policy']
