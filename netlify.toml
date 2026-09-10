@@ -264,6 +264,11 @@
   status = 301
   force = true
 [[redirects]]
+  from = "/cran/*"
+  to = "https://cran.r-project.org/package=:splat"
+  status = 301
+  force = true
+[[redirects]]
   from   = "/meetme"
   to     = "https://outlook.office.com/bookwithme/user/2b0ce7630ff348a88c23c82847beef52@umail.utah.edu/meetingtype/oAPRWNYkaU-VaGvNTTByjA2?anonymous&ismsaljsauthenabled&ep=mlink"
   status = 301
