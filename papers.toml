@@ -476,14 +476,15 @@ keywords = ['published']
 [vegayonPracticalGuidelinesReflections2026]
 entrytype = 'misc'
 sharing = 'author-held'
-title = 'Practical Guidelines and Reflections on Building Public Health Software: A Measles Case Study (Preprint)'
+title = 'Practical Guidelines and Reflections on Building Public Health Software: A Measles Case Study'
 shorttitle = 'Practical Guidelines and Reflections on Building Public Health Software'
 author = 'Vega Yon, George G.; Thornton, Delaney; Redd, Andrew; Pulsipher, Andrew; Toth, Damon; Dorsan, Egenia; Rennert, Lior; Johnson, Kaitlyn; White, Laura F; Gruninger, Randon; Nolen, Leisha D; Samore, Matthew H'
 year = '2026'
 month = 'feb'
 publisher = 'JMIR Public Health and Surveillance'
 doi = '10.2196/preprints.94240'
-urldate = '2026-03-03'
+url = 'https://preprints.jmir.org/preprint/94240'
+pubstate = 'prepublished'
 archiveprefix = 'JMIR Public Health and Surveillance'
 abstract = 'Academic–public health partnerships are essential for strengthening outbreak preparedness and response, yet translating modeling tools into routine public health practice remains challenging. Structural, technical, and workforce constraints often limit the capacity for modeling tools during emergencies. Here, we describe the development a software ecosystem designed to support real-time infectious disease response through sustained collaboration between an academic research team and public health agencies, with particular focus on the recent measles outbreak. The resulting software enabled real-time scenario modeling, visualization of transmission dynamics, and iterative updates as new data became available. Beyond immediate outbreak response, the initiative strengthened cross-sector collaboration, expanded modeling capacity, and highlighted ongoing gaps in technical infrastructure and workforce readiness at the state and local levels. This case study demonstrates how sustained academic–government partnerships combined with streamlined development practices can accelerate the translation of modeling tools into operational public health settings. Establishing and maintaining analytic infrastructure and agile processes between emergencies may be critical for ensuring timely, data-informed decision-making during future outbreaks.'
 keywords = ['wip']
@@ -564,4 +565,3 @@ pubstate = 'prepublished'
 archiveprefix = 'medRxiv'
 abstract = 'Background: The 2026 FIFA World Cup may bring over one million visitors to North America from around the globe to participate in mass gathering events. The nature of the event and recent news have raised concerns for some that the tournament could lead to infectious disease outbreaks or fuel existing epidemics. Objective: To systematically assess the infectious disease threat posed to the United States by the tournament. Design: A multi-institutional team evaluated pathogen-specific risk across three dimensions: importation, outbreak potential, and impact to identify a priority pathogen list. A systematic screening protocol ensured common criteria and that pathogen information was collected when necessary to inform inclusion. Results: Increased risk from the World Cup is near zero for 63 of 77 evaluated pathogens. Pathogens were predominantly excluded as threats due to low excess importation risk and low outbreak potential if introduced. The remaining priority pathogens fall into five categories: (a) mosquito borne pathogens with the potential for sustained transmission in some host cities, (b) seasonal respiratory viruses, (c) chronic infections with high prevalence outside the United States, (d) pathogens present in the United States with likely increased transmission at World Cup activities, and (e) high-consequence infectious threats. Limitations: Data availability is variable across diseases. Impact calculations may not reflect actual costs to host cities. Disease incidence in World Cup travelers may differ from national incidence rates. Conclusion: While infectious disease outbreaks at the 2026 FIFA World Cup are possible, in an already highly connected world where large gatherings are frequent, the elevated risk from the tournament is not as extreme as it first may seem. Primary Funding Source: US Centers for Disease Control and Prevention'
 keywords = ['wip']
-
