@@ -213,6 +213,11 @@ for (i in seq_along(es)) {
 # Grants
 
 ```{=typst}
+#dated[Advancing Exponential-Family Random Graph Model Estimation and Power Analysis for Biomedical and Public Health Research][2026-2028][
+  1R21LM015164-01, National Library of Medicine (PI: Vega Yon). Role: PI. Total award: \$361,710.][
+    This project will develop new statistical methods to improve the estimation and study design of Exponential- family Random Graph Models (ERGMs), a widely used framework for modeling complex networks in biomedical, public health, and social sciences. By addressing convergence issues and creating the first power analysis framework for multi-network ERGMs, this research will enhance the reliability and reproducibility of network-based studies.
+]
+
 #dated[Quantum-Enhanced Epidemiological Modeling for Public Health Decision-Making][2026 -- 2027][
   University of Utah Seed Grant (PIs: Vega Yon, Basu Roy). Role: Co-PI. Total award: \$50,000.][
   Explores the potential of quantum computing to enhance epidemiological modeling and public
