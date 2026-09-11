@@ -288,6 +288,34 @@ keywords = ['epidemiology', 'agent-based models', 'hpc']
 hex = '/img/epiworld.webp'
 featured = true
 
+[epiworldpy]
+entrytype = 'manual'
+title = 'epiworldpy: Python Bindings for epiworld'
+author = 'Vega Yon, George G.; Banks, Olivia'
+year = '2026'
+note = 'Python package version 0.15.0-0'
+url = 'https://github.com/UofUEpiBio/epiworldpy'
+repo = 'https://github.com/UofUEpiBio/epiworldpy'
+kind = 'package'
+status = 'active'
+languages = ['Python', 'C++']
+abstract = "Python bindings for the 'epiworld' C++ agent-based modeling library. It provides a general framework for modeling disease transmission, including multiple diseases, user-defined policies, feature-dependent transmission, and parallel execution of multiple simulations."
+keywords = ['epidemiology', 'agent-based models']
+
+[epiworldweb]
+entrytype = 'manual'
+title = 'epiworldweb: WebAssembly Port of epiworld'
+author = 'Banks, Olivia'
+year = '2024'
+note = 'Web application version 0.0.1'
+url = 'https://github.com/UofUEpiBio/epiworldweb'
+repo = 'https://github.com/UofUEpiBio/epiworldweb'
+kind = 'app'
+status = 'active'
+languages = ['TypeScript', 'Svelte', 'WebAssembly']
+abstract = "A web application that ports the 'epiworld' epidemiological agent-based modeling framework to WebAssembly, bringing epiworld simulations to the browser."
+keywords = ['epidemiology', 'agent-based models', 'visualization']
+
 [pyrenew]
 entrytype = 'manual'
 title = 'PyRenew: A Package for Bayesian Renewal Modeling with JAX and NumPyro'
