@@ -305,7 +305,7 @@ keywords = ['epidemiology', 'agent-based models']
 [epiworldweb]
 entrytype = 'manual'
 title = 'epiworldweb: WebAssembly Port of epiworld'
-author = 'Banks, Olivia'
+author = 'Banks, Olivia; Vega Yon, George G.'
 year = '2024'
 note = 'Web application version 0.0.1'
 url = 'https://github.com/UofUEpiBio/epiworldweb'
