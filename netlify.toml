@@ -1,4 +1,9 @@
 [[redirects]]
+  from = "slides/nsi-sep2026"
+  to = "https://gvegayon/github.io/nsi-sep2026"
+  force = true
+  status = 301
+[[redirects]]
   from = "sunbelt2026"
   to = "https://posit.cloud/spaces/797063/join?access_code=FlE5qs5kE5spLqFqSuHTYXdDtneJa7bPDbUIlCIv"
   force = true
