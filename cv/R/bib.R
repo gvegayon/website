@@ -34,14 +34,35 @@ fmt_pub <- function(e) {
   paste0(bits, collapse = "")
 }
 
+# The parenthesised tail used to be a single `note` string in the .toml, pasted
+# through as-is. It is now composed from the entry's own fields (talktype,
+# slides, video, repo, announcement -- see R/entries.R), which is what lets the
+# line also carry the co-authors and the venue that the note never held.
+TALK_LINK_LABELS <- c(slides = "slides", video = "video",
+                      repo = "materials", announcement = "announcement")
+
 fmt_talk <- function(e) {
   f <- e$fields
-  ti <- f$title %||% ""
+  ti <- md_escape(f$title %||% "")
   yr <- sub("^(\\d{4}).*$", "\\1", f$year %||% "")
-  ev <- f$eventtitle %||% ""
-  nt <- f$note %||% ""
-  paste0(md_escape(ti), ". ", if (nzchar(ev)) paste0("*", md_escape(ev), "*. ") else "",
-         "(", yr, ") ", md_escape(nt))
+  ev <- md_escape(venue_of(f))
+  loc <- md_escape(f$location %||% "")
+  with <- md_escape(talk_coauthors(f))
+
+  links <- talk_links(f)
+  urls <- paste(sprintf("[%s](%s)", TALK_LINK_LABELS[names(links)], links), collapse = "/")
+  type <- talk_type_token(f)
+  note <- if (nzchar(type) || nzchar(urls)) {
+    sprintf("(%s%s%s)", type, if (nzchar(type) && nzchar(urls)) ", " else "", urls)
+  } else ""
+
+  paste0(
+    ti,
+    if (nzchar(with)) sprintf(" (with %s)", with) else "",
+    ". ",
+    if (nzchar(ev)) paste0("*", ev, "*", if (nzchar(loc)) paste0(", ", loc) else "", ". ") else "",
+    "(", yr, ") ", note
+  )
 }
 
 fmt_software <- function(e) {

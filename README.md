@@ -16,7 +16,8 @@ This is the source code for my personal website built with Quarto.
 ## Publication and software data
 
 Publications, software and talks live in TOML, and these files are the source
-of truth -- nothing regenerates them:
+of truth -- no render regenerates them (`make import-talks` tops the talk
+files up from the talks repo, by hand -- see below):
 
 | File | Feeds |
 | --- | --- |
@@ -75,6 +76,53 @@ token and prints "G." instead of "G. G."; see `bibtex_name()` in
 
 Legacy arrays (`author = ['A, B', 'C, D']`) are still parsed, so an old file
 keeps rendering, but new entries should use the string form.
+
+### Talks
+
+A talk entry carries the shared fields above plus its own. All are optional
+except the ones every entry needs (`title`, `year`, `month`):
+
+| Field | Meaning |
+| --- | --- |
+| `talktype` | `invited talk`, `conference talk`, `conference poster`, `conference workshop`, `workshop` or `talk` -- drives the badge on the timeline and the note on the CV |
+| `date` | full `YYYY-MM-DD`; `year`/`month` remain the sort keys, this only adds the day |
+| `eventtitle` | the conference, seminar series or course |
+| `eventurl` | the event's own page; the event title links to it |
+| `host` | who ran it (`INSNA`, `USC`); hidden when it only repeats the event title |
+| `location` | where it was given (`Washington DC`, `Online`) |
+| `slides` | the title links here |
+| `video` | recording |
+| `repo` | source repository, or wherever the materials live |
+| `announcement` | the host's announcement of the talk |
+| `source` | the folder in [gvegayon/talks](https://github.com/gvegayon/talks) this entry was imported from |
+
+`author` is the speaker list, in the same `Last, First M.; ...` form as
+everywhere else. The site and the CV print the *co-authors* -- "with de la
+Haye, K." -- so a solo talk still names its speaker rather than leaving the
+field empty.
+
+Older entries packed the type and the links into one `note` string,
+`(conference workshop, [slides](...)/[video](...))`. That is still parsed, so a
+hand-written entry in the old shape keeps rendering, but nothing in the data
+uses it any more: two places holding the same fact is how they drift apart.
+
+#### Importing from the talks repo
+
+Every talk also has a folder in [gvegayon/talks](https://github.com/gvegayon/talks)
+whose `README.md` front matter is the fuller record -- that is where `host`,
+`event_url`, `location`, `repo`, `announcement` and the `costar` list come
+from. With a checkout of it beside this one:
+
+```sh
+make import-talks              # or: make import-talks TALKS=/path/to/talks
+```
+
+It fills in what a `.toml` entry is missing, adds entries for talks it has
+never seen, converts `costar` (`{\bf George G.} {\bf Vega Yon} and Kayla de la
+Haye`) into the `author` form, and reports what it did. It never overwrites a
+field the `.toml` already fills, so hand edits survive a re-import, and it
+pins each entry to its folder with `source` so a second run matches exactly
+rather than guessing again. No network.
 
 ### Images
 

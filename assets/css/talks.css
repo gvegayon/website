@@ -128,10 +128,35 @@
 
 .talk__title a:hover { color: var(--tl-accent); }
 
+/* Who else was on the talk. Above the venue line, not in it: the co-authors
+ * are the one thing on a card that is about people rather than the occasion,
+ * and a third dot-separated run would bury them. */
+.talk__with {
+  margin: 0 0 0.15rem;
+  font-size: 0.85rem;
+  color: var(--ig-muted, #7a6a5c);
+}
+
+.talk__coauthors { color: inherit; }
+
 .talk__meta {
   margin: 0 0 0.15rem;
   font-size: 0.9rem;
   color: var(--ig-muted, #7a6a5c);
+}
+
+/* The event title links to the event's own page when the entry records one.
+ * It stays the colour of the line it sits in -- a conference name that lit up
+ * like a call to action would outrank the talk's own title. */
+.talk__meta a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+.talk__meta a:hover {
+  color: var(--tl-accent);
+  border-bottom-color: var(--tl-accent);
 }
 
 .talk__meta .sep,
