@@ -6,7 +6,10 @@
 QUARTO  ?= quarto
 RSCRIPT ?= Rscript
 
-.PHONY: deps pages build clean-generated refresh update-cv
+# Checkout of github.com/gvegayon/talks, for `import-talks` only.
+TALKS   ?= ../talks
+
+.PHONY: deps pages build clean-generated refresh update-cv import-talks
 
 # papers.toml/software.toml are read with toml::read_toml(); the CI container
 # (rocker/tidyverse) does not ship it.
@@ -41,6 +44,16 @@ build: clean-generated pages
 # refresh can never fail the build; metrics.toml keeps its previous values.
 refresh: deps
 	-$(RSCRIPT) R/fetch_metrics.R
+
+# The talks themselves live in the TALKS repo, one folder per talk, and their
+# README front matter records more than the .toml files do: the host, the
+# event's own URL, the location, the co-authors, the video, the announcement.
+# This tops the .toml files up from a checkout of it -- no network, and nothing
+# already in a .toml is overwritten. Run by hand after a talk is added over
+# there; never part of a render, because the .toml files stay the source of
+# truth for the site.
+import-talks: deps
+	$(RSCRIPT) R/import_talks.R $(TALKS)
 
 update-cv:
 	cp ../resume/resume.pdf public/.; cp ../resume/resume.docx public/.

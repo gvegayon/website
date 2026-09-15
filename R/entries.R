@@ -176,6 +176,130 @@ link_of <- function(f) {
   ""
 }
 
+# ------------------------------------------------------------------ talks
+
+# A talk entry carries, on top of the fields above:
+#
+#   talktype      'conference workshop'  the fine-grained kind: what separates a
+#                                        poster from a workshop from a plain
+#                                        talk, which `keywords` does not say
+#   date          '2017-07-26'           the full date; `year`/`month` stay the
+#                                        sort keys, this only adds the day
+#   eventurl                             the event's own page
+#   host          'INSNA'                who ran it
+#   location      'Washington DC'        where it was given
+#   slides / video / repo / announcement
+#   speaker       'Quistorff, Brian'     who delivered it, when that is not the
+#                                        first author (see talk_speaker())
+#   source        '20170726-nasn2017'    the folder in github.com/gvegayon/talks
+#                                        this was imported from
+#
+# Every one is optional. They come from the talk's README front matter over in
+# that repository, via R/import_talks.R.
+
+TALK_LINK_FIELDS <- c("slides", "video", "repo", "announcement")
+
+# Entries written before those fields existed packed the type and the
+# slides/video links into one `note` string:
+#
+#   (conference workshop, [slides](https://...)/[video](https://...))
+#
+# Nothing in the current data still does, but a hand-written entry in the old
+# shape keeps rendering rather than losing its links. A few of those URLs
+# carried a trailing space, hence the trimws().
+parse_talk_note <- function(note) {
+  note <- trimws(note %||% "")
+  out <- list(talktype = "", slides = "", video = "", repo = "", announcement = "")
+  if (!nzchar(note)) return(out)
+
+  tok <- sub("^\\(([^,)]+)[,)].*$", "\\1", note)
+  if (!identical(tok, note)) out$talktype <- trimws(tok)
+
+  for (link in regmatches(note, gregexpr("\\[[^]]+\\]\\([^)]*\\)", note, perl = TRUE))[[1]]) {
+    label <- tolower(sub("^\\[([^]]+)\\].*$", "\\1", link))
+    if (label %in% names(out) && !nzchar(out[[label]])) {
+      out[[label]] <- trimws(sub("^.*\\(([^)]*)\\)$", "\\1", link))
+    }
+  }
+  out
+}
+
+talk_type_token <- function(f) {
+  tolower(trimws(f$talktype %||% parse_talk_note(f$note)$talktype %||% ""))
+}
+
+# The external links an entry has, in a fixed order, dropping the ones it
+# doesn't. Named, so callers can pull out `slides` (which the title links to)
+# without re-deriving the rest.
+talk_links <- function(f) {
+  legacy <- parse_talk_note(f$note)
+  out <- vapply(TALK_LINK_FIELDS, function(nm) {
+    trimws(f[[nm]] %||% legacy[[nm]] %||% "")
+  }, character(1))
+  out[nzchar(out)]
+}
+
+# Every talk here is the site owner's, so the byline worth printing is who
+# *else* was on it -- "with de la Haye, K." rather than a list led by a name
+# that is the same on all 65 entries. `drop` takes out anyone already named
+# elsewhere on the card, which in practice means the speaker.
+talk_coauthors <- function(f, self = SELF, emphasis = identity, drop = character(0)) {
+  people <- parse_authors(f$author)
+  people <- people[!grepl(self, people, fixed = TRUE)]
+  people <- setdiff(people, trimws(drop))
+  if (!length(people)) return("")
+  fmt_authors(paste(people, collapse = "; "), self = self, emphasis = emphasis)
+}
+
+# Who actually gave the talk.
+#
+# The default is the first author, which is the convention these entries were
+# written under. Authorship and who stood up are not the same fact, though --
+# on a joint paper the lead author does not always present -- so `speaker`
+# overrides it, and is the only way to record a talk led by the site owner but
+# delivered by a co-author.
+talk_speaker <- function(f) {
+  explicit <- trimws(f$speaker %||% "")
+  if (nzchar(explicit)) return(explicit)
+  people <- parse_authors(f$author)
+  if (!length(people)) return("")
+  people[1]
+}
+
+# TRUE when someone else gave it. An entry with no authors recorded returns
+# FALSE: nothing is known, and a marker saying otherwise would be a claim.
+talk_by_proxy <- function(f, self = SELF) {
+  speaker <- talk_speaker(f)
+  nzchar(speaker) && !grepl(self, speaker, fixed = TRUE)
+}
+
+# The speaker, formatted like any other name: "Tanaka, K."
+talk_speaker_label <- function(f, self = SELF, emphasis = identity) {
+  speaker <- talk_speaker(f)
+  if (!nzchar(speaker)) return("")
+  fmt_authors(speaker, self = self, emphasis = emphasis)
+}
+
+# 'Washington DC' / 'INSNA' -- but not both when one repeats the event title
+# ("Stata Conference, 2013" hosted by "Stata").
+talk_host <- function(f) {
+  host <- trimws(f$host %||% "")
+  venue <- trimws(f$eventtitle %||% "")
+  if (!nzchar(host)) return("")
+  if (nzchar(venue) && (grepl(host, venue, fixed = TRUE) || grepl(venue, host, fixed = TRUE))) {
+    return("")
+  }
+  host
+}
+
+# The day of the month, or 0 when the entry only records year and month.
+talk_day <- function(f) {
+  d <- trimws(f$date %||% "")
+  m <- regmatches(d, regexec("^\\d{4}-\\d{2}-(\\d{2})", d))[[1]]
+  if (length(m) != 2) return(0L)
+  as.integer(m[2])
+}
+
 # ---------------------------------------------------------------- keywords
 
 entry_keywords <- function(e) {
