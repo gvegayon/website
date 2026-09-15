@@ -49,6 +49,11 @@ talk_type <- function(e) {
 
 # ---------------------------------------------------------------- rendering
 
+# The footnote mark on a talk someone else gave. Decorative: the same fact is
+# spelled out in words on the card's byline right below it, so screen readers
+# get it from there rather than from a dagger with a tooltip.
+PROXY_MARK <- "\u2020"
+
 talk_month_abbr <- function(month, months_abb) {
   n <- suppressWarnings(as.integer(gsub("\\D", "", month %||% "")))
   if (is.na(n) || n < 1L || n > 12L) return("")
@@ -88,14 +93,30 @@ talk_card_html <- function(e, i18n) {
     title
   }
 
-  # Who else was on it. A quarter of these talks are joint work and the old
-  # site said so; the .toml dropped the co-authors on everything but the
-  # conference entries, so nothing downstream could show them.
-  with <- talk_coauthors(f)
-  with_html <- if (nzchar(with)) {
-    names_html <- sprintf('<span class="talk__coauthors">%s</span>', esc(with))
-    tpl <- esc(i18n$talk_with %||% "with {names}")
-    sprintf('<p class="talk__with">%s</p>', gsub("{names}", names_html, tpl, fixed = TRUE))
+  # Who else was on it, and -- when it was not the site owner who stood up --
+  # who gave it. A quarter of these talks are joint work and the old site said
+  # so; the .toml dropped the co-authors on everything but the conference
+  # entries, so nothing downstream could show them.
+  proxy <- talk_by_proxy(f)
+  speaker <- if (proxy) talk_speaker_label(f) else ""
+  with <- talk_coauthors(f, drop = if (proxy) talk_speaker(f) else character(0))
+
+  # Each label is a template with one slot, so a language can put the name
+  # wherever its grammar wants it.
+  byline <- function(tpl, slot, value, cls) {
+    gsub(slot, sprintf('<span class="%s">%s</span>', cls, esc(value)), esc(tpl), fixed = TRUE)
+  }
+  byline_bits <- c(
+    if (nzchar(speaker)) {
+      byline(i18n$talk_presented_by %||% "Presented by {name}", "{name}", speaker, "talk__speaker")
+    },
+    if (nzchar(with)) {
+      byline(i18n$talk_with %||% "with {names}", "{names}", with, "talk__coauthors")
+    }
+  )
+  with_html <- if (length(byline_bits)) {
+    sprintf('<p class="talk__with">%s</p>',
+            paste(byline_bits, collapse = '<span class="sep">·</span>'))
   } else ""
 
   meta_bits <- c(
@@ -125,10 +146,14 @@ talk_card_html <- function(e, i18n) {
 
   badge_label <- i18n_value(i18n, type$slug)
 
+  mark_html <- if (proxy) {
+    sprintf('<sup class="talk__proxy" aria-hidden="true">%s</sup>', PROXY_MARK)
+  } else ""
+
   paste0(
-    '<li class="talk">',
+    sprintf('<li class="talk%s">', if (proxy) " talk--proxy" else ""),
     sprintf('<span class="tag tag--talktype %s">%s</span>', type$class, esc(badge_label)),
-    sprintf('<h3 class="talk__title">%s</h3>', title_html),
+    sprintf('<h3 class="talk__title">%s%s</h3>', title_html, mark_html),
     with_html,
     meta_html,
     links_html,
@@ -171,6 +196,14 @@ render_talk_timeline <- function(entries, language = "en") {
 
   cat('<section class="talks">')
   cat(sprintf('<p class="talks__summary">%s<br><span class="muted">%s</span></p>', esc(summary), esc(breakdown)))
+
+  # Only when there is something to explain -- a legend for a mark that does
+  # not appear on the page would be noise.
+  if (any(vapply(es, function(e) talk_by_proxy(e$fields), logical(1)))) {
+    cat(sprintf(
+      '<p class="talks__note"><span class="talk__proxy" aria-hidden="true">%s</span> %s</p>',
+      PROXY_MARK, esc(i18n$talks_proxy_note %||% "Presented by a co-author, not by me.")))
+  }
 
   cat(sprintf('<nav class="talks__years" aria-label="%s">', esc(i18n$jump_to_year %||% "Jump to year")))
   for (yr in year_order) cat(sprintf('<a href="#y%s">%s</a>', esc(yr), esc(yr)))

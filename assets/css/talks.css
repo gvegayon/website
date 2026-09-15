@@ -139,6 +139,23 @@
 
 .talk__coauthors { color: inherit; }
 
+.talk__speaker { font-weight: 600; }
+
+/* The mark on a talk a co-author gave, and the line at the top of the page
+ * that explains it. Accent-coloured so the eye catches it against the title,
+ * but a superscript, so it never competes with the title itself. */
+.talk__proxy {
+  color: var(--tl-accent);
+  font-size: 0.8em;
+  margin-left: 0.15em;
+}
+
+.talks__note {
+  margin: -0.75rem 0 1.25rem;
+  font-size: 0.85rem;
+  color: var(--ig-muted, #7a6a5c);
+}
+
 .talk__meta {
   margin: 0 0 0.15rem;
   font-size: 0.9rem;

@@ -46,7 +46,7 @@ FIELD_ORDER <- c(
   "entrytype", "title", "author", "year", "month", "date",
   "eventtitle", "eventurl", "host", "location",
   "talktype", "slides", "video", "repo", "announcement",
-  "keywords", "source"
+  "speaker", "keywords", "source"
 )
 
 # ------------------------------------------------------------- front matter
@@ -191,6 +191,10 @@ fields_from_source <- function(fm, dir) {
     video        = fm$video %||% "",
     repo         = fm$repo %||% "",
     announcement = fm$announcement %||% "",
+    # Not a key the talks repo writes today. Read it anyway, so recording who
+    # presented over there is all it takes for the site to show it; until then
+    # it is set by hand in the .toml (see talk_speaker() in R/entries.R).
+    speaker      = costar_to_author(fm$speaker %||% ""),
     source       = dir
   )
   out[nzchar(unlist(lapply(out, function(v) trimws(v %||% ""))))]

@@ -94,12 +94,34 @@ except the ones every entry needs (`title`, `year`, `month`):
 | `video` | recording |
 | `repo` | source repository, or wherever the materials live |
 | `announcement` | the host's announcement of the talk |
+| `speaker` | who delivered it, when that is **not** the first author |
 | `source` | the folder in [gvegayon/talks](https://github.com/gvegayon/talks) this entry was imported from |
 
-`author` is the speaker list, in the same `Last, First M.; ...` form as
+`author` is the author list, in the same `Last, First M.; ...` form as
 everywhere else. The site and the CV print the *co-authors* -- "with de la
 Haye, K." -- so a solo talk still names its speaker rather than leaving the
 field empty.
+
+#### Who gave the talk
+
+The first author is taken to be the speaker. When they are not the site owner,
+the timeline marks the title with a `†`, says "Presented by Ouellet, M." on the
+byline, and prints a line at the top of the page explaining the mark; the CV
+says "(presented by Ouellet, M.)" in words instead, since a CV is read once and
+out of context.
+
+Authorship and who stood up are not the same fact, though -- on a joint paper
+the lead author does not always present. `speaker` overrides the default, and
+is the only way to record a talk led by the site owner but delivered by a
+co-author:
+
+```toml
+author = 'Vega Yon, George G.; Quistorff, Brian'
+speaker = 'Quistorff, Brian'
+```
+
+An entry that records no authors at all is left unmarked: nothing is known
+about who presented, and a mark either way would be a claim.
 
 Older entries packed the type and the links into one `note` string,
 `(conference workshop, [slides](...)/[video](...))`. That is still parsed, so a

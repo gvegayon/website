@@ -47,7 +47,17 @@ fmt_talk <- function(e) {
   yr <- sub("^(\\d{4}).*$", "\\1", f$year %||% "")
   ev <- md_escape(venue_of(f))
   loc <- md_escape(f$location %||% "")
-  with <- md_escape(talk_coauthors(f))
+
+  # Said in words rather than marked with a symbol: a CV is read once, out of
+  # context, and a dagger needing a legend at the top of the section is a worse
+  # bargain there than four extra words on the line.
+  proxy <- talk_by_proxy(f)
+  speaker <- if (proxy) md_escape(talk_speaker_label(f)) else ""
+  with <- md_escape(talk_coauthors(f, drop = if (proxy) talk_speaker(f) else character(0)))
+  credit <- paste(c(
+    if (nzchar(speaker)) sprintf("presented by %s", speaker),
+    if (nzchar(with)) sprintf("with %s", with)
+  ), collapse = "; ")
 
   links <- talk_links(f)
   urls <- paste(sprintf("[%s](%s)", TALK_LINK_LABELS[names(links)], links), collapse = "/")
@@ -58,7 +68,7 @@ fmt_talk <- function(e) {
 
   paste0(
     ti,
-    if (nzchar(with)) sprintf(" (with %s)", with) else "",
+    if (nzchar(credit)) sprintf(" (%s)", credit) else "",
     ". ",
     if (nzchar(ev)) paste0("*", ev, "*", if (nzchar(loc)) paste0(", ", loc) else "", ". ") else "",
     "(", yr, ") ", note

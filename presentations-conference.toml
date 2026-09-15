@@ -80,6 +80,7 @@ location = 'Baltimore, MD'
 talktype = 'conference talk'
 slides = 'https://github.com/gvegayon/parallel/raw/master/talks/20170727_stata_conference/20170727_stata_conference.pdf'
 repo = 'https://github.com/gvegayon/parallel/tree/master/talks/20170727_stata_conference'
+speaker = 'Quistorff, Brian'
 keywords = ['conferencetalk']
 source = '20170700-stataconf'
 
