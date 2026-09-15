@@ -168,3 +168,13 @@ eventtitle = 'Epi Corner'
 note = '(invited talk, [slides](https://docs.google.com/presentation/d/1tRYpRmqojL2exDZ4q494TobGHJgBJ4igmiWvZbkRKbk/edit?usp=sharing))'
 keywords = ['invitedtalk']
 
+[talk-18-invited]
+entrytype = 'inproceedings'
+title = 'From Supercomputers to Health Departments'
+author = ''
+year = '2026'
+month = '9'
+eventtitle = 'Network Science Institute + Roux Institute'
+note = '(invited talk, [slides](https://gvegayon.github.io/nsi-sep2026); event [announcement](https://www.networkscienceinstitute.org/talks/george-vega-yons))'
+keywords = ['invitedtalk']
+
