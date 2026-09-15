@@ -476,7 +476,7 @@ source = '20260624-sunbelt2026-netdiffuseR'
 [talk-29-conference]
 entrytype = 'inproceedings'
 title = 'Variability of ERGM fits influences epidemic simulation results: A case study of Monkeypox virus transmission and methods for robust scenario analysis'
-author = 'Manuelpillai, Bevin; Spicknall, Ian; Miller, Paige; Vega Yon, George G.; Clay, Patrick; Mistry, Dina; Pollock, Emily'
+author = 'Rosenblatt, Samuel; Manuelpillai, Bevin; Spicknall, Ian; Miller, Paige; Vega Yon, George G.; Clay, Patrick; Mistry, Dina; Pollock, Emily'
 year = '2026'
 month = '6'
 eventtitle = 'Sunbelt Conference, 2026'
