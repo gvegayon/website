@@ -466,6 +466,20 @@ languages = ['JavaScript']
 abstract = "A small, dependency-light JavaScript simulator for Exponential Random Graph Models (ERGMs), built for teaching and presentations. It simulates from user-specified model parameters and provides an interactive widget for exploring how density, homophily, and reciprocity change network structure in real time."
 keywords = ['networks', 'ergm', 'simulation']
 
+[ergmquarto]
+entrytype = 'manual'
+title = 'ergm-widget: Interactive ERGM widget for Quarto'
+author = 'Vega Yon, George G.'
+year = '2026'
+note = 'Quarto extension version 0.1.0'
+url = 'https://gvegayon.github.io/ergm-quarto/'
+repo = 'https://github.com/gvegayon/ergm-quarto'
+kind = 'library'
+status = 'active'
+languages = ['Lua', 'JavaScript']
+abstract = "A Quarto extension that embeds the 'ergm-js' interactive Exponential Random Graph Model (ERGM) simulator in HTML-based Quarto output, including documents, websites, books, and 'revealjs' decks. It installs with `quarto add` and provides an `ergm-widget` shortcode for interactive network simulation demos."
+keywords = ['networks', 'ergm', 'quarto']
+
 [epicc]
 entrytype = 'manual'
 title = 'EPICC: Epidemiological Cost Calculator'
