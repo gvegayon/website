@@ -18,7 +18,7 @@ Soy un educador dedicado que disfruta compartir conocimiento y fomentar un ambie
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/book-cover-sna-small.webp)
+![](../img/book-cover-sna-small.webp){width=80% fig-alt="Portada del'libro "Ciencia de Redes Aplicada con R'"}
 :::
 ::: {.column width="80%"}
 ### Ciencia de Redes Aplicada con R
@@ -32,7 +32,7 @@ Versión en español: <https://book.ggvy.cl/es>
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/cover-book-hpc.webp)
+![](../img/cover-book-hpc.webp){width=80% fig-alt="Portada del libro 'HPC Aplicada con R'"}
 :::
 ::: {.column width="80%"}
 ### HPC Aplicada con R
@@ -46,7 +46,7 @@ Versión en español: <https://book-hpc.ggvy.cl/es>
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/book-ai-small.webp)
+![](../img/book-ai-small.webp){width=80% fig-alt="Portada del libro 'AI for the Scientist in a Hurry'"}
 :::
 ::: {.column width="80%"}
 ### AI for the Scientist in a Hurry

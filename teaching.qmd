@@ -18,7 +18,7 @@ I am a dedicated educator who enjoys sharing knowledge and fostering an open and
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](img/book-cover-sna-small.webp)
+![](img/book-cover-sna-small.webp){width=80% fig-alt="Cover of the book 'Applied Network Science With R'"}
 :::
 ::: {.column width="80%"}
 ### Applied Network Science With R
@@ -32,7 +32,7 @@ Spanish version: <https://book.ggvy.cl/es>
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](img/cover-book-hpc.webp)
+![](img/cover-book-hpc.webp){width=80% fig-alt="Cover of the book 'Applied HPC with R'"}
 :::
 ::: {.column width="80%"}
 ### Applied HPC with R
@@ -46,7 +46,7 @@ Spanish version: <https://book-hpc.ggvy.cl/es>
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](img/book-ai-small.webp)
+![](img/book-ai-small.webp){width=80% fig-alt="Cover of the book 'AI for the Scientist in a Hurry'"}
 :::
 ::: {.column width="80%"}
 ### AI for the Scientist in a Hurry

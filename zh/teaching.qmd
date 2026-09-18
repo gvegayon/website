@@ -18,7 +18,7 @@ include-in-header:
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/book-cover-sna-small.webp)
+![](../img/book-cover-sna-small.webp){width=80% fig-alt="R 應用網絡科學書籍封面"}
 :::
 ::: {.column width="80%"}
 ### R 應用網絡科學
@@ -32,7 +32,7 @@ include-in-header:
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/cover-book-hpc.webp)
+![](../img/cover-book-hpc.webp){width=80% fig-alt="R 應用高性能計算書籍封面"}
 :::
 ::: {.column width="80%"}
 ### R 應用高性能計算
@@ -46,7 +46,7 @@ include-in-header:
 
 ::: {.columns style="align-items: center;"}
 ::: {.column width="20%"}
-![](../img/book-ai-small.webp)
+![](../img/book-ai-small.webp){width=80% fig-alt="AI for the Scientist in a Hurry 書籍封面"}
 :::
 ::: {.column width="80%"}
 ### AI for the Scientist in a Hurry
