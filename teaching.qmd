@@ -16,27 +16,45 @@ I am a dedicated educator who enjoys sharing knowledge and fostering an open and
 ## Books
 
 
-::: {.columns style="text-align: center;"}
-::: {.column width="50%"}
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](img/book-cover-sna-small.webp){width=80% fig-alt="Cover of the book 'Applied Network Science With R'"}
+:::
+::: {.column width="80%"}
 ### Applied Network Science With R
-![](img/cover-book-sna.webp){width="50%"}
 
 The book is a collection of presentations, workshops, and tutorials I have developed over the years to teach network science with R. The book mostly deals with ERGM models and network data processing. The book was written entirely in quarto, which makes it completely reproducible.
 
 Book website: <https://book.ggvy.cl><br>
 Spanish version: <https://book.ggvy.cl/es>
-
+:::
 :::
 
-::: {.column width="50%"}
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](img/cover-book-hpc.webp){width=80% fig-alt="Cover of the book 'Applied HPC with R'"}
+:::
+::: {.column width="80%"}
 ### Applied HPC with R
-
-![](img/cover-book-hpc.webp){width="50%"}
 
 This book provides a practical overview of how to accelerate R code. With a focus on parallel computing and writing efficient R code, the book also provides an introduction to how to use R in HPC environments with the slurmR R package and ready-to-use examples with C++ via Rcpp.
 
 Book website: <https://book-hpc.ggvy.cl><br>
 Spanish version: <https://book-hpc.ggvy.cl/es>
+:::
+:::
+
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](img/book-ai-small.webp){width=80% fig-alt="Cover of the book 'AI for the Scientist in a Hurry'"}
+:::
+::: {.column width="80%"}
+### AI for the Scientist in a Hurry
+
+Running notes and reflections on AI, written for scientists who need to get up to speed quickly. The book covers practical AI concepts and tools relevant to research, with a focus on building intuition fast.
+
+Book website: <https://book-ai.ggvy.cl><br>
+Spanish version: <https://book-ai.ggvy.cl/es>
 :::
 :::
 
