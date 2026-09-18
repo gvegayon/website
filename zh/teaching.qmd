@@ -16,27 +16,45 @@ include-in-header:
 ## 書籍
 
 
-::: {.columns style="text-align: center;"}
-::: {.column width="50%"}
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](../img/book-cover-sna-small.webp)
+:::
+::: {.column width="80%"}
 ### R 應用網絡科學
-![](../img/cover-book-sna.webp){width="50%"}
 
 本書是我多年來開發的演示、研討會和教程的集合，用於使用 R 教授網絡科學。本書主要涉及 ERGM 模型和網絡數據處理。本書完全用 quarto 編寫，使其完全可重現。
 
 書籍網站：<https://book.ggvy.cl><br>
 西班牙語版本：<https://book.ggvy.cl/es>
-
+:::
 :::
 
-::: {.column width="50%"}
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](../img/cover-book-hpc.webp)
+:::
+::: {.column width="80%"}
 ### R 應用高性能計算
-
-![](../img/cover-book-hpc.webp){width="50%"}
 
 本書提供了如何加速 R 代碼的實用概述。本書專注於並行計算和編寫高效的 R 代碼，還介紹了如何使用 slurmR R 包在 HPC 環境中使用 R，以及通過 Rcpp 使用 C++ 的即用示例。
 
 書籍網站：<https://book-hpc.ggvy.cl><br>
 西班牙語版本：<https://book-hpc.ggvy.cl/es>
+:::
+:::
+
+::: {.columns style="align-items: center;"}
+::: {.column width="20%"}
+![](../img/book-ai-small.webp)
+:::
+::: {.column width="80%"}
+### AI for the Scientist in a Hurry
+
+關於人工智慧的隨筆筆記與思考，為需要快速掌握相關知識的科學家而寫。本書涵蓋與研究相關的實用 AI 概念與工具，著重於快速建立直覺。
+
+書籍網站：<https://book-ai.ggvy.cl><br>
+西班牙語版本：<https://book-ai.ggvy.cl/es>
 :::
 :::
 
