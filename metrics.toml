@@ -4,147 +4,147 @@
 # stars from GitHub. Everything here is a number the site displays with an
 # "as of" date; nothing here overrides papers.toml or software.toml.
 
-fetched_at = '2026-09-13T07:10:28Z'
+fetched_at = '2026-09-20T07:26:54Z'
 
 [papers.Bell2019]
 openalex = 'W2944985829'
 citations = 11
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.DelaHaye2019]
 openalex = 'W2974169394'
 citations = 16
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.duongIncorporatingSocialDeterminants2024]
 openalex = 'W4399428687'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.FabregaLacoa2013]
 openalex = 'W2053412338'
 citations = 3
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.Hancean2022]
 openalex = 'W4210333629'
 citations = 4
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.johnsonBayesianGenerativeModeling2026]
 openalex = 'W7131313957'
 citations = 2
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.lesslerWhyEpidemicRisk2026]
 openalex = 'W7163014203'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.loveCharacterizingSpatiotemporalVariation2023]
 openalex = 'W4376618107'
 citations = 2
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.maryeHiddenBurdenMeasles2026]
 openalex = 'W7168361957'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.meyerEpiworldRFastAgentBased2023]
 openalex = 'W4387299204'
 citations = 2
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.milandoVisionEstimationInstantaneous2026]
 openalex = 'W7126110702'
 citations = 1
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.mohammadiNovelApproachClassifying2025c]
 openalex = 'W4415164903'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.najafzadehkhoeiMachineGeneralizeLearning2025a]
 openalex = 'W4416064184'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.ouellet2022]
 openalex = 'W4282927777'
 citations = 20
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.panahiVeteranPerspectivesEpilepsy2023]
 openalex = 'W4379095377'
 citations = 1
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.piombo2025]
 openalex = 'W4408907310'
 citations = 1
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.quintanilla2013estudio]
 openalex = 'W2237259042'
 citations = 0
 matched_by = 'title'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.'RePEc:sdp:sdpwps:57']
 openalex = 'W2261095021'
 citations = 2
 matched_by = 'title'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.repetto2013impacto]
 miss = 'no-doi-no-title-match'
-checked_at = '2026-08-15T00:32:52Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.sargentAssessingDynamicsPrEP2024]
 openalex = 'W4393110855'
 citations = 4
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.tanakaImaginaryNetworkMotifs2024]
 openalex = 'W4389469626'
 citations = 3
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.Valente2019]
 openalex = 'W2908978639'
 citations = 14
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.Valente2020]
 openalex = 'W3008609788'
 citations = 70
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayon-geese]
 miss = 'no-doi-no-title-match'
-checked_at = '2026-08-15T00:32:52Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayon-ltcf]
 miss = 'no-doi-no-title-match'
@@ -154,291 +154,299 @@ checked_at = '2026-09-04T03:36:06Z'
 openalex = 'W2961079676'
 citations = 8
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.VegaYon2019b]
 openalex = 'W2956344799'
 citations = 3
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.VegaYon2019c]
 openalex = 'W2973364623'
-citations = 18
+citations = 19
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayon2020aphylo]
 openalex = 'W3131602060'
 citations = 1
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.VegaYon2021rgexf]
 openalex = 'W3191564770'
 citations = 6
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayonDiscreteExponentialFamilyModels2022]
 openalex = 'W4308164854'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayonPowerMulticollinearitySmall2023a]
 openalex = 'W4387782172'
 citations = 5
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.vegayonPracticalGuidelinesReflections2026]
 openalex = 'W7133185207'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.visnovskyMultidrugResistantOrganism2026]
 openalex = 'W7122458533'
 citations = 0
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [papers.yon2019exponential]
 openalex = 'W2941544156'
 citations = 47
 matched_by = 'doi'
-checked_at = '2026-09-11T06:24:37Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.ABCoptim]
-cran_downloads = 94242
+cran_downloads = 94414
 cran_version = '0.15.0'
 license = 'MIT + file LICENSE'
 stars = 32
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.aphylo]
-cran_downloads = 19972
+cran_downloads = 20096
 cran_version = '0.3-6'
 license = 'MIT + file LICENSE'
 stars = 6
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.barry]
-cran_downloads = 2798
+cran_downloads = 2869
 cran_version = '0.2.2'
 license = 'MIT + file LICENSE'
 stars = 0
-pushed_at = '2026-08-06'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.defm]
-cran_downloads = 2947
+cran_downloads = 2967
 cran_version = '0.2.1.0'
 license = 'MIT + file LICENSE'
 stars = 1
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epicc]
 stars = 4
 pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworld]
 stars = 10
-pushed_at = '2026-08-26'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworldpy]
 stars = 0
 pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworldR]
-cran_downloads = 15971
+cran_downloads = 16115
 cran_version = '0.14.0.0'
 license = 'MIT + file LICENSE'
 stars = 14
-pushed_at = '2026-08-26'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworldRcalibrate]
-cran_downloads = 1562
+cran_downloads = 1605
 cran_version = '0.1.4'
 license = 'MIT + file LICENSE'
 stars = 1
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworldRShiny]
-cran_downloads = 14539
+cran_downloads = 14643
 cran_version = '0.2.3'
 license = 'MIT + file LICENSE'
 stars = 3
-pushed_at = '2026-08-06'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.epiworldweb]
 stars = 0
 pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.ergmito]
-cran_downloads = 28417
+cran_downloads = 28487
 cran_version = '0.3-2'
 license = 'MIT + file LICENSE'
 stars = 9
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.ergmjs]
 stars = 1
-pushed_at = '2026-09-11'
+pushed_at = '2026-09-17'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
+
+[software.ergmquarto]
+stars = 0
+pushed_at = '2026-09-17'
+archived = false
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.fmcmc]
-cran_downloads = 35339
+cran_downloads = 35427
 cran_version = '0.5-2'
 license = 'MIT + file LICENSE'
 stars = 16
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.googlePublicData]
-cran_downloads = 62081
+cran_downloads = 62188
 cran_version = '0.16.1'
 license = 'MIT + file LICENSE'
 stars = 8
-pushed_at = '2026-08-06'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.idcup]
 stars = 0
-pushed_at = '2026-08-01'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.imaginarycss]
-cran_downloads = 2625
+cran_downloads = 2654
 cran_version = '0.1.0'
 license = 'MIT + file LICENSE'
 stars = 1
 pushed_at = '2026-07-23'
 archived = true
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.insightnetexplorer]
 stars = 1
-pushed_at = '2026-08-09'
+pushed_at = '2026-09-20'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.measles]
-cran_downloads = 2525
+cran_downloads = 2599
 cran_version = '0.2.0'
 license = 'MIT + file LICENSE'
 stars = 5
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.'multigroup.vaccine']
 stars = 2
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-18'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
-cran_downloads = 1533
+checked_at = '2026-09-20T07:26:54Z'
+cran_downloads = 1576
+cran_version = '0.1.2'
+license = 'MIT + file LICENSE'
 
 [software.netdiffuseR]
-cran_downloads = 58212
+cran_downloads = 58349
 cran_version = '1.25.0'
 license = 'MIT + file LICENSE'
 stars = 92
-pushed_at = '2026-08-24'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.netplot]
-cran_downloads = 22675
+cran_downloads = 22748
 cran_version = '0.4-0'
 license = 'MIT + file LICENSE'
 stars = 53
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.parallel]
 stars = 134
-pushed_at = '2025-12-28'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.pruner]
 stars = 1
-pushed_at = '2020-07-08'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.pyrenew]
 stars = 29
-pushed_at = '2026-09-04'
+pushed_at = '2026-09-18'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.rgexf]
-cran_downloads = 654156
+cran_downloads = 654394
 cran_version = '0.17.0'
 license = 'MIT + file LICENSE'
 stars = 32
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.slurmR]
-cran_downloads = 37510
+cran_downloads = 37578
 cran_version = '0.5-4'
 license = 'MIT + file LICENSE'
 stars = 61
-pushed_at = '2026-08-16'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.tabulergm]
-cran_downloads = 281
+cran_downloads = 336
 cran_version = '0.1.0'
 license = 'MIT + file LICENSE'
-stars = 2
-pushed_at = '2026-08-20'
+stars = 3
+pushed_at = '2026-09-12'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.twitterreport]
 stars = 38
-pushed_at = '2017-11-29'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
 [software.wwinference]
 stars = 32
-pushed_at = '2026-08-31'
+pushed_at = '2026-09-11'
 archived = false
-checked_at = '2026-09-13T07:10:28Z'
+checked_at = '2026-09-20T07:26:54Z'
 
