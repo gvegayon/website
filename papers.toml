@@ -565,3 +565,20 @@ pubstate = 'prepublished'
 archiveprefix = 'medRxiv'
 abstract = 'Background: The 2026 FIFA World Cup may bring over one million visitors to North America from around the globe to participate in mass gathering events. The nature of the event and recent news have raised concerns for some that the tournament could lead to infectious disease outbreaks or fuel existing epidemics. Objective: To systematically assess the infectious disease threat posed to the United States by the tournament. Design: A multi-institutional team evaluated pathogen-specific risk across three dimensions: importation, outbreak potential, and impact to identify a priority pathogen list. A systematic screening protocol ensured common criteria and that pathogen information was collected when necessary to inform inclusion. Results: Increased risk from the World Cup is near zero for 63 of 77 evaluated pathogens. Pathogens were predominantly excluded as threats due to low excess importation risk and low outbreak potential if introduced. The remaining priority pathogens fall into five categories: (a) mosquito borne pathogens with the potential for sustained transmission in some host cities, (b) seasonal respiratory viruses, (c) chronic infections with high prevalence outside the United States, (d) pathogens present in the United States with likely increased transmission at World Cup activities, and (e) high-consequence infectious threats. Limitations: Data availability is variable across diseases. Impact calculations may not reflect actual costs to host cities. Disease incidence in World Cup travelers may differ from national incidence rates. Conclusion: While infectious disease outbreaks at the 2026 FIFA World Cup are possible, in an already highly connected world where large gatherings are frequent, the elevated risk from the tournament is not as extreme as it first may seem. Primary Funding Source: US Centers for Disease Control and Prevention'
 keywords = ['wip']
+
+[heCaseStudyAccessible2026]
+entrytype = 'misc'
+sharing = 'author-held'
+title = 'A Case Study in Accessible Redesign of a Wastewater Dashboard'
+author = ' He, Tingying; Wagoner, Jake; Zaman, Md Rahat-uz-; Rahman, Md Dilshadur; Ray, Willy; Vega Yon, George G.; Samore, Matthew; Lex, Alexander; Rosen, Paul'
+year = '2026'
+month = '9'
+number = 'arXiv.2609.25273'
+eprint = '2609.25273'
+primaryclass = 'cs'
+publisher = 'arXiv'
+archiveprefix = 'arxiv'
+doi = '10.48550/arXiv.2609.25273'
+url = 'https://doi.org/10.48550/arXiv.2609.25273'
+abstract = 'Public health dashboards communicate data that can inform important decisions, but they often raise accessibility challenges. We present a case study redesigning the Utah Wastewater Surveillance System dashboard to improve accessibility and usability across desktop and mobile settings. The redesign was informed by WCAG and developed iteratively with Utah DHHS collaborators, and we collected feedback on the final design from an external blind researcher. Our case study highlights that accessible dashboard design requires aligning accessibility guidelines with user needs, stakeholder workflows, and technical constraints. It also suggests that simple, targeted technical solutions tailored to the existing environment can provide practical value for dashboard redesign in government contexts.'
+keywords = ['wip']
