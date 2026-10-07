@@ -68,7 +68,7 @@ format:
               body, text(fill: muted, size: 9pt)[#date])
           ]
 
-          // CRAN download badge, emitted inline by R/downloads.R.
+          // CRAN/npm download badge, emitted inline by R/downloads.R.
           #let dlbadge(n) = box(
             baseline: 0.15em,
             fill: accent.lighten(88%),
@@ -102,7 +102,7 @@ pubs   <- read_entries(src[1])
 soft   <- read_entries(src[2])
 talks  <- read_entries(src[3], src[4], src[5])
 metrics <- read_metrics()              # ../metrics.toml; refreshed weekly by CI
-counts  <- read_downloads(metrics)     # CRAN downloads, keyed by software.toml key
+counts  <- read_downloads(metrics)     # CRAN + npm downloads, keyed by software.toml key
 ```
 
 ```{=typst}
@@ -196,7 +196,7 @@ emit_section(pubs, "wip", fmt_pub)
 if (length(counts)) {
   stamp <- downloads_stamp(metrics)
   asof  <- if (nzchar(stamp)) sprintf(", as of %s", format(as.Date(stamp), "%B %Y")) else ""
-  cat(sprintf("\n_Badges show total CRAN downloads (%s across %d packages)%s._\n",
+  cat(sprintf("\n_Badges show total CRAN and npm downloads (%s across %d packages)%s._\n",
               format(sum(counts), big.mark = ","), length(counts), asof))
 }
 ```

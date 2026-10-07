@@ -84,7 +84,7 @@ jobs:
         if git diff --quiet -- metrics.toml; then
           echo "changed=false" >> "$GITHUB_OUTPUT"
           echo "No change to metrics.toml." >> "$GITHUB_STEP_SUMMARY"
-        elif [ -z "$(git diff -U0 -- metrics.toml | grep -E '^[+-](citations|cran_downloads|cran_version|stars|pushed_at|archived|license|openalex|matched_by|miss) ' || true)" ]; then
+        elif [ -z "$(git diff -U0 -- metrics.toml | grep -E '^[+-](citations|cran_downloads|cran_version|npm_downloads|npm_version|stars|pushed_at|archived|license|openalex|matched_by|miss) ' || true)" ]; then
           echo "changed=false" >> "$GITHUB_OUTPUT"
           echo "Only the \`fetched_at\` timestamp moved - not rebuilding." >> "$GITHUB_STEP_SUMMARY"
           git checkout -- metrics.toml
@@ -99,7 +99,7 @@ jobs:
             # whenever a lot of numbers moved at once. awk drains stdin and
             # exits 0. The trailing `|| true` is just belt and braces.
             git diff -U0 -- metrics.toml \
-              | grep -E '^[+-](citations|cran_downloads|cran_version|stars|pushed_at|archived|openalex|matched_by|miss) |^\+\+\+|^---|^@@' \
+              | grep -E '^[+-](citations|cran_downloads|cran_version|npm_downloads|npm_version|stars|pushed_at|archived|openalex|matched_by|miss) |^\+\+\+|^---|^@@' \
               | awk 'NR <= 60' || true
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
