@@ -52,6 +52,16 @@ metric_chr <- function(metrics, kind, key, field) {
   if (nzchar(v)) v else NULL
 }
 
+# Total downloads from whichever registry the package ships on: list(n, source)
+# or NULL. An entry is on CRAN or npm, not both, so CRAN is simply tried first.
+metric_downloads <- function(metrics, key) {
+  n <- metric_num(metrics, "software", key, "cran_downloads")
+  if (!is.null(n)) return(list(n = n, source = "CRAN"))
+  n <- metric_num(metrics, "software", key, "npm_downloads")
+  if (!is.null(n)) return(list(n = n, source = "npm"))
+  NULL
+}
+
 # Big download counts are noise at full precision on a card.
 fmt_count <- function(n) {
   if (is.null(n)) return("")

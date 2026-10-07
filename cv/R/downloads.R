@@ -1,4 +1,4 @@
-# CRAN download counts for the software section.
+# CRAN and npm download counts for the software section.
 #
 # Reads the committed metrics.toml -- the same cache the website badges use,
 # refreshed by R/fetch_metrics.R from the weekly cron (update-metrics.yml).
@@ -11,7 +11,7 @@
 # Still no network at render time: metrics.toml is committed, so the render
 # stays a pure function of the repo.
 
-# Named integer vector: software.toml key -> total CRAN downloads.
+# Named integer vector: software.toml key -> total CRAN or npm downloads.
 #
 # Keyed by the software.toml section name, which is both what metrics.toml is
 # keyed by and what read_entries() hands back as `key` -- so the lookup is an
@@ -21,7 +21,7 @@
 read_downloads <- function(metrics = read_metrics()) {
   m <- metrics$software
   if (is.null(m) || !length(m)) return(stats::setNames(integer(0), character(0)))
-  n <- vapply(m, function(x) suppressWarnings(as.integer(x$cran_downloads %||% NA)),
+  n <- vapply(m, function(x) suppressWarnings(as.integer(x$cran_downloads %||% x$npm_downloads %||% NA)),
               integer(1))
   n[!is.na(n) & n > 0]
 }

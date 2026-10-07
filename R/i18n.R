@@ -33,7 +33,7 @@ I18N <- list(
     experimental = "Experimental", archived = "Archived",
     package = "Package", app = "App", library = "Library",
     cli = "CLI", template = "Template",
-    dist_cran = "CRAN", dist_pypi = "PyPI", dist_github = "GitHub only",
+    dist_cran = "CRAN", dist_pypi = "PyPI", dist_npm = "npm", dist_github = "GitHub only",
 
     # --- sort / view
     sort_by        = "Sort",
@@ -121,7 +121,7 @@ I18N <- list(
     experimental = "Experimental", archived = "Archivado",
     package = "Paquete", app = "Aplicación", library = "Biblioteca",
     cli = "CLI", template = "Plantilla",
-    dist_cran = "CRAN", dist_pypi = "PyPI", dist_github = "Solo GitHub",
+    dist_cran = "CRAN", dist_pypi = "PyPI", dist_npm = "npm", dist_github = "Solo GitHub",
 
     sort_by        = "Ordenar",
     sort_year_desc = "Más recientes",
@@ -204,7 +204,7 @@ I18N <- list(
     experimental = "实验性", archived = "已归档",
     package = "软件包", app = "应用", library = "库",
     cli = "命令行工具", template = "模板",
-    dist_cran = "CRAN", dist_pypi = "PyPI", dist_github = "仅 GitHub",
+    dist_cran = "CRAN", dist_pypi = "PyPI", dist_npm = "npm", dist_github = "仅 GitHub",
 
     sort_by        = "排序",
     sort_year_desc = "最新优先",

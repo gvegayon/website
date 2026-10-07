@@ -302,6 +302,22 @@ languages = ['Python', 'C++']
 abstract = "Python bindings for the 'epiworld' C++ agent-based modeling library. It provides a general framework for modeling disease transmission, including multiple diseases, user-defined policies, feature-dependent transmission, and parallel execution of multiple simulations."
 keywords = ['epidemiology', 'agent-based models']
 
+[epiworldjs]
+entrytype = 'manual'
+title = 'epiworldjs: epiworld Agent-Based Models in the Browser via WebAssembly'
+author = 'Vega Yon, George G.'
+year = '2026'
+note = 'JavaScript package version 0.18.0-0'
+url = 'https://uofuepibio.github.io/epiworldjs/'
+repo = 'https://github.com/UofUEpiBio/epiworldjs'
+npm = 'epiworldjs'
+docs = 'https://uofuepibio.github.io/epiworldjs/'
+kind = 'library'
+status = 'active'
+languages = ['JavaScript', 'C++', 'WebAssembly']
+abstract = "Runs the 'epiworld' agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly. It provides a JavaScript API and a drop-in <epiworld-model> web component, so real epiworld models, such as SIR, SEIR, and measles, can run on any static website with no server."
+keywords = ['epidemiology', 'agent-based models', 'visualization']
+
 [epiworldweb]
 entrytype = 'manual'
 title = 'epiworldweb: WebAssembly Port of epiworld'
@@ -456,9 +472,10 @@ entrytype = 'manual'
 title = 'ergm-js: Dependency-light Exponential Random Graph Model Simulator'
 author = 'Vega Yon, George G.'
 year = '2026'
-note = 'JavaScript package version 0.2.1'
+note = 'JavaScript package version 0.3.0'
 url = 'https://gvegayon.github.io/ergm-js/'
 repo = 'https://github.com/gvegayon/ergm-js'
+npm = 'ergm-js'
 docs = 'https://gvegayon.github.io/ergm-js/'
 kind = 'library'
 status = 'active'
@@ -471,7 +488,7 @@ entrytype = 'manual'
 title = 'ergm-widget: Interactive ERGM widget for Quarto'
 author = 'Vega Yon, George G.'
 year = '2026'
-note = 'Quarto extension version 0.1.0'
+note = 'Quarto extension version 0.3.0-0'
 url = 'https://gvegayon.github.io/ergm-quarto/'
 repo = 'https://github.com/gvegayon/ergm-quarto'
 kind = 'library'

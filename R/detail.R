@@ -289,11 +289,11 @@ detail_qmd_text <- function(e, kind, index, people, i18n) {
     if (nzchar(year)) tag_html(year, "tag--year") else "",
     if (identical(kind, "software")) local({
       v <- software_version(f)
-      if (nzchar(v)) badge_html(if (nzchar(f$cran %||% "")) "CRAN" else "version", v) else ""
+      if (nzchar(v)) badge_html(software_registry(f), v) else ""
     }) else "",
     if (identical(kind, "software")) local({
-      n <- metric_num(metrics, "software", e$key, "cran_downloads")
-      if (is.null(n)) "" else badge_html("downloads", fmt_count(n), paste0(n, " CRAN downloads"))
+      d <- metric_downloads(metrics, e$key)
+      if (is.null(d)) "" else badge_html("downloads", fmt_count(d$n), paste0(d$n, " ", d$source, " downloads"))
     }) else "",
     if (identical(kind, "software")) local({
       n <- metric_num(metrics, "software", e$key, "stars")

@@ -41,6 +41,7 @@ software_dist <- function(f) {
     out <- c(out, "cran")
   }
   if (nzchar(f$pypi %||% "")) out <- c(out, "pypi")
+  if (nzchar(f$npm %||% "")) out <- c(out, "npm")
   if (!length(out) && (nzchar(f$repo %||% "") || grepl("github.com", f$url %||% "", ignore.case = TRUE))) {
     out <- c(out, "github")
   }
@@ -219,6 +220,11 @@ research_card <- function(e, i18n) {
 
 # `note` is free text ("R package version 0.1.1.99, https://...") so pull the
 # first version-shaped token out of it rather than everything after "version".
+# Label for the version badge: the registry the version number comes from.
+software_registry <- function(f) {
+  if (nzchar(f$cran %||% "")) "CRAN" else if (nzchar(f$npm %||% "")) "npm" else "version"
+}
+
 software_version <- function(f) {
   v <- f$version %||% ""
   if (nzchar(v)) return(sub("^v", "", v))
@@ -279,10 +285,10 @@ software_card <- function(e, i18n) {
     local({
       ver <- software_version(f)
       bits <- c(
-        if (nzchar(ver)) badge_html(if (nzchar(f$cran %||% "")) "CRAN" else "version", ver, note) else "",
+        if (nzchar(ver)) badge_html(software_registry(f), ver, note) else "",
         local({
-          n <- metric_num(GRID_METRICS, "software", e$key, "cran_downloads")
-          if (is.null(n)) "" else badge_html("downloads", fmt_count(n), paste0(n, " CRAN downloads"))
+          d <- metric_downloads(GRID_METRICS, e$key)
+          if (is.null(d)) "" else badge_html("downloads", fmt_count(d$n), paste0(d$n, " ", d$source, " downloads"))
         }),
         local({
           n <- metric_num(GRID_METRICS, "software", e$key, "stars")
