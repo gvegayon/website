@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.9.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Cursos, libros y materiales docentes abiertos del Doctor George G. Vega Yon sobre ciencia de datos, estadística y ciencia de redes.">
+<meta name="description" content="Runs the ‘epiworld’ agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly.">
 
-<title>Enseñanza – George G. Vega Yon, Ph.D.</title>
+<title>epiworldjs – George G. Vega Yon, Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-5d254f1e278c2921d96b26102a150bb1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b67f5be76090743cfe785b04ea34939d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5d254f1e278c2921d96b26102a150bb1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-b67f5be76090743cfe785b04ea34939d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -56,17 +56,17 @@ ul.task-list li input[type="checkbox"] {
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No se han encontrado resultados",
-    "search-matching-documents-text": "documentos encontrados",
-    "search-copy-link-title": "Copiar el enlace en la búsqueda",
-    "search-hide-matches-text": "Ocultar resultados adicionales",
-    "search-more-match-text": "resultado adicional en este documento",
-    "search-more-matches-text": "resultados adicionales en este documento",
-    "search-clear-button-title": "Borrar",
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancelar",
-    "search-submit-button-title": "Enviar",
-    "search-label": "Buscar"
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-FH7BRCRDTQ"></script>
@@ -78,24 +78,6 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-FH7BRCRDTQ', { 'anonymize_ip': true});
 </script>
-<style>
-
-      .quarto-title-block .quarto-title-banner h1,
-      .quarto-title-block .quarto-title-banner h2,
-      .quarto-title-block .quarto-title-banner h3,
-      .quarto-title-block .quarto-title-banner h4,
-      .quarto-title-block .quarto-title-banner h5,
-      .quarto-title-block .quarto-title-banner h6
-      {
-        color: white;
-      }
-
-      .quarto-title-block .quarto-title-banner {
-        color: white;
-background-image: url(../img/usc_r_bootcamp_clip.jpg);
-background-size: cover;
-      }
-</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -265,95 +247,95 @@ background-size: cover;
   ]
 }
 </script>
-<link rel="alternate" hreflang="en" href="https://ggvy.cl/teaching.html">
-<link rel="alternate" hreflang="es" href="https://ggvy.cl/es/teaching.html">
-<link rel="alternate" hreflang="zh-Hant" href="https://ggvy.cl/zh/teaching.html">
-<link rel="alternate" hreflang="x-default" href="https://ggvy.cl/teaching.html">
 
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/cards.css">
 <link rel="stylesheet" href="../assets/css/talks.css">
-<meta property="og:title" content="Enseñanza – George G. Vega Yon, Ph.D.">
-<meta property="og:description" content="Sitio web personal del Doctor George G. Vega Yon, Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah. El Dr.&nbsp;Vega Yon trabaja en Computación Estadística, Ciencia de Datos y Desarrollo de Software Científico.">
+<meta property="og:title" content="epiworldjs – George G. Vega Yon, Ph.D.">
+<meta property="og:description" content="Runs the ‘epiworld’ agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly.">
 <meta property="og:image" content="https://ggvy.cl/img/og-card.png">
 <meta property="og:site_name" content="George G. Vega Yon, Ph.D.">
-<meta name="twitter:title" content="Enseñanza – George G. Vega Yon, Ph.D.">
-<meta name="twitter:description" content="Sitio web personal del Doctor George G. Vega Yon, Profesor Asociado de Investigación en la División de Epidemiología de la Universidad de Utah. El Dr.&nbsp;Vega Yon trabaja en Computación Estadística, Ciencia de Datos y Desarrollo de Software Científico.">
+<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="1200">
+<meta name="twitter:title" content="epiworldjs – George G. Vega Yon, Ph.D.">
+<meta name="twitter:description" content="Runs the ‘epiworld’ agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly.">
 <meta name="twitter:image" content="https://ggvy.cl/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://ggvy.cl/es/teaching.html">
+<meta name="twitter:image-height" content="630">
+<meta name="twitter:image-width" content="1200">
+<link rel="canonical" href="https://ggvy.cl/software/epiworldjs.html">
 </head>
 
 <body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./../img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo light-content">
-    <img src="./../img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo dark-content">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo light-content">
+    <img src="../img/logo.svg" alt="George G. Vega Yon, Ph.D." class="navbar-logo dark-content">
     </a>
   </div>
-            <div id="quarto-search" class="" title="Buscar"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Inicio</span></a>
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
-<span class="menu-text">Investigación</span></a>
+    <a class="nav-link" href="../research.html"> 
+<span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./software.html"> 
+    <a class="nav-link" href="../software.html"> 
 <span class="menu-text">Software</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./talks.html"> 
-<span class="menu-text">Charlas</span></a>
+    <a class="nav-link" href="../talks.html"> 
+<span class="menu-text">Talks</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
-<span class="menu-text">Enseñanza</span></a>
+    <a class="nav-link" href="../teaching.html"> 
+<span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./people.html"> 
-<span class="menu-text">Personas</span></a>
+    <a class="nav-link" href="../people.html"> 
+<span class="menu-text">People</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-currículum" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Currículum</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resumecv" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resume/CV</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-currículum">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resumecv">    
         <li>
-    <a class="dropdown-item" href="./../cv/resume.docx">
- <span class="dropdown-text">Resume (breve)</span></a>
+    <a class="dropdown-item" href="../cv/resume.docx">
+ <span class="dropdown-text">Resume (brief)</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./../cv/cv.pdf">
- <span class="dropdown-text">CV (académico)</span></a>
+    <a class="dropdown-item" href="../cv/cv.pdf">
+ <span class="dropdown-text">CV (academic)</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="https://vyanalytics.io/"> 
-<span class="menu-text">Consultoría</span></a>
+<span class="menu-text">Consulting</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./../index.html"> 
-<span class="menu-text">🇺🇸</span></a>
+    <a class="nav-link" href="../es/index.html"> 
+<span class="menu-text">🇨🇱</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./../zh/index.html"> 
+    <a class="nav-link" href="../zh/index.html"> 
 <span class="menu-text">🇨🇳</span></a>
   </li>  
   <li class="nav-item compact">
@@ -388,84 +370,59 @@ background-size: cover;
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Enseñanza</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">epiworldjs</h1>
+<p class="subtitle lead">2026</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">epidemiology</div>
+    <div class="quarto-category">agent-based models</div>
+    <div class="quarto-category">visualization</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Runs the ‘epiworld’ agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-<p>Soy un educador dedicado que disfruta compartir conocimiento y fomentar un ambiente de aprendizaje abierto e inclusivo. La mayor parte de mi experiencia docente ha sido en las áreas de ciencia de datos, estadística y ciencia de redes. Comprometido con la ciencia abierta, me aseguro de que todos mis contenidos educativos estén disponibles gratuitamente en línea.</p>
-<section id="libros" class="level2">
-<h2 class="anchored" data-anchor-id="libros">Libros</h2>
-<div class="columns" style="align-items: center;">
-<div class="column" style="width:20%;">
-<p><img src="../img/book-cover-sna-small.webp" class="img-fluid" style="width:80.0%" alt="Portada del libro 'Ciencia de Redes Aplicada con R'"></p>
-</div><div class="column" style="width:80%;">
-<section id="ciencia-de-redes-aplicada-con-r" class="level3">
-<h3 class="anchored" data-anchor-id="ciencia-de-redes-aplicada-con-r">Ciencia de Redes Aplicada con R</h3>
-<p>El libro es una colección de presentaciones, talleres y tutoriales que he desarrollado a lo largo de los años para enseñar ciencia de redes con R. El libro trata principalmente sobre modelos ERGM y procesamiento de datos de redes. El libro fue escrito completamente en quarto, lo que lo hace completamente reproducible.</p>
-<p>Sitio web del libro: <a href="https://book.ggvy.cl" class="uri">https://book.ggvy.cl</a><br> Versión en español: <a href="https://book.ggvy.cl/es" class="uri">https://book.ggvy.cl/es</a></p>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"epiworldjs: epiworld Agent-Based Models in the Browser via WebAssembly","author":[{"@type":"Person","name":"Vega Yon, George G."}],"datePublished":"2026","url":"https://uofuepibio.github.io/epiworldjs/","codeRepository":"https://github.com/UofUEpiBio/epiworldjs","programmingLanguage":"JavaScript, C++, WebAssembly","abstract":"Runs the 'epiworld' agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly. It provides a JavaScript API and a drop-in <epiworld-model> web component, so real epiworld models, such as SIR, SEIR, and measles, can run on any static website with no server."}</script><div class="item-detail"><p class="item-badges"><span class="tag tag--status is-active">Active</span><span class="tag tag--kind">Library</span><span class="tag tag--year">2026</span><span class="badge "><span class="badge__k">npm</span><span class="badge__v">0.18.0-0</span></span></p><ol class="author-list"><li class="author is-self"><img class="avatar avatar--detail" src="../img/people/gvy.jpg" alt="" aria-hidden="true" loading="lazy" width="24" height="24"><span class="author__info"><span class="author__name"><a href="https://ggvy.cl" target="_blank" rel="noopener">Vega Yon, G. G.</a></span><span class="author__aff" title="University of Utah">UofU</span><a class="author__orcid" href="https://orcid.org/0000-0002-3171-0844" target="_blank" rel="noopener" aria-label="ORCID">iD</a></span></li></ol><p class="item-links"><a href="https://uofuepibio.github.io/epiworldjs/" target="_blank" rel="noopener">Link</a><span class="sep">•</span><a href="https://uofuepibio.github.io/epiworldjs/" target="_blank" rel="noopener">Docs</a><span class="sep">•</span><a href="https://github.com/UofUEpiBio/epiworldjs" target="_blank" rel="noopener">Repository</a></p></div>
+<p>epiworld Agent-Based Models in the Browser via WebAssembly</p>
+<section id="about" class="level2">
+<h2 class="anchored" data-anchor-id="about">About</h2>
+<p>Runs the ‘epiworld’ agent-based epidemic simulation engine in the browser (and Node) by compiling it to WebAssembly. It provides a JavaScript API and a drop-in <epiworld-model> web component, so real epiworld models, such as SIR, SEIR, and measles, can run on any static website with no server.</epiworld-model></p>
 </section>
-</div>
-</div>
-<div class="columns" style="align-items: center;">
-<div class="column" style="width:20%;">
-<p><img src="../img/cover-book-hpc.webp" class="img-fluid" style="width:80.0%" alt="Portada del libro 'HPC Aplicada con R'"></p>
-</div><div class="column" style="width:80%;">
-<section id="hpc-aplicada-con-r" class="level3">
-<h3 class="anchored" data-anchor-id="hpc-aplicada-con-r">HPC Aplicada con R</h3>
-<p>Este libro proporciona una visión general práctica de cómo acelerar el código R. Con un enfoque en computación paralela y escritura de código R eficiente, el libro también proporciona una introducción sobre cómo usar R en entornos HPC con el paquete slurmR de R y ejemplos listos para usar con C++ a través de Rcpp.</p>
-<p>Sitio web del libro: <a href="https://book-hpc.ggvy.cl" class="uri">https://book-hpc.ggvy.cl</a><br> Versión en español: <a href="https://book-hpc.ggvy.cl/es" class="uri">https://book-hpc.ggvy.cl/es</a></p>
-</section>
-</div>
-</div>
-<div class="columns" style="align-items: center;">
-<div class="column" style="width:20%;">
-<p><img src="../img/book-ai-small.webp" class="img-fluid" style="width:80.0%" alt="Portada del libro 'AI for the Scientist in a Hurry'"></p>
-</div><div class="column" style="width:80%;">
-<section id="ai-for-the-scientist-in-a-hurry" class="level3">
-<h3 class="anchored" data-anchor-id="ai-for-the-scientist-in-a-hurry">AI for the Scientist in a Hurry</h3>
-<p>Notas y reflexiones sobre inteligencia artificial, escritas para científicos que necesitan ponerse al día rápidamente. El libro cubre conceptos y herramientas de IA prácticos y relevantes para la investigación, con un enfoque en construir intuición rápidamente.</p>
-<p>Sitio web del libro: <a href="https://book-ai.ggvy.cl" class="uri">https://book-ai.ggvy.cl</a><br> Versión en español: <a href="https://book-ai.ggvy.cl/es" class="uri">https://book-ai.ggvy.cl/es</a></p>
-</section>
-</div>
-</div>
-</section>
-<section id="cursos" class="level2">
-<h2 class="anchored" data-anchor-id="cursos">Cursos</h2>
-<ul>
-<li><p><strong>PHS 7045: Programación Avanzada con R y HPC</strong> (Universidad de Utah, Programas de Posgrado) (<a href="https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023" target="_blank">enlace</a>): Co-diseño e imparto esta clase con mi colega el Dr.&nbsp;Jonathan Chipman para estudiantes de posgrado en el Departamento de Ciencias de Salud Poblacional de la Universidad de Utah.</p></li>
-<li><p><strong>PM 566: Introducción a la Ciencia de Datos en Salud</strong> (USC, Programas de Posgrado) (<a href="https://github.com/USCbiostats/PM566/tree/fall2021" target="_blank">enlace</a>): Co-diseñé esta clase con profesores de la División de Bioestadística de USC como la clase introductoria al programa de Maestría en Ciencia de Datos en Salud de USC.</p></li>
-</ul>
-</section>
-<section id="talleres-y-tutoriales" class="level2">
-<h2 class="anchored" data-anchor-id="talleres-y-tutoriales">Talleres y Tutoriales</h2>
-<p>Puede encontrar una lista completa de mis talleres y tutoriales en la sección de <a href="./talks.html">charlas</a> de mi sitio web.</p>
-<hr>
-<div style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;">
-<p><em>Esta versión del sitio web fue traducida automáticamente de la versión original en inglés usando GitHub Copilot y aún no ha sido verificada por un humano.</em></p>
-</div>
+<section id="cite" class="level2">
+<h2 class="anchored" data-anchor-id="cite">Cite</h2>
+<div class="cite-block"><button class="cite-copy" type="button" data-target="bib-epiworldjs">Copy BibTeX</button><pre id="bib-epiworldjs"><code>@Manual{epiworldjs,
+  title = {epiworldjs: epiworld Agent-Based Models in the Browser via WebAssembly},
+  author = {{Vega Yon}, {George G.}},
+  year = {2026},
+  url = {https://uofuepibio.github.io/epiworldjs/},
+  note = {JavaScript package version 0.18.0-0},
+}</code></pre></div>
+<p class="back-link"><a href="../software.html">← All software</a></p>
 
 
 </section>
@@ -496,12 +453,12 @@ background-size: cover;
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copiado");
+      button.setAttribute("title", "Copied!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copiado");
+        button.setAttribute("data-bs-title", "Copied!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
@@ -544,7 +501,7 @@ background-size: cover;
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ggvy\.cl\/es");
+        var filterRegex = new RegExp("https:\/\/ggvy\.cl");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -878,15 +835,15 @@ background-size: cover;
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2025 George G. Vega Yon. Todos los derechos reservados.</p>
+<p>© 2025 George G. Vega Yon. All rights reserved.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
 </footer>
-<!-- Same scripts as assets/after-body.html, but for the es/ and zh/ projects,
-     whose output sits one level deeper under public/. -->
+<!-- Referenced root-relatively so the es/ and zh/ projects can include this
+     same file without any per-project path rewriting. -->
 <script src="../assets/js/item-grid.js" defer=""></script>
 <script src="../assets/js/cite-copy.js" defer=""></script>
 
