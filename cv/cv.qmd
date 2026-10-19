@@ -242,7 +242,7 @@ for (i in seq_along(es)) {
   for the study of infectious diseases.]
 
 #v(0.4em)
-#text(style: "italic", fill: muted)[Submitted but not funded]
+#text(style: "italic", fill: muted)[Submitted and under review]
 #v(0.4em)
 
 #dated[Optimizing Peer-Led Vaping Prevention Under Uncertain Influence and Missing Network Data][07-01-2027 -- 06-30-2029][
