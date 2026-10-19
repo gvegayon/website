@@ -242,6 +242,14 @@ for (i in seq_along(es)) {
   for the study of infectious diseases.]
 
 #v(0.4em)
+#text(style: "italic", fill: muted)[Under review]
+#v(0.4em)
+
+#dated[Optimizing Peer-Led Vaping Prevention Under Uncertain Influence and Missing Network Data][07-01-2027 -- 06-30-2029][
+  R21, National Institute on Drug Abuse (PI: Vega Yon). Role: PI. Submitted 10-16-2026. Total costs requested (incl. indirect): \$405,706.][
+  Uses synthetic school-network simulations to identify peer-leader selection rules for vaping-prevention trials under uncertain peer influence and incomplete friendship data.]
+
+#v(0.4em)
 #text(style: "italic", fill: muted)[Submitted but not funded]
 #v(0.4em)
 
