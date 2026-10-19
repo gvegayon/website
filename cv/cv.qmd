@@ -245,6 +245,10 @@ for (i in seq_along(es)) {
 #text(style: "italic", fill: muted)[Submitted but not funded]
 #v(0.4em)
 
+#dated[Optimizing Peer-Led Vaping Prevention Under Uncertain Influence and Missing Network Data][07-01-2027 -- 06-30-2029][
+  R21, National Institute on Drug Abuse (PI: Vega Yon). Role: PI. Submitted 10-16-2026. Total costs requested (incl. indirect): \$405,706.][
+  Uses synthetic school-network simulations to identify peer-leader selection rules for vaping-prevention trials under uncertain peer influence and incomplete friendship data.]
+
 #dated[Improving our Predictive Capability of Gene Functions by Leveraging Biological Insights with Advanced Statistical Computing][12-01-2022 -- 11-30-2027][
   1R01HG012878-01, National Human Genome Research Institute (PI: Vega Yon). Role: PI.][
   Uses discrete exponential-family models to build a mechanistic gene function evolution model
