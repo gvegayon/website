@@ -7,10 +7,10 @@ project:
   resources:
     - "../img/"
 
-# Sets <html lang="zh-Hant"> -- this edition is Traditional Chinese
-# (confirmed against the character forms used in zh/index.qmd), not
-# Simplified, so plain "zh" would be wrong.
-lang: zh-Hant
+# Sets <html lang="zh-Hans"> -- this edition is Simplified Chinese, the
+# more widely read script (converted from Traditional in 2026-10). Keep the
+# script subtag: plain "zh" says nothing about which one the page uses.
+lang: zh-Hans
 
 website:
   title: "George G. Vega Yon, Ph.D."
@@ -28,7 +28,7 @@ website:
     card-style: summary_large_image
     image: https://ggvy.cl/img/og-card.png
   description: |
-    George G. Vega Yon 博士的個人網站，猶他大學流行病學系研究副教授。Vega Yon 博士從事統計計算、數據科學和科學軟件開發工作。
+    George G. Vega Yon 博士的个人网站，犹他大学流行病学系研究副教授。Vega Yon 博士从事统计计算、数据科学和科学软件开发工作。
   navbar:
     # Logo only. The name would otherwise appear twice on the
     # homepage: once here and once in the page's own <h1>.
@@ -43,31 +43,33 @@ website:
     collapse-below: lg
     left:
       - href: index.qmd
-        text: 主頁
+        text: 主页
       - href: research.qmd
         text: 研究
       - href: software.qmd
-        text: 軟件
+        text: 软件
       - href: talks.qmd
-        text: 演講
+        text: 演讲
       - href: teaching.qmd
-        text: 教學
+        text: 教学
       - href: people.qmd
-        text: 團隊
-      - text: '簡歷'
+        text: 团队
+      - text: '简历'
         menu:
-          - text: Resume (簡要)
+          - text: Resume (简要)
             href: ../cv/resume.docx
-          - text: CV (學術)
+          - text: CV (学术)
             href: ../cv/cv.pdf
-      # 外部連結：諮詢服務有自己的網站，不在本站。
+      # 外部连结：咨询服务有自己的网站，不在本站。
       - href: https://vyanalytics.io/
-        text: 諮詢
+        text: 咨询
     right:
       - href: ../index.html
         text: 🇺🇸
+        aria-label: "English"
       - href: ../es/index.html
-        text: 🇪🇸
+        text: 🇨🇱
+        aria-label: "Español"
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon
@@ -82,7 +84,7 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. 版權所有。
+      © 2026 George G. Vega Yon. 版权所有。
 
 format:
   html:

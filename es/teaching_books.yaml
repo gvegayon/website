@@ -1,0 +1,41 @@
+# Rendered by R/features.R (render_feature_list) on es/teaching.qmd. Field
+# reference is at the top of that file. Translated copy of the root file.
+sna:
+  title: Ciencia de Redes Aplicada con R
+  img: img/book-cover-sna-small.webp
+  alt: Portada del libro 'Ciencia de Redes Aplicada con R'
+  description: |
+    El libro es una colección de presentaciones, talleres y tutoriales que he desarrollado a lo largo de los años para enseñar ciencia de redes con R. El libro trata principalmente sobre modelos ERGM y procesamiento de datos de redes. El libro fue escrito completamente en quarto, lo que lo hace completamente reproducible.
+  links:
+    - label: Leer en línea (inglés)
+      url: https://book.ggvy.cl
+      icon: book
+    - label: Edición en español
+      url: https://book.ggvy.cl/es
+      icon: translate
+hpc:
+  title: HPC Aplicada con R
+  img: img/cover-book-hpc.webp
+  alt: Portada del libro 'HPC Aplicada con R'
+  description: |
+    Este libro proporciona una visión general práctica de cómo acelerar el código R. Con un enfoque en computación paralela y escritura de código R eficiente, el libro también proporciona una introducción sobre cómo usar R en entornos HPC con el paquete slurmR de R y ejemplos listos para usar con C++ a través de Rcpp.
+  links:
+    - label: Leer en línea (inglés)
+      url: https://book-hpc.ggvy.cl
+      icon: book
+    - label: Edición en español
+      url: https://book-hpc.ggvy.cl/es
+      icon: translate
+ai:
+  title: AI for the Scientist in a Hurry
+  img: img/book-ai-small.webp
+  alt: Portada del libro 'AI for the Scientist in a Hurry'
+  description: |
+    Notas y reflexiones sobre inteligencia artificial, escritas para científicos que necesitan ponerse al día rápidamente. El libro cubre conceptos y herramientas de IA prácticos y relevantes para la investigación, con un enfoque en construir intuición rápidamente.
+  links:
+    - label: Leer en línea (inglés)
+      url: https://book-ai.ggvy.cl
+      icon: book
+    - label: Edición en español
+      url: https://book-ai.ggvy.cl/es
+      icon: translate

@@ -27,7 +27,7 @@ project:
     - "_redirects"
 
 # Sets <html lang="en">. es/_quarto.yml and zh/_quarto.yml set their own
-# ("es" and "zh-Hant" -- the Chinese edition is Traditional, not Simplified).
+# ("es" and "zh-Hans" -- the Chinese edition is Simplified, not Traditional).
 lang: en
 
 website:
@@ -84,10 +84,16 @@ website:
       - href: https://vyanalytics.io/
         text: Consulting
     right:
+      # Spanish keeps the Chilean flag on purpose -- it is George's own variety
+      # of Spanish. Chinese gets a text label instead of a flag: a language is
+      # not a country, and no single flag stands for Chinese readers. Same
+      # choices in es/_quarto.yml and zh/_quarto.yml.
       - href: es/index.html
         text: 🇨🇱
+        aria-label: "Español"
       - href: zh/index.html
-        text: 🇨🇳
+        text: 中文
+        aria-label: "简体中文"
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon
@@ -102,7 +108,7 @@ website:
 
   page-footer:
     center: |
-      © 2025 George G. Vega Yon. All rights reserved.
+      © 2026 George G. Vega Yon. All rights reserved.
 
 format:
   html:

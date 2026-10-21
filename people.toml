@@ -65,7 +65,7 @@ group = 'current'
 start = 2024
 bio = "Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Mentor and research assistant supervisor. Computational epidemiology, agent-based models, and machine learning."
 bio_es = "Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Epidemiología computacional, modelos basados en agentes y aprendizaje de máquinas."
-bio_zh = "猶他大學人口健康科學系生物統計學博士生。導師及研究助理指導老師。計算流行病學、基於主體的模型和機器學習。"
+bio_zh = "犹他大学人口健康科学系生物统计学博士生。导师及研究助理指导老师。计算流行病学、基于主体的模型和机器学习。"
 
 [meyer]
 name = 'Meyer, Derek'
@@ -79,7 +79,7 @@ start = 2022
 end = 2024
 bio = "M.Sc. student in Population Health Sciences, University of Utah. Supervisor, research assistant supervisor, and thesis committee member. Agent-based models for epidemics. Now Biostatistician at the University of Utah Data Coordinating Center."
 bio_es = "Estudiante de magíster en Ciencias de Salud Poblacional, Universidad de Utah. Supervisor, supervisor como ayudante de investigación y miembro del comité de tesis. Modelos basados en agentes para epidemias. Actualmente Bioestadístico en el Data Coordinating Center de la Universidad de Utah."
-bio_zh = "猶他大學人口健康科學碩士生。指導教師、研究助理指導老師及論文委員會成員。流行病的基於主體模型。現任猶他大學數據協調中心生物統計師。"
+bio_zh = "犹他大学人口健康科学硕士生。指导教师、研究助理指导老师及论文委员会成员。流行病的基于主体模型。现任犹他大学数据协调中心生物统计师。"
 
 [wagoner]
 name = 'Wagoner, Jake'
@@ -93,7 +93,7 @@ start = 2025
 end = 2025
 bio = "Staff, Scientific Computing and Imaging (SCI) Institute, University of Utah. Co-supervisor and mentor. Tool development for ForeSITE. Now a graduate student in computer science and Software Engineer at PassiveLogic."
 bio_es = "Personal del Instituto de Computación Científica e Imágenes (SCI), Universidad de Utah. Co-supervisor y mentor. Desarrollo de herramientas para ForeSITE. Actualmente estudiante de postgrado en ciencia de la computación e Ingeniero de Software en PassiveLogic."
-bio_zh = "猶他大學科學計算與成像（SCI）研究所職員。共同指導教師及導師。ForeSITE 工具開發。現為計算機科學研究生，並任 PassiveLogic 軟件工程師。"
+bio_zh = "犹他大学科学计算与成像（SCI）研究所职员。共同指导教师及导师。ForeSITE 工具开发。现为计算机科学研究生，并任 PassiveLogic 软件工程师。"
 
 [pulsipher]
 name = 'Pulsipher, Andrew'
@@ -105,7 +105,7 @@ start = 2025
 end = 2025
 bio = "Data scientist on the ForeSITE team, the CDC Insight Net center led by the University of Utah. Research assistant supervisor. R packages and tooling for outbreak analytics. Now Software Engineer at PointClickCare."
 bio_es = "Científico de datos del equipo ForeSITE, el centro Insight Net de los CDC liderado por la Universidad de Utah. Supervisor como ayudante de investigación. Paquetes de R y herramientas para el análisis de brotes. Actualmente Ingeniero de Software en PointClickCare."
-bio_zh = "猶他大學主導的 CDC Insight Net 中心 ForeSITE 團隊的數據科學家。研究助理指導老師。疫情分析的 R 套件與工具開發。現任 PointClickCare 軟件工程師。"
+bio_zh = "犹他大学主导的 CDC Insight Net 中心 ForeSITE 团队的数据科学家。研究助理指导老师。疫情分析的 R 包与工具开发。现任 PointClickCare 软件工程师。"
 
 [olivera]
 name = 'Olivera, Anibal'
@@ -118,7 +118,7 @@ group = 'current'
 start = 2024
 bio = "Ph.D. student in Social Complexity, Universidad del Desarrollo, Chile. Mentor and research assistant supervisor. Network science and R package development."
 bio_es = "Estudiante de doctorado en Complejidad Social, Universidad del Desarrollo, Chile. Mentor y supervisor como ayudante de investigación. Ciencia de redes y desarrollo de paquetes de R."
-bio_zh = "智利 Universidad del Desarrollo 社會複雜性博士生。導師及研究助理指導老師。網絡科學和 R 套件開發。"
+bio_zh = "智利 Universidad del Desarrollo 社会复杂性博士生。导师及研究助理指导老师。网络科学和 R 包开发。"
 
 [banks]
 name = 'Banks, Olivia'
@@ -131,7 +131,7 @@ group = 'current'
 start = 2024
 bio = "Undergraduate honors student, double major in Computer Science and Cellular and Molecular Biology, University of Utah. Mentor and research assistant supervisor. Software development and computational epidemiology."
 bio_es = "Estudiante de pregrado del programa de honores, doble titulación en Ciencia de la Computación y Biología Celular y Molecular, Universidad de Utah. Mentor y supervisor como ayudante de investigación. Desarrollo de software y epidemiología computacional."
-bio_zh = "猶他大學榮譽課程本科生，計算機科學與細胞分子生物學雙主修。導師及研究助理指導老師。軟件開發和計算流行病學。"
+bio_zh = "犹他大学荣誉课程本科生，计算机科学与细胞分子生物学双主修。导师及研究助理指导老师。软件开发和计算流行病学。"
 
 [anto]
 name = 'Anto, Eric'
@@ -145,7 +145,7 @@ start = 2023
 end = 2026
 bio = "Ph.D. student in Biostatistics, Population Health Sciences, University of Utah. Dissertation committee member."
 bio_es = "Estudiante de doctorado en Bioestadística, Ciencias de Salud Poblacional, Universidad de Utah. Miembro del comité de tesis doctoral."
-bio_zh = "猶他大學人口健康科學系生物統計學博士生。博士論文委員會成員。"
+bio_zh = "犹他大学人口健康科学系生物统计学博士生。博士论文委员会成员。"
 
 [diesen]
 name = 'Diesen, Hyrum Thomas'
@@ -159,7 +159,7 @@ start = 2024
 end = 2025
 bio = "Ph.D. student in Molecular, Cellular, and Evolutionary Biology, School of Biological Sciences, University of Utah. Mentor."
 bio_es = "Estudiante de doctorado en Biología Molecular, Celular y Evolutiva, Escuela de Ciencias Biológicas, Universidad de Utah. Mentor."
-bio_zh = "猶他大學生物科學學院分子細胞演化生物學博士生。導師。"
+bio_zh = "犹他大学生物科学学院分子细胞演化生物学博士生。导师。"
 
 [kentmarvick]
 name = 'Kent-Marvick, Jacqueline M.'
@@ -174,7 +174,7 @@ start = 2022
 end = 2024
 bio = "Ph.D. in Health Sciences, College of Nursing, University of Utah. Mentor. Network science and social network analysis. Now Research Assistant Professor at the University of Utah College of Nursing."
 bio_es = "Doctorado en Ciencias de la Salud, Facultad de Enfermería, Universidad de Utah. Mentor. Ciencia de redes y análisis de redes sociales. Actualmente Profesora Asistente de Investigación en la Facultad de Enfermería de la Universidad de Utah."
-bio_zh = "猶他大學護理學院健康科學博士。導師。網絡科學和社會網絡分析。現為猶他大學護理學院研究助理教授。"
+bio_zh = "犹他大学护理学院健康科学博士。导师。网络科学和社会网络分析。现为犹他大学护理学院研究助理教授。"
 
 [lawsonmichod]
 name = 'Lawson-Michod, Katherine'
@@ -189,7 +189,7 @@ start = 2022
 end = 2024
 bio = "Ph.D. student in Clinical and Translational Epidemiology, Population Health Sciences, University of Utah. Qualifying exam chair and dissertation committee member. Now a postdoctoral fellow at Fred Hutchinson Cancer Center."
 bio_es = "Estudiante de doctorado en Epidemiología Clínica y Traslacional, Ciencias de Salud Poblacional, Universidad de Utah. Presidente del examen de calificación y miembro del comité de tesis doctoral. Actualmente investigadora postdoctoral en el Fred Hutchinson Cancer Center."
-bio_zh = "猶他大學人口健康科學系臨床與轉化流行病學博士生。資格考試主席及博士論文委員會成員。現為 Fred Hutchinson 癌症中心博士後研究員。"
+bio_zh = "犹他大学人口健康科学系临床与转化流行病学博士生。资格考试主席及博士论文委员会成员。现为 Fred Hutchinson 癌症中心博士后研究员。"
 
 [bischoff]
 name = 'Bischoff, Porter'
@@ -203,7 +203,7 @@ start = 2023
 end = 2023
 bio = "Undergraduate student, Utah Valley University, Summer Program for Undergraduate Research (SPUR) at the University of Utah. Mentor. Network visualization with R. Now a medical student at Washington University School of Medicine in St. Louis."
 bio_es = "Estudiante de pregrado, Utah Valley University, Programa de Verano de Investigación para Pregrado (SPUR) de la Universidad de Utah. Mentor. Visualización de redes con R. Actualmente estudiante de medicina en la Washington University School of Medicine en San Luis."
-bio_zh = "Utah Valley University 本科生，猶他大學本科生暑期研究計劃（SPUR）。導師。使用 R 進行網絡可視化。現為聖路易斯華盛頓大學醫學院醫學生。"
+bio_zh = "Utah Valley University 本科生，犹他大学本科生暑期研究计划（SPUR）。导师。使用 R 进行网络可视化。现为圣路易斯华盛顿大学医学院医学生。"
 
 [lopez]
 name = 'Lopez, Luis'
@@ -215,7 +215,7 @@ start = 2022
 end = 2022
 bio = "Postbaccalaureate fellow, National Institutes of Health. Mentor. Exponential-family random graph models."
 bio_es = "Becario del programa postbaccalaureate, Institutos Nacionales de Salud (NIH). Mentor. Modelos exponenciales de grafos aleatorios (ERGM)."
-bio_zh = "美國國立衛生研究院（NIH）學士後研究員。導師。指數族隨機圖模型（ERGM）。"
+bio_zh = "美国国立卫生研究院（NIH）学士后研究员。导师。指数族随机图模型（ERGM）。"
 
 # --- my own mentors (see the "My own mentors" section of people.qmd) ---
 # No `group`: they stay off the generated People-page grid, in that
