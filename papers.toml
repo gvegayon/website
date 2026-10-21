@@ -38,7 +38,7 @@ pages = '1-35'
 number = '2'
 doi = '10.1371/journal.pcbi.1007948'
 abstract = 'Gene function annotation is important for a variety of downstream analyses of genetic data. But experimental characterization of function remains costly and slow, making computational prediction an important endeavor. Phylogenetic approaches to prediction have been developed, but implementation of a practical Bayesian framework for parameter estimation remains an outstanding challenge. We have developed a computationally efficient model of evolution of gene annotations using phylogenies based on a Bayesian framework using Markov Chain Monte Carlo for parameter estimation. Unlike previous approaches, our method is able to estimate parameters over many different phylogenetic trees and functions. The resulting parameters agree with biological intuition, such as the increased probability of function change following gene duplication. The method performs well on leave-one-out cross-validation, and we further validated some of the predictions in the experimental scientific literature.'
-code = 'https://github.com/USCbiostats/aphylo-simulations'
+code = 'https://github.com/USCbiostats/aphylo-simulations/releases/tag/paper-ploscb-2021'
 keywords = ['published']
 software = ['aphylo']
 
@@ -97,7 +97,7 @@ volume = '39'
 number = '3'
 pages = '679–703'
 abstract = "Objectives: We reconstruct the networks of officers co-involved in force incidents to test whether interactions with weapon-prone peers impact firearm use. Methods: We draw from a statewide dataset of force incidents across law enforcement agencies in New Jersey, and employ conditional likelihood models to estimate whether exposure to peers with histories of firearm use is associated with an officer's own likelihood of firearm use net of other contextual confounders. Results: We find preliminary evidence that officer firearm behaviors, including drawing, pointing, and discharging a firearm, is influenced by an officer's peers. Greater exposure to colleagues with histories of firearm use is associated with a lower risk of using a firearm. We also find that officer features, including experience and race/ethnicity, are associated with the risk of firearm use. Conclusions: Our study suggests officers' peers structure the risk of firearm use. Our data allow us to look at time order and rule out situational confounders pertaining to firearm use; however, do not allow us to infer causality. We discuss the study's implications for understanding firearm behaviors and the role of network science in moving policing research forward."
-code = 'https://github.com/gvegayon/use_of_force'
+code = 'https://github.com/gvegayon/use_of_force/releases/tag/paper-jqc-2022'
 keywords = ['published']
 
 [repetto2013impacto]
@@ -152,7 +152,7 @@ pages = '188 – 197'
 issn = '0277–9536'
 url = 'http://www.sciencedirect.com/science/article/pii/S0277953619300085'
 abstract = 'This paper examines whether country implementation of a public health treaty is influenced by the implementation behaviors of other countries to which they have network ties. We examine implementation of the Framework Convention on Tobacco Control (FCTC) adopted by the World Health Organization in 2003 and ratified by approximately 94% of countries as of 2016. We constructed five networks: (1) geographic distance, (2) general trade, (3) tobacco trade, (4) GLOBALink referrals, and (5) GLOBALink co-subscriptions. Network exposure terms were constructed from these networks based on the implementation scores for six articles of the FCTC treaty. We estimate effects using a lagged Type 1 Tobit model. Results show that network effects were significant: (a) across all networks for article 6 (pricing and taxation), (b) distance, general trade, GL referrals, and GL co-subscriptions for article 8 (second hand smoke), (c) distance, general trade, and GL co-subscriptions for article 11 (packaging and labeling), and (d) distance and GL co-subscription for article 13 (promotion and advertising), (e) tobacco trade and GL co-subscriptions for article 14 (cessation). These results indicate that diffusion effects were more prevalent for pricing and taxation as well as restrictions on smoking in public places and packaging and labeling. These results suggest that network influences are possible in domains that are amenable to control by national governments but unlikely to occur in domains established by existing regulatory systems. Implications for future studies of policy implementation are discussed.'
-code = 'https://github.com/gvegayon/fctc'
+code = 'https://github.com/gvegayon/fctc/releases/tag/paper-ssm-2019'
 keywords = ['published', 'Diffusion of innovations', 'Policy implementation', 'Social network analysis', 'Tobacco control']
 
 [yon2019exponential]
@@ -169,7 +169,7 @@ note = '(Top 10 most downloaded articles–since December 2020–from Social Net
 doi = '10.1016/j.socnet.2020.07.005'
 eprint = '1904.10406'
 abstract = 'Statistical models for social networks have enabled researchers to study complex social phenomena that give rise to observed patterns of relationships among social actors and to gain a rich understanding of the interdependent nature of social ties and actors. Much of this research has focused on social networks within medium to large social groups. To date, these advances in statistical models for social networks, and in particular, of Exponential-Family Random Graph Models (ERGMS), have rarely been applied to the study of small networks, despite small network data in teams, families, and personal networks being common in many fields. In this paper, we revisit the estimation of ERGMs for small networks and propose using exhaustive enumeration when possible. We developed an R package that implements the estimation of pooled ERGMs for small networks using Maximum Likelihood Estimation (MLE), called ergmito. Based on the results of an extensive simulation study to assess the properties of the MLE estimator, we conclude that there are several benefits of direct MLE estimation compared to approximate methods and that this creates opportunities for valuable methodological innovations that can be applied to modeling social networks with ERGMs.'
-code = 'https://github.com/muriteams/ergmito-simulations'
+code = 'https://github.com/muriteams/ergmito-simulations/releases/tag/paper-socnet-2021'
 keywords = ['published']
 software = ['ergmito']
 
@@ -380,7 +380,7 @@ doi = '10.1080/01621459.2023.2252041'
 langid = 'english'
 url = 'https://doi.org/10.1080/01621459.2023.2252041'
 abstract = 'The recent work by Krivitsky, Coletti & Hens [KCH] provides an important new contribution to the Exponential-Family Random Graph Models [ERGMs], a start-to-finish approach to dealing with multi-network ERGMs. Although multi-network ERGMs have been around for a while (mostly in the form of block-diagonal models and multi-level ERGMs, see Duxbury and Wertsching (2023), Wang et al. (2013), Slaughter and Koehly (2016)), not much care has been given to the estimation and post-estimation steps. In their paper, Krivitsky, Coletti & Hens give a detailed layout of how to build, estimate, and analyze multi-ERGMs with heterogeneous data sources. In this comment, I will focus on two issues the authors did not discuss, namely, sample size requirements and multicollinearity.'
-code = 'https://github.com/gvegayon/jasa-comment-2023'
+code = 'https://github.com/gvegayon/jasa-comment-2023/releases/tag/paper-jasa-2023'
 keywords = ['published']
 
 [meyerEpiworldRFastAgentBased2023]
