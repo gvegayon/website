@@ -178,77 +178,195 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
 
-/* Homepage hero --------------------------------------------------------- */
-/* The homepage keeps `title: ""` -- it opens with the portrait banner -- so
-   its single <h1> is written in the body instead. */
-.home-hero {
-	text-align: center;
-	margin: 0.5rem 0 1.75rem;
+/* Homepage hero band ---------------------------------------------------- */
+/* The Utah landscape (img/paisaje.jpg) under a warm scrim, with a network
+   drawn over it (img/network-band.svg) -- the field, not just the scenery.
+   The scrim is darkest on the left, where the portrait and text sit, and
+   lets the lake through on the right. White text on the darkest stop clears
+   WCAG AA whatever part of the photo is behind it.
+   The homepage keeps `title: ""`, so its single <h1> is written here.
+   `margin-top: -60px` (with the matching extra padding) pulls the band up
+   under Quarto's content padding so it meets the navbar, as the old
+   landscape banner did. */
+.home-band {
+	--band-ink: #ffffff;
+	--band-muted: #e8d9c8;
+	--band-accent: #e0a774;
+	margin-top: -60px;
+	padding: calc(60px + clamp(2.25rem, 6vw, 4.5rem)) 1rem clamp(2.25rem, 6vw, 4.5rem);
+	background-color: #2f2a26;
+	background-image:
+		url("img/network-band.svg"),
+		linear-gradient(90deg, rgba(38, 26, 18, 0.84) 0%, rgba(38, 26, 18, 0.66) 55%, rgba(38, 26, 18, 0.42) 100%),
+		url("img/paisaje.jpg");
+	background-size: cover;
+	background-position: center, center, center 40%;
+	background-repeat: no-repeat;
 }
 
-.home-hero h1 {
-	font-size: clamp(2rem, 5vw, 2.9rem);
-	font-weight: 700;
-	line-height: 1.15;
-	letter-spacing: -0.02em;
+.home-band__inner {
+	max-width: 1040px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: clamp(1.25rem, 4vw, 3rem);
+}
+
+/* Pandoc wraps the portrait in its own <p>. */
+.home-band__inner > p {
 	margin: 0;
+	flex-shrink: 0;
 }
 
-.home-hero .home-hero-role {
-	display: inline-block;
-	margin-top: 0.55rem;
-	color: var(--muted);
-	font-size: clamp(0.98rem, 2vw, 1.15rem);
-}
-
-.home-hero::after {
-	content: "";
+.home-band__portrait {
 	display: block;
-	width: 72px;
-	height: 3px;
-	margin: 1.15rem auto 0;
-	border-radius: 2px;
-	background: var(--main-color);
+	width: 184px;
+	height: 184px;
+	object-fit: cover;
+	object-position: 20% 30%;
+	border-radius: 50%;
+	border: 3px solid var(--band-accent);
 }
 
-/* Homepage lead --------------------------------------------------------- */
-/* The lead used to be centered. Centered multi-line prose gives every line a
-   ragged left edge, so the eye has no fixed return point on the sweep back --
-   worst at 375px, where the measure collapses to a few words per line. Only
-   the text inside the block is left-aligned; the block itself stays centered
-   on the page, so the portrait banner and hero above are untouched. The
+.home-band h1 {
+	margin: 0;
+	color: var(--band-ink);
+	font-size: clamp(2rem, 5vw, 3rem);
+	font-weight: 700;
+	line-height: 1.08;
+	letter-spacing: -0.02em;
+}
+
+/* `p { color: var(--ink) }` is set site-wide, so every paragraph in the band
+   names its colour rather than inheriting white. */
+.home-band__text p {
+	margin: 0.6rem 0 0;
+	color: var(--band-muted);
+	font-size: clamp(1rem, 2vw, 1.15rem);
+	line-height: 1.45;
+}
+
+.home-band__text p:last-child {
+	max-width: 38rem;
+	margin-top: 1.5rem;
+	color: var(--band-ink);
+	font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+	line-height: 1.4;
+}
+
+@media (max-width: 720px) {
+	.home-band {
+		background-image:
+			url("img/network-band.svg"),
+			linear-gradient(180deg, rgba(38, 26, 18, 0.6) 0%, rgba(38, 26, 18, 0.82) 100%),
+			url("img/paisaje.jpg");
+		background-position: 85% center, center, 30% center;
+	}
+
+	.home-band__inner {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.home-band__portrait {
+		width: 112px;
+		height: 112px;
+	}
+}
+
+/* Homepage body --------------------------------------------------------- */
+/* Intro on the left, the three main routes onward on the right; on a phone
+   they stack with the routes first, straight under the band, rather than
+   below three paragraphs of intro. Left-aligned
+   prose: centred multi-line text has no fixed return point for the eye. The
    max-width holds the measure near 65 characters. */
-/* `width: 100%` is load-bearing on both blocks below. Quarto puts page content
-   in a CSS grid, and an auto inline margin on a grid item switches it from
-   stretch to shrink-to-fit -- which would size the rule under .home-links to
-   its four links instead of the measure, leaving it visibly out of alignment
-   with the paragraphs above. */
+.home-body {
+	display: grid;
+	grid-template-columns: minmax(0, 34rem) 11rem;
+	justify-content: space-between;
+	column-gap: 2.5rem;
+	margin-top: 2.5rem;
+}
+
 .home-lead {
-	width: 100%;
-	max-width: 34rem;
-	margin-inline: auto;
-	text-align: left;
+	grid-column: 1;
 	line-height: 1.6;
 }
 
-/* The opening question is the hook the whole page hangs on, so it is set a
-   step above the body rather than reading as the first of four equal
-   paragraphs. Size only -- no bold, which at this measure would fight the
-   display face in the hero directly above it. */
-.home-lead > p:first-of-type {
-	font-size: 1.12rem;
-	line-height: 1.55;
+.home-actions {
+	grid-column: 2;
+	grid-row: 1 / span 2;
 }
 
-/* Homepage next steps --------------------------------------------------- */
-/* Without this row the homepage offers no route onward except the navbar.
+.home-actions p {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+	margin: 0;
+}
+
+.home-action {
+	display: block;
+	text-align: center;
+	border: 1px solid var(--line);
+	border-radius: 999px;
+	padding: 0.65rem 1.2rem;
+	color: var(--ink-strong);
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 0.95rem;
+	text-decoration: none;
+}
+
+.home-action:hover {
+	background: var(--accent-tint);
+	text-decoration: none;
+}
+
+.home-action--primary {
+	background: var(--main-color);
+	border-color: var(--main-color);
+	color: #fff;
+}
+
+.home-action--primary:hover {
+	background: #8f4600;
+	color: #fff;
+}
+
+@media (max-width: 720px) {
+	.home-body {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.home-actions {
+		grid-column: 1;
+		grid-row: 1;
+		margin-bottom: 1.75rem;
+	}
+
+	.home-lead {
+		grid-row: 2;
+	}
+
+	.home-actions p {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.home-links {
+		grid-row: 3;
+	}
+}
+
+/* Homepage profile links ------------------------------------------------ */
+/* Scholar, ORCID, GitHub and the rest, as a row of icons under the intro.
    The glyphs come from Bootstrap Icons, which Quarto already ships and the
    navbar already uses -- no second icon font is loaded for this. Each link
    carries its own title/aria-label, so the row needs no tooltip JS. */
 .home-links {
-	width: 100%;
-	max-width: 34rem;
-	margin: 2rem auto 0;
+	grid-column: 1;
+	margin-top: 2rem;
 	padding-top: 1.4rem;
 	border-top: 1px solid var(--line);
 }
@@ -259,7 +377,7 @@ body .quarto-title-block .quarto-title-banner h1.title {
 .home-links p {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 1.4rem;
 	margin: 0;
 }
