@@ -235,8 +235,8 @@ verbatim into `public/`. So:
    works from the `es/` and `zh/` grids. `R/detail.R` now resolves `pdf` the
    same way — it was passing the raw field to `safe_link()`, which happens to
    work for a `/`-prefixed path at the domain root but breaks the file's
-   site-root-relative convention. (`R/research_publications.R` contains a
-   second, older copy of this link row, but nothing sources it — leave it be.)
+   site-root-relative convention. (An older, unsourced copy of this link row in
+   `R/research_publications.R` was deleted in 2026-10.)
 5. **Stamp every AAM** with a cover line before uploading. For Elsevier titles
    this is a requirement, not a nicety:
 

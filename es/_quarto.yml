@@ -63,11 +63,9 @@ website:
         text: Consultoría
     right:
       - href: ../index.html
-        text: 🇺🇸
-        aria-label: "English"
+        text: '<span class="flag flag--us" role="img" aria-label="English" title="English"></span>'
       - href: ../zh/index.html
-        text: 中文
-        aria-label: "简体中文"
+        text: '<span lang="zh-Hans" title="简体中文">中文</span>'
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon

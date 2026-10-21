@@ -65,11 +65,9 @@ website:
         text: 咨询
     right:
       - href: ../index.html
-        text: 🇺🇸
-        aria-label: "English"
+        text: '<span class="flag flag--us" role="img" aria-label="English" title="English"></span>'
       - href: ../es/index.html
-        text: 🇨🇱
-        aria-label: "Español"
+        text: '<span class="flag flag--cl" role="img" aria-label="Español" title="Español"></span>'
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon

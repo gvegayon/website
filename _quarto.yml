@@ -88,12 +88,15 @@ website:
       # of Spanish. Chinese gets a text label instead of a flag: a language is
       # not a country, and no single flag stands for Chinese readers. Same
       # choices in es/_quarto.yml and zh/_quarto.yml.
+      #
+      # The flags are CSS-drawn spans (.flag in styles.css), not emoji: Windows
+      # has no flag emoji and shows the bare letters "CL" / "US". The span
+      # carries role="img" + aria-label itself because Quarto silently drops
+      # an `aria-label:` key on navbar items.
       - href: es/index.html
-        text: 🇨🇱
-        aria-label: "Español"
+        text: '<span class="flag flag--cl" role="img" aria-label="Español" title="Español"></span>'
       - href: zh/index.html
-        text: 中文
-        aria-label: "简体中文"
+        text: '<span lang="zh-Hans" title="简体中文">中文</span>'
       - href: https://github.com/gvegayon
         icon: github
       - href: https://linkedin.com/in/georgevegayon
