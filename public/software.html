@@ -267,7 +267,7 @@ background-size: cover;
 </script>
 <link rel="alternate" hreflang="en" href="https://ggvy.cl/software.html">
 <link rel="alternate" hreflang="es" href="https://ggvy.cl/es/software.html">
-<link rel="alternate" hreflang="zh-Hant" href="https://ggvy.cl/zh/software.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://ggvy.cl/zh/software.html">
 <link rel="alternate" hreflang="x-default" href="https://ggvy.cl/software.html">
 
 
@@ -358,7 +358,7 @@ background-size: cover;
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./zh/index.html"> 
-<span class="menu-text">🇨🇳</span></a>
+<span class="menu-text">中文</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/gvegayon"> <i class="bi bi-github" role="img">
@@ -421,25 +421,36 @@ background-size: cover;
 
 <p>I am deeply committed to open-source software and have been building professional-grade tools for over 15 years—going back to the days of <a href="https://code.google.com/archive/p/rdspl/" target="_blank">Google Code here</a>. My work combines rigorous statistical methods with modern software engineering practices, including version control (Git/GitHub), continuous integration, agentic AI, container technologies, and agile methodologies. I have led scientific software development teams to deliver <strong>high-performance, reliable, and user-friendly tools</strong> that are widely adopted by researchers and practitioners. Most of my work is built in C++ with wrappers for R and Python, optimized for use in high-performance computing environments. Recently, during the last couple of years, I have incorporated AI into my work, influencing development and innovation (see <a href="https://github.com/gvegayon/ai-examples" target="_blank">here</a> for a few examples). Across all projects, I design with performance and usability in mind, ensuring that complex methods can be both scalable and accessible.</p>
 <p>A couple of projects to highlight include:</p>
-<div class="columns" style="display: flex;">
-<div class="column" style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center">
-<p><img src="./img/epiworld.webp" class="img-fluid"></p>
-</div><div class="column" style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px">
-<p><em>The <strong>epiworld</strong> framework</em> is an advanced agent-based modeling framework written in C++ that was designed for rapid prototyping of simulation models focused on epidemiological modeling. The library is available in R, Python, as well as a shiny package.<br>The most notable application of <code>epiworld</code> is with the modeling of measles during the recent US outbreaks. You can see a version of the shiny app that was developed <a href="https://ggvy.cl/shiny/measles">here</a>. <a href="https://github.com/UofUEpiBio/epiworld"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="img-fluid" width="20"></a></p>
+<div class="feature-list feature-list--logo">
+<div class="feature">
+<div class="feature__media">
+<img src="img/epiworld.webp" alt="" loading="lazy">
 </div>
+<section id="epiworld" class="level3 feature__body">
+<h3 class="anchored" data-anchor-id="epiworld">epiworld</h3>
+<p>An advanced agent-based modeling framework written in C++, designed for rapid prototyping of simulation models focused on epidemiological modeling. The library is available in R, Python, as well as a shiny package. Its most notable application is the modeling of measles during the recent US outbreaks.</p>
+<p><span class="feature__links"><a href="https://github.com/UofUEpiBio/epiworld" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-github" aria-hidden="true"></span> GitHub</a> <a href="https://ggvy.cl/shiny/measles" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-play-circle" aria-hidden="true"></span> Measles simulator</a></span></p>
+</section>
 </div>
-<div class="columns" style="display: flex;">
-<div class="column" style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center">
-<p><img src="./img/rgexf.webp" class="img-fluid"></p>
-</div><div class="column" style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px">
-<p><em>The <strong>rgexf</strong> package.</em> Create, read, and write ‘GEXF’ (Graph Exchange ‘XML’ Format) graph files (used in ‘Gephi’ and others). Using the ‘XML’ package, rgexf allows reading and writing GEXF files, including attributes, ‘GEXF’ visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges’ weights. Users can build/handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through ‘gexf-js’ (a ‘javascript’ library), and interact with the ‘igraph’ package.<br>You can see a live version of the <code>gexf-js</code> library in action <a href="https://gvegayon.github.io/rgexf/lesmiserables/">here</a>. <a href="https://github.com/gvegayon/rgexf"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="img-fluid" width="20"></a></p>
+<div class="feature">
+<div class="feature__media">
+<img src="img/rgexf.webp" alt="" loading="lazy">
 </div>
+<section id="rgexf" class="level3 feature__body">
+<h3 class="anchored" data-anchor-id="rgexf">rgexf</h3>
+<p>Create, read, and write ‘GEXF’ (Graph Exchange ‘XML’ Format) graph files (used in ‘Gephi’ and others). Using the ‘XML’ package, rgexf allows reading and writing GEXF files, including attributes, ‘GEXF’ visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges’ weights. Users can build/handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through ‘gexf-js’ (a ‘javascript’ library), and interact with the ‘igraph’ package.</p>
+<p><span class="feature__links"><a href="https://github.com/gvegayon/rgexf" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-github" aria-hidden="true"></span> GitHub</a> <a href="https://gvegayon.github.io/rgexf/lesmiserables/" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-diagram-3" aria-hidden="true"></span> Live gexf-js demo</a></span></p>
+</section>
 </div>
-<div class="columns" style="display: flex;">
-<div class="column" style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center">
-<p><img src="./img/ergmito.webp" class="img-fluid"></p>
-</div><div class="column" style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px">
-<p><em>The <strong>ergmito</strong> R packagee</em>. Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics as shown in Vega Yon et al.&nbsp;(2020) <a href="https://doi.org/10.1016/j.socnet.2020.07.005" class="uri">https://doi.org/10.1016/j.socnet.2020.07.005</a>. As a difference from the ‘ergm’ package, ‘ergmito’ circumvents using Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions, and other relevant functions, directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms. <a href="https://github.com/muriteams/ergmito"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" class="img-fluid" width="20"></a></p>
+<div class="feature">
+<div class="feature__media">
+<img src="img/ergmito.webp" alt="" loading="lazy">
+</div>
+<section id="ergmito" class="level3 feature__body">
+<h3 class="anchored" data-anchor-id="ergmito">ergmito</h3>
+<p>Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics as shown in Vega Yon et al.&nbsp;(2020). As a difference from the ‘ergm’ package, ‘ergmito’ circumvents using Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions, and other relevant functions, directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms.</p>
+<p><span class="feature__links"><a href="https://github.com/muriteams/ergmito" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-github" aria-hidden="true"></span> GitHub</a> <a href="https://doi.org/10.1016/j.socnet.2020.07.005" class="feature__link" target="_blank" rel="noopener"><span class="bi bi-file-earmark-text" aria-hidden="true"></span> Paper</a></span></p>
+</section>
 </div>
 </div>
 <p>The following is an exhaustive list of the software packages I have either built or contributed. You can take a look at my most recent contributions and ongoing open source projects on <a href="https://github.com/gvegayon">my GitHub</a></p>
@@ -855,7 +866,7 @@ background-size: cover;
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2025 George G. Vega Yon. All rights reserved.</p>
+<p>© 2026 George G. Vega Yon. All rights reserved.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
