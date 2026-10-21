@@ -47,6 +47,17 @@ safe_link <- function(url, label, cls = NULL) {
   )
 }
 
+# The `code` field of a paper: the analysis repository or a pinned release.
+# The label stays next to the icon, so it reads the same as DOI/PDF and to a
+# screen reader.
+code_link <- function(url, label = "Code") {
+  safe_link(
+    url,
+    paste0('<i class="bi bi-code-slash" aria-hidden="true"></i> ', esc(label)),
+    cls = "link-code"
+  )
+}
+
 # Facet values become both a visible label and a machine token. The token has
 # to survive being stuffed into a pipe-delimited data attribute, so it loses
 # everything that is not alphanumeric.
