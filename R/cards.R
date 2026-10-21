@@ -259,12 +259,11 @@ software_card <- function(e, i18n) {
     sprintf('<img class="card__hex" src="%s" alt="" loading="lazy">', esc(hex))
   } else {
     # Only three packages have a hex logo, so most cards fall back to a
-    # monogram. A hue derived from the key keeps them from all looking like
-    # the same orange square -- stable across builds, no image needed.
-    hue <- sum(utf8ToInt(tolower(e$key))) %% 360L
+    # monogram. A shade derived from the key keeps them from all looking like
+    # the same orange square -- see monogram_bg() in R/html.R.
     sprintf(
-      '<span class="card__hex card__hex--mono" style="background:hsl(%d 45%% 42%%)" aria-hidden="true">%s</span>',
-      hue, esc(toupper(substr(name, 1, 1)))
+      '<span class="card__hex card__hex--mono" style="background:%s" aria-hidden="true">%s</span>',
+      monogram_bg(e$key), esc(toupper(substr(name, 1, 1)))
     )
   }
 

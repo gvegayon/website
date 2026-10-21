@@ -36,16 +36,25 @@
 	src: url("assets/fonts/archivo-700.woff2") format("woff2");
 }
 
-/* CSS Variables matching lab website */
+/* Design tokens -- the whole palette. styles.css, cards.css and talks.css
+   use these and nothing else, so a colour change happens here once. One
+   accent, one warm ink family, one line, two surfaces. Every text colour
+   clears WCAG AA (4.5:1) on every surface below. */
 :root {
-	--link-on: white;
-	--link-off: brown;
 	/* Single source of truth for the accent color. Must match the navbar
 	   `background:` in _quarto.yml, es/_quarto.yml, and zh/_quarto.yml
 	   (those need a literal hex; this is the one that actually renders). */
 	--main-color: #A85200;
-	--ink: #4a4a4a;
-	--muted: #6b5c4d;
+	--accent-tint: #fbeee0;   /* hover and highlighted-tag fill */
+
+	--ink-strong: #2f2a26;    /* headings, card titles */
+	--ink: #4a423b;           /* body text */
+	--muted: #6e5f52;         /* metadata, captions, secondary text */
+
+	--line: #e8dccd;          /* borders and rules */
+	--sep: #c3a887;           /* bullet separators in link rows */
+	--surface: #fffaf4;       /* cards */
+	--surface-2: #fbf3e8;     /* panels, code, inputs */
 
 	--font-body: "Source Serif 4", Georgia, serif;
 	--font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -107,7 +116,7 @@ code, pre, kbd {
 
 /* Typography */
 h1, h2, h3, h4 {
-	color: darkslategray;
+	color: var(--ink-strong);
 	font-family: var(--font-display);
 }
 
@@ -131,6 +140,12 @@ body .quarto-title-block .quarto-title-banner {
 	margin-bottom: 2.25rem;
 	background-position: center;
 	background-repeat: no-repeat;
+	/* The banner images range from a classroom photo to a wall of multicolour
+	   hex logos. `luminosity` keeps each image's light and shade but takes its
+	   hue from this colour, so every banner reads as the same warm duotone
+	   instead of a different palette per page. */
+	background-color: #5a3a22;
+	background-blend-mode: luminosity;
 }
 
 /* The banner photographs are light and vary by crop, so the white text needs a
@@ -141,10 +156,10 @@ body .quarto-title-block .quarto-title-banner::before {
 	inset: 0;
 	background: linear-gradient(
 		to bottom,
-		rgba(24, 34, 34, 0.28) 0%,
-		rgba(24, 34, 34, 0.5) 35%,
-		rgba(24, 34, 34, 0.72) 65%,
-		rgba(24, 34, 34, 0.85) 100%
+		rgba(38, 26, 18, 0.25) 0%,
+		rgba(38, 26, 18, 0.45) 35%,
+		rgba(38, 26, 18, 0.65) 65%,
+		rgba(38, 26, 18, 0.8) 100%
 	);
 }
 
@@ -182,7 +197,7 @@ body .quarto-title-block .quarto-title-banner h1.title {
 .home-hero .home-hero-role {
 	display: inline-block;
 	margin-top: 0.55rem;
-	color: #5c5c5c;
+	color: var(--muted);
 	font-size: clamp(0.98rem, 2vw, 1.15rem);
 }
 
@@ -235,7 +250,7 @@ body .quarto-title-block .quarto-title-banner h1.title {
 	max-width: 34rem;
 	margin: 2rem auto 0;
 	padding-top: 1.4rem;
-	border-top: 1px solid #e5dcd1;
+	border-top: 1px solid var(--line);
 }
 
 /* Pandoc wraps the run of anchors in a single <p>. The newlines between them
@@ -314,116 +329,17 @@ a:hover {
 	overflow-wrap: anywhere;
 }
 
-/* Research page redesign */
-.research-shell {
-	margin-top: 1.5rem;
+/* Language-switcher flags (navbar, see _quarto.yml). Inline SVG, so there is
+   no image path to resolve from es/, zh/ or the detail pages. */
+.flag {
+	display: inline-block;
+	width: 1.35em;
+	height: 0.9em;
+	vertical-align: -0.08em;
+	background-size: cover;
+	border-radius: 2px;
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.55);
 }
 
-.research-controls {
-	display: grid;
-	gap: 0.75rem;
-	margin-bottom: 1rem;
-}
-
-.pub-search {
-	width: 100%;
-	border: 1px solid #d4c5b4;
-	border-radius: 999px;
-	padding: 0.75rem 1rem;
-	font-size: 1rem;
-	color: #3a3028;
-	background: linear-gradient(180deg, #fffdf9 0%, #fff8ef 100%);
-}
-
-.pub-search:focus {
-	outline: 2px solid var(--main-color);
-	border-color: var(--main-color);
-}
-
-.pub-filter-group {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-}
-
-.pub-filter {
-	border: 1px solid #d7c5af;
-	background: #fff;
-	color: #634529;
-	border-radius: 999px;
-	padding: 0.4rem 0.85rem;
-	font-size: 0.9rem;
-	transition: all 120ms ease-in-out;
-}
-
-.pub-filter:hover {
-	background: #fff4e8;
-}
-
-.pub-filter.is-active {
-	background: var(--main-color);
-	border-color: var(--main-color);
-	color: #fff;
-}
-
-.pub-list {
-	display: grid;
-	gap: 0.9rem;
-}
-
-.pub-card {
-	border: 1px solid #efe2d2;
-	background: linear-gradient(120deg, #fffcf8 0%, #fff8f0 100%);
-	border-radius: 14px;
-	padding: 1rem 1.1rem;
-	box-shadow: 0 4px 20px rgba(109, 75, 44, 0.08);
-}
-
-.pub-card h3 {
-	margin: 0 0 0.45rem;
-	font-size: 1.07rem;
-	color: #173042;
-}
-
-.pub-meta {
-	margin: 0 0 0.5rem;
-	color: #4f4f4f;
-}
-
-.pub-links {
-	margin: 0.2rem 0 0.4rem;
-	font-size: 0.95rem;
-}
-
-.pub-links .sep {
-	margin: 0 0.45rem;
-	color: #af8b66;
-}
-
-.pub-abstract summary {
-	cursor: pointer;
-	font-weight: 700;
-	color: #1d4c6b;
-	margin-bottom: 0.35rem;
-}
-
-.pub-abstract p {
-	margin-bottom: 0.15rem;
-	color: #4b4b4b;
-}
-
-.muted {
-	color: var(--muted);
-	font-size: 0.92rem;
-}
-
-.abstract-missing {
-	margin-top: 0.3rem;
-}
-
-@media (max-width: 720px) {
-	.pub-card {
-		border-radius: 12px;
-		padding: 0.9rem;
-	}
-}
+.flag--cl { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23d52b1e'/%3E%3Crect width='30' height='10' fill='%23fff'/%3E%3Crect width='10' height='10' fill='%230039a6'/%3E%3Cpolygon points='5.00,2.20 5.68,4.27 7.85,4.27 6.09,5.56 6.76,7.63 5.00,6.35 3.24,7.63 3.91,5.56 2.15,4.27 4.32,4.27' fill='%23fff'/%3E%3C/svg%3E"); }
+.flag--us { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Crect width='30' height='20' fill='%23fff'/%3E%3Crect y='0.000' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='3.077' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='6.154' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='9.231' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='12.308' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='15.385' width='30' height='1.538' fill='%23b22234'/%3E%3Crect y='18.462' width='30' height='1.538' fill='%23b22234'/%3E%3Crect width='12' height='10.769' fill='%233c3b6e'/%3E%3Ccircle cx='1.40' cy='1.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='3.60' cy='1.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='5.80' cy='1.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='8.00' cy='1.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='10.20' cy='1.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='2.50' cy='3.10' r='0.45' fill='%23fff'/%3E%3Ccircle cx='4.70' cy='3.10' r='0.45' fill='%23fff'/%3E%3Ccircle cx='6.90' cy='3.10' r='0.45' fill='%23fff'/%3E%3Ccircle cx='9.10' cy='3.10' r='0.45' fill='%23fff'/%3E%3Ccircle cx='1.40' cy='4.90' r='0.45' fill='%23fff'/%3E%3Ccircle cx='3.60' cy='4.90' r='0.45' fill='%23fff'/%3E%3Ccircle cx='5.80' cy='4.90' r='0.45' fill='%23fff'/%3E%3Ccircle cx='8.00' cy='4.90' r='0.45' fill='%23fff'/%3E%3Ccircle cx='10.20' cy='4.90' r='0.45' fill='%23fff'/%3E%3Ccircle cx='2.50' cy='6.70' r='0.45' fill='%23fff'/%3E%3Ccircle cx='4.70' cy='6.70' r='0.45' fill='%23fff'/%3E%3Ccircle cx='6.90' cy='6.70' r='0.45' fill='%23fff'/%3E%3Ccircle cx='9.10' cy='6.70' r='0.45' fill='%23fff'/%3E%3Ccircle cx='1.40' cy='8.50' r='0.45' fill='%23fff'/%3E%3Ccircle cx='3.60' cy='8.50' r='0.45' fill='%23fff'/%3E%3Ccircle cx='5.80' cy='8.50' r='0.45' fill='%23fff'/%3E%3Ccircle cx='8.00' cy='8.50' r='0.45' fill='%23fff'/%3E%3Ccircle cx='10.20' cy='8.50' r='0.45' fill='%23fff'/%3E%3Ccircle cx='2.50' cy='10.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='4.70' cy='10.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='6.90' cy='10.30' r='0.45' fill='%23fff'/%3E%3Ccircle cx='9.10' cy='10.30' r='0.45' fill='%23fff'/%3E%3C/svg%3E"); }

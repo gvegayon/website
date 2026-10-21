@@ -73,3 +73,13 @@ tag_html <- function(text, cls = "") {
   if (!nzchar(text %||% "")) return("")
   sprintf('<span class="tag %s">%s</span>', esc(cls), esc(text))
 }
+
+# Background for a letter monogram (software cards without a hex logo, People
+# entries without a photo). Derived from the key, so it is stable across
+# builds, but held to the site's warm band -- terracotta through ochre --
+# rather than the whole colour wheel, which put purple and teal tiles next to
+# an orange navbar. White text clears 4.5:1 on every value.
+monogram_bg <- function(key) {
+  n <- sum(utf8ToInt(tolower(key)))
+  sprintf("hsl(%d 50%% %d%%)", 8L + (n %% 9L) * 4L, 30L + (n %/% 9L) %% 3L * 4L)
+}

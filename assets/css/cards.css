@@ -1,17 +1,11 @@
 /* Card grid for the research and software pages.
  *
- * Scoped under .item-grid so it cannot leak into the rest of the site. Font
- * roles are inherited through the site-wide --font-* tokens in styles.css.
+ * Colours and fonts come from the site-wide tokens in styles.css (:root);
+ * nothing here declares a colour of its own except pure white and the
+ * ORCID brand green.
  */
 
 .item-grid {
-  --ig-accent: var(--main-color, #A85200);
-  --ig-ink: #2f2a26;
-  --ig-muted: #7a6a5c;
-  --ig-line: #e8dccd;
-  --ig-surface: #fffdfa;
-  --ig-surface-2: #fff7ec;
-
   margin-top: 1.75rem;
 }
 
@@ -27,18 +21,18 @@
 
 .ig-search {
   width: 100%;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 0.7rem 1.15rem;
   font-size: 1rem;
-  color: var(--ig-ink);
-  background: linear-gradient(180deg, #fffdf9 0%, #fff8ef 100%);
+  color: var(--ink-strong);
+  background: #fff;
 }
 
 .ig-search:focus-visible {
-  outline: 2px solid var(--ig-accent);
+  outline: 2px solid var(--main-color);
   outline-offset: 1px;
-  border-color: var(--ig-accent);
+  border-color: var(--main-color);
 }
 
 .ig-tools {
@@ -54,21 +48,21 @@
   align-items: center;
   gap: 0.4rem;
   font-size: 0.85rem;
-  color: var(--ig-muted);
+  color: var(--muted);
 }
 
 .ig-sort-select {
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
   border-radius: 8px;
   padding: 0.3rem 0.5rem;
   background: #fff;
-  color: var(--ig-ink);
+  color: var(--ink-strong);
   font-size: 0.85rem;
 }
 
 .ig-view {
   display: inline-flex;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -76,14 +70,14 @@
 .ig-view button {
   border: 0;
   background: #fff;
-  color: var(--ig-muted);
+  color: var(--muted);
   font-size: 0.82rem;
   padding: 0.32rem 0.7rem;
   cursor: pointer;
 }
 
 .ig-view button[aria-pressed="true"] {
-  background: var(--ig-accent);
+  background: var(--main-color);
   color: #fff;
 }
 
@@ -93,9 +87,9 @@
   display: grid;
   gap: 0.5rem;
   padding: 0.85rem 1rem;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
   border-radius: 12px;
-  background: var(--ig-surface-2);
+  background: var(--surface-2);
 }
 
 .ig-facet {
@@ -109,7 +103,7 @@
   font-size: 0.74rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--ig-muted);
+  color: var(--muted);
   font-weight: 700;
 }
 
@@ -123,9 +117,9 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
   background: #fff;
-  color: #634529;
+  color: var(--ink);
   border-radius: 999px;
   padding: 0.26rem 0.7rem;
   font-size: 0.82rem;
@@ -134,16 +128,16 @@
   transition: background 120ms ease, border-color 120ms ease;
 }
 
-.ig-chip:hover { background: #fff1e0; }
+.ig-chip:hover { background: var(--accent-tint); }
 
 .ig-chip[aria-pressed="true"] {
-  background: var(--ig-accent);
-  border-color: var(--ig-accent);
+  background: var(--main-color);
+  border-color: var(--main-color);
   color: #fff;
 }
 
 .ig-chip:focus-visible {
-  outline: 2px solid var(--ig-accent);
+  outline: 2px solid var(--main-color);
   outline-offset: 2px;
 }
 
@@ -159,7 +153,7 @@
   justify-self: start;
   border: 0;
   background: none;
-  color: var(--ig-accent);
+  color: var(--main-color);
   font-size: 0.8rem;
   text-decoration: underline;
   cursor: pointer;
@@ -168,13 +162,13 @@
 
 .ig-status {
   font-size: 0.82rem;
-  color: var(--ig-muted);
+  color: var(--muted);
   margin: 0 0 0.75rem;
 }
 
 .ig-empty {
   text-align: center;
-  color: var(--ig-muted);
+  color: var(--muted);
   padding: 2.5rem 1rem;
 }
 
@@ -201,17 +195,19 @@
   flex-direction: column;
   gap: 0.5rem;
   width: 100%;
-  border: 1px solid #efe2d2;
-  background: linear-gradient(150deg, var(--ig-surface) 0%, var(--ig-surface-2) 100%);
+  border: 1px solid var(--line);
+  background: var(--surface);
   border-radius: 14px;
   padding: 1.05rem 1.15rem;
-  box-shadow: 0 3px 16px rgba(109, 75, 44, 0.07);
-  transition: transform 140ms ease, box-shadow 140ms ease;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
 }
 
+/* Flat at rest -- 36 floating, gradient-filled cards read as noise. Only the
+   card under the pointer lifts out, by its edge rather than by moving: the
+   card itself is not a link, so it should not jump like a button. */
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(109, 75, 44, 0.13);
+  border-color: var(--sep);
+  box-shadow: 0 4px 14px rgba(47, 42, 38, 0.08);
 }
 
 .card__head {
@@ -226,23 +222,23 @@
   font-family: var(--font-display, inherit);
   font-size: 1.04rem;
   line-height: 1.35;
-  color: #173042;
+  color: var(--ink-strong);
 }
 
 .card__title a { color: inherit; font-weight: 700; }
-.card__title a:hover { color: var(--ig-accent); }
+.card__title a:hover { color: var(--main-color); }
 
 .card__authors,
 .card__venue,
 .card__blurb {
   margin: 0;
   font-size: 0.88rem;
-  color: #55524e;
+  color: var(--ink);
   line-height: 1.45;
 }
 
-.card__venue { color: var(--ig-muted); }
-.card__authors .is-self { font-weight: 700; color: var(--ig-ink); }
+.card__venue { color: var(--muted); }
+.card__authors .is-self { font-weight: 700; color: var(--ink-strong); }
 
 /* Collaborators resolved through people.toml get a link; the affiliation
    rides along as a tooltip so the card stays compact. */
@@ -254,8 +250,8 @@
   text-underline-offset: 2px;
 }
 
-.card__authors .author-link:hover { color: var(--ig-accent); }
-.card__authors .author-aff { border-bottom: 1px dotted var(--ig-line); cursor: help; }
+.card__authors .author-link:hover { color: var(--main-color); }
+.card__authors .author-aff { border-bottom: 1px dotted var(--line); cursor: help; }
 
 /* Roster avatars -- rendered only when a matched people.toml entry carries a
    `photo`. Every other author keeps today's text-only markup. */
@@ -266,7 +262,7 @@
   object-fit: cover;
   vertical-align: -0.35em;
   margin-right: 0.28em;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
 }
 
 .card__links {
@@ -275,23 +271,23 @@
   font-size: 0.86rem;
 }
 
-.card__links .sep { margin: 0 0.45rem; color: #c3a887; }
+.card__links .sep { margin: 0 0.45rem; color: var(--sep); }
 
 .card__abstract summary {
   cursor: pointer;
   font-size: 0.84rem;
   font-weight: 700;
-  color: #1d4c6b;
+  color: var(--main-color);
 }
 
 .card__abstract p {
   margin: 0.4rem 0 0;
   font-size: 0.86rem;
-  color: #4b4b4b;
+  color: var(--ink);
   line-height: 1.5;
 }
 
-.muted { color: var(--ig-muted); font-size: 0.86rem; }
+.muted { color: var(--muted); font-size: 0.86rem; }
 
 /* ----------------------------------------------------------- tags/badges */
 
@@ -303,40 +299,42 @@
   font-size: 0.71rem;
   font-weight: 700;
   letter-spacing: 0.02em;
-  border: 1px solid var(--ig-line);
-  color: var(--ig-muted);
+  border: 1px solid var(--line);
+  color: var(--muted);
   background: #fff;
 }
 
 .tag--year { font-variant-numeric: tabular-nums; }
-.tag--status.is-published,
-.tag--status.is-active { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
+/* Status pills: the normal state (published, active) stays a plain tag, so
+   colour is spent only on the exceptions worth noticing. */
 .tag--status.is-wip,
-.tag--status.is-experimental { background: #fdf3e3; border-color: #edd6ac; color: #8a5b12; }
-.tag--status.is-archived { background: #f2f1ef; border-color: #ddd9d3; color: #6d6862; }
-.tag--topic { text-transform: none; font-weight: 500; background: #fbf5ec; }
+.tag--status.is-experimental { background: var(--accent-tint); border-color: var(--sep); color: var(--main-color); }
+.tag--status.is-archived { border-style: dashed; }
+.tag--topic { text-transform: none; font-weight: 500; background: var(--surface-2); }
 
-/* Talk-type badges (talks.qmd, via R/talks.R) -- same five-state palette as
-   .tag--status above, reused rather than invented so a poster/workshop/talk
-   reads as consistently "typed" as a status pill does. */
-.tag--talktype.is-invited    { background: #eef2fb; border-color: #c7d4ef; color: #2f4f8a; }
-.tag--talktype.is-conference { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
-.tag--talktype.is-workshop   { background: #fdf3e3; border-color: #edd6ac; color: #8a5b12; }
-.tag--talktype.is-poster     { background: #f7ecf5; border-color: #e3c7dd; color: #7a3b6e; }
-.tag--talktype.is-talk       { background: #f2f1ef; border-color: #ddd9d3; color: #6d6862; }
+/* Talk-type pills (talks.qmd, via R/talks.R). The label already says what
+   kind of talk it is; five pastel hues on top of that only added noise. Same
+   rule as status: invited talks are the one type that gets the accent. */
+.tag--talktype.is-invited { background: var(--accent-tint); border-color: var(--sep); color: var(--main-color); }
 
+/* Metric badges (CRAN version, downloads, stars, citations): an outlined
+   key/value pair in the card's own palette rather than a two-tone
+   shields.io block, which looked pasted in from a README. */
 .badge {
   display: inline-flex;
-  align-items: stretch;
+  align-items: baseline;
+  gap: 0.3rem;
+  border: 1px solid var(--line);
   border-radius: 4px;
-  overflow: hidden;
+  background: #fff;
+  padding: 0 0.4rem;
   font-size: 0.7rem;
   line-height: 1.7;
   margin-right: 0.3rem;
 }
 
-.badge__k { background: #55524e; color: #fff; padding: 0 0.4rem; }
-.badge__v { background: var(--ig-accent); color: #fff; padding: 0 0.4rem; }
+.badge__k { color: var(--muted); }
+.badge__v { color: var(--ink-strong); font-weight: 700; font-variant-numeric: tabular-nums; }
 
 /* --------------------------------------------------------------- software */
 
@@ -354,7 +352,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  background: var(--ig-accent);
+  background: var(--main-color);
   color: #fff;
   font-weight: 700;
   font-size: 1.2rem;
@@ -373,7 +371,6 @@
 
 @media (prefers-reduced-motion: reduce) {
   .card { transition: none; }
-  .card:hover { transform: none; }
 }
 
 /* ------------------------------------------------------- detail pages */
@@ -381,7 +378,7 @@
 .item-detail {
   margin: 0 0 1.5rem;
   padding-bottom: 1.25rem;
-  border-bottom: 1px solid var(--ig-line, #e8dccd);
+  border-bottom: 1px solid var(--line);
 }
 
 .item-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 0.9rem; }
@@ -415,16 +412,16 @@
   border-radius: 50%;
   object-fit: cover;
   flex: 0 0 auto;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
 }
 
-.author-list .author__name { color: #2f2a26; }
+.author-list .author__name { color: var(--ink-strong); }
 .author-list .author.is-self .author__name { font-weight: 700; }
-.author-list .author__aff { font-size: 0.76rem; color: #7a6a5c; }
+.author-list .author__aff { font-size: 0.76rem; color: var(--muted); }
 /* Shortened affiliation (people.toml `affiliation_short`): the full name is in
    the title attr, so mark it hoverable the same way .card__authors .author-aff
    is above. */
-.author-list .author__aff[title] { border-bottom: 1px dotted var(--ig-line, #e8dccd); cursor: help; }
+.author-list .author__aff[title] { border-bottom: 1px dotted var(--line); cursor: help; }
 
 .author-list .author__orcid {
   font-size: 0.7rem;
@@ -433,7 +430,7 @@
 }
 
 .item-links { margin: 0; font-size: 0.95rem; }
-.item-links .sep { margin: 0 0.5rem; color: #c3a887; }
+.item-links .sep { margin: 0 0.5rem; color: var(--sep); }
 
 /* Optional `image` / `image_caption` on an entry. Height-capped so a tall
    figure cannot push the abstract off the first screen. */
@@ -444,7 +441,7 @@
   max-width: 100%;
   max-height: 26rem;
   margin: 0 auto;
-  border: 1px solid var(--ig-line, #e8dccd);
+  border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
 }
@@ -453,7 +450,7 @@
   margin-top: 0.5rem;
   font-size: 0.82rem;
   line-height: 1.45;
-  color: #7a6a5c;
+  color: var(--muted);
   text-align: center;
 }
 
@@ -465,8 +462,8 @@
 .cite-block { position: relative; }
 
 .cite-block pre {
-  background: #fbf5ec;
-  border: 1px solid var(--ig-line, #e8dccd);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
   border-radius: 10px;
   padding: 0.9rem 1rem;
   overflow-x: auto;
@@ -479,32 +476,32 @@
   top: 0.55rem;
   right: 0.55rem;
   z-index: 1;
-  border: 1px solid var(--ig-line, #e8dccd);
+  border: 1px solid var(--line);
   background: #fff;
-  color: #634529;
+  color: var(--ink);
   border-radius: 6px;
   padding: 0.25rem 0.6rem;
   font-size: 0.75rem;
   cursor: pointer;
 }
 
-.cite-copy:hover { background: #fff1e0; }
+.cite-copy:hover { background: var(--accent-tint); }
 .cite-copy.is-copied { background: #eef7ee; border-color: #cbe3c9; color: #2f6b31; }
-.cite-copy:focus-visible { outline: 2px solid var(--ig-accent); outline-offset: 2px; }
+.cite-copy:focus-visible { outline: 2px solid var(--main-color); outline-offset: 2px; }
 
 .back-link { margin-top: 2rem; font-size: 0.9rem; }
 
 .ig-stamp {
   font-size: 0.75rem;
-  color: var(--ig-muted, #7a6a5c);
+  color: var(--muted);
   margin: -0.4rem 0 0.9rem;
 }
 
-.badge--muted .badge__v { background: #8a7a6b; }
+.badge--muted .badge__v { color: var(--muted); font-weight: 400; }
 
 .item-stamp {
   font-size: 0.74rem;
-  color: var(--ig-muted, #7a6a5c);
+  color: var(--muted);
   margin: -0.5rem 0 0.9rem;
 }
 
@@ -532,7 +529,7 @@
   height: 56px;
   border-radius: 50%;
   flex: 0 0 auto;
-  border: 1px solid var(--ig-line);
+  border: 1px solid var(--line);
 }
 
 .avatar--lg { object-fit: cover; }
@@ -547,7 +544,7 @@
 }
 
 .person__name { font-weight: 700; }
-.person__years { font-weight: 400; color: var(--ig-muted); font-size: 0.85em; }
+.person__years { font-weight: 400; color: var(--muted); font-size: 0.85em; }
 .person__bio { margin: 0.15rem 0 0; font-size: 0.92rem; line-height: 1.45; }
 
 @media (max-width: 480px) {
@@ -557,8 +554,8 @@
 
 /* ------------------------------------------------------- feature rows */
 /* Software highlights and teaching books, generated by R/features.R. Same
-   surface as .card, minus the hover lift: the row as a whole is not a link,
-   so it should not move as if it were one. Pandoc wraps the markdown in
+   flat surface as .card, minus the hover edge: the row as a whole is not a
+   link. Pandoc wraps the markdown in
    divs and <p>s, hence the descendant selectors on the body. */
 
 .feature-list {
@@ -572,11 +569,10 @@
   grid-template-columns: 7rem 1fr;
   gap: 1.25rem;
   align-items: start;
-  border: 1px solid #efe2d2;
-  background: linear-gradient(150deg, #fffdfa 0%, #fff7ec 100%);
+  border: 1px solid var(--line);
+  background: var(--surface);
   border-radius: 14px;
   padding: 1.15rem 1.25rem;
-  box-shadow: 0 3px 16px rgba(109, 75, 44, 0.07);
 }
 
 .feature__media img {
@@ -596,7 +592,7 @@
   margin: 0 0 0.45rem;
   font-size: 1.15rem;
   line-height: 1.3;
-  color: #173042;
+  color: var(--ink-strong);
 }
 
 .feature__body p {
@@ -617,19 +613,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  border: 1px solid #e8dccd;
+  border: 1px solid var(--line);
   background: #fff;
-  color: #634529;
+  color: var(--ink);
   border-radius: 999px;
   padding: 0.22rem 0.75rem;
   font-size: 0.84rem;
   text-decoration: none;
 }
 
-.feature__link:hover { background: #fff1e0; color: var(--main-color, #A85200); }
+.feature__link:hover { background: var(--accent-tint); color: var(--main-color); }
 
 .feature__link:focus-visible {
-  outline: 2px solid var(--main-color, #A85200);
+  outline: 2px solid var(--main-color);
   outline-offset: 2px;
 }
 

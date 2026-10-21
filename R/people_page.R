@@ -34,7 +34,7 @@ person_years_html <- function(p, i18n) {
 }
 
 # Photo when people.toml has an approved one; otherwise the same
-# deterministic-hue monogram fallback used for software hex logos
+# deterministic warm monogram used for software hex logos (monogram_bg())
 # (R/cards.R::software_card(), .card__hex--mono in cards.css) so a photo-less
 # entry still looks designed rather than broken.
 person_avatar_html <- function(p, root) {
@@ -43,9 +43,8 @@ person_avatar_html <- function(p, root) {
     return(sprintf('<img class="avatar--lg" src="%s" alt="" loading="lazy" width="56" height="56">', esc(src)))
   }
   name <- person_display_name(p)
-  hue <- sum(utf8ToInt(tolower(p$name %||% name))) %% 360L
-  sprintf('<span class="avatar--lg-mono" style="background:hsl(%d 45%% 42%%)" aria-hidden="true">%s</span>',
-          hue, esc(toupper(substr(name, 1, 1))))
+  sprintf('<span class="avatar--lg-mono" style="background:%s" aria-hidden="true">%s</span>',
+          monogram_bg(p$name %||% name), esc(toupper(substr(name, 1, 1))))
 }
 
 # `bio_es` / `bio_zh` are optional per-language overrides; `bio` (English) is
