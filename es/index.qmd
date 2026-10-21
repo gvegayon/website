@@ -11,26 +11,37 @@ include-in-header:
   - file: ../_includes/hreflang-index.html
 ---
 
-<!-- Background Header Section - 30vh -->
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('../img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center; flex-direction: column;"}
-![](../img/george-g-vega-yon-university-of-utah.webp){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;" alt="Doctor George G. Vega Yon con la escultura de Charles Darwin en el British Museum"}
-:::
+<!-- The hero band: the Utah landscape under a warm scrim with a network
+     drawn over it (img/network-band.svg); styled by .home-band in styles.css.
+     The page keeps `title: ""`, so this <h1> is the page's only one. -->
+::: {.column-screen .home-band}
+::: {.home-band__inner}
+![](../img/george-g-vega-yon-university-of-utah.webp){.home-band__portrait alt="Doctor George G. Vega Yon con la escultura de Charles Darwin en el British Museum"}
 
-::: {.home-hero}
+::: {.home-band__text}
 # George G. Vega Yon, Ph.D.
 
-[Profesor Asociado de Investigación · División de Epidemiología, Universidad de Utah]{.home-hero-role}
+[Profesor Asociado de Investigación · División de Epidemiología, Universidad de Utah]{.home-band__role}
+
+[¿Cómo moldean las conexiones entre las personas el comportamiento, la salud y la propagación de enfermedades?]{.home-band__question}
+:::
+:::
 :::
 
+::: {.home-body}
 ::: {.home-lead}
 
-¿Cómo moldean las conexiones entre las personas el comportamiento, la salud y la propagación de enfermedades? Mi investigación desarrolla métodos estadísticos y computacionales para estudiar estas preguntas.
-
-Soy un metodólogo que trabaja en la intersección de la ciencia de redes, la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> y los <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>. Estudio redes sociales, influencia social y transmisión de enfermedades, con particular experiencia en modelos exponenciales de grafos aleatorios (ERGM), simulación y aprendizaje automático mecanicista, es decir, <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">basado en teoría</a>. Las aplicaciones son deliberadamente multidisciplinarias y abarcan [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
+Mi investigación desarrolla métodos estadísticos y computacionales para estudiar estas preguntas. Soy un metodólogo que trabaja en la intersección de la ciencia de redes, la <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">computación estadística</a> y los <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">sistemas complejos</a>. Estudio redes sociales, influencia social y transmisión de enfermedades, con particular experiencia en modelos exponenciales de grafos aleatorios (ERGM), simulación y aprendizaje automático mecanicista, es decir, <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">basado en teoría</a>. Las aplicaciones son deliberadamente multidisciplinarias y abarcan [epidemiología y modelación de brotes, criminología, transmisión social del comportamiento y evolución de funciones génicas](research.qmd).
 
 El desarrollo de herramientas es central en mi trabajo. Construyo [software científico](software.qmd) para inferencia estadística, computación de alto rendimiento y simulación, convirtiendo métodos sofisticados en herramientas confiables que otros investigadores pueden usar. Más recientemente me he enfocado en hacer que los modelos complejos sean accesibles más allá de públicos especializados, mediante herramientas interactivas y de cara al público como el <a href="https://ggvy.cl/shiny/measles" target="_blank">simulador de sarampión</a> construido durante los brotes recientes en Estados Unidos.
 
 Soy Profesor Asociado de Investigación en la <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">División de Epidemiología de la Universidad de Utah</a>, con nombramientos adjuntos en Ciencias de la Salud Poblacional y la Escuela Kahlert de Computación. Mi formación interdisciplinaria abarca Políticas Públicas (M.A., <a href="https://www.uai.cl/" target="_blank">UAI</a>), Economía (M.Sc., <a href="https://caltech.edu" target="_blank">Caltech</a>) y Bioestadística (Ph.D., <a href="https://usc.edu" target="_blank">USC</a>).
+:::
+
+::: {.home-actions}
+[Investigación](research.qmd){.home-action .home-action--primary}
+[Software](software.qmd){.home-action}
+[CV (PDF)](../cv/cv.pdf){.home-action}
 :::
 
 ::: {.home-links}
@@ -41,6 +52,7 @@ Soy Profesor Asociado de Investigación en la <a href="https://medicine.utah.edu
 <a href="https://github.com/gvegayon" target="_blank" title="Código en GitHub" aria-label="Código en GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
 <a href="https://linkedin.com/in/georgevegayon" target="_blank" title="Perfil de LinkedIn" aria-label="Perfil de LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
 <a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
+:::
 :::
 
 ---

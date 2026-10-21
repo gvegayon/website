@@ -11,26 +11,37 @@ include-in-header:
   - file: _includes/hreflang-index.html
 ---
 
-<!-- Background Header Section - 30vh -->
-::: {.column-screen style="background-image: linear-gradient(to bottom, transparent 60%, white 100%), url('img/paisaje.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: scroll; background-position-x: center; background-position-y: top; height: 40vh; margin-top: -60px; display: flex; align-items: center; justify-content: center; flex-direction: column;"}
-![](img/george-g-vega-yon-university-of-utah.webp){style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 25px rgba(0,0,0,0.3); margin-top: 60px;" alt="Doctor George G. Vega Yon with Charles Darwin's sculpture at the British Museum"}
-:::
+<!-- The hero band: the Utah landscape under a warm scrim with a network
+     drawn over it (img/network-band.svg); styled by .home-band in styles.css.
+     The page keeps `title: ""`, so this <h1> is the page's only one. -->
+::: {.column-screen .home-band}
+::: {.home-band__inner}
+![](img/george-g-vega-yon-university-of-utah.webp){.home-band__portrait alt="Doctor George G. Vega Yon with Charles Darwin's sculpture at the British Museum"}
 
-::: {.home-hero}
+::: {.home-band__text}
 # George G. Vega Yon, Ph.D.
 
-[Associate Research Professor · Division of Epidemiology, University of Utah]{.home-hero-role}
+[Associate Research Professor · Division of Epidemiology, University of Utah]{.home-band__role}
+
+[How do connections between people shape behavior, health, and the spread of disease?]{.home-band__question}
+:::
+:::
 :::
 
+::: {.home-body}
 ::: {.home-lead}
 
-How do connections between people shape behavior, health, and the spread of disease? My research develops statistical and computational methods to study these questions.
-
-I am a methodologist working at the intersection of network science, <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a>, and <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>. I study social networks, social influence, and disease transmission, with particular expertise in exponential-family random graph models (ERGMs), simulation, and mechanistic — or <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">theory-driven</a> — machine learning. The applications are deliberately multidisciplinary, spanning [epidemiology and outbreak modeling, criminology, the social transmission of behavior, and the evolution of gene functions](research.qmd).
+My research develops statistical and computational methods to study these questions. I am a methodologist working at the intersection of network science, <a href="https://en.wikipedia.org/w/index.php?title=Computational_statistics&oldid=1340808080" target="_blank">statistical computing</a>, and <a href="https://en.wikipedia.org/w/index.php?title=Complex_system&oldid=1369270950" target="_blank">complex systems</a>. I study social networks, social influence, and disease transmission, with particular expertise in exponential-family random graph models (ERGMs), simulation, and mechanistic — or <a href="https://doi.org/10.1098/rsbl.2017.0660" target="_blank">theory-driven</a> — machine learning. The applications are deliberately multidisciplinary, spanning [epidemiology and outbreak modeling, criminology, the social transmission of behavior, and the evolution of gene functions](research.qmd).
 
 Tool development is central to my work. I build [scientific software](software.qmd) for statistical inference, high-performance computing, and simulation, turning sophisticated methods into reliable tools that other researchers can use. More recently I have focused on making complex models accessible beyond specialist audiences — interactive, public-facing tools like the <a href="https://ggvy.cl/shiny/measles" target="_blank">measles simulator</a> built during the recent US outbreaks.
 
 I am an Associate Research Professor in the <a href="https://medicine.utah.edu/internalmedicine/epidemiology/" target="_blank">Division of Epidemiology at the University of Utah</a>, with adjunct appointments in Population Health Sciences and the Kahlert School of Computing. My interdisciplinary training spans Public Policy (M.A., <a href="https://www.uai.cl/" target="_blank">UAI</a>), Economics (M.Sc., <a href="https://caltech.edu" target="_blank">Caltech</a>), and Biostatistics (Ph.D., <a href="https://usc.edu" target="_blank">USC</a>).
+:::
+
+::: {.home-actions}
+[Research](research.qmd){.home-action .home-action--primary}
+[Software](software.qmd){.home-action}
+[CV (PDF)](cv/cv.pdf){.home-action}
 :::
 
 ::: {.home-links}
@@ -41,4 +52,5 @@ I am an Associate Research Professor in the <a href="https://medicine.utah.edu/i
 <a href="https://github.com/gvegayon" target="_blank" title="Code on GitHub" aria-label="Code on GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
 <a href="https://linkedin.com/in/georgevegayon" target="_blank" title="LinkedIn profile" aria-label="LinkedIn profile"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
 <a href="https://bsky.app/profile/gvegayon.bsky.social" target="_blank" title="Bluesky" aria-label="Bluesky"><i class="bi bi-bluesky" aria-hidden="true"></i></a>
+:::
 :::
