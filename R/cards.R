@@ -179,7 +179,8 @@ research_card <- function(e, i18n) {
     if (nzchar(doi)) safe_link(paste0("https://doi.org/", doi), "DOI") else "",
     safe_link(url, i18n$link_publisher),
     if (nzchar(arxiv)) safe_link(paste0("https://arxiv.org/abs/", arxiv), "arXiv") else "",
-    safe_link(pdf, "PDF")
+    safe_link(pdf, "PDF"),
+    code_link(f$code %||% "", i18n$link_code)
   )
   links <- links[nzchar(links)]
 

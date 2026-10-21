@@ -153,7 +153,7 @@ links_row_html <- function(e, kind, i18n) {
       safe_link(f$url %||% "", i18n$link_publisher),
       if (nzchar(f$eprint %||% "")) safe_link(paste0("https://arxiv.org/abs/", f$eprint), "arXiv") else "",
       safe_link(asset_url(f$pdf %||% "", DETAIL_ROOT), "PDF"),
-      safe_link(f$code %||% "", "Code"),
+      code_link(f$code %||% "", i18n$link_code),
       safe_link(f$data %||% "", "Data"),
       safe_link(f$slides %||% "", "Slides"))
   } else {

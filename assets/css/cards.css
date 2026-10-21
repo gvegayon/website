@@ -273,6 +273,8 @@
 
 .card__links .sep { margin: 0 0.45rem; color: var(--sep); }
 
+.link-code .bi { vertical-align: -0.1em; }
+
 .card__abstract summary {
   cursor: pointer;
   font-size: 0.84rem;

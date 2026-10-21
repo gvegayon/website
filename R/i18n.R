@@ -51,6 +51,7 @@ I18N <- list(
     details              = "Details",
     no_link              = "No external link listed",
     link_publisher       = "Publisher / Preprint",
+    link_code            = "Code",
     untitled             = "Untitled",
     no_date              = "n.d.",
 
@@ -137,6 +138,7 @@ I18N <- list(
     details              = "Detalles",
     no_link              = "No hay enlace externo registrado",
     link_publisher       = "Editorial / Preprint",
+    link_code            = "Código",
     untitled             = "Sin título",
     no_date              = "s.f.",
 
@@ -220,6 +222,7 @@ I18N <- list(
     details              = "详情",
     no_link              = "暂无外部链接",
     link_publisher       = "期刊 / 预印本",
+    link_code            = "代码",
     untitled             = "无标题",
     no_date              = "无日期",
 
