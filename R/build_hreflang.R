@@ -35,7 +35,7 @@ local({
     people   = "people.html"
   )
 
-  langs <- c(en = "", es = "es/", `zh-Hant` = "zh/")
+  langs <- c(en = "", es = "es/", `zh-Hans` = "zh/")
 
   include_dir <- file.path(root, "_includes")
   dir.create(include_dir, showWarnings = FALSE)

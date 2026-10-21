@@ -1,76 +1,42 @@
 ---
-title: "教學"
+title: "教学"
 # Renders the heading over a full-width banner, which is why the page
 # body no longer opens with a hand-rolled .column-screen image div.
-title-block-banner: ../img/usc_r_bootcamp_clip.jpg
+title-block-banner: ../img/usc_r_bootcamp_clip.webp
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
-description-meta: "George G. Vega Yon 博士在數據科學、統計學與網絡科學方面的課程、書籍與公開教學資料。"
+description-meta: "George G. Vega Yon 博士在数据科学、统计学与网络科学方面的课程、书籍与公开教学资料。"
 include-in-header:
   - file: ../_includes/hreflang-teaching.html
 ---
 
-我是一位敬業的教育工作者，喜歡分享知識並營造開放和包容的學習環境。我的大部分教學經驗都在數據科學、統計學和網絡科學領域。致力於開放科學，我確保所有教育內容都可以在線免費獲取。
+我是一位敬业的教育工作者，喜欢分享知识并营造开放和包容的学习环境。我的大部分教学经验都在数据科学、统计学和网络科学领域。致力于开放科学，我确保所有教育内容都可以在线免费获取。
 
-## 書籍
+## 书籍
 
+```{r}
+#| label: teaching-books
+#| echo: false
+#| results: asis
+source("../R/entries.R")
+source("../R/html.R")
+source("../R/features.R")
+render_feature_list("teaching_books.yaml", "cover")
+```
 
-::: {.columns style="align-items: center;"}
-::: {.column width="20%"}
-![](../img/book-cover-sna-small.webp){width=80% fig-alt="R 應用網絡科學書籍封面"}
-:::
-::: {.column width="80%"}
-### R 應用網絡科學
+## 课程
 
-本書是我多年來開發的演示、研討會和教程的集合，用於使用 R 教授網絡科學。本書主要涉及 ERGM 模型和網絡數據處理。本書完全用 quarto 編寫，使其完全可重現。
+- **PHS 7045：R 和 HPC 高级编程**（犹他大学，研究生课程）（[链接](https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023){target="_blank"}）：我与同事 Jonathan Chipman 博士共同设计并教授这门课程，面向犹他大学人口健康科学系的研究生。
 
-書籍網站：<https://book.ggvy.cl><br>
-西班牙語版本：<https://book.ggvy.cl/es>
-:::
-:::
+- **PM 566：健康数据科学导论**（USC，研究生课程）（[链接](https://github.com/USCbiostats/PM566/tree/fall2021){target="_blank"}）：我与 USC 生物统计学系的教师共同设计了这门课程，作为 USC 健康数据科学硕士学位的入门课程。
 
-::: {.columns style="align-items: center;"}
-::: {.column width="20%"}
-![](../img/cover-book-hpc.webp){width=80% fig-alt="R 應用高性能計算書籍封面"}
-:::
-::: {.column width="80%"}
-### R 應用高性能計算
+## 研讨会和教程
 
-本書提供了如何加速 R 代碼的實用概述。本書專注於並行計算和編寫高效的 R 代碼，還介紹了如何使用 slurmR R 包在 HPC 環境中使用 R，以及通過 Rcpp 使用 C++ 的即用示例。
-
-書籍網站：<https://book-hpc.ggvy.cl><br>
-西班牙語版本：<https://book-hpc.ggvy.cl/es>
-:::
-:::
-
-::: {.columns style="align-items: center;"}
-::: {.column width="20%"}
-![](../img/book-ai-small.webp){width=80% fig-alt="AI for the Scientist in a Hurry 書籍封面"}
-:::
-::: {.column width="80%"}
-### AI for the Scientist in a Hurry
-
-關於人工智慧的隨筆筆記與思考，為需要快速掌握相關知識的科學家而寫。本書涵蓋與研究相關的實用 AI 概念與工具，著重於快速建立直覺。
-
-書籍網站：<https://book-ai.ggvy.cl><br>
-西班牙語版本：<https://book-ai.ggvy.cl/es>
-:::
-:::
-
-
-## 課程
-
-- **PHS 7045：R 和 HPC 高級編程**（猶他大學，研究生課程）（[鏈接](https://github.com/UofUEpiBio/PHS7045-advanced-programming/tree/spring-2023){target="_blank"}）：我與同事 Jonathan Chipman 博士共同設計並教授這門課程，面向猶他大學人口健康科學系的研究生。
-
-- **PM 566：健康數據科學導論**（USC，研究生課程）（[鏈接](https://github.com/USCbiostats/PM566/tree/fall2021){target="_blank"}）：我與 USC 生物統計學系的教師共同設計了這門課程，作為 USC 健康數據科學碩士學位的入門課程。
-
-## 研討會和教程
-
-您可以在我網站的[演講](talks.qmd)部分找到我的研討會和教程的完整列表。
+您可以在我网站的[演讲](talks.qmd)部分找到我的研讨会和教程的完整列表。
 
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
-*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+*本网站版本使用 GitHub Copilot 从原始英文版本自动翻译，尚未经过人工验证。*
 :::

@@ -223,24 +223,24 @@ I18N <- list(
     untitled             = "无标题",
     no_date              = "无日期",
 
-    talks_summary    = "{n} 場演講 · {span}",
-    talks_breakdown  = "{invited} 場受邀演講 · {conference} 場會議演講 · {other} 場其他演講",
-    talks_unavailable = "演講列表暫時無法取得。",
+    talks_summary    = "{n} 场演讲 · {span}",
+    talks_breakdown  = "{invited} 场受邀演讲 · {conference} 场会议演讲 · {other} 场其他演讲",
+    talks_unavailable = "演讲列表暂时无法取得。",
     jump_to_year     = "跳至年份",
-    slides           = "投影片",
-    video            = "影片",
-    materials        = "資料",
+    slides           = "幻灯片",
+    video            = "视频",
+    materials        = "资料",
     announcement     = "公告",
     talk_with        = "合作者：{names}",
-    talk_presented_by = "由 {name} 發表",
-    talks_proxy_note = "由合作者發表，非本人。",
+    talk_presented_by = "由 {name} 发表",
+    talks_proxy_note = "由合作者发表，非本人。",
     date_fmt         = "{month}{day}日",
-    invited_talk           = "受邀演講",
-    conference_talk        = "會議演講",
-    conference_poster      = "海報",
-    conference_workshop    = "會議工作坊",
+    invited_talk           = "受邀演讲",
+    conference_talk        = "会议演讲",
+    conference_poster      = "海报",
+    conference_workshop    = "会议工作坊",
     workshop               = "工作坊",
-    talk                   = "演講",
+    talk                   = "演讲",
     months_abb = c("1月", "2月", "3月", "4月", "5月", "6月",
                    "7月", "8月", "9月", "10月", "11月", "12月"),
 
@@ -257,10 +257,10 @@ I18N <- list(
     cited_via_paper  = "配套软件论文的引用数",
     metrics_note     = "引用数据来自 OpenAlex，下载量来自 CRAN。更新于 %s。",
 
-    people_current     = "現任成員",
-    people_past        = "過往成員",
+    people_current     = "现任成员",
+    people_past        = "过往成员",
     people_present     = "至今",
-    people_unavailable = "名單暫時無法取得。"
+    people_unavailable = "名单暂时无法取得。"
   )
 )
 

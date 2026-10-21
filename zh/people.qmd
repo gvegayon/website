@@ -1,17 +1,17 @@
 ---
-title: "團隊"
+title: "团队"
 # Renders the heading over a full-width banner, which is why the page
 # body no longer opens with a hand-rolled .column-screen image div.
-title-block-banner: ../img/usc_r_bootcamp.jpg
+title-block-banner: ../img/usc_r_bootcamp.webp
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
-description-meta: "George G. Vega Yon 博士在猶他大學指導與合作的學生和研究人員，以及 NetSNAU 研究小組。"
+description-meta: "George G. Vega Yon 博士在犹他大学指导与合作的学生和研究人员，以及 NetSNAU 研究小组。"
 include-in-header:
   - file: ../_includes/hreflang-people.html
 ---
 
-我的大部分工作都是與學生和研究人員共同完成的。我領導 [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} 研究小組，並指導高中、本科、碩士和博士各階段的學生。
+我的大部分工作都是与学生和研究人员共同完成的。我领导 [Network Science and Social Network Analysis at the U (NetSNAU)](https://netsci.utah.edu){target="_blank"} 研究小组，并指导高中、本科、硕士和博士各阶段的学生。
 
 ```{r}
 #| label: render-people-page
@@ -25,16 +25,16 @@ source("../R/people_page.R")
 render_people_page("zh")
 ```
 
-## 我的導師
+## 我的导师
 
-我在南加州大學（USC）攻讀生物統計學博士學位，師從 [**Paul Marjoram 教授**](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}與 [**Kayla de la Haye 教授**](https://kayladelahaye.net){target="_blank"}。我今日指導學生的方式，很大程度上得益於他們當年對我的指導。那段研究成為我的博士論文：[*Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems*](../thesis.pdf){target="_blank"}。
+我在南加州大学（USC）攻读生物统计学博士学位，师从 [**Paul Marjoram 教授**](https://scholar.google.com/citations?user=Zj5ky5gAAAAJ&hl=en){target="_blank"}与 [**Kayla de la Haye 教授**](https://kayladelahaye.net){target="_blank"}。我今日指导学生的方式，很大程度上得益于他们当年对我的指导。那段研究成为我的博士论文：[*Essays on Bioinformatics and Social Network Analysis: Statistical and Computational Methods for Complex Systems*](../thesis.pdf){target="_blank"}。
 
-## 與我合作
+## 与我合作
 
-如果您對網絡科學、統計計算或計算流行病學感興趣，歡迎[預約會面](https://ggvy.cl/meetme){target="_blank"}。
+如果您对网络科学、统计计算或计算流行病学感兴趣，欢迎[预约会面](https://ggvy.cl/meetme){target="_blank"}。
 
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
-*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+*本网站版本使用 GitHub Copilot 从原始英文版本自动翻译，尚未经过人工验证。*
 :::

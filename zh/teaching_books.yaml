@@ -1,0 +1,41 @@
+# Rendered by R/features.R (render_feature_list) on zh/teaching.qmd. Field
+# reference is at the top of that file. Translated copy of the root file.
+sna:
+  title: R 应用网络科学
+  img: img/book-cover-sna-small.webp
+  alt: R 应用网络科学书籍封面
+  description: |
+    本书是我多年来开发的演示、研讨会和教程的集合，用于使用 R 教授网络科学。本书主要涉及 ERGM 模型和网络数据处理。本书完全用 quarto 编写，使其完全可重现。
+  links:
+    - label: 线上阅读（英文）
+      url: https://book.ggvy.cl
+      icon: book
+    - label: 西班牙语版
+      url: https://book.ggvy.cl/es
+      icon: translate
+hpc:
+  title: R 应用高性能计算
+  img: img/cover-book-hpc.webp
+  alt: R 应用高性能计算书籍封面
+  description: |
+    本书提供了如何加速 R 代码的实用概述。本书专注于并行计算和编写高效的 R 代码，还介绍了如何使用 slurmR R 包在 HPC 环境中使用 R，以及通过 Rcpp 使用 C++ 的即用示例。
+  links:
+    - label: 线上阅读（英文）
+      url: https://book-hpc.ggvy.cl
+      icon: book
+    - label: 西班牙语版
+      url: https://book-hpc.ggvy.cl/es
+      icon: translate
+ai:
+  title: AI for the Scientist in a Hurry
+  img: img/book-ai-small.webp
+  alt: AI for the Scientist in a Hurry 书籍封面
+  description: |
+    关于人工智能的随笔笔记与思考，为需要快速掌握相关知识的科学家而写。本书涵盖与研究相关的实用 AI 概念与工具，着重于快速建立直觉。
+  links:
+    - label: 线上阅读（英文）
+      url: https://book-ai.ggvy.cl
+      icon: book
+    - label: 西班牙语版
+      url: https://book-ai.ggvy.cl/es
+      icon: translate

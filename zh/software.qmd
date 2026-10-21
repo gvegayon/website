@@ -1,55 +1,35 @@
 ---
-title: "軟件"
+title: "软件"
 # Renders the heading over a full-width banner, which is why the page
 # body no longer opens with a hand-rolled .column-screen image div.
 title-block-banner: ../img/hexlogos-banner.webp
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
-description-meta: "George G. Vega Yon 博士開發的開源軟件包與科學軟件，包括用於網絡科學與計算流行病學的 R、C++ 與 Python 工具。"
+description-meta: "George G. Vega Yon 博士开发的开源软件包与科学软件，包括用于网络科学与计算流行病学的 R、C++ 与 Python 工具。"
 include-in-header:
   - file: ../_includes/hreflang-software.html
 ---
 
 
-我深深致力於開源軟件，並在15年多的時間裡一直在構建專業級工具——可以追溯到 [Google Code 時代](https://code.google.com/archive/p/rdspl/){target="_blank"}。我的工作將嚴格的統計方法與現代軟件工程實踐相結合，包括版本控制（Git/GitHub）、持續集成、代理 AI、容器技術和敏捷方法。我領導科學軟件開發團隊交付**高性能、可靠且用戶友好的工具**，這些工具被研究人員和從業者廣泛採用。我的大部分工作是用 C++ 構建的，為 R 和 Python 提供包裝器，針對高性能計算環境進行優化。在所有項目中，我在設計時都考慮到性能和可用性，確保複雜的方法既可擴展又易於訪問。
+我深深致力于开源软件，并在15年多的时间里一直在构建专业级工具——可以追溯到 [Google Code 时代](https://code.google.com/archive/p/rdspl/){target="_blank"}。我的工作将严格的统计方法与现代软件工程实践相结合，包括版本控制（Git/GitHub）、持续集成、代理 AI、容器技术和敏捷方法。我领导科学软件开发团队交付**高性能、可靠且用户友好的工具**，这些工具被研究人员和从业者广泛采用。我的大部分工作是用 C++ 构建的，为 R 和 Python 提供包装器，针对高性能计算环境进行优化。在所有项目中，我在设计时都考虑到性能和可用性，确保复杂的方法既可扩展又易于访问。
 
-近年來，我也將 **AI** 融入工作，推動研發與創新（一些示例見[此處](https://github.com/gvegayon/ai-examples){target="_blank"}）。
+近年来，我也将 **AI** 融入工作，推动研发与创新（一些示例见[此处](https://github.com/gvegayon/ai-examples){target="_blank"}）。
 
-重點項目包括：
+重点项目包括：
 
 
 ```{r}
-#| label: cards
-#| results: asis
+#| label: software-highlights
 #| echo: false
-#| eval: true
-x <- yaml::read_yaml("software_highlights.yaml")
-for (n in names(x)) {
-
-  cat('::: {.columns style="display: flex;"}\n')
-  with(x[[n]], {
-    cat('::: {.column style="width: 20%; display: flex; display: flex; flex-direction: column; justify-content: center"}\n')
-    cat('![](', img, ')\n')
-    cat(':::\n')
-    cat('::: {.column style="width: 80%; vertical-align: middle; display: flex; flex-direction: column; justify-content: center; margin: 40px"}\n')
-    cat(description)
-
-    # Now, pasting a GitHub icon with a link to the repository
-    cat(
-      sprintf(
-        '[![](%s){width="20px"}](%s)\n',
-        "https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg",
-        github
-        )
-    )
-    cat(':::\n')
-  })
-  cat(':::\n\n')
-}
+#| results: asis
+source("../R/entries.R")
+source("../R/html.R")
+source("../R/features.R")
+render_feature_list("software_highlights.yaml", "logo")
 ```
 
-以下是我構建或貢獻的軟件包的詳盡列表。您可以在 [我的 GitHub](https://github.com/gvegayon) 上查看我最近的貢獻和正在進行的開源項目
+以下是我构建或贡献的软件包的详尽列表。您可以在 [我的 GitHub](https://github.com/gvegayon) 上查看我最近的贡献和正在进行的开源项目
 
 ```{r}
 #| label: render-software-cards
@@ -68,5 +48,5 @@ render_item_grid(read_entries("../software.toml"), "software", language = "zh")
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
-*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+*本网站版本使用 GitHub Copilot 从原始英文版本自动翻译，尚未经过人工验证。*
 :::

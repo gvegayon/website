@@ -1,17 +1,17 @@
 ---
-title: "演講"
+title: "演讲"
 # Renders the heading over a full-width banner, which is why the page
 # body no longer opens with a hand-rolled .column-screen image div.
 title-block-banner: ../img/george_sonic_talk.jpg
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
-description-meta: "George G. Vega Yon 博士在網絡科學、統計計算與科學軟件方面的受邀演講、會議報告與研討會。"
+description-meta: "George G. Vega Yon 博士在网络科学、统计计算与科学软件方面的受邀演讲、会议报告与研讨会。"
 include-in-header:
   - file: ../_includes/hreflang-talks.html
 ---
 
-按時間順序整理的受邀演講、會議報告、工作坊與海報紀錄，內容取自我的[履歷](../cv/cv.pdf)。
+按时间顺序整理的受邀演讲、会议报告、工作坊与海报纪录，内容取自我的[履历](../cv/cv.pdf)。
 
 ```{r}
 #| label: render-talks-timeline
@@ -35,5 +35,5 @@ render_talk_timeline(
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
-*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+*本网站版本使用 GitHub Copilot 从原始英文版本自动翻译，尚未经过人工验证。*
 :::

@@ -1,22 +1,41 @@
+# Rendered by R/features.R (render_feature_list) on software.qmd. Field
+# reference is at the top of that file. es/ and zh/ keep translated copies.
 epiworld:
+  title: epiworld
+  img: img/epiworld.webp
+  alt: ""
   description: |
-    *The **epiworld** framework* is an advanced agent-based modeling framework written in C++ that was designed for rapid prototyping of simulation models focused on epidemiological modeling. The library is available in R, Python, as well as a shiny package.<br>The most notable application of `epiworld` is with the modeling of measles during the recent US outbreaks. You can see a version of the shiny app that was developed [here](https://ggvy.cl/shiny/measles).
-  img: ./img/epiworld.webp
-  github: https://github.com/UofUEpiBio/epiworld
+    An advanced agent-based modeling framework written in C++, designed for rapid prototyping of simulation models focused on epidemiological modeling. The library is available in R, Python, as well as a shiny package. Its most notable application is the modeling of measles during the recent US outbreaks.
+  links:
+    - label: GitHub
+      url: https://github.com/UofUEpiBio/epiworld
+      icon: github
+    - label: Measles simulator
+      url: https://ggvy.cl/shiny/measles
+      icon: play-circle
 rgexf:
+  title: rgexf
+  img: img/rgexf.webp
+  alt: ""
   description: |
-    *The **rgexf** package.* Create, read, and write 'GEXF' (Graph Exchange 'XML' Format) graph files (used in 'Gephi' and others). Using the 'XML' package, rgexf allows reading and writing GEXF files, including attributes, 'GEXF' visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges' weights. Users can build/handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through 'gexf-js' (a 'javascript' library), and interact with the 'igraph' package.<br>You can see a live version of the `gexf-js` library in action [here](https://gvegayon.github.io/rgexf/lesmiserables/).
-  img: ./img/rgexf.webp
-  github: https://github.com/gvegayon/rgexf
+    Create, read, and write 'GEXF' (Graph Exchange 'XML' Format) graph files (used in 'Gephi' and others). Using the 'XML' package, rgexf allows reading and writing GEXF files, including attributes, 'GEXF' visual attributes (such as color, size, and position), network dynamics (for both edges and nodes), and edges' weights. Users can build/handle graphs element-by-element or massively through data frames, visualize the graph on a web browser through 'gexf-js' (a 'javascript' library), and interact with the 'igraph' package.
+  links:
+    - label: GitHub
+      url: https://github.com/gvegayon/rgexf
+      icon: github
+    - label: Live gexf-js demo
+      url: https://gvegayon.github.io/rgexf/lesmiserables/
+      icon: diagram-3
 ergmito:
+  title: ergmito
+  img: img/ergmito.webp
+  alt: ""
   description: |
-    *The **ergmito** R packagee*. Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics as shown in Vega Yon et al. (2020) <https://doi.org/10.1016/j.socnet.2020.07.005>. As a difference from the 'ergm' package, 'ergmito' circumvents using Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions, and other relevant functions, directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms.
-  img: ./img/ergmito.webp
-  github: https://github.com/muriteams/ergmito
-  
-  
-
-
-
-  
-  
+    Simulation and estimation of Exponential Random Graph Models (ERGMs) for small networks using exact statistics as shown in Vega Yon et al. (2020). As a difference from the 'ergm' package, 'ergmito' circumvents using Markov-Chain Maximum Likelihood Estimator (MC-MLE) and instead uses Maximum Likelihood Estimator (MLE) to fit ERGMs for small networks. As exhaustive enumeration is computationally feasible for small networks, this R package takes advantage of this and provides tools for calculating likelihood functions, and other relevant functions, directly, meaning that in many cases both estimation and simulation of ERGMs for small networks can be faster and more accurate than simulation-based algorithms.
+  links:
+    - label: GitHub
+      url: https://github.com/muriteams/ergmito
+      icon: github
+    - label: Paper
+      url: https://doi.org/10.1016/j.socnet.2020.07.005
+      icon: file-earmark-text

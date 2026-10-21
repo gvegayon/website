@@ -2,7 +2,7 @@
 title: "Personas"
 # Renders the heading over a full-width banner, which is why the page
 # body no longer opens with a hand-rolled .column-screen image div.
-title-block-banner: ../img/usc_r_bootcamp.jpg
+title-block-banner: ../img/usc_r_bootcamp.webp
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.

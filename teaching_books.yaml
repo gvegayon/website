@@ -1,0 +1,41 @@
+# Rendered by R/features.R (render_feature_list) on teaching.qmd. Field
+# reference is at the top of that file. es/ and zh/ keep translated copies.
+sna:
+  title: Applied Network Science With R
+  img: img/book-cover-sna-small.webp
+  alt: Cover of the book 'Applied Network Science With R'
+  description: |
+    The book is a collection of presentations, workshops, and tutorials I have developed over the years to teach network science with R. The book mostly deals with ERGM models and network data processing. The book was written entirely in quarto, which makes it completely reproducible.
+  links:
+    - label: Read online
+      url: https://book.ggvy.cl
+      icon: book
+    - label: Spanish edition
+      url: https://book.ggvy.cl/es
+      icon: translate
+hpc:
+  title: Applied HPC with R
+  img: img/cover-book-hpc.webp
+  alt: Cover of the book 'Applied HPC with R'
+  description: |
+    This book provides a practical overview of how to accelerate R code. With a focus on parallel computing and writing efficient R code, the book also provides an introduction to how to use R in HPC environments with the slurmR R package and ready-to-use examples with C++ via Rcpp.
+  links:
+    - label: Read online
+      url: https://book-hpc.ggvy.cl
+      icon: book
+    - label: Spanish edition
+      url: https://book-hpc.ggvy.cl/es
+      icon: translate
+ai:
+  title: AI for the Scientist in a Hurry
+  img: img/book-ai-small.webp
+  alt: Cover of the book 'AI for the Scientist in a Hurry'
+  description: |
+    Running notes and reflections on AI, written for scientists who need to get up to speed quickly. The book covers practical AI concepts and tools relevant to research, with a focus on building intuition fast.
+  links:
+    - label: Read online
+      url: https://book-ai.ggvy.cl
+      icon: book
+    - label: Spanish edition
+      url: https://book-ai.ggvy.cl/es
+      icon: translate

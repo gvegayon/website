@@ -6,14 +6,14 @@ title-block-banner: ../img/collage_research.webp
 title-block-banner-color: white
 # description-meta, not description: `description` would also print
 # verbatim on the banner, under the heading.
-description-meta: "George G. Vega Yon 博士在統計計算、網絡科學與計算流行病學方面的論文、預印本與工作論文。"
+description-meta: "George G. Vega Yon 博士在统计计算、网络科学与计算流行病学方面的论文、预印本与工作论文。"
 include-in-header:
   - file: ../_includes/hreflang-research.html
 ---
 
-我是一位方法論學者，專注於複雜系統和統計計算的交叉領域，重點關注高性能計算和機器學習。我工作的核心部分是開發科學軟件：作為一名專業軟件工程師，我投入大量精力確保我創建的方法和工具可靠、開放，並且研究社區可以廣泛使用。我的合作涵蓋多個領域，包括**流行病學、公共衛生、社交網絡分析和基因組學**，但它們都有一個共同的基礎——密集計算和先進的統計方法。
+我是一位方法论学者，专注于复杂系统和统计计算的交叉领域，重点关注高性能计算和机器学习。我工作的核心部分是开发科学软件：作为一名专业软件工程师，我投入大量精力确保我创建的方法和工具可靠、开放，并且研究社区可以广泛使用。我的合作涵盖多个领域，包括**流行病学、公共卫生、社交网络分析和基因组学**，但它们都有一个共同的基础——密集计算和先进的统计方法。
 
-若要查看完整且持續更新的出版物索引，請參閱 [Google Scholar 個人資料](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}。您也可以透過 [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}、[GitHub](https://github.com/gvegayon){target='_blank'} 與 [軟體頁面](software.qmd) 追蹤相關研究與程式。
+若要查看完整且持续更新的出版物索引，请参阅 [Google Scholar 个人资料](https://scholar.google.com/citations?user=34E1yTAAAAAJ&hl=en){target='_blank'}。您也可以通过 [ORCID](https://orcid.org/0000-0002-3171-0844){target='_blank'}、[GitHub](https://github.com/gvegayon){target='_blank'} 与 [软件页面](software.qmd) 追踪相关研究与程序。
 
 ```{r}
 #| label: render-research-cards
@@ -32,5 +32,5 @@ render_item_grid(read_entries("../papers.toml"), "research", language = "zh")
 ---
 
 ::: {style="font-size: 0.9em; color: #666; text-align: center; margin-top: 2em; padding: 1em; background-color: #f8f9fa; border-radius: 5px;"}
-*本網站版本使用 GitHub Copilot 從原始英文版本自動翻譯，尚未經過人工驗證。*
+*本网站版本使用 GitHub Copilot 从原始英文版本自动翻译，尚未经过人工验证。*
 :::
