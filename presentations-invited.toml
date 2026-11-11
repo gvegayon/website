@@ -292,3 +292,5 @@ talktype = 'invited talk'
 slides = 'https://gvegayon.github.io/nsi-sep2026'
 announcement = 'https://www.networkscienceinstitute.org/talks/george-vega-yons'
 keywords = ['invitedtalk']
+video = 'https://www.youtube.com/watch?v=0L4njk8VvjQ'
+
