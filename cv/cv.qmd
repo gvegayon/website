@@ -79,6 +79,10 @@ format:
 execute:
   echo: false
   warning: false
+params:
+  # Set by `make published-only` to omit manuscripts, preprints, and other
+  # work-in-progress entries while keeping this as the sole CV source.
+  published_only: false
 knitr:
   opts_chunk:
     # The default SVG device needs cairo/X11, which isn't present here; this
@@ -174,11 +178,12 @@ Social Networks and Complex Systems · Network Science · Statistical Computing 
 emit_section(pubs, "published", fmt_pub)
 ```
 
-# Work in Progress and Technical Reports
-
 ```{r}
 #| results: asis
-emit_section(pubs, "wip", fmt_pub)
+if (!isTRUE(params$published_only)) {
+  cat("# Work in Progress and Technical Reports\n\n")
+  emit_section(pubs, "wip", fmt_pub)
+}
 ```
 
 # Books

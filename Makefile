@@ -5,11 +5,13 @@
 
 QUARTO  ?= quarto
 RSCRIPT ?= Rscript
+DEVCONTAINER ?= devcontainer
+USE_CONTAINER ?= false
 
 # Checkout of github.com/gvegayon/talks, for `import-talks` only.
 TALKS   ?= ../talks
 
-.PHONY: deps pages build clean-generated refresh update-cv import-talks
+.PHONY: deps pages build clean-generated refresh update-cv import-talks cv-published
 
 # papers.toml/software.toml are read with toml::read_toml(); the CI container
 # (rocker/tidyverse) does not ship it.
@@ -57,3 +59,16 @@ import-talks: deps
 
 update-cv:
 	cp ../resume/resume.pdf public/.; cp ../resume/resume.docx public/.
+
+# Publication-only academic CV. Its WIP/preprint section is controlled by a
+# render parameter, so cv/cv.qmd remains the only CV source to maintain.
+ifeq ($(USE_CONTAINER),true)
+# `up` creates (or reuses) the repository's configured devcontainer, whose
+# image supplies Quarto, R, and the fonts required by the Typst CV.
+cv-published:
+	$(DEVCONTAINER) up --workspace-folder "$(CURDIR)"
+	$(DEVCONTAINER) exec --workspace-folder "$(CURDIR)" make -C cv published-only
+else
+cv-published:
+	$(MAKE) -C cv published-only
+endif

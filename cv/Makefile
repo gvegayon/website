@@ -12,9 +12,17 @@ SRC = ../papers.toml ../software.toml ../presentations-conference.toml \
 # cv.qmd sits inside the website project, so Quarto writes the PDF to the
 # project's output-dir rather than next to the source.
 OUT = ../public/cv/cv.pdf
+PUBLISHED_OUT = ../public/cv/cv-published.pdf
 
 $(OUT): cv.qmd R/bib.R R/downloads.R $(SRC)
 	quarto render cv.qmd --to typst
+
+# A publication-only CV generated from cv.qmd. The source bibliography remains
+# the single source of truth; this only sets its documented render parameter.
+$(PUBLISHED_OUT): cv.qmd R/bib.R R/downloads.R $(SRC)
+	quarto render cv.qmd --to typst --output cv-published.pdf -P published_only:true
+
+published-only: $(PUBLISHED_OUT)
 
 # There is no CRAN-download target here any more. The badges read ../metrics.toml,
 # which `make refresh` in the parent Makefile rewrites from the weekly cron --
@@ -28,4 +36,4 @@ preview: cv.qmd
 clean:
 	rm -f cv.typ page*.png
 
-.PHONY: preview clean
+.PHONY: published-only preview clean
